@@ -74,19 +74,12 @@
       }
 
       @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
       }
 
       @keyframes fadeOut {
-        to {
-          opacity: 0;
-          visibility: hidden;
-        }
+        to { opacity: 0; visibility: hidden; }
       }
 
       /* Glassmorphism Effect */
@@ -173,13 +166,8 @@
         align-items: center;
         position: relative;
         overflow: hidden;
-        background: linear-gradient(
-          135deg,
-          #0f1419 0%,
-          #1a2332 50%,
-          #243447 100%
-        );
-        padding-top: 80px; /* Ensure content is not hidden under navbar */
+        background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #243447 100%);
+        padding-top: 80px;
       }
 
       .hero-bg {
@@ -194,13 +182,8 @@
       }
 
       @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
       }
 
       .hero-content {
@@ -281,11 +264,7 @@
       .hero-graphic {
         width: 100%;
         height: 400px;
-        background: linear-gradient(
-          135deg,
-          rgba(0, 255, 193, 0.1),
-          rgba(0, 212, 170, 0.1)
-        );
+        background: linear-gradient(135deg, rgba(0, 255, 193, 0.1), rgba(0, 212, 170, 0.1));
         border-radius: 20px;
         display: flex;
         align-items: center;
@@ -310,30 +289,13 @@
         animation: floatAnimation 6s ease-in-out infinite;
       }
 
-      .floating-element:nth-child(1) {
-        top: 20%;
-        left: 20%;
-        animation-delay: 0s;
-      }
-      .floating-element:nth-child(2) {
-        top: 60%;
-        right: 20%;
-        animation-delay: 2s;
-      }
-      .floating-element:nth-child(3) {
-        bottom: 20%;
-        left: 30%;
-        animation-delay: 4s;
-      }
+      .floating-element:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+      .floating-element:nth-child(2) { top: 60%; right: 20%; animation-delay: 2s; }
+      .floating-element:nth-child(3) { bottom: 20%; left: 30%; animation-delay: 4s; }
 
       @keyframes floatAnimation {
-        0%,
-        100% {
-          transform: translateY(0px) rotate(0deg);
-        }
-        50% {
-          transform: translateY(-20px) rotate(180deg);
-        }
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
       }
 
       /* Services Section */
@@ -373,7 +335,6 @@
 
       .service-card {
         background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 20px;
         padding: 2rem;
@@ -399,7 +360,7 @@
       }
 
       .service-card:hover {
-        transform: translateY(-10px);
+        transform queue: translateY(-10px);
         box-shadow: 0 20px 60px rgba(0, 255, 193, 0.2);
       }
 
@@ -430,11 +391,7 @@
       /* Features Section */
       .features {
         padding: 6rem 5%;
-        background: linear-gradient(
-          135deg,
-          rgba(0, 255, 193, 0.05),
-          rgba(0, 212, 170, 0.05)
-        );
+        background: linear-gradient(135deg, rgba(0, 255, 193, 0.05), rgba(0, 212, 170, 0.05));
       }
 
       .features-content {
@@ -493,7 +450,6 @@
 
       .use-case-card {
         background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 20px;
         padding: 2rem;
@@ -526,11 +482,7 @@
       /* Testimonials Section */
       .testimonials {
         padding: 6rem 5%;
-        background: linear-gradient(
-          135deg,
-          rgba(255, 255, 255, 0.02),
-          rgba(0, 255, 193, 0.02)
-        );
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(0, 255, 193, 0.02));
       }
 
       .testimonials-content {
@@ -546,7 +498,6 @@
 
       .testimonial-card {
         background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 20px;
         padding: 2rem;
@@ -598,9 +549,37 @@
       }
 
       .contact-item {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 1.5rem;
         display: flex;
         align-items: center;
         gap: 1rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .contact-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #00ffc1, #00d4aa);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .contact-item:hover::before {
+        transform: scaleX(1);
+      }
+
+      .contact-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 60px rgba(0, 255, 193, 0.2);
       }
 
       .contact-icon {
@@ -612,6 +591,33 @@
         align-items: center;
         justify-content: center;
         font-size: 1.2rem;
+      }
+
+      .contact-item a {
+        color: #00ffc1;
+        text-decoration: none;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .contact-item a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background: linear-gradient(90deg, #00ffc1, #00d4aa);
+        transition: width 0.3s ease;
+      }
+
+      .contact-item a:hover::after {
+        width: 100%;
+      }
+
+      .contact-item a:hover {
+        transform: scale(1.05);
+        color: #ffffff;
       }
 
       /* Footer */
@@ -757,7 +763,7 @@
     <!-- Navigation -->
     <nav>
       <div class="navbar">
-        <a href="#" class="logo">Softwaller Technologies</a>
+        <a href="#" class="logo">Softwaller</a>
         <ul class="nav-links">
           <li><a href="#services">Solutions</a></li>
           <li><a href="#features">Platform</a></li>
@@ -804,8 +810,8 @@
       <div class="section-header">
         <h2>Comprehensive Industrial Software Solutions</h2>
         <p>
-          End-to-end manufacturing technology solutions designed to optimize
-          your operations and drive digital transformation
+          End-to-end manufacturing technology solutions designed designed to
+          optimize your operations and drive digital transformation
         </p>
       </div>
       <div class="services-grid">
