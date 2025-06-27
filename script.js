@@ -116,7 +116,7 @@ document
 
 // Chatbot functionality
 function openChat() {
-  window.location.href = "mailto:softwaller.sales@gmail.com";
+  window.location.href = "mailto:info@softwaller.com";
 }
 
 // Hover effects
