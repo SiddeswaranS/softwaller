@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Softwaller Solutions - Smart Manufacturing Software & IoT</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+
+      /* Loading Spinner */
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        animation: fadeOut 0.5s ease-in-out 2s forwards;
+      }
+
+      .spinner {
+        width: 60px;
+        height: 60px;
+        border: 3px solid rgba(0, 255, 193, 0.3);
+        border-top: 3px solid #00ffc1;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      /* Glassmorphism Effect */
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+      }
+
+      /* Navbar */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(15, 20, 25, 0.95);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #00ffc1;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #00ffc1;
+      }
+
+      .nav-cta {
+        background: linear-gradient(135deg, #00ffc1, #00d4aa);
+        color: #0f1419;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .nav-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(0, 255, 193, 0.3);
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          #0f1419 0%,
+          #1a2332 50%,
+          #243447 100%
+        );
+      }
+
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="%2300ffc1" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+        animation: float 20s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .hero-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        z-index: 2;
+        position: relative;
+      }
+
+      .hero-text h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #ffffff, #00ffc1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-text p {
+        font-size: 1.25rem;
+        color: #a0aec0;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .hero-cta {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #00ffc1, #00d4aa);
+        color: #0f1419;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(0, 255, 193, 0.4);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: #ffffff;
+        padding: 1rem 2rem;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #00ffc1;
+      }
+
+      .hero-visual {
+        position: relative;
+      }
+
+      .hero-graphic {
+        width: 100%;
+        height: 400px;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 255, 193, 0.1),
+          rgba(0, 212, 170, 0.1)
+        );
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .floating-elements {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .floating-element {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: rgba(0, 255, 193, 0.2);
+        border-radius: 12px;
+        animation: floatAnimation 6s ease-in-out infinite;
+      }
+
+      .floating-element:nth-child(1) {
+        top: 20%;
+        left: 20%;
+        animation-delay: 0s;
+      }
+      .floating-element:nth-child(2) {
+        top: 60%;
+        right: 20%;
+        animation-delay: 2s;
+      }
+      .floating-element:nth-child(3) {
+        bottom: 20%;
+        left: 30%;
+        animation-delay: 4s;
+      }
+
+      @keyframes floatAnimation {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(180deg);
+        }
+      }
+
+      /* Services Section */
+      .services {
+        padding: 8rem 5% 6rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #ffffff, #00ffc1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .section-header p {
+        font-size: 1.25rem;
+        color: #a0aec0;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+      }
+
+      .service-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #00ffc1, #00d4aa);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 60px rgba(0, 255, 193, 0.2);
+      }
+
+      .service-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #00ffc1, #00d4aa);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+      }
+
+      .service-card h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #ffffff;
+      }
+
+      .service-card p {
+        color: #a0aec0;
+        line-height: 1.6;
+      }
+
+      /* Features Section */
+      .features {
+        padding: 6rem 5%;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 255, 193, 0.05),
+          rgba(0, 212, 170, 0.05)
+        );
+      }
+
+      .features-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .feature-list {
+        list-style: none;
+      }
+
+      .feature-list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+      }
+
+      .feature-list li:hover {
+        background: rgba(0, 255, 193, 0.1);
+        transform: translateX(10px);
+      }
+
+      .feature-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #00ffc1, #00d4aa);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+        color: #0f1419;
+      }
+
+      /* Use Cases Section */
+      .use-cases {
+        padding: 8rem 5% 6rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .use-cases-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .use-case-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .use-case-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 80px rgba(0, 255, 193, 0.15);
+      }
+
+      .kpi-badges {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .kpi-badge {
+        background: linear-gradient(135deg, #00ffc1, #00d4aa);
+        color: #0f1419;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 600;
+      }
+
+      /* Testimonials Section */
+      .testimonials {
+        padding: 6rem 5%;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(0, 255, 193, 0.02)
+        );
+      }
+
+      .testimonials-content {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+      }
+
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        position: relative;
+      }
+
+      .testimonial-quote {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .author-avatar {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #00ffc1, #00d4aa);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        color: #0f1419;
+      }
+
+      /* Footer */
+      footer {
+        background: linear-gradient(135deg, #0a0f14, #1a2332);
+        padding: 4rem 5% 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-section h3 {
+        color: #00ffc1;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-section ul li a {
+        color: #a0aec0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-section ul li a:hover {
+        color: #00ffc1;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #a0aec0;
+      }
+
+      .trust-badges {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .trust-badge {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        color: #a0aec0;
+        font-weight: 500;
+      }
+
+      /* Chatbot */
+      .chatbot {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #00ffc1, #00d4aa);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(0, 255, 193, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .chatbot:hover {
+        transform: scale(1.1);
+        box-shadow: 0 15px 40px rgba(0, 255, 193, 0.5);
+      }
+
+      .chatbot::before {
+        content: "💬";
+        font-size: 1.5rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .hero-text h1 {
+          font-size: 2.5rem;
+        }
+
+        .features-content {
+          grid-template-columns: 1fr;
+        }
+
+        .services-grid,
+        .use-cases-grid,
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading Spinner -->
+    <div class="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="navbar">
+        <a href="#" class="logo">Softwaller</a>
+        <ul class="nav-links">
+          <li><a href="#services">Solutions</a></li>
+          <li><a href="#features">Platform</a></li>
+          <li><a href="#use-cases">Industries</a></li>
+          <li><a href="#testimonials">Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#" class="nav-cta">Get Demo</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Empowering Smart Manufacturing Through Custom Software & IoT</h1>
+          <p>
+            Transform your industrial operations with cutting-edge automation
+            software, real-time analytics, and seamless IoT integration. Drive
+            efficiency, reduce costs, and accelerate your Industry 4.0 journey.
+          </p>
+          <div class="hero-cta">
+            <a href="#" class="btn-primary">Talk to Our Experts</a>
+            <a href="#" class="btn-secondary">Watch Demo</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-graphic">
+            <div class="floating-elements">
+              <div class="floating-element"></div>
+              <div class="floating-element"></div>
+              <div class="floating-element"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="section-header">
+        <h2>Comprehensive Industrial Software Solutions</h2>
+        <p>
+          End-to-end manufacturing technology solutions designed to optimize
+          your operations and drive digital transformation
+        </p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏭</div>
+          <h3>MES & SCADA Systems</h3>
+          <p>
+            Advanced Manufacturing Execution Systems and Supervisory Control
+            solutions for real-time production monitoring and control.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Predictive Maintenance</h3>
+          <p>
+            AI-powered maintenance solutions that predict equipment failures
+            before they occur, reducing downtime and maintenance costs.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👥</div>
+          <h3>Digital Twin Technology</h3>
+          <p>
+            Create virtual replicas of your manufacturing processes for
+            simulation, optimization, and predictive insights.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📊</div>
+          <h3>IoT Dashboards</h3>
+          <p>
+            Intuitive dashboards that provide real-time visibility into your
+            connected devices and manufacturing processes.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Edge Computing</h3>
+          <p>
+            Process data at the source with our edge computing solutions for
+            faster response times and reduced latency.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">☁️</div>
+          <h3>Cloud Integration</h3>
+          <p>
+            Seamlessly connect your operations to the cloud for scalable data
+            storage, analytics, and remote monitoring capabilities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="features-content">
+        <div>
+          <h2>Why Choose Our Platform?</h2>
+          <p>
+            Our comprehensive platform delivers the tools and insights you need
+            to transform your manufacturing operations and stay competitive in
+            today's digital landscape.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <div class="feature-icon">📈</div>
+              <div>
+                <strong>Real-time Monitoring</strong><br />
+                Monitor all your processes in real-time with advanced analytics
+              </div>
+            </li>
+            <li>
+              <div class="feature-icon">🤖</div>
+              <div>
+                <strong>AI-Driven Insights</strong><br />
+                Leverage machine learning for predictive analytics and
+                optimization
+              </div>
+            </li>
+            <li>
+              <div class="feature-icon">🔗</div>
+              <div>
+                <strong>Edge-to-Cloud Connectivity</strong><br />
+                Seamless data flow from factory floor to enterprise systems
+              </div>
+            </li>
+            <li>
+              <div class="feature-icon">📱</div>
+              <div>
+                <strong>Cross-Platform Compatibility</strong><br />
+                Access your data anywhere, on any device, at any time
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-graphic">
+          <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases" id="use-cases">
+      <div class="section-header">
+        <h2>Industry Success Stories</h2>
+        <p>
+          See how our solutions are transforming manufacturing across different
+          industries
+        </p>
+      </div>
+      <div class="use-cases-grid">
+        <div class="use-case-card">
+          <h3>Automotive Manufacturing</h3>
+          <p>
+            Streamlined production lines with real-time quality control and
+            predictive maintenance, resulting in significant operational
+            improvements.
+          </p>
+          <div class="kpi-badges">
+            <span class="kpi-badge">25% Reduced Downtime</span>
+            <span class="kpi-badge">18% Improved OEE</span>
+            <span class="kpi-badge">30% Energy Savings</span>
+          </div>
+        </div>
+        <div class="use-case-card">
+          <h3>Pharmaceutical Production</h3>
+          <p>
+            Enhanced compliance and quality assurance through digital tracking
+            and automated documentation systems.
+          </p>
+          <div class="kpi-badges">
+            <span class="kpi-badge">99.9% Compliance</span>
+            <span class="kpi-badge">40% Faster Batch Processing</span>
+            <span class="kpi-badge">50% Reduced Errors</span>
+          </div>
+        </div>
+        <div class="use-case-card">
+          <h3>Food Processing</h3>
+          <p>
+            Improved food safety and traceability with integrated IoT sensors
+            and blockchain-based supply chain tracking.
+          </p>
+          <div class="kpi-badges">
+            <span class="kpi-badge">100% Traceability</span>
+            <span class="kpi-badge">35% Waste Reduction</span>
+            <span class="kpi-badge">20% Faster Processing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials-content">
+        <div class="section-header">
+          <h2>What Our Clients Say</h2>
+          <p>Trusted by industry leaders worldwide</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">
+              "Softwaller's solution transformed our manufacturing efficiency.
+              We've seen a 35% increase in productivity and significant cost
+              savings across all operations."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">JD</div>
+              <div>
+                <strong>John Davis</strong><br />
+                <span style="color: #a0aec0">CTO, AutoTech Industries</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-quote">
+              "The predictive maintenance capabilities have revolutionized our
+              operations. We now prevent failures before they happen, saving
+              millions in downtime costs."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">SM</div>
+              <div>
+                <strong>Sarah Mitchell</strong><br />
+                <span style="color: #a0aec0"
+                  >Operations Director, PharmaCorp</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-quote">
+              "Outstanding support and cutting-edge technology. The ROI was
+              evident within the first quarter of implementation."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">RK</div>
+              <div>
+                <strong>Robert Kim</strong><br />
+                <span style="color: #a0aec0"
+                  >Plant Manager, FoodTech Solutions</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Solutions</h3>
+          <ul>
+            <li><a href="#">MES Systems</a></li>
+            <li><a href="#">SCADA Solutions</a></li>
+            <li><a href="#">Predictive Maintenance</a></li>
+            <li><a href="#">Digital Twins</a></li>
+            <li><a href="#">IoT Platforms</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Industries</h3>
+          <ul>
+            <li><a href="#">Automotive</a></li>
+            <li><a href="#">Pharmaceutical</a></li>
+            <li><a href="#">Food & Beverage</a></li>
+            <li><a href="#">Chemical</a></li>
+            <li><a href="#">Oil & Gas</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">White Papers</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">Support Center</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="trust-badges">
+        <div class="trust-badge">ISO 27001 Certified</div>
+        <div class="trust-badge">Microsoft Azure Partner</div>
+        <div class="trust-badge">AWS Solutions Provider</div>
+        <div class="trust-badge">SOC 2 Type II</div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Softwaller Solutions. All rights reserved. |
+          <a href="#" style="color: #00ffc1">Privacy Policy</a> |
+          <a href="#" style="color: #00ffc1">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot" onclick="openChat()"></div>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 100) {
+          nav.style.background = "rgba(15, 20, 25, 0.98)";
+          nav.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.3)";
+        } else {
+          nav.style.background = "rgba(15, 20, 25, 0.95)";
+          nav.style.boxShadow = "none";
+        }
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Animate elements on scroll
+      document
+        .querySelectorAll(
+          ".service-card, .use-case-card, .testimonial-card, .feature-list li"
+        )
+        .forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(30px)";
+          el.style.transition = "all 0.6s ease";
+          observer.observe(el);
+        });
+
+      // Chatbot functionality
+      function openChat() {
+        alert(
+          "Chat support coming soon! For immediate assistance, please contact us at support@Softwaller.com or call +1-800-INDUSTRY"
+        );
+      }
+
+      // Add some interactive hover effects
+      document
+        .querySelectorAll(".service-card, .use-case-card")
+        .forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-10px) scale(1.02)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+          });
+        });
+
+      // Parallax effect for hero background
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const heroBackground = document.querySelector(".hero-bg");
+        if (heroBackground) {
+          heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+      });
+
+      // Dynamic typing effect for hero title (optional enhancement)
+      function typeWriter(element, text, speed = 100) {
+        let i = 0;
+        element.innerHTML = "";
+        function type() {
+          if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+          }
+        }
+        type();
+      }
+
+      // Add loading animation completion
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.querySelector(".loader").style.display = "none";
+        }, 2500);
+      });
+
+      // Add performance monitoring
+      const observePerformance = () => {
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(() => {
+            // Lazy load non-critical animations
+            document
+              .querySelectorAll(".floating-element")
+              .forEach((el, index) => {
+                setTimeout(() => {
+                  el.style.animation = `floatAnimation ${
+                    6 + index
+                  }s ease-in-out infinite`;
+                }, index * 200);
+              });
+          });
+        }
+      };
+
+      observePerformance();
+
+      // Add mobile menu toggle (for responsive design)
+      const createMobileMenu = () => {
+        if (window.innerWidth <= 768) {
+          const navbar = document.querySelector(".navbar");
+          const menuToggle = document.createElement("button");
+          menuToggle.innerHTML = "☰";
+          menuToggle.style.cssText = `
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    display: block;
+                `;
+
+          const navLinks = document.querySelector(".nav-links");
+          menuToggle.addEventListener("click", () => {
+            navLinks.style.display =
+              navLinks.style.display === "flex" ? "none" : "flex";
+            navLinks.style.flexDirection = "column";
+            navLinks.style.position = "absolute";
+            navLinks.style.top = "100%";
+            navLinks.style.left = "0";
+            navLinks.style.width = "100%";
+            navLinks.style.background = "rgba(15, 20, 25, 0.98)";
+            navLinks.style.padding = "1rem";
+          });
+
+          navbar.appendChild(menuToggle);
+        }
+      };
+
+      window.addEventListener("resize", createMobileMenu);
+      createMobileMenu();
+
+      // Add smooth reveal animations for statistics/KPIs
+      const animateCounters = () => {
+        const kpiBadges = document.querySelectorAll(".kpi-badge");
+        kpiBadges.forEach((badge) => {
+          const text = badge.textContent;
+          const number = text.match(/\d+/);
+          if (number) {
+            const finalNumber = parseInt(number[0]);
+            let currentNumber = 0;
+            const increment = finalNumber / 30;
+
+            const counter = setInterval(() => {
+              currentNumber += increment;
+              if (currentNumber >= finalNumber) {
+                currentNumber = finalNumber;
+                clearInterval(counter);
+              }
+              badge.textContent = text.replace(
+                /\d+/,
+                Math.floor(currentNumber)
+              );
+            }, 50);
+          }
+        });
+      };
+
+      // Trigger counter animation when section is visible
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            statsObserver.unobserve(entry.target);
+          }
+        });
+      });
+
+      document
+        .querySelector(".use-cases")
+        ?.let((section) => statsObserver.observe(section));
+    </script>
+  </body>
+</html>
