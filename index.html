@@ -74,18 +74,24 @@
       }
 
       @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
 
       @keyframes fadeOut {
-        to { opacity: 0; visibility: hidden; }
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
       }
 
       /* Glassmorphism Effect */
       .glass {
         background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 16px;
       }
@@ -166,7 +172,12 @@
         align-items: center;
         position: relative;
         overflow: hidden;
-        background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #243447 100%);
+        background: linear-gradient(
+          135deg,
+          #0f1419 0%,
+          #1a2332 50%,
+          #243447 100%
+        );
         padding-top: 80px;
       }
 
@@ -182,8 +193,13 @@
       }
 
       @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
       }
 
       .hero-content {
@@ -264,7 +280,11 @@
       .hero-graphic {
         width: 100%;
         height: 400px;
-        background: linear-gradient(135deg, rgba(0, 255, 193, 0.1), rgba(0, 212, 170, 0.1));
+        background: linear-gradient(
+          135deg,
+          rgba(0, 255, 193, 0.1),
+          rgba(0, 212, 170, 0.1)
+        );
         border-radius: 20px;
         display: flex;
         align-items: center;
@@ -289,13 +309,30 @@
         animation: floatAnimation 6s ease-in-out infinite;
       }
 
-      .floating-element:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
-      .floating-element:nth-child(2) { top: 60%; right: 20%; animation-delay: 2s; }
-      .floating-element:nth-child(3) { bottom: 20%; left: 30%; animation-delay: 4s; }
+      .floating-element:nth-child(1) {
+        top: 20%;
+        left: 20%;
+        animation-delay: 0s;
+      }
+      .floating-element:nth-child(2) {
+        top: 60%;
+        right: 20%;
+        animation-delay: 2s;
+      }
+      .floating-element:nth-child(3) {
+        bottom: 20%;
+        left: 30%;
+        animation-delay: 4s;
+      }
 
       @keyframes floatAnimation {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        50% { transform: translateY(-20px) rotate(180deg); }
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(180deg);
+        }
       }
 
       /* Services Section */
@@ -360,7 +397,7 @@
       }
 
       .service-card:hover {
-        transform queue: translateY(-10px);
+        transform: translateY(-10px);
         box-shadow: 0 20px 60px rgba(0, 255, 193, 0.2);
       }
 
@@ -391,7 +428,11 @@
       /* Features Section */
       .features {
         padding: 6rem 5%;
-        background: linear-gradient(135deg, rgba(0, 255, 193, 0.05), rgba(0, 212, 170, 0.05));
+        background: linear-gradient(
+          135deg,
+          rgba(0, 255, 193, 0.05),
+          rgba(0, 212, 170, 0.05)
+        );
       }
 
       .features-content {
@@ -482,7 +523,11 @@
       /* Testimonials Section */
       .testimonials {
         padding: 6rem 5%;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(0, 255, 193, 0.02));
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(0, 255, 193, 0.02)
+        );
       }
 
       .testimonials-content {
@@ -531,15 +576,17 @@
 
       /* Contact Section */
       .contact {
-        padding: 6rem 5%;
+        padding: 6rem 5% 4rem;
         max-width: 1400px;
         margin: 0 auto;
+        position: relative;
       }
 
       .contact-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
+        align-items: flex-start;
       }
 
       .contact-info {
@@ -601,7 +648,7 @@
       }
 
       .contact-item a::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 0;
         height: 2px;
@@ -620,11 +667,26 @@
         color: #ffffff;
       }
 
+      .contact .hero-graphic {
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contact .floating-elements {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
       /* Footer */
       footer {
         background: linear-gradient(135deg, #0a0f14, #1a2332);
         padding: 4rem 5% 2rem;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
+        clear: both;
       }
 
       .footer-content {
@@ -751,6 +813,10 @@
         .contact-grid {
           grid-template-columns: 1fr;
         }
+
+        .contact .hero-graphic {
+          height: 300px;
+        }
       }
     </style>
   </head>
@@ -810,8 +876,8 @@
       <div class="section-header">
         <h2>Comprehensive Industrial Software Solutions</h2>
         <p>
-          End-to-end manufacturing technology solutions designed designed to
-          optimize your operations and drive digital transformation
+          End-to-end manufacturing technology solutions designed to optimize
+          your operations and drive digital transformation
         </p>
       </div>
       <div class="services-grid">
