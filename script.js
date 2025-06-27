@@ -37,6 +37,8 @@ document.querySelectorAll(".nav-links a").forEach((anchor) => {
         behavior: "smooth",
         block: "start",
       });
+    } else {
+      window.location.href = `index.html${href}`;
     }
 
     // Close mobile menu
@@ -44,7 +46,26 @@ document.querySelectorAll(".nav-links a").forEach((anchor) => {
   });
 });
 
-// Common observer options
+// Loading animation completion
+window.addEventListener("load", () => {
+  const hash = window.location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 100);
+    }
+  }
+
+  setTimeout(() => {
+    document.querySelector(".loader").style.display = "none";
+  }, 2500);
+});
+
 const observerOptions = {
   root: null,
   threshold: 0.3,
@@ -119,14 +140,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Loading animation completion
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.querySelector(".loader").style.display = "none";
-  }, 2500);
-});
-
-// Floating elements animation
 document.querySelectorAll(".floating-element").forEach((el, index) => {
   setTimeout(() => {
     el.style.animation = `floatAnimation ${6 + index}s ease-in-out infinite`;
