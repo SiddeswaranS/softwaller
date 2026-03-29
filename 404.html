@@ -1,105 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - Page Not Found | Softwaller Technologies</title>
-    <meta
-      name="description"
-      content="Oops! The page you requested is not found. Return to Softwaller Technologies' homepage to discover our smart manufacturing and IoT solutions for Industry 4.0."
-    />
-    <meta
-      name="keywords"
-      content="404, page not found, Softwaller Technologies, smart manufacturing, IoT, Industry 4.0"
-    />
-    <meta name="author" content="Softwaller Technologies Private Limited" />
-    <meta name="robots" content="noindex" />
-    <meta http-equiv="content-language" content="en" />
-    <!-- Open Graph Tags -->
-    <meta
-      property="og:title"
-      content="404 - Page Not Found | Softwaller Technologies"
-    />
-    <meta
-      property="og:description"
-      content="The page you are looking for cannot be found. Explore our homepage for smart manufacturing and IoT solutions."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://www.softwaller.com/og-image.jpg"
-    />
-    <meta property="og:url" content="https://www.softwaller.com/404.html" />
-    <meta property="og:site_name" content="Softwaller Technologies" />
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="404 - Page Not Found" />
-    <meta
-      name="twitter:description"
-      content="Page not found. Return to Softwaller Technologies' homepage."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.softwaller.com/og-image.jpg"
-    />
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.softwaller.com/404.html" />
-    <!-- hreflang for English -->
-    <link
-      rel="alternate"
-      href="https://www.softwaller.com/404.html"
-      hreflang="en"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Loading Spinner -->
-    <div class="loader">
-      <div class="spinner"></div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — Softwaller Technologies</title>
+<meta name="description" content="The page you're looking for doesn't exist. Return to Softwaller Technologies to explore our CRM, ERP & business software solutions.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.softwaller.com/404.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='7' fill='%23070D1A' stroke='%232563EB' stroke-width='1'/%3E%3Cline x1='16' y1='7' x2='16' y2='25' stroke='%2364748B' stroke-width='.8'/%3E%3Cline x1='7' y1='16' x2='25' y2='16' stroke='%2364748B' stroke-width='.8'/%3E%3Crect x='5' y='5' width='9' height='9' rx='2.5' fill='%232563EB'/%3E%3Crect x='18' y='5' width='9' height='9' rx='2.5' fill='%230891B2'/%3E%3Crect x='5' y='18' width='9' height='9' rx='2.5' fill='%23059669'/%3E%3Crect x='18' y='18' width='9' height='9' rx='2.5' fill='%23D97706'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23DC2626'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px}
+a{text-decoration:none;color:inherit}
+:root{
+  --ink:#0A0F1E;--muted:#6B7694;--muted2:#9BA3BF;
+  --line:#E4E7F0;--surf:#F7F8FC;
+  --blue:#1557FF;--blue2:#3B74FF;--blue-bg:#EBF0FF;--blue-br:#C2CFFF;
+  --white:#FFFFFF;
+  --sh-blue:0 6px 28px rgba(21,87,255,.28);
+  --font:'Plus Jakarta Sans',sans-serif;
+}
+body{font-family:var(--font);background:var(--white);color:var(--ink);line-height:1.65;min-height:100vh;display:flex;flex-direction:column}
+
+/* Nav */
+.pnav{position:fixed;top:0;left:0;right:0;z-index:500;background:#fff;border-bottom:1px solid var(--line);backdrop-filter:blur(20px)}
+.pnav-inner{max-width:1200px;margin:0 auto;padding:0 28px;height:66px;display:flex;align-items:center;justify-content:space-between}
+.pnav-logo{display:flex;align-items:center;gap:10px}
+.pnav-logo img{height:42px;width:auto}
+.pnav-back{font-size:13.5px;font-weight:600;color:var(--blue);display:flex;align-items:center;gap:6px;padding:8px 18px;border-radius:9px;border:1.5px solid var(--blue-br);transition:all .15s}
+.pnav-back:hover{background:var(--blue-bg)}
+
+/* 404 Content */
+.error-page{flex:1;display:flex;align-items:center;justify-content:center;padding:120px 28px 80px;text-align:center;position:relative;overflow:hidden}
+.error-page::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 50% 20%,rgba(21,87,255,.06) 0%,transparent 70%);pointer-events:none}
+.error-page::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse 60% 60% at 50% 40%,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 40%,black 20%,transparent 70%);pointer-events:none}
+.error-inner{position:relative;z-index:1;max-width:520px}
+.error-code{font-size:clamp(100px,18vw,180px);font-weight:800;letter-spacing:-6px;line-height:1;color:var(--surf);background:linear-gradient(135deg,var(--blue) 0%,rgba(21,87,255,.15) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px}
+.error-icon{width:64px;height:64px;border-radius:16px;background:var(--blue-bg);border:1px solid var(--blue-br);display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--blue);margin:0 auto 24px}
+.error-h{font-size:clamp(22px,3vw,32px);font-weight:800;color:var(--ink);letter-spacing:-1px;margin-bottom:12px}
+.error-p{font-size:15.5px;color:var(--muted);line-height:1.75;margin-bottom:32px}
+.error-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:11px;font-size:14.5px;font-weight:600;color:#fff;background:var(--blue);border:none;cursor:pointer;transition:all .2s;font-family:var(--font);box-shadow:var(--sh-blue)}
+.btn-primary:hover{background:var(--blue2);transform:translateY(-2px)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:11px;font-size:14.5px;font-weight:600;color:var(--ink);background:var(--white);border:1.5px solid var(--line);cursor:pointer;transition:all .2s;font-family:var(--font)}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+.error-help{margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.error-help-label{font-size:11px;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:16px}
+.error-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.error-links a{font-size:13.5px;font-weight:500;color:var(--muted);display:flex;align-items:center;gap:6px;transition:color .15s}
+.error-links a:hover{color:var(--blue)}
+.error-links a i{font-size:12px}
+
+/* Footer */
+.pfooter{background:var(--ink);color:rgba(255,255,255,.6);padding:32px 0;text-align:center;font-size:13px;margin-top:auto}
+.pfooter a{color:var(--blue2);margin:0 8px}
+
+@media(max-width:640px){
+  .error-page{padding:100px 20px 60px}
+  .error-btns{flex-direction:column;align-items:center}
+  .error-links{flex-direction:column;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<nav class="pnav">
+  <div class="pnav-inner">
+    <a href="index.html" class="pnav-logo">
+      <img src="assets/softwaller-technologies-logo-light.png" alt="Softwaller Technologies" height="42">
+    </a>
+    <a href="index.html" class="pnav-back"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+  </div>
+</nav>
+
+<section class="error-page">
+  <div class="error-inner">
+    <div class="error-code">404</div>
+    <div class="error-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+    <h1 class="error-h">Page Not Found</h1>
+    <p class="error-p">The page you're looking for doesn't exist or has been moved. Let's get you back on track — explore our software solutions or get in touch with our team.</p>
+    <div class="error-btns">
+      <a href="index.html" class="btn-primary"><i class="fa-solid fa-house"></i> Go to Homepage</a>
+      <a href="index.html#services" class="btn-outline"><i class="fa-solid fa-grid-2"></i> View Services</a>
     </div>
-
-    <!-- Navigation -->
-    <nav>
-      <div class="navbar">
-        <a href="index.html" class="logo">Softwaller</a>
-        <ul class="nav-links">
-          <li><a href="#services">Solutions</a></li>
-          <li><a href="#features">Platform</a></li>
-          <li><a href="#use-cases">Industries</a></li>
-          <li><a href="#testimonials">Clients</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="index.html#contact" class="nav-cta">Get Demo</a>
-        <button class="menu-toggle">☰</button>
+    <div class="error-help">
+      <div class="error-help-label">Quick Links</div>
+      <div class="error-links">
+        <a href="index.html#about"><i class="fa-solid fa-building"></i> About Us</a>
+        <a href="index.html#contact"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+        <a href="https://wa.me/919585999819" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="tel:+919585999819"><i class="fa-solid fa-phone"></i> +91 95859 99819</a>
       </div>
-    </nav>
+    </div>
+  </div>
+</section>
 
-    <!-- 404 Error Section -->
-    <section class="error-section">
-      <div class="hero-bg"></div>
-      <div class="error-content">
-        <h1>404</h1>
-        <p>
-          Oops! The page you're looking for doesn't exist or has been moved.
-          Visit our <a href="index.html">homepage</a> to explore our smart
-          manufacturing and IoT solutions or contact us for assistance.
-        </p>
-        <a href="index.html" class="btn-primary">Return to Home</a>
-        <div class="floating-elements">
-          <div class="floating-element"></div>
-          <div class="floating-element"></div>
-          <div class="floating-element"></div>
-        </div>
-      </div>
-    </section>
+<footer class="pfooter">
+  <div>&copy; 2026 Softwaller Technologies Private Limited. All rights reserved. <a href="index.html">Home</a> <a href="index.html#services">Services</a> <a href="index.html#contact">Contact</a></div>
+</footer>
 
-    <!-- Chatbot -->
-    <div class="chatbot" onclick="openChat()"></div>
-
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>

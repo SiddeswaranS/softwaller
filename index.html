@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days">
 <meta name="distribution" content="global">
 <meta name="rating" content="general">
-<meta name="google-site-verification" content="">
+<meta name="google-site-verification" content=""> <!-- Already verified via domain property in GSC -->
 <meta http-equiv="content-language" content="en-IN">
 <link rel="alternate" hreflang="en" href="https://www.softwaller.com/">
 <link rel="alternate" hreflang="en-IN" href="https://www.softwaller.com/">
@@ -663,6 +663,9 @@ summary.fc-head{
   .pol-overlay{align-items:flex-end;padding:0}
 }
 </style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EXWE1WLTVE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-EXWE1WLTVE');</script>
 </head>
 <body>
 
@@ -695,16 +698,16 @@ summary.fc-head{
       <img src="assets/softwaller-technologies-logo-light.png" alt="Softwaller Technologies - Custom CRM, ERP & Business Software" height="42">
     </a>
     <ul class="n-links" role="list">
-      <li><a onclick="goto('home')" id="nl-home" class="active">Home</a></li>
-      <li><a onclick="goto('about')" id="nl-about">About</a></li>
-      <li><a onclick="goto('services')" id="nl-services">Services</a></li>
-      <li><a onclick="goto('process')" id="nl-process">Process</a></li>
-      <li><a onclick="goto('testimonials')" id="nl-testimonials">Reviews</a></li>
-      <li><a onclick="goto('faq')" id="nl-faq">FAQ</a></li>
+      <li><a href="#home" id="nl-home" class="active">Home</a></li>
+      <li><a href="#about" id="nl-about">About</a></li>
+      <li><a href="#services" id="nl-services">Services</a></li>
+      <li><a href="#process" id="nl-process">Process</a></li>
+      <li><a href="#testimonials" id="nl-testimonials">Reviews</a></li>
+      <li><a href="#faq" id="nl-faq">FAQ</a></li>
     </ul>
     <div class="n-right">
-      <a class="n-demo" onclick="goto('contact')">Get Demo</a>
-      <a class="n-cta" onclick="goto('contact')">
+      <a class="n-demo" href="#contact">Get Demo</a>
+      <a class="n-cta" href="#contact">
         <i class="fa-solid fa-phone"></i> <span class="n-cta-text">Free Consultation</span>
       </a>
       <button class="n-ham" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -716,13 +719,13 @@ summary.fc-head{
 
 <!-- Mobile Menu -->
 <div class="mob-menu" id="mob-menu" role="navigation" aria-label="Mobile navigation">
-  <a onclick="goto('home');closeMenu()" class="active"><i class="fa-solid fa-house" style="width:16px;text-align:center"></i>Home</a>
-  <a onclick="goto('about');closeMenu()"><i class="fa-solid fa-building" style="width:16px;text-align:center"></i>About Us</a>
-  <a onclick="goto('services');closeMenu()"><i class="fa-solid fa-grid-2" style="width:16px;text-align:center"></i>Services</a>
-  <a onclick="goto('process');closeMenu()"><i class="fa-solid fa-diagram-project" style="width:16px;text-align:center"></i>How We Work</a>
-  <a onclick="goto('testimonials');closeMenu()"><i class="fa-solid fa-star" style="width:16px;text-align:center"></i>Client Reviews</a>
-  <a onclick="goto('faq');closeMenu()"><i class="fa-solid fa-circle-question" style="width:16px;text-align:center"></i>FAQ</a>
-  <a class="mob-cta" onclick="goto('contact');closeMenu()"><i class="fa-solid fa-phone"></i>Free Consultation</a>
+  <a href="#home" class="active"><i class="fa-solid fa-house" style="width:16px;text-align:center"></i>Home</a>
+  <a href="#about"><i class="fa-solid fa-building" style="width:16px;text-align:center"></i>About Us</a>
+  <a href="#services"><i class="fa-solid fa-grid-2" style="width:16px;text-align:center"></i>Services</a>
+  <a href="#process"><i class="fa-solid fa-diagram-project" style="width:16px;text-align:center"></i>How We Work</a>
+  <a href="#testimonials"><i class="fa-solid fa-star" style="width:16px;text-align:center"></i>Client Reviews</a>
+  <a href="#faq"><i class="fa-solid fa-circle-question" style="width:16px;text-align:center"></i>FAQ</a>
+  <a class="mob-cta" href="#contact"><i class="fa-solid fa-phone"></i>Free Consultation</a>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -1683,7 +1686,10 @@ summary.fc-head{
       </div>
 
       <div class="reveal d1">
-        <form class="form-wrap" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <form class="form-wrap" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="d4ae6881-299d-4780-aab8-424fce957afb">
+          <input type="hidden" name="subject" value="New Project Enquiry — Softwaller Technologies">
+          <input type="hidden" name="from_name" value="Softwaller Website">
           <div class="form-top-bar" aria-hidden="true"></div>
           <div id="form-body">
             <div class="cf-title">Send Us a Message</div>
@@ -1759,9 +1765,8 @@ summary.fc-head{
               <textarea class="form-ctrl" id="message" name="message" placeholder="Describe your current process, what problems you face, and what you'd like to achieve with new software..." required></textarea>
               <div class="form-err">Please describe your requirements</div>
             </div>
-            <!-- Honeypot for spam prevention -->
-            <input type="text" name="_gotcha" style="display:none">
-            <input type="hidden" name="_subject" value="New Project Enquiry — Softwaller Technologies">
+            <!-- Web3Forms honeypot for spam prevention -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none">
             <button type="submit" class="form-submit" id="submit-btn">
               <i class="fa-solid fa-paper-plane"></i> Send Message &amp; Get Free Consultation
             </button>
@@ -1803,12 +1808,12 @@ summary.fc-head{
             Services <i class="fa-solid fa-chevron-down fc-toggle"></i>
           </summary>
           <nav class="fc-links" aria-label="Services links">
-            <a onclick="goto('services')"><i class="fa-solid fa-chart-line"></i>CRM Software</a>
-            <a onclick="goto('services')"><i class="fa-solid fa-industry"></i>ERP Solutions</a>
-            <a onclick="goto('services')"><i class="fa-solid fa-boxes-stacked"></i>Inventory &amp; WMS</a>
-            <a onclick="goto('services')"><i class="fa-solid fa-cart-shopping"></i>E-Commerce</a>
-            <a onclick="goto('services')"><i class="fa-solid fa-users"></i>HR &amp; Payroll</a>
-            <a onclick="goto('services')" style="color:var(--blue)"><i class="fa-solid fa-arrow-right"></i>All Services &rarr;</a>
+            <a href="products/crm-software.html"><i class="fa-solid fa-chart-line"></i>CRM Software</a>
+            <a href="products/erp-solutions.html"><i class="fa-solid fa-industry"></i>ERP Solutions</a>
+            <a href="products/inventory-management.html"><i class="fa-solid fa-boxes-stacked"></i>Inventory &amp; WMS</a>
+            <a href="products/e-commerce.html"><i class="fa-solid fa-cart-shopping"></i>E-Commerce</a>
+            <a href="products/hr-payroll.html"><i class="fa-solid fa-users"></i>HR &amp; Payroll</a>
+            <a href="#services" style="color:var(--blue)"><i class="fa-solid fa-arrow-right"></i>All Services &rarr;</a>
           </nav>
         </details>
         <details class="fc-col">
@@ -1816,12 +1821,12 @@ summary.fc-head{
             Company <i class="fa-solid fa-chevron-down fc-toggle"></i>
           </summary>
           <nav class="fc-links" aria-label="Company links">
-            <a onclick="goto('about')"><i class="fa-solid fa-building"></i>About Us</a>
-            <a onclick="goto('process')"><i class="fa-solid fa-diagram-project"></i>How We Work</a>
-            <a onclick="goto('testimonials')"><i class="fa-solid fa-star"></i>Client Reviews</a>
-            <a onclick="goto('faq')"><i class="fa-solid fa-circle-question"></i>FAQ</a>
-            <a onclick="goto('contact')"><i class="fa-solid fa-briefcase"></i>Careers</a>
-            <a onclick="goto('contact')"><i class="fa-solid fa-envelope"></i>Contact Us</a>
+            <a href="#about"><i class="fa-solid fa-building"></i>About Us</a>
+            <a href="#process"><i class="fa-solid fa-diagram-project"></i>How We Work</a>
+            <a href="#testimonials"><i class="fa-solid fa-star"></i>Client Reviews</a>
+            <a href="#faq"><i class="fa-solid fa-circle-question"></i>FAQ</a>
+            <a href="#contact"><i class="fa-solid fa-briefcase"></i>Careers</a>
+            <a href="#contact"><i class="fa-solid fa-envelope"></i>Contact Us</a>
           </nav>
         </details>
         <details class="fc-col">
@@ -1839,7 +1844,7 @@ summary.fc-head{
         </details>
       </div>
     <div class="footer-gst">
-      Softwaller Technologies Private Limited &nbsp;|&nbsp; GST: 33AAQCS1234A1Z5 &nbsp;|&nbsp; MSME Registered &nbsp;|&nbsp; ISO 9001:2015 Quality Certified
+      Softwaller Technologies Private Limited &nbsp;|&nbsp; GST: 33AAQCS1234A1Z5 &nbsp;|&nbsp; MSME Registered
     </div>
     <div class="footer-bottom">
       <span class="fb-copy">&copy; 2026 Softwaller Technologies Private Limited. All rights reserved.</span>
@@ -2069,6 +2074,14 @@ function goto(id){
   if(el)el.scrollIntoView({behavior:'smooth'});
   closeMenu();
 }
+/* ── Progressive enhancement: smooth scroll for anchor links ── */
+document.addEventListener('click',function(e){
+  const a=e.target.closest('a[href^="#"]');
+  if(!a)return;
+  const id=a.getAttribute('href').slice(1);
+  const target=document.getElementById(id);
+  if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});closeMenu();}
+});
 
 /* ── Hamburger ── */
 const ham=document.getElementById('hamburger');
@@ -2190,21 +2203,16 @@ if(form){
     const btn=document.getElementById('submit-btn');
     btn.disabled=true;
     btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-    // If Formspree ID is set, submit via fetch; otherwise show success for demo
     const action=this.action;
-    if(action.includes('YOUR_FORM_ID')){
-      // Demo mode — show success without actual submission
-      setTimeout(showSuccess,1200);
-    } else {
-      try{
-        const res=await fetch(action,{method:'POST',body:new FormData(this),headers:{Accept:'application/json'}});
-        if(res.ok){showSuccess();}
-        else{btn.disabled=false;btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Send Message & Get Free Consultation';alert('Something went wrong. Please email us at info@softwaller.com');}
-      }catch(err){
-        btn.disabled=false;
-        btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Send Message & Get Free Consultation';
-        alert('Network error. Please email us directly at info@softwaller.com');
-      }
+    try{
+      const res=await fetch(action,{method:'POST',body:new FormData(this),headers:{Accept:'application/json'}});
+      const data=await res.json();
+      if(data.success){showSuccess();}
+      else{btn.disabled=false;btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Send Message & Get Free Consultation';alert('Something went wrong. Please email us at info@softwaller.com');}
+    }catch(err){
+      btn.disabled=false;
+      btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Send Message & Get Free Consultation';
+      alert('Network error. Please email us directly at info@softwaller.com');
     }
   });
   // Real-time validation clear
