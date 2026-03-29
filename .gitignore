@@ -2,3 +2,4 @@ audit.log
 open_claude_tabs.bat
 SoftwallerBrandKit/
 screenshots/
+.playwright-mcp/

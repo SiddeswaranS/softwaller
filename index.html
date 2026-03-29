@@ -342,7 +342,7 @@ nav{max-width:1200px;margin:0 auto;padding:0 28px;height:var(--nav-h);display:fl
 .svc-tags{display:flex;flex-wrap:wrap;gap:5px}
 .svc-tag{font-size:10.5px;color:var(--muted);background:var(--surf);border:1px solid var(--line);border-radius:5px;padding:3px 9px;font-weight:500}
 .svc-card:hover .svc-tag{background:var(--blue-bg);color:var(--blue);border-color:var(--blue-br)}
-.svc-link{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:var(--blue);margin-top:18px;opacity:0;transform:translateY(4px);transition:all .25s}
+.svc-link{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:var(--blue);margin-top:18px;opacity:0;transform:translateY(4px);transition:all .25s;text-decoration:none}
 .svc-card:hover .svc-link{opacity:1;transform:none}
 
 /* ══════════════════════════════════════
@@ -692,8 +692,7 @@ summary.fc-head{
 <header id="site-header">
   <nav role="navigation" aria-label="Main navigation">
     <a href="#home" class="n-logo" aria-label="Softwaller Technologies Home">
-      <div class="n-logo-mark"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="44" height="44" rx="11" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/><line x1="24" y1="10" x2="24" y2="38" stroke="#64748B" stroke-width="1.2"/><line x1="10" y1="24" x2="38" y2="24" stroke="#64748B" stroke-width="1.2"/><rect x="8" y="8" width="13.5" height="13.5" rx="3.5" fill="#2563EB"/><rect x="26.5" y="8" width="13.5" height="13.5" rx="3.5" fill="#0891B2"/><rect x="8" y="26.5" width="13.5" height="13.5" rx="3.5" fill="#059669"/><rect x="26.5" y="26.5" width="13.5" height="13.5" rx="3.5" fill="#D97706"/><circle cx="24" cy="24" r="2.8" fill="#DC2626"/></svg></div>
-      <span class="n-logo-name">Softwaller <span>Technologies</span></span>
+      <img src="assets/softwaller-technologies-logo.png" alt="Softwaller Technologies - Custom CRM, ERP & Business Software" height="42">
     </a>
     <ul class="n-links" role="list">
       <li><a onclick="goto('home')" id="nl-home" class="active">Home</a></li>
@@ -981,7 +980,7 @@ summary.fc-head{
           <span class="svc-tag">Follow-up Alerts</span><span class="svc-tag">WhatsApp Integration</span>
           <span class="svc-tag">Sales Reports</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/crm-software.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal d1" aria-labelledby="svc-erp">
@@ -993,7 +992,7 @@ summary.fc-head{
           <span class="svc-tag">Production Planning</span><span class="svc-tag">Multi-Branch</span>
           <span class="svc-tag">MIS Reports</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/erp-solutions.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal d2" aria-labelledby="svc-ims">
@@ -1005,7 +1004,7 @@ summary.fc-head{
           <span class="svc-tag">Auto Reorder</span><span class="svc-tag">Batch Tracking</span>
           <span class="svc-tag">Supplier Reports</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/inventory-management.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal" aria-labelledby="svc-hr">
@@ -1017,7 +1016,7 @@ summary.fc-head{
           <span class="svc-tag">Payroll Processing</span><span class="svc-tag">ESI / PF / TDS</span>
           <span class="svc-tag">Payslip Generation</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/hr-payroll.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal d1" aria-labelledby="svc-billing">
@@ -1029,7 +1028,7 @@ summary.fc-head{
           <span class="svc-tag">E-Way Bill</span><span class="svc-tag">Bank Reconciliation</span>
           <span class="svc-tag">GSTR Export</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/gst-billing-accounting.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal d2" aria-labelledby="svc-custom">
@@ -1041,7 +1040,7 @@ summary.fc-head{
           <span class="svc-tag">Customer Portals</span><span class="svc-tag">API Integrations</span>
           <span class="svc-tag">Business Dashboards</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/custom-business-apps.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal" aria-labelledby="svc-ecom">
@@ -1053,7 +1052,7 @@ summary.fc-head{
           <span class="svc-tag">Order Management</span><span class="svc-tag">Shipping Integration</span>
           <span class="svc-tag">Customer Portal</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/e-commerce.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal d1" aria-labelledby="svc-field">
@@ -1065,7 +1064,7 @@ summary.fc-head{
           <span class="svc-tag">Expense Claims</span><span class="svc-tag">Daily Reports</span>
           <span class="svc-tag">Offline Mode</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/field-service.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal d2" aria-labelledby="svc-whatsapp">
@@ -1077,7 +1076,7 @@ summary.fc-head{
           <span class="svc-tag">Bulk Messaging</span><span class="svc-tag">Order Notifications</span>
           <span class="svc-tag">Payment Reminders</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/whatsapp-automation.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal" aria-labelledby="svc-project">
@@ -1089,7 +1088,7 @@ summary.fc-head{
           <span class="svc-tag">Time Tracking</span><span class="svc-tag">Task Dependencies</span>
           <span class="svc-tag">Team Collaboration</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/project-management.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal d1" aria-labelledby="svc-helpdesk">
@@ -1101,7 +1100,7 @@ summary.fc-head{
           <span class="svc-tag">Auto Assignment</span><span class="svc-tag">Knowledge Base</span>
           <span class="svc-tag">CSAT Surveys</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/helpdesk.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal d2" aria-labelledby="svc-dms">
@@ -1113,7 +1112,7 @@ summary.fc-head{
           <span class="svc-tag">Version Control</span><span class="svc-tag">Access Permissions</span>
           <span class="svc-tag">Audit Trail</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/document-management.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal" aria-labelledby="svc-wms">
@@ -1125,7 +1124,7 @@ summary.fc-head{
           <span class="svc-tag">Barcode Scanning</span><span class="svc-tag">3PL Integration</span>
           <span class="svc-tag">Returns Processing</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/warehouse-management.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal d1" aria-labelledby="svc-fleet">
@@ -1137,7 +1136,7 @@ summary.fc-head{
           <span class="svc-tag">Driver Management</span><span class="svc-tag">Fuel Tracking</span>
           <span class="svc-tag">Proof of Delivery</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/fleet-logistics.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal d2" aria-labelledby="svc-booking">
@@ -1149,7 +1148,7 @@ summary.fc-head{
           <span class="svc-tag">SMS / Email Reminders</span><span class="svc-tag">Payments</span>
           <span class="svc-tag">No-Show Tracking</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/appointment-booking.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal" aria-labelledby="svc-bi">
@@ -1161,7 +1160,7 @@ summary.fc-head{
           <span class="svc-tag">Trend Analysis</span><span class="svc-tag">Excel / PDF Export</span>
           <span class="svc-tag">Scheduled Reports</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/business-intelligence.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal d1" aria-labelledby="svc-school">
@@ -1173,7 +1172,7 @@ summary.fc-head{
           <span class="svc-tag">Attendance</span><span class="svc-tag">Exam &amp; Report Cards</span>
           <span class="svc-tag">Parent Portal</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/school-management.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
       <article class="svc-card reveal d2" aria-labelledby="svc-realestate">
@@ -1185,7 +1184,7 @@ summary.fc-head{
           <span class="svc-tag">Rent Collection</span><span class="svc-tag">Maintenance Requests</span>
           <span class="svc-tag">Owner Portal</span>
         </div>
-        <div class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</div>
+        <a href="products/real-estate.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Learn more</a>
       </article>
 
     </div>
@@ -1479,10 +1478,10 @@ summary.fc-head{
         <p class="tc-text">Softwaller built our complete ERP — purchase, production, inventory, billing and accounts — all integrated. Before this we had 5 separate Excel files. Now everything is in one place and my team saves at least 15 hours a week.</p>
         <div class="tc-sep"></div>
         <div class="tc-author">
-          <div class="tc-av" style="background:#1557FF">RK</div>
+          <div class="tc-av" style="background:#1557FF">MD</div>
           <div>
-            <div class="tc-name">Ramesh Kumar</div>
-            <div class="tc-co">Managing Director, RK Industries, Coimbatore</div>
+            <div class="tc-name">Managing Director</div>
+            <div class="tc-co">Manufacturing Company, Coimbatore</div>
             <div class="tc-stars">★★★★★</div>
           </div>
         </div>
@@ -1492,10 +1491,10 @@ summary.fc-head{
         <p class="tc-text">Our sales team was losing leads because there was no follow-up system. Softwaller built a CRM that pulls leads from our website and WhatsApp automatically. Our conversion rate went up 32% in 3 months.</p>
         <div class="tc-sep"></div>
         <div class="tc-author">
-          <div class="tc-av" style="background:#7C3AED">PS</div>
+          <div class="tc-av" style="background:#7C3AED">VP</div>
           <div>
-            <div class="tc-name">Priya Sundaram</div>
-            <div class="tc-co">VP Sales, PillaiTech Pvt Ltd, Chennai</div>
+            <div class="tc-name">VP Sales</div>
+            <div class="tc-co">Technology Company, Chennai</div>
             <div class="tc-stars">★★★★★</div>
           </div>
         </div>
@@ -1505,10 +1504,10 @@ summary.fc-head{
         <p class="tc-text">We have 3 warehouses in different cities. Stock mismatch was a constant problem. Softwaller built an IMS with barcode scanning and now stock discrepancies are essentially zero. The ROI was visible within 60 days.</p>
         <div class="tc-sep"></div>
         <div class="tc-author">
-          <div class="tc-av" style="background:#059669">VM</div>
+          <div class="tc-av" style="background:#059669">OD</div>
           <div>
-            <div class="tc-name">Vijay Murugan</div>
-            <div class="tc-co">Operations Director, VMS Exports, Tirupur</div>
+            <div class="tc-name">Operations Director</div>
+            <div class="tc-co">Export Company, Tirupur</div>
             <div class="tc-stars">★★★★★</div>
           </div>
         </div>
@@ -1788,8 +1787,7 @@ summary.fc-head{
       <div class="footer-grid">
         <div class="footer-brand-mob">
           <div class="fb-logo">
-            <div class="fb-lm"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="44" height="44" rx="11" fill="#070D1A" stroke="#2563EB" stroke-width="1.5"/><line x1="24" y1="10" x2="24" y2="38" stroke="#64748B" stroke-width="1.2"/><line x1="10" y1="24" x2="38" y2="24" stroke="#64748B" stroke-width="1.2"/><rect x="8" y="8" width="13.5" height="13.5" rx="3.5" fill="#2563EB"/><rect x="26.5" y="8" width="13.5" height="13.5" rx="3.5" fill="#0891B2"/><rect x="8" y="26.5" width="13.5" height="13.5" rx="3.5" fill="#059669"/><rect x="26.5" y="26.5" width="13.5" height="13.5" rx="3.5" fill="#D97706"/><circle cx="24" cy="24" r="2.8" fill="#DC2626"/></svg></div>
-            <span class="fb-name">Softwaller Technologies</span>
+            <img src="assets/softwaller-technologies-logo.png" alt="Softwaller Technologies - Custom CRM, ERP & Business Software" height="36" style="filter:brightness(0) invert(1)">
           </div>
           <p class="fb-desc">Softwaller Technologies Private Limited — building intelligent business software for growing enterprises since 2024. CRM, ERP, IMS, HR &amp; Payroll, GST Billing and custom solutions.</p>
           <div class="fb-socials">
