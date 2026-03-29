@@ -62,18 +62,26 @@ function closeMenu() {
   }
 }
 
-/* ── Active nav (IntersectionObserver) ── */
+/* ── Active nav (scroll-based, RAF-throttled) ── */
 var sects = ['home', 'about', 'services', 'showcase', 'why', 'process', 'testimonials', 'faq', 'contact'];
-var navIO = new IntersectionObserver(function (entries) {
-  entries.forEach(function (e) {
-    if (e.isIntersecting) {
-      sects.forEach(function (s) { var a = document.getElementById('nl-' + s); if (a) a.classList.remove('active'); });
-      var a = document.getElementById('nl-' + e.target.id);
-      if (a) a.classList.add('active');
-    }
+var navTicking = false;
+function updateActiveNav() {
+  var scrollY = window.scrollY + 200;
+  var current = '';
+  sects.forEach(function (s) {
+    var el = document.getElementById(s);
+    if (el && el.offsetTop <= scrollY) current = s;
   });
-}, { threshold: 0.3 });
-sects.forEach(function (s) { var el = document.getElementById(s); if (el) navIO.observe(el); });
+  sects.forEach(function (s) {
+    var a = document.getElementById('nl-' + s);
+    if (a) a.classList.toggle('active', s === current);
+  });
+  navTicking = false;
+}
+window.addEventListener('scroll', function () {
+  if (!navTicking) { navTicking = true; requestAnimationFrame(updateActiveNav); }
+});
+updateActiveNav();
 
 /* ── Scroll reveal — with bulletproof fallback ── */
 function showAllReveal() { document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); }); }
@@ -161,9 +169,12 @@ if (form) {
         phoneInvalid = !/^(\+91)?[6-9]\d{9}$/.test(phone);
       }
       if (empty || emailInvalid || phoneInvalid) {
-        field.classList.add('error'); valid = false;
+        valid = false;
+        var cselWrap = field.type === 'hidden' ? document.getElementById('csel-' + field.id) : null;
+        if (cselWrap) { cselWrap.classList.add('error'); } else { field.classList.add('error'); }
       } else {
-        field.classList.remove('error');
+        var cselWrapOk = field.type === 'hidden' ? document.getElementById('csel-' + field.id) : null;
+        if (cselWrapOk) { cselWrapOk.classList.remove('error'); } else { field.classList.remove('error'); }
       }
     });
     if (!valid) return;
@@ -237,6 +248,7 @@ function initCookieConsent() {
   var consent = localStorage.getItem('sw_cookie');
   if (consent === 'accepted') {
     loadGA4();
+    loadClarity();
   } else if (consent === 'rejected') {
     /* Don't load GA4, don't show banner */
   } else {
@@ -251,6 +263,7 @@ function acceptCookie() {
   localStorage.setItem('sw_cookie', 'accepted');
   closeCookie();
   loadGA4();
+  loadClarity();
   trackEvent('cookie_consent', 'compliance', 'accepted');
 }
 function rejectCookie() {
@@ -274,6 +287,12 @@ function loadGA4() {
   }
   gtag('js', new Date());
   gtag('config', 'G-EXWE1WLTVE');
+}
+
+/* ── Microsoft Clarity — heatmaps & session recordings ── */
+function loadClarity() {
+  if (window.clarity) return;
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","w3ftuv8jjc");
 }
 
 /* ── Page loader — dismiss on load (not hardcoded timeout) ── */
@@ -422,6 +441,73 @@ document.addEventListener('click', function (e) {
   }
 });
 
+/* ── Custom Select dropdowns (accessible) ── */
+(function () {
+  document.querySelectorAll('.csel').forEach(function (csel) {
+    var trigger = csel.querySelector('.csel-trigger');
+    var valSpan = csel.querySelector('.csel-value');
+    var optionsWrap = csel.querySelector('.csel-options');
+    var hiddenId = csel.id.replace('csel-', '');
+    var hidden = document.getElementById(hiddenId);
+    var opts = csel.querySelectorAll('.csel-opt');
+    valSpan.classList.add('placeholder');
+
+    /* A11y attributes */
+    trigger.setAttribute('role', 'combobox');
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.setAttribute('aria-haspopup', 'listbox');
+    trigger.setAttribute('tabindex', '0');
+    if (optionsWrap) optionsWrap.setAttribute('role', 'listbox');
+    opts.forEach(function (opt) { opt.setAttribute('role', 'option'); });
+
+    function openDropdown() {
+      document.querySelectorAll('.csel.open').forEach(function (other) { if (other !== csel) { other.classList.remove('open'); other.querySelector('.csel-trigger').setAttribute('aria-expanded', 'false'); } });
+      csel.classList.add('open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+    function closeDropdown() {
+      csel.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    function selectOpt(opt) {
+      opts.forEach(function (o) { o.classList.remove('selected'); o.removeAttribute('aria-selected'); });
+      opt.classList.add('selected');
+      opt.setAttribute('aria-selected', 'true');
+      valSpan.textContent = opt.textContent;
+      valSpan.classList.remove('placeholder');
+      if (hidden) hidden.value = opt.dataset.val;
+      csel.classList.remove('error');
+      closeDropdown();
+      trigger.focus();
+    }
+
+    trigger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (csel.classList.contains('open')) closeDropdown(); else openDropdown();
+    });
+
+    trigger.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (csel.classList.contains('open')) closeDropdown(); else openDropdown(); }
+      if (e.key === 'Escape') { closeDropdown(); }
+      if (e.key === 'ArrowDown') { e.preventDefault(); openDropdown(); var first = csel.querySelector('.csel-opt'); if (first) first.focus(); }
+    });
+
+    opts.forEach(function (opt, idx) {
+      opt.setAttribute('tabindex', '-1');
+      opt.addEventListener('click', function (e) { e.stopPropagation(); selectOpt(opt); });
+      opt.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectOpt(opt); }
+        if (e.key === 'Escape') { closeDropdown(); trigger.focus(); }
+        if (e.key === 'ArrowDown') { e.preventDefault(); var next = opts[idx + 1]; if (next) next.focus(); }
+        if (e.key === 'ArrowUp') { e.preventDefault(); if (idx > 0) opts[idx - 1].focus(); else trigger.focus(); }
+      });
+    });
+  });
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.csel.open').forEach(function (c) { c.classList.remove('open'); c.querySelector('.csel-trigger').setAttribute('aria-expanded', 'false'); });
+  });
+})();
+
 /* ── Multi-step form ── */
 function formNextStep() {
   var step1 = document.getElementById('form-step-1');
@@ -497,3 +583,37 @@ if (window.innerWidth > 768) {
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') closeExitPopup();
 });
+
+/* ── Newsletter form (Brevo) ── */
+var nlForm = document.getElementById('nl-subscribe');
+if (nlForm) {
+  nlForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var emailInput = document.getElementById('nl-email');
+    var email = emailInput ? emailInput.value.trim() : '';
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      if (emailInput) emailInput.classList.add('nl-error');
+      return;
+    }
+    emailInput.classList.remove('nl-error');
+    var btn = document.getElementById('nl-submit-btn');
+    if (btn) { btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Subscribing...'; }
+    var action = nlForm.action;
+    fetch(action, { method: 'POST', body: new FormData(nlForm), headers: { Accept: 'application/json' } })
+      .then(function (res) { return res.json(); })
+      .then(function () {
+        nlForm.style.display = 'none';
+        var success = document.getElementById('nl-success');
+        if (success) success.classList.add('show');
+        trackEvent('newsletter', 'subscribe', 'success');
+      })
+      .catch(function () {
+        if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Subscribe'; }
+        var errMsg = document.getElementById('nl-error-msg');
+        if (errMsg) errMsg.classList.add('show');
+        trackEvent('newsletter', 'subscribe', 'error');
+      });
+  });
+  var nlEmail = document.getElementById('nl-email');
+  if (nlEmail) nlEmail.addEventListener('input', function () { nlEmail.classList.remove('nl-error'); });
+}

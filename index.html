@@ -61,6 +61,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <link rel="stylesheet" href="assets/shared.css">
 <link rel="stylesheet" href="assets/home.css">
@@ -640,10 +641,10 @@
       <h2 class="sec-h" id="showcase-heading">Typical Impact on<br><em>Your Business</em></h2>
       <p class="sec-p" style="max-width:600px;margin:0 auto">Here's what businesses like yours can expect — measurable before &amp; after impact across key metrics.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+    <div class="sc-grid">
 
-      <div class="reveal" style="background:var(--white);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;transition:all .25s;cursor:default" onmouseover="this.style.boxShadow='var(--sh-lg)';this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
-        <div style="background:linear-gradient(135deg,var(--blue),#818CF8);padding:20px 24px;color:#fff">
+      <div class="sc-card reveal">
+        <div class="sc-header" style="background:linear-gradient(135deg,var(--blue),#818CF8)">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.7;margin-bottom:6px">Manufacturing ERP</div>
           <div style="font-size:18px;font-weight:700">Manufacturing Company</div>
           <div style="font-size:12px;opacity:.6;margin-top:4px">Production &bull; 120+ Employees</div>
@@ -651,15 +652,15 @@
         <div style="padding:24px">
           <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Before &rarr; After</div>
           <div style="display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Order Processing</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">4 hours</span> &rarr; <span style="color:var(--green)">18 mins</span></span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Stock Accuracy</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">72%</span> &rarr; <span style="color:var(--green)">99.2%</span></span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Weekly Hours Saved</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">0</span> &rarr; <span style="color:var(--green)">22 hrs</span></span>
             </div>
@@ -671,8 +672,8 @@
         </div>
       </div>
 
-      <div class="reveal d1" style="background:var(--white);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;transition:all .25s;cursor:default" onmouseover="this.style.boxShadow='var(--sh-lg)';this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
-        <div style="background:linear-gradient(135deg,var(--green),#34D399);padding:20px 24px;color:#fff">
+      <div class="sc-card reveal">
+        <div class="sc-header" style="background:linear-gradient(135deg,var(--green),#34D399)">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.7;margin-bottom:6px">CRM + WhatsApp</div>
           <div style="font-size:18px;font-weight:700">IT Services Company</div>
           <div style="font-size:12px;opacity:.6;margin-top:4px">B2B Services &bull; 45 Employees</div>
@@ -680,15 +681,15 @@
         <div style="padding:24px">
           <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Before &rarr; After</div>
           <div style="display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Lead Conversion</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">8%</span> &rarr; <span style="color:var(--green)">32%</span></span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Follow-up Missed</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">40%</span> &rarr; <span style="color:var(--green)">2%</span></span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Revenue Growth</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">Flat</span> &rarr; <span style="color:var(--green)">+42% in 6mo</span></span>
             </div>
@@ -700,8 +701,8 @@
         </div>
       </div>
 
-      <div class="reveal d2" style="background:var(--white);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;transition:all .25s;cursor:default" onmouseover="this.style.boxShadow='var(--sh-lg)';this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
-        <div style="background:linear-gradient(135deg,var(--orange),#F59E0B);padding:20px 24px;color:#fff">
+      <div class="sc-card reveal">
+        <div class="sc-header" style="background:linear-gradient(135deg,var(--orange),#F59E0B)">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.7;margin-bottom:6px">Inventory + Barcode</div>
           <div style="font-size:18px;font-weight:700">Export Trading Firm</div>
           <div style="font-size:12px;opacity:.6;margin-top:4px">Textile Export &bull; 3 Warehouses</div>
@@ -709,15 +710,15 @@
         <div style="padding:24px">
           <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Before &rarr; After</div>
           <div style="display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Stock Discrepancy</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">15-20%</span> &rarr; <span style="color:var(--green)">&lt;0.5%</span></span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Stocktake Time</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">3 days</span> &rarr; <span style="color:var(--green)">4 hours</span></span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">ROI Achieved</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">12+ months</span> &rarr; <span style="color:var(--green)">60 days</span></span>
             </div>
@@ -729,8 +730,8 @@
         </div>
       </div>
 
-      <div class="reveal" style="background:var(--white);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;transition:all .25s;cursor:default" onmouseover="this.style.boxShadow='var(--sh-lg)';this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
-        <div style="background:linear-gradient(135deg,#7C3AED,#A78BFA);padding:20px 24px;color:#fff">
+      <div class="sc-card reveal">
+        <div class="sc-header" style="background:linear-gradient(135deg,#7C3AED,#A78BFA)">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.7;margin-bottom:6px">HR &amp; Payroll</div>
           <div style="font-size:18px;font-weight:700">Wholesale Trading Company</div>
           <div style="font-size:12px;opacity:.6;margin-top:4px">Distribution &bull; 85 Employees</div>
@@ -738,15 +739,15 @@
         <div style="padding:24px">
           <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Before &rarr; After</div>
           <div style="display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Payroll Processing</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">5 days</span> &rarr; <span style="color:var(--green)">2 hours</span></span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Attendance Errors</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">30+/month</span> &rarr; <span style="color:var(--green)">0</span></span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Compliance Penalties</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">&#8377;2L/year</span> &rarr; <span style="color:var(--green)">&#8377;0</span></span>
             </div>
@@ -758,8 +759,8 @@
         </div>
       </div>
 
-      <div class="reveal d1" style="background:var(--white);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;transition:all .25s;cursor:default" onmouseover="this.style.boxShadow='var(--sh-lg)';this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
-        <div style="background:linear-gradient(135deg,#DB2777,#F472B6);padding:20px 24px;color:#fff">
+      <div class="sc-card reveal">
+        <div class="sc-header" style="background:linear-gradient(135deg,#DB2777,#F472B6)">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.7;margin-bottom:6px">E-Commerce + GST Billing</div>
           <div style="font-size:18px;font-weight:700">Multi-Store Retail Chain</div>
           <div style="font-size:12px;opacity:.6;margin-top:4px">Retail &bull; 6 Stores &bull; Online</div>
@@ -767,15 +768,15 @@
         <div style="padding:24px">
           <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Before &rarr; After</div>
           <div style="display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Online Revenue</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">&#8377;0</span> &rarr; <span style="color:var(--green)">&#8377;12L/month</span></span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Invoice Generation</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">Manual</span> &rarr; <span style="color:var(--green)">Auto GST</span></span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">GSTR Filing Time</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">3 days</span> &rarr; <span style="color:var(--green)">1 click</span></span>
             </div>
@@ -787,8 +788,8 @@
         </div>
       </div>
 
-      <div class="reveal d2" style="background:var(--white);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;transition:all .25s;cursor:default" onmouseover="this.style.boxShadow='var(--sh-lg)';this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
-        <div style="background:linear-gradient(135deg,#0891B2,#22D3EE);padding:20px 24px;color:#fff">
+      <div class="sc-card reveal">
+        <div class="sc-header" style="background:linear-gradient(135deg,#0891B2,#22D3EE)">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.7;margin-bottom:6px">Field Service + Fleet</div>
           <div style="font-size:18px;font-weight:700">Industrial Equipment Company</div>
           <div style="font-size:12px;opacity:.6;margin-top:4px">Field Operations &bull; 200+ Staff</div>
@@ -796,15 +797,15 @@
         <div style="padding:24px">
           <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Before &rarr; After</div>
           <div style="display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Field Visits Tracked</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">0%</span> &rarr; <span style="color:var(--green)">100% GPS</span></span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Service Response</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">48 hrs</span> &rarr; <span style="color:var(--green)">4 hrs</span></span>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
               <span style="font-size:13px;color:var(--muted)">Fuel Cost Saved</span>
               <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">Untracked</span> &rarr; <span style="color:var(--green)">28% saved</span></span>
             </div>
@@ -873,56 +874,52 @@
       <h2 class="sec-h" id="tech-heading">Technologies We <em>Work With</em></h2>
       <p class="sec-p" style="margin-bottom:48px">We use proven, enterprise-grade technologies to build software that scales reliably and performs under pressure.</p>
     </div>
-    <div class="tech-grid reveal d1">
-      <div class="tech-item">
-        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 456 528" width="30" height="34"><path d="M0 264L228 0l228 264-228 264L0 264z" fill="#512BD4"/><path d="M227.8 132l-95.8 132 95.8 132 95.8-132-95.8-132z" fill="#fff"/><path d="M323.6 264l-47.9-66-47.9 66 47.9 66 47.9-66z" fill="#512BD4"/></svg></div>
-        <div class="tech-name">.NET / C#</div>
-        <div class="tech-desc">Backend & API</div>
+    <!-- Row 1 — scrolls left -->
+    <div class="marquee-row reveal d1">
+      <div class="marquee-track" style="--speed:30s">
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-csharp-plain colored" style="font-size:32px"></i></div><div class="tech-name">C#</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-dot-net-plain colored" style="font-size:32px"></i></div><div class="tech-name">ASP.NET</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-blazor-plain colored" style="font-size:32px"></i></div><div class="tech-name">Blazor</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-dotnetcore-plain colored" style="font-size:32px"></i></div><div class="tech-name">.NET MAUI</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-microsoftsqlserver-plain colored" style="font-size:32px"></i></div><div class="tech-name">SQL Server</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-azure-plain colored" style="font-size:32px"></i></div><div class="tech-name">Azure</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="2" width="6" height="20" rx="1.5" fill="#F2C811"/><rect x="9" y="6" width="6" height="16" rx="1.5" fill="#F2C811" opacity=".75"/><rect x="4" y="10" width="6" height="12" rx="1.5" fill="#F2C811" opacity=".5"/></svg></div><div class="tech-name">Power BI</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-react-original colored" style="font-size:32px"></i></div><div class="tech-name">React</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-nextjs-plain" style="font-size:32px;color:#000"></i></div><div class="tech-name">Next.js</div></div>
+        <!-- duplicate set for seamless loop -->
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-csharp-plain colored" style="font-size:32px"></i></div><div class="tech-name">C#</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-dot-net-plain colored" style="font-size:32px"></i></div><div class="tech-name">ASP.NET</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-blazor-plain colored" style="font-size:32px"></i></div><div class="tech-name">Blazor</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-dotnetcore-plain colored" style="font-size:32px"></i></div><div class="tech-name">.NET MAUI</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-microsoftsqlserver-plain colored" style="font-size:32px"></i></div><div class="tech-name">SQL Server</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-azure-plain colored" style="font-size:32px"></i></div><div class="tech-name">Azure</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="2" width="6" height="20" rx="1.5" fill="#F2C811"/><rect x="9" y="6" width="6" height="16" rx="1.5" fill="#F2C811" opacity=".75"/><rect x="4" y="10" width="6" height="12" rx="1.5" fill="#F2C811" opacity=".5"/></svg></div><div class="tech-name">Power BI</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-react-original colored" style="font-size:32px"></i></div><div class="tech-name">React</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-nextjs-plain" style="font-size:32px;color:#000"></i></div><div class="tech-name">Next.js</div></div>
       </div>
-      <div class="tech-item">
-        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 326" width="26" height="32"><path d="M160 0c1 0 11 2 14 13l17 59c3 10-2 20-12 24l-4 1-50 14c-10 3-20-3-23-13L86 40c-3-10 3-21 13-24l5-1L160 0z" fill="#512BD4"/><path d="M210 120c9 4 14 14 11 24l-17 59c-3 10-13 16-23 14l-5-2-49-22c-9-4-14-14-11-24l17-59c3-10 13-16 23-14l5 2 49 22z" fill="#512BD4"/><path d="M128 224c10-1 20 6 22 16l10 60c2 10-5 21-16 23h-5l-53 3c-11 1-20-7-22-17l-10-60c-1-10 5-20 16-22h5l53-3z" fill="#512BD4"/></svg></div>
-        <div class="tech-name">Blazor</div>
-        <div class="tech-desc">Web Apps</div>
-      </div>
-      <div class="tech-item">
-        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 256" width="30" height="30"><rect width="256" height="256" rx="28" fill="#CC2927"/><path d="M80 80h40v96H80zm56 0h40v96h-40z" fill="#fff"/><path d="M80 116h96v24H80z" fill="#fff"/></svg></div>
-        <div class="tech-name">SQL Server</div>
-        <div class="tech-desc">Database</div>
-      </div>
-      <div class="tech-item">
-        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 161 129" width="32" height="26"><path d="M57 0L0 56l21 23L57 0z" fill="#0089D6"/><path d="M57 0l40 79H57l-36 50h140L57 0z" fill="#0089D6"/></svg></div>
-        <div class="tech-name">Azure</div>
-        <div class="tech-desc">Cloud Hosting</div>
-      </div>
-      <div class="tech-item">
-        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 256" width="30" height="30"><circle cx="128" cy="128" r="128" fill="#512BD4"/><path d="M72 80h32v96H72zm40 0h32v96h-32zm40 0h32v96h-32z" fill="#fff"/><path d="M72 116h112v24H72z" fill="#fff"/></svg></div>
-        <div class="tech-name">.NET MAUI</div>
-        <div class="tech-desc">Mobile Apps</div>
-      </div>
-      <div class="tech-item">
-        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 256" width="30" height="30"><rect width="256" height="256" fill="#F7DF1E"/><path d="M67 214l15-9c3 5 5 10 11 10 6 0 9-2 9-11v-60h18v60c0 18-10 26-26 26-14 0-22-7-27-16m64-2l15-9c4 7 9 12 18 12 7 0 12-4 12-9 0-6-5-8-13-12l-4-2c-13-6-22-13-22-27 0-14 10-24 26-24 11 0 20 4 25 14l-14 9c-3-5-6-7-11-7s-9 3-9 7c0 5 3 7 11 11l5 2c16 7 24 13 24 29 0 16-13 25-30 25-17 0-28-8-33-19" fill="#000"/></svg></div>
-        <div class="tech-name">JavaScript</div>
-        <div class="tech-desc">Frontend</div>
-      </div>
-      <div class="tech-item">
-        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 292" width="26" height="30"><path d="M24 0l21 236 83 24 83-24L232 0H24z" fill="#E34F26"/><path d="M128 267l67-19 18-197H128v216z" fill="#EF652A"/><path d="M128 109h-40l-3-30h43V50H56l1 10 8 90h63v-41z" fill="#EBEBEB"/><path d="M128 109v30h37l-4 40-33 9v34l63-18 1-7 7-77 1-11H128z" fill="#fff"/></svg></div>
-        <div class="tech-name">HTML / CSS</div>
-        <div class="tech-desc">UI Design</div>
-      </div>
-      <div class="tech-item">
-        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 256" width="30" height="30"><rect width="256" height="256" rx="28" fill="#0089D6"/><path d="M56 96h20v64H56zm42-24h20v88H98zm42-16h20v104h-20zm42 24h20v64h-20z" fill="#fff" opacity=".9"/><path d="M48 176h160v8H48z" fill="#fff"/></svg></div>
-        <div class="tech-name">REST APIs</div>
-        <div class="tech-desc">Integrations</div>
-      </div>
-      <div class="tech-item">
-        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 256" width="30" height="30"><path d="M251 119L137 5c-5-5-12-5-17 0l-24 24 30 30c7-2 15-1 20 5 6 6 7 14 4 21l29 29c7-3 15-1 21 4 8 8 8 21 0 29s-21 8-29 0c-6-6-8-15-4-22l-27-27v71c2 1 4 2 5 4 8 8 8 21 0 29-8 8-21 8-29 0-8-8-8-21 0-29 2-2 5-4 7-5V116c-2-1-5-3-7-5-6-6-7-15-4-22L83 59 5 137c-5 5-5 12 0 17l114 114c5 5 12 5 17 0L251 136c5-5 5-12 0-17z" fill="#F05033"/></svg></div>
-        <div class="tech-name">Git / DevOps</div>
-        <div class="tech-desc">CI/CD</div>
-      </div>
-      <div class="tech-item">
-        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 341" width="22" height="30"><rect x="147" y="0" width="75" height="341" rx="10" fill="#F2C811"/><rect x="74" y="60" width="75" height="281" rx="10" fill="#F2C811" opacity=".7"/><rect x="0" y="120" width="75" height="221" rx="10" fill="#F2C811" opacity=".5"/></svg></div>
-        <div class="tech-name">Power BI</div>
-        <div class="tech-desc">Analytics</div>
+    </div>
+    <!-- Row 2 — scrolls right (reverse) -->
+    <div class="marquee-row reveal d2">
+      <div class="marquee-track marquee-reverse" style="--speed:35s">
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-angularjs-plain colored" style="font-size:32px"></i></div><div class="tech-name">Angular</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-javascript-plain colored" style="font-size:32px"></i></div><div class="tech-name">JavaScript</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-typescript-plain colored" style="font-size:32px"></i></div><div class="tech-name">TypeScript</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-html5-plain colored" style="font-size:32px"></i></div><div class="tech-name">HTML / CSS</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-git-plain colored" style="font-size:32px"></i></div><div class="tech-name">Git</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-azuredevops-plain colored" style="font-size:32px"></i></div><div class="tech-name">Azure DevOps</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-fastapi-plain colored" style="font-size:32px"></i></div><div class="tech-name">REST APIs</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-docker-plain colored" style="font-size:32px"></i></div><div class="tech-name">Docker</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-redis-plain colored" style="font-size:32px"></i></div><div class="tech-name">Redis</div></div>
+        <!-- duplicate set for seamless loop -->
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-angularjs-plain colored" style="font-size:32px"></i></div><div class="tech-name">Angular</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-javascript-plain colored" style="font-size:32px"></i></div><div class="tech-name">JavaScript</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-typescript-plain colored" style="font-size:32px"></i></div><div class="tech-name">TypeScript</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-html5-plain colored" style="font-size:32px"></i></div><div class="tech-name">HTML / CSS</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-git-plain colored" style="font-size:32px"></i></div><div class="tech-name">Git</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-azuredevops-plain colored" style="font-size:32px"></i></div><div class="tech-name">Azure DevOps</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-fastapi-plain colored" style="font-size:32px"></i></div><div class="tech-name">REST APIs</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-docker-plain colored" style="font-size:32px"></i></div><div class="tech-name">Docker</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-redis-plain colored" style="font-size:32px"></i></div><div class="tech-name">Redis</div></div>
       </div>
     </div>
   </div>
@@ -1118,6 +1115,44 @@
 </section>
 
 <!-- ══════════════════════════════════════
+     NEWSLETTER
+══════════════════════════════════════ -->
+<section id="newsletter" class="sec-pad nl-section" aria-labelledby="nl-heading">
+  <div class="container">
+    <div class="nl-inner">
+      <div class="reveal">
+        <div class="sec-tag" style="background:rgba(21,87,255,.25);border-color:rgba(21,87,255,.4);color:#93BBFF">Stay Updated</div>
+        <h2 class="nl-h" id="nl-heading">Get Business Software<br>Insights <em>Every Week</em></h2>
+        <p class="nl-p">Practical tips on CRM, ERP, GST compliance, and business automation — delivered free to your inbox. No spam, unsubscribe anytime.</p>
+      </div>
+      <div class="reveal d1">
+        <div class="nl-form" id="nl-form-wrap">
+          <div class="nl-form-title">Subscribe to Our Newsletter</div>
+          <div class="nl-form-sub">Join 500+ business owners who read our weekly insights.</div>
+          <form id="nl-subscribe" action="https://eb65560b.sibforms.com/serve/MUIFACP2rFDETv2p-mUPqyHo3glJtZhcD0GG3f63ikM49xDLRJyQdEWUq0PBoF0ksGw1g_N182HgQUpPssTKQKbO_o-YEB7N347_FS22M6QudGfXoY8QkWZ93gPvVtu8RVTgz--uNpErO1Xd4RccAsEDFLg3mci83OfHVyaJWN0sybuGWiTH50Rmf6Jh_BRVN1HTSAYIwS2z6SKAUw==" method="POST" novalidate>
+            <input type="hidden" name="locale" value="en">
+            <div class="nl-row">
+              <input type="email" name="EMAIL" class="nl-input" id="nl-email" placeholder="your@email.com" required aria-label="Email address">
+              <button type="submit" class="nl-btn" id="nl-submit-btn"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+            </div>
+            <p class="nl-note"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime. We respect your privacy.</p>
+          </form>
+          <div class="nl-success" id="nl-success">
+            <i class="fa-solid fa-circle-check"></i>
+            <div class="nl-success-text">You're subscribed!</div>
+            <div class="nl-success-sub">Check your inbox for a confirmation email.</div>
+          </div>
+          <div class="nl-error-msg" id="nl-error-msg">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>Something went wrong. Please try again later.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
      CTA BAND
 ══════════════════════════════════════ -->
 <section id="cta-band" aria-label="Call to action">
@@ -1238,41 +1273,47 @@
               </div>
               <div class="form-row">
                 <div class="form-group">
-                  <label class="form-label" for="service">Service Needed<span class="req">*</span></label>
-                  <select class="form-ctrl" id="service" name="service" required aria-describedby="service-err">
-                    <option value="">Select a service...</option>
-                    <option>CRM Software</option>
-                    <option>ERP Solutions</option>
-                    <option>Inventory Management</option>
-                    <option>HR &amp; Payroll</option>
-                    <option>GST Billing &amp; Accounting</option>
-                    <option>E-Commerce &amp; Online Store</option>
-                    <option>Field Service &amp; Sales Force</option>
-                    <option>WhatsApp Business Automation</option>
-                    <option>Project &amp; Task Management</option>
-                    <option>Helpdesk &amp; Ticket Management</option>
-                    <option>Document Management (DMS)</option>
-                    <option>Warehouse Management (WMS)</option>
-                    <option>Fleet &amp; Logistics Management</option>
-                    <option>Appointment &amp; Booking System</option>
-                    <option>Business Intelligence &amp; Dashboards</option>
-                    <option>School &amp; Institute Management</option>
-                    <option>Real Estate &amp; Property Management</option>
-                    <option>Custom Business App</option>
-                    <option>Multiple / Not Sure Yet</option>
-                  </select>
+                  <label class="form-label">Service Needed<span class="req">*</span></label>
+                  <input type="hidden" id="service" name="service" required aria-describedby="service-err">
+                  <div class="csel" id="csel-service" data-placeholder="Select a service...">
+                    <div class="csel-trigger"><span class="csel-value">Select a service...</span><svg class="csel-arrow" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <div class="csel-options">
+                      <div class="csel-opt" data-val="CRM Software">CRM Software</div>
+                      <div class="csel-opt" data-val="ERP Solutions">ERP Solutions</div>
+                      <div class="csel-opt" data-val="Inventory Management">Inventory Management</div>
+                      <div class="csel-opt" data-val="HR &amp; Payroll">HR &amp; Payroll</div>
+                      <div class="csel-opt" data-val="GST Billing &amp; Accounting">GST Billing &amp; Accounting</div>
+                      <div class="csel-opt" data-val="E-Commerce &amp; Online Store">E-Commerce &amp; Online Store</div>
+                      <div class="csel-opt" data-val="Field Service &amp; Sales Force">Field Service &amp; Sales Force</div>
+                      <div class="csel-opt" data-val="WhatsApp Business Automation">WhatsApp Business Automation</div>
+                      <div class="csel-opt" data-val="Project &amp; Task Management">Project &amp; Task Management</div>
+                      <div class="csel-opt" data-val="Helpdesk &amp; Ticket Management">Helpdesk &amp; Ticket Management</div>
+                      <div class="csel-opt" data-val="Document Management (DMS)">Document Management (DMS)</div>
+                      <div class="csel-opt" data-val="Warehouse Management (WMS)">Warehouse Management (WMS)</div>
+                      <div class="csel-opt" data-val="Fleet &amp; Logistics Management">Fleet &amp; Logistics Management</div>
+                      <div class="csel-opt" data-val="Appointment &amp; Booking System">Appointment &amp; Booking System</div>
+                      <div class="csel-opt" data-val="Business Intelligence &amp; Dashboards">Business Intelligence &amp; Dashboards</div>
+                      <div class="csel-opt" data-val="School &amp; Institute Management">School &amp; Institute Management</div>
+                      <div class="csel-opt" data-val="Real Estate &amp; Property Management">Real Estate &amp; Property Management</div>
+                      <div class="csel-opt" data-val="Custom Business App">Custom Business App</div>
+                      <div class="csel-opt" data-val="Multiple / Not Sure Yet">Multiple / Not Sure Yet</div>
+                    </div>
+                  </div>
                   <div class="form-err" id="service-err">Please select a service</div>
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="budget">Approx. Budget</label>
-                  <select class="form-ctrl" id="budget" name="budget">
-                    <option value="">Select range...</option>
-                    <option>Under &#8377;1 Lakh</option>
-                    <option>&#8377;1 – 3 Lakhs</option>
-                    <option>&#8377;3 – 6 Lakhs</option>
-                    <option>&#8377;6 Lakhs &amp; above</option>
-                    <option>Not decided yet</option>
-                  </select>
+                  <label class="form-label">Approx. Budget</label>
+                  <input type="hidden" id="budget" name="budget">
+                  <div class="csel" id="csel-budget" data-placeholder="Select range...">
+                    <div class="csel-trigger"><span class="csel-value">Select range...</span><svg class="csel-arrow" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <div class="csel-options">
+                      <div class="csel-opt" data-val="Under ₹1 Lakh">Under ₹1 Lakh</div>
+                      <div class="csel-opt" data-val="₹1 – 3 Lakhs">₹1 – 3 Lakhs</div>
+                      <div class="csel-opt" data-val="₹3 – 6 Lakhs">₹3 – 6 Lakhs</div>
+                      <div class="csel-opt" data-val="₹6 Lakhs &amp; above">₹6 Lakhs &amp; above</div>
+                      <div class="csel-opt" data-val="Not decided yet">Not decided yet</div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="form-group">
@@ -1573,24 +1614,58 @@ s0.parentNode.insertBefore(s1,s0);
       <h2>Main Pages</h2>
       <ul>
         <li><a href="#" data-sitemap-goto="home">Home — Overview, hero, stats</a></li>
-        <li><a href="#" data-sitemap-goto="about">About Us — Company story, team values, milestones</a></li>
-        <li><a href="#" data-sitemap-goto="services">Services — All software solutions we offer</a></li>
-        <li><a href="#" data-sitemap-goto="why">Why Softwaller — Our differentiators</a></li>
+        <li><a href="about.html" onclick="closePolicy('sitemap')">About Us — Company story, team, values, timeline</a></li>
+        <li><a href="#" data-sitemap-goto="services">Services — 18+ software solutions</a></li>
+        <li><a href="case-studies.html" onclick="closePolicy('sitemap')">Case Studies — Real projects with measurable results</a></li>
+        <li><a href="portfolio.html" onclick="closePolicy('sitemap')">Portfolio — Software we've built</a></li>
+        <li><a href="industries.html" onclick="closePolicy('sitemap')">Industries — 6 verticals we serve</a></li>
+        <li><a href="blog/" onclick="closePolicy('sitemap')">Blog — Insights &amp; resources</a></li>
         <li><a href="#" data-sitemap-goto="process">How We Work — Our development process</a></li>
         <li><a href="#" data-sitemap-goto="testimonials">Client Reviews — Testimonials from our clients</a></li>
         <li><a href="#" data-sitemap-goto="faq">FAQ — Frequently asked questions</a></li>
         <li><a href="#" data-sitemap-goto="contact">Contact Us — Enquiry form and contact details</a></li>
       </ul>
-      <h2>Services</h2>
+      <h2>Services (18+ Solutions)</h2>
       <ul>
-        <li>CRM Software — Lead management, sales pipeline, follow-up automation</li>
-        <li>ERP Solutions — Finance, procurement, production, HR integration</li>
-        <li>Inventory Management System — Multi-warehouse, barcode/QR, auto reorder</li>
-        <li>HR &amp; Payroll — Attendance, leave, payroll, ESI/PF compliance</li>
-        <li>GST Billing &amp; Accounting — e-Invoice, e-Way Bill, GSTR exports</li>
-        <li>Custom Business Apps — Web apps, mobile apps, portals, dashboards</li>
+        <li><a href="products/crm-software.html" onclick="closePolicy('sitemap')">CRM Software — Lead management, sales pipeline, follow-up automation</a></li>
+        <li><a href="products/erp-solutions.html" onclick="closePolicy('sitemap')">ERP Solutions — Finance, procurement, production, HR integration</a></li>
+        <li><a href="products/inventory-management.html" onclick="closePolicy('sitemap')">Inventory Management — Multi-warehouse, barcode/QR, auto reorder</a></li>
+        <li><a href="products/hr-payroll.html" onclick="closePolicy('sitemap')">HR &amp; Payroll — Attendance, leave, payroll, ESI/PF compliance</a></li>
+        <li><a href="products/gst-billing-accounting.html" onclick="closePolicy('sitemap')">GST Billing &amp; Accounting — e-Invoice, e-Way Bill, GSTR exports</a></li>
+        <li><a href="products/custom-business-apps.html" onclick="closePolicy('sitemap')">Custom Business Apps — Web apps, mobile apps, portals, dashboards</a></li>
+        <li><a href="products/e-commerce.html" onclick="closePolicy('sitemap')">E-Commerce &amp; Online Store — Product catalog, payments, orders</a></li>
+        <li><a href="products/field-service.html" onclick="closePolicy('sitemap')">Field Service &amp; Sales Force — GPS tracking, task assignment</a></li>
+        <li><a href="products/whatsapp-automation.html" onclick="closePolicy('sitemap')">WhatsApp Business Automation — Chatbots, bulk messaging, API</a></li>
+        <li><a href="products/project-management.html" onclick="closePolicy('sitemap')">Project &amp; Task Management — Timelines, sprints, team tracking</a></li>
+        <li><a href="products/helpdesk.html" onclick="closePolicy('sitemap')">Helpdesk &amp; Ticket Management — SLA tracking, knowledge base</a></li>
+        <li><a href="products/document-management.html" onclick="closePolicy('sitemap')">Document Management (DMS) — File storage, versioning, access control</a></li>
+        <li><a href="products/warehouse-management.html" onclick="closePolicy('sitemap')">Warehouse Management (WMS) — Pick/pack, barcode, stock transfers</a></li>
+        <li><a href="products/fleet-logistics.html" onclick="closePolicy('sitemap')">Fleet &amp; Logistics — Route planning, vehicle tracking, delivery</a></li>
+        <li><a href="products/appointment-booking.html" onclick="closePolicy('sitemap')">Appointment &amp; Booking — Online scheduling, reminders, payments</a></li>
+        <li><a href="products/business-intelligence.html" onclick="closePolicy('sitemap')">Business Intelligence — KPI dashboards, reports, analytics</a></li>
+        <li><a href="products/school-management.html" onclick="closePolicy('sitemap')">School &amp; Institute Management — Students, fees, attendance</a></li>
+        <li><a href="products/real-estate.html" onclick="closePolicy('sitemap')">Real Estate &amp; Property — Listings, leads, site visits, docs</a></li>
       </ul>
-      <h2>Legal Pages</h2>
+      <h2>Blog</h2>
+      <ul>
+        <li><a href="blog/crm-vs-spreadsheets.html" onclick="closePolicy('sitemap')">CRM vs Spreadsheets: Why Growing Businesses Need Custom CRM</a></li>
+        <li><a href="blog/gst-billing-software.html" onclick="closePolicy('sitemap')">How GST Billing Software Saves 20+ Hours Per Month</a></li>
+        <li><a href="blog/custom-erp-vs-readymade.html" onclick="closePolicy('sitemap')">Custom ERP vs Ready-Made ERP: Which Is Right?</a></li>
+        <li><a href="blog/whatsapp-automation-signs.html" onclick="closePolicy('sitemap')">5 Signs Your Business Needs WhatsApp Automation</a></li>
+        <li><a href="blog/inventory-management-mistakes.html" onclick="closePolicy('sitemap')">7 Inventory Management Mistakes Killing Your Profits</a></li>
+        <li><a href="blog/hr-payroll-compliance-india.html" onclick="closePolicy('sitemap')">HR &amp; Payroll Compliance in India: What Businesses Get Wrong</a></li>
+        <li><a href="blog/ecommerce-website-vs-marketplace.html" onclick="closePolicy('sitemap')">E-Commerce Website vs Marketplace: A Cost Comparison</a></li>
+        <li><a href="blog/business-process-automation-guide.html" onclick="closePolicy('sitemap')">Small Business Guide to Process Automation</a></li>
+        <li><a href="blog/field-sales-team-mobile-app.html" onclick="closePolicy('sitemap')">Why Field Sales Teams Fail Without a Mobile App</a></li>
+        <li><a href="blog/document-management-hidden-cost.html" onclick="closePolicy('sitemap')">Document Management: The Hidden Cost of Searching for Files</a></li>
+        <li><a href="blog/school-management-software-guide.html" onclick="closePolicy('sitemap')">How to Choose the Right School Management Software</a></li>
+        <li><a href="blog/fleet-logistics-tracking.html" onclick="closePolicy('sitemap')">Fleet &amp; Logistics Tracking: Guesswork to Real-Time Visibility</a></li>
+        <li><a href="blog/business-dashboard-guide.html" onclick="closePolicy('sitemap')">Why Every Business Needs a Dashboard</a></li>
+        <li><a href="blog/appointment-booking-software.html" onclick="closePolicy('sitemap')">Appointment Booking: Stop Losing Customers to Missed Calls</a></li>
+        <li><a href="blog/helpdesk-ticket-management.html" onclick="closePolicy('sitemap')">Helpdesk: Handle 10x More Tickets Without Hiring</a></li>
+        <li><a href="blog/real-estate-crm-software.html" onclick="closePolicy('sitemap')">Real Estate CRM: Leads, Site Visits, and Closings</a></li>
+      </ul>
+      <h2>Legal</h2>
       <ul>
         <li><a href="#" data-sitemap-policy="privacy">Privacy Policy</a></li>
         <li><a href="#" data-sitemap-policy="terms">Terms of Service</a></li>
