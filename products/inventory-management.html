@@ -21,91 +21,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='7' fill='%23070D1A' stroke='%232563EB' stroke-width='1'/%3E%3Cline x1='16' y1='7' x2='16' y2='25' stroke='%2364748B' stroke-width='.8'/%3E%3Cline x1='7' y1='16' x2='25' y2='16' stroke='%2364748B' stroke-width='.8'/%3E%3Crect x='5' y='5' width='9' height='9' rx='2.5' fill='%232563EB'/%3E%3Crect x='18' y='5' width='9' height='9' rx='2.5' fill='%230891B2'/%3E%3Crect x='5' y='18' width='9' height='9' rx='2.5' fill='%23059669'/%3E%3Crect x='18' y='18' width='9' height='9' rx='2.5' fill='%23D97706'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23DC2626'/%3E%3C/svg%3E">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;font-size:16px}
-a{text-decoration:none;color:inherit}
-:root{
-  --ink:#0A0F1E;--ink2:#1C2340;--ink3:#384165;
-  --muted:#6B7694;--muted2:#9BA3BF;
-  --line:#E4E7F0;--surf:#F7F8FC;--surf2:#EEF1FA;
-  --blue:#1557FF;--blue2:#3B74FF;
-  --blue-bg:#EBF0FF;--blue-br:#C2CFFF;
-  --green:#059669;--green-bg:#ECFDF5;--green-br:#A7F3D0;
-  --orange:#EA580C;--orange-bg:#FFF7ED;
-  --purple:#7C3AED;--purple-bg:#F5F3FF;
-  --pink:#DB2777;--pink-bg:#FDF2F8;
-  --cyan:#0891B2;--cyan-bg:#ECFEFF;
-  --red:#DC2626;--white:#FFFFFF;
-  --sh-sm:0 1px 4px rgba(10,15,30,.08),0 1px 2px rgba(10,15,30,.05);
-  --sh-md:0 4px 16px rgba(10,15,30,.10),0 2px 6px rgba(10,15,30,.06);
-  --sh-lg:0 12px 40px rgba(10,15,30,.12),0 4px 12px rgba(10,15,30,.07);
-  --sh-blue:0 6px 28px rgba(21,87,255,.28);
-  --r:10px;--r2:16px;--r3:24px;
-  --font:'Plus Jakarta Sans',sans-serif;
+<link rel="stylesheet" href="../assets/shared.css">
+<link rel="stylesheet" href="../assets/product.css">
+<!-- GA4 — loaded conditionally based on cookie consent -->
+<script>
+if(localStorage.getItem('sw_cookie')==='accepted'){
+  var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-EXWE1WLTVE';document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-EXWE1WLTVE');
 }
-body{font-family:var(--font);background:var(--white);color:var(--ink);line-height:1.65;overflow-x:hidden}
-.pnav{position:fixed;top:0;left:0;right:0;z-index:500;background:#fff;border-bottom:1px solid var(--line);backdrop-filter:blur(20px)}
-.pnav-inner{max-width:1200px;margin:0 auto;padding:0 28px;height:66px;display:flex;align-items:center;justify-content:space-between}
-.pnav-logo{display:flex;align-items:center;gap:10px}
-.pnav-logo img{height:42px;width:auto}
-.pnav-back{font-size:13.5px;font-weight:600;color:var(--blue);display:flex;align-items:center;gap:6px;padding:8px 18px;border-radius:9px;border:1.5px solid var(--blue-br);transition:all .15s}
-.pnav-back:hover{background:var(--blue-bg)}
-.phero{padding:120px 0 60px;background:var(--surf);position:relative;overflow:hidden}
-.phero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
-.phero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1;display:flex;align-items:center;gap:48px}
-.phero-text{flex:1}
-.phero-icon{width:64px;height:64px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
-.phero h1{font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
-.phero p{font-size:16px;color:var(--muted);max-width:500px;line-height:1.75}
-.phero-visual{flex:0 0 420px;display:flex;align-items:center;justify-content:center}
-.phero-visual svg{width:100%;height:auto;filter:drop-shadow(0 8px 24px rgba(10,15,30,.08))}
-@media(max-width:768px){.phero-inner{flex-direction:column;text-align:center}.phero-visual{flex:none;width:280px;margin-top:32px}.phero p{margin:0 auto}}
-.pfeatures{padding:80px 0}
-.pfeatures-inner{max-width:1200px;margin:0 auto;padding:0 28px}
-.pfeatures h2{font-size:clamp(24px,3vw,36px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
-.pfeatures .sub{font-size:15px;color:var(--muted);text-align:center;margin-bottom:48px}
-.feat-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;list-style:none;padding:0}
-.feat-item{display:flex;gap:16px;align-items:flex-start;padding:22px 20px;background:var(--white);border:1px solid var(--line);border-radius:var(--r2);transition:all .25s}
-.feat-item:hover{border-color:var(--blue-br);box-shadow:var(--sh-md);transform:translateY(-2px)}
-.feat-ic{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:transform .25s}
-.feat-item:hover .feat-ic{transform:scale(1.1)}
-.feat-body{flex:1;min-width:0}
-.feat-body .feat-num{font-size:10px;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;display:block}
-.feat-body h3{font-size:15px;font-weight:700;margin-bottom:5px;letter-spacing:-.2px;color:var(--ink)}
-.feat-body p{font-size:13.5px;color:var(--muted);line-height:1.65;margin:0}
-.pwhy{padding:80px 0;background:var(--surf)}
-.pwhy-inner{max-width:1200px;margin:0 auto;padding:0 28px;text-align:center}
-.pwhy h2{font-size:clamp(24px,3vw,36px);font-weight:800;margin-bottom:12px;letter-spacing:-1px}
-.pwhy .sub{font-size:15px;color:var(--muted);margin-bottom:48px}
-.pwhy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
-.pwhy-item{display:flex;gap:14px;align-items:flex-start}
-.pwhy-item i{font-size:20px;color:var(--blue);margin-top:3px;flex-shrink:0}
-.pwhy-item h4{font-size:14.5px;font-weight:700;margin-bottom:4px}
-.pwhy-item p{font-size:13.5px;color:var(--muted);line-height:1.65}
-.pcta{padding:80px 0;text-align:center}
-.pcta-inner{max-width:1200px;margin:0 auto;padding:0 28px}
-.pcta h2{font-size:clamp(24px,3vw,36px);font-weight:800;margin-bottom:12px;letter-spacing:-1px}
-.pcta p{font-size:16px;color:var(--muted);margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7}
-.pcta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:11px;font-size:15px;font-weight:600;color:#fff;background:var(--blue);border:none;cursor:pointer;transition:all .2s;font-family:var(--font);box-shadow:var(--sh-blue)}
-.pcta-btn:hover{background:var(--blue2);transform:translateY(-2px)}
-.pfooter{background:var(--ink);color:rgba(255,255,255,.6);padding:32px 0;text-align:center;font-size:13px}
-.pfooter a{color:var(--blue2);margin:0 8px}
-@media(max-width:768px){
-  .feat-list{grid-template-columns:1fr}
-  .pwhy-grid{grid-template-columns:1fr}
-  .phero{padding:100px 0 40px}
-}
-@media(min-width:769px) and (max-width:1024px){
-  .pwhy-grid{grid-template-columns:repeat(2,1fr)}
-}
-</style>
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EXWE1WLTVE"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-EXWE1WLTVE');</script>
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Inventory Management","description":"Advanced inventory management with multi-warehouse tracking, barcode scanning, and auto-reorder. Built by Softwaller Technologies. Free consultation available.","url":"https://www.softwaller.com/products/inventory-management.html","provider":{"@type":"Organization","name":"Softwaller Technologies Private Limited","url":"https://www.softwaller.com"},"areaServed":"IN","serviceType":"Software Development"}</script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <nav class="pnav">
   <div class="pnav-inner">
@@ -116,6 +44,7 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
   </div>
 </nav>
 
+<main id="main">
 <section class="phero">
   <div class="phero-inner">
     <div class="phero-text">
@@ -286,6 +215,8 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
     <a href="../index.html#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
   </div>
 </section>
+
+</main>
 
 <footer class="pfooter">
   <div>&copy; 2026 Softwaller Technologies Private Limited. All rights reserved. <a href="../index.html">Home</a> <a href="../index.html#services">Services</a> <a href="../index.html#contact">Contact</a></div>
