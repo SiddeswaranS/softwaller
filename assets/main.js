@@ -15,16 +15,19 @@ var cachedProgressBar = document.getElementById('progress-bar');
 var cachedHeader = document.getElementById('site-header');
 var cachedBtt = document.getElementById('btt');
 
-/* ── Scroll progress bar ── */
+/* ── Scroll progress bar (RAF-throttled) ── */
+var scrollTicking = false;
 window.addEventListener('scroll', function () {
-  var h = document.body.scrollHeight - window.innerHeight;
-  if (cachedProgressBar && h > 0) cachedProgressBar.style.width = (window.scrollY / h * 100) + '%';
-
-  /* Header shadow on scroll */
-  if (cachedHeader) cachedHeader.classList.toggle('scrolled', window.scrollY > 20);
-
-  /* Back to top visibility */
-  if (cachedBtt) cachedBtt.classList.toggle('visible', window.scrollY > 400);
+  if (!scrollTicking) {
+    requestAnimationFrame(function () {
+      var h = document.body.scrollHeight - window.innerHeight;
+      if (cachedProgressBar && h > 0) cachedProgressBar.style.width = (window.scrollY / h * 100) + '%';
+      if (cachedHeader) cachedHeader.classList.toggle('scrolled', window.scrollY > 20);
+      if (cachedBtt) cachedBtt.classList.toggle('visible', window.scrollY > 400);
+      scrollTicking = false;
+    });
+    scrollTicking = true;
+  }
 });
 
 /* ── Smooth goto ── */
@@ -249,6 +252,7 @@ function initCookieConsent() {
   if (consent === 'accepted') {
     loadGA4();
     loadClarity();
+    loadTawkTo();
   } else if (consent === 'rejected') {
     /* Don't load GA4, don't show banner */
   } else {
@@ -264,6 +268,7 @@ function acceptCookie() {
   closeCookie();
   loadGA4();
   loadClarity();
+  loadTawkTo();
   trackEvent('cookie_consent', 'compliance', 'accepted');
 }
 function rejectCookie() {
@@ -295,12 +300,24 @@ function loadClarity() {
   (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","w3ftuv8jjc");
 }
 
+/* ── Tawk.to live chat — loaded only after cookie consent ── */
+function loadTawkTo() {
+  if (window.Tawk_API && window.Tawk_API.onLoaded) return;
+  var Tawk_API = window.Tawk_API || {};
+  var Tawk_LoadStart = new Date();
+  window.Tawk_API = Tawk_API;
+  window.Tawk_LoadStart = Tawk_LoadStart;
+  var s1 = document.createElement('script');
+  s1.async = true;
+  s1.src = 'https://embed.tawk.to/69c94e34d2d96c1c3cdc0170/1jkt5ivim';
+  s1.charset = 'UTF-8';
+  s1.setAttribute('crossorigin', '*');
+  document.head.appendChild(s1);
+}
+
 /* ── Page loader — dismiss on load (not hardcoded timeout) ── */
 window.addEventListener('load', function () {
-  var loaderStart = Date.now();
-  var minDisplay = 800; /* minimum ms to show loader for animation */
-  var elapsed = Date.now() - loaderStart;
-  var remaining = Math.max(0, minDisplay - elapsed);
+  var remaining = 800; /* minimum ms to show loader for animation */
   setTimeout(function () {
     var loader = document.getElementById('sw-loader');
     if (loader) { loader.classList.add('hide'); setTimeout(function () { loader.remove(); }, 600); }
@@ -395,6 +412,9 @@ document.addEventListener('click', function (e) {
     if (action === 'retryForm') { retryForm(); }
     else if (action === 'acceptCookie') { acceptCookie(); }
     else if (action === 'rejectCookie') { rejectCookie(); }
+    else if (action === 'formNextStep') { formNextStep(); }
+    else if (action === 'formPrevStep') { formPrevStep(); }
+    else if (action === 'closeExitPopup') { closeExitPopup(); }
     else if (action === 'scrollTop') { window.scrollTo({ top: 0, behavior: 'smooth' }); }
     return;
   }
@@ -584,35 +604,34 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') closeExitPopup();
 });
 
-/* ── Newsletter form (Brevo) ── */
+/* ── Newsletter form (Brevo) — hidden iframe submit to avoid CORS ── */
 var nlForm = document.getElementById('nl-subscribe');
 if (nlForm) {
+  /* Create hidden iframe as form target */
+  var nlIframe = document.createElement('iframe');
+  nlIframe.name = 'nl-iframe';
+  nlIframe.style.display = 'none';
+  document.body.appendChild(nlIframe);
+  nlForm.setAttribute('target', 'nl-iframe');
+
   nlForm.addEventListener('submit', function (e) {
-    e.preventDefault();
     var emailInput = document.getElementById('nl-email');
     var email = emailInput ? emailInput.value.trim() : '';
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      e.preventDefault();
       if (emailInput) emailInput.classList.add('nl-error');
       return;
     }
     emailInput.classList.remove('nl-error');
     var btn = document.getElementById('nl-submit-btn');
     if (btn) { btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Subscribing...'; }
-    var action = nlForm.action;
-    fetch(action, { method: 'POST', body: new FormData(nlForm), headers: { Accept: 'application/json' } })
-      .then(function (res) { return res.json(); })
-      .then(function () {
-        nlForm.style.display = 'none';
-        var success = document.getElementById('nl-success');
-        if (success) success.classList.add('show');
-        trackEvent('newsletter', 'subscribe', 'success');
-      })
-      .catch(function () {
-        if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Subscribe'; }
-        var errMsg = document.getElementById('nl-error-msg');
-        if (errMsg) errMsg.classList.add('show');
-        trackEvent('newsletter', 'subscribe', 'error');
-      });
+    /* Allow native form POST to hidden iframe — show success after short delay */
+    setTimeout(function () {
+      nlForm.style.display = 'none';
+      var success = document.getElementById('nl-success');
+      if (success) success.classList.add('show');
+      trackEvent('newsletter', 'subscribe', 'success');
+    }, 1500);
   });
   var nlEmail = document.getElementById('nl-email');
   if (nlEmail) nlEmail.addEventListener('input', function () { nlEmail.classList.remove('nl-error'); });

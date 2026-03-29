@@ -95,7 +95,7 @@ body{min-height:100vh;display:flex;flex-direction:column}
 <nav class="pnav">
   <div class="pnav-inner">
     <a href="index.html" class="pnav-logo">
-      <img src="assets/softwaller-technologies-logo-light.png" alt="Softwaller Technologies - Custom CRM, ERP & Business Software" height="42" loading="lazy">
+      <img src="assets/softwaller-technologies-logo-light.png" alt="Softwaller Technologies - Custom CRM, ERP & Business Software" height="42">
     </a>
     <a href="index.html#services" class="pnav-back"><i class="fa-solid fa-arrow-left"></i> All Services</a>
   </div>
@@ -245,17 +245,15 @@ body{min-height:100vh;display:flex;flex-direction:column}
   <div>&copy; 2026 Softwaller Technologies Private Limited. All rights reserved. <a href="index.html">Home</a> <a href="index.html#services">Services</a> <a href="index.html#contact">Contact</a></div>
 </footer>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69c94e34d2d96c1c3cdc0170/1jkt5ivim';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+<!--Start of Tawk.to Script — loaded only if cookie consent accepted-->
+<script>
+if(localStorage.getItem('sw_cookie')==='accepted'){
+  var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+  var s1=document.createElement("script");s1.async=true;
+  s1.src='https://embed.tawk.to/69c94e34d2d96c1c3cdc0170/1jkt5ivim';
+  s1.charset='UTF-8';s1.setAttribute('crossorigin','*');
+  document.head.appendChild(s1);
+}
 </script>
 <!--End of Tawk.to Script-->
 

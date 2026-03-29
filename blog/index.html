@@ -32,8 +32,8 @@ body{min-height:100vh;display:flex;flex-direction:column}
 .blog-card{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:all .25s;display:flex;flex-direction:column}
 .blog-card:hover{box-shadow:0 12px 40px rgba(10,15,30,.12);transform:translateY(-4px)}
 .bc-color{height:6px}
-.bc-illust{height:160px;display:flex;align-items:center;justify-content:center;background:var(--surf);position:relative;overflow:hidden}
-.bc-illust svg{width:auto;height:100px;opacity:.9}
+.bc-illust{height:200px;display:flex;align-items:center;justify-content:center;background:var(--surf);position:relative;overflow:hidden}
+.bc-illust img{width:100%;height:100%;object-fit:cover}
 .bc-body{padding:28px;flex:1;display:flex;flex-direction:column}
 .bc-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:14px;width:fit-content}
 .bc-title{font-size:20px;font-weight:800;color:var(--ink);letter-spacing:-.5px;line-height:1.25;margin-bottom:10px}
@@ -58,7 +58,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <nav class="pnav">
   <div class="pnav-inner">
     <a href="../index.html" class="pnav-logo">
-      <img src="../assets/softwaller-technologies-logo-light.png" alt="Softwaller Technologies" height="42" loading="lazy">
+      <img src="../assets/softwaller-technologies-logo-light.png" alt="Softwaller Technologies" height="42">
     </a>
     <a href="../index.html" class="pnav-back"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
   </div>
@@ -75,27 +75,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 1: CRM -->
     <a href="crm-vs-spreadsheets.html" class="blog-card">
       <div class="bc-color" style="background:var(--blue)"></div>
-      <div class="bc-illust" style="background:var(--blue-bg)">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="10" width="180" height="100" rx="10" fill="#fff" stroke="#C2CFFF" stroke-width="1.5"/>
-          <rect x="22" y="24" width="50" height="32" rx="6" fill="#EBF0FF" stroke="#C2CFFF"/>
-          <text x="47" y="44" text-anchor="middle" font-size="8" font-weight="700" fill="#1557FF">NEW</text>
-          <rect x="28" y="48" width="36" height="4" rx="2" fill="#C2CFFF"/>
-          <rect x="80" y="24" width="50" height="32" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
-          <text x="105" y="44" text-anchor="middle" font-size="8" font-weight="700" fill="#7C3AED">QUAL</text>
-          <rect x="86" y="48" width="30" height="4" rx="2" fill="#DDD6FE"/>
-          <rect x="138" y="24" width="44" height="32" rx="6" fill="#ECFDF5" stroke="#A7F3D0"/>
-          <text x="160" y="44" text-anchor="middle" font-size="8" font-weight="700" fill="#059669">WON</text>
-          <rect x="144" y="48" width="28" height="4" rx="2" fill="#A7F3D0"/>
-          <rect x="22" y="68" width="80" height="32" rx="6" fill="#fff" stroke="#E4E7F0"/>
-          <polyline points="30,92 45,82 60,86 75,76 90,72" fill="none" stroke="#1557FF" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="90" cy="72" r="3" fill="#1557FF"/>
-          <rect x="110" y="68" width="72" height="32" rx="6" fill="#fff" stroke="#E4E7F0"/>
-          <rect x="118" y="78" width="10" height="16" rx="2" fill="#EBF0FF"/><rect x="118" y="86" width="10" height="8" rx="2" fill="#1557FF"/>
-          <rect x="132" y="78" width="10" height="16" rx="2" fill="#EBF0FF"/><rect x="132" y="82" width="10" height="12" rx="2" fill="#1557FF"/>
-          <rect x="146" y="78" width="10" height="16" rx="2" fill="#EBF0FF"/><rect x="146" y="80" width="10" height="14" rx="2" fill="#1557FF"/>
-          <rect x="160" y="78" width="10" height="16" rx="2" fill="#EBF0FF"/><rect x="160" y="84" width="10" height="10" rx="2" fill="#1557FF"/>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/crm.jpg" alt="CRM software dashboard showing sales pipeline" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--blue-bg);color:var(--blue)">CRM</span>
@@ -111,26 +92,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 2: GST -->
     <a href="gst-billing-software.html" class="blog-card">
       <div class="bc-color" style="background:var(--green)"></div>
-      <div class="bc-illust" style="background:var(--green-bg)">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="30" y="8" width="140" height="104" rx="10" fill="#fff" stroke="#A7F3D0" stroke-width="1.5"/>
-          <rect x="42" y="20" width="60" height="8" rx="3" fill="#A7F3D0"/>
-          <text x="72" y="27" text-anchor="middle" font-size="7" font-weight="700" fill="#059669">TAX INVOICE</text>
-          <rect x="120" y="20" width="38" height="8" rx="3" fill="#ECFDF5" stroke="#A7F3D0"/>
-          <text x="139" y="27" text-anchor="middle" font-size="6" font-weight="600" fill="#059669">GST</text>
-          <rect x="42" y="36" width="116" height="1" fill="#E4E7F0"/>
-          <rect x="42" y="44" width="80" height="5" rx="2" fill="#E4E7F0"/>
-          <rect x="42" y="54" width="60" height="5" rx="2" fill="#E4E7F0"/>
-          <rect x="42" y="64" width="90" height="5" rx="2" fill="#E4E7F0"/>
-          <rect x="42" y="74" width="70" height="5" rx="2" fill="#E4E7F0"/>
-          <rect x="42" y="86" width="116" height="1" fill="#A7F3D0"/>
-          <rect x="42" y="94" width="40" height="6" rx="2" fill="#059669"/>
-          <text x="62" y="99" text-anchor="middle" font-size="5" font-weight="700" fill="#fff">TOTAL</text>
-          <rect x="100" y="94" width="58" height="6" rx="2" fill="#ECFDF5"/>
-          <text x="129" y="99" text-anchor="middle" font-size="5" font-weight="700" fill="#059669">&#8377;24,500.00</text>
-          <circle cx="160" cy="30" r="12" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
-          <path d="M155 30l3 3 6-6" stroke="#059669" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/gst.jpg" alt="GST invoice and billing software" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--green-bg);color:var(--green)">GST</span>
@@ -146,29 +109,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 3: ERP -->
     <a href="custom-erp-vs-readymade.html" class="blog-card">
       <div class="bc-color" style="background:var(--purple)"></div>
-      <div class="bc-illust" style="background:var(--purple-bg)">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="60" y="10" width="80" height="28" rx="8" fill="#fff" stroke="#DDD6FE" stroke-width="1.5"/>
-          <text x="100" y="28" text-anchor="middle" font-size="9" font-weight="800" fill="#7C3AED">ERP</text>
-          <line x1="70" y1="38" x2="40" y2="56" stroke="#DDD6FE" stroke-width="1.5"/>
-          <line x1="100" y1="38" x2="100" y2="56" stroke="#DDD6FE" stroke-width="1.5"/>
-          <line x1="130" y1="38" x2="160" y2="56" stroke="#DDD6FE" stroke-width="1.5"/>
-          <rect x="10" y="56" width="60" height="24" rx="6" fill="#fff" stroke="#DDD6FE"/>
-          <text x="40" y="71" text-anchor="middle" font-size="7" font-weight="600" fill="#7C3AED">Inventory</text>
-          <rect x="70" y="56" width="60" height="24" rx="6" fill="#fff" stroke="#DDD6FE"/>
-          <text x="100" y="71" text-anchor="middle" font-size="7" font-weight="600" fill="#7C3AED">Finance</text>
-          <rect x="130" y="56" width="60" height="24" rx="6" fill="#fff" stroke="#DDD6FE"/>
-          <text x="160" y="71" text-anchor="middle" font-size="7" font-weight="600" fill="#7C3AED">HR</text>
-          <line x1="40" y1="80" x2="40" y2="90" stroke="#DDD6FE" stroke-width="1.5"/>
-          <line x1="100" y1="80" x2="100" y2="90" stroke="#DDD6FE" stroke-width="1.5"/>
-          <line x1="160" y1="80" x2="160" y2="90" stroke="#DDD6FE" stroke-width="1.5"/>
-          <rect x="10" y="90" width="60" height="20" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
-          <text x="40" y="103" text-anchor="middle" font-size="6" fill="#7C3AED">Production</text>
-          <rect x="70" y="90" width="60" height="20" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
-          <text x="100" y="103" text-anchor="middle" font-size="6" fill="#7C3AED">GST Billing</text>
-          <rect x="130" y="90" width="60" height="20" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
-          <text x="160" y="103" text-anchor="middle" font-size="6" fill="#7C3AED">Payroll</text>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/erp.jpg" alt="ERP system for manufacturing and business" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--purple-bg);color:var(--purple)">ERP</span>
@@ -184,22 +126,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 4: Automation -->
     <a href="whatsapp-automation-signs.html" class="blog-card">
       <div class="bc-color" style="background:var(--orange)"></div>
-      <div class="bc-illust" style="background:var(--orange-bg)">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="50" y="8" width="100" height="104" rx="14" fill="#fff" stroke="#FED7AA" stroke-width="1.5"/>
-          <rect x="50" y="8" width="100" height="22" rx="14" fill="#25D366"/>
-          <rect x="64" y="8" width="86" height="22" fill="#25D366"/>
-          <text x="100" y="23" text-anchor="middle" font-size="8" font-weight="700" fill="#fff">WhatsApp Business</text>
-          <rect x="60" y="40" width="70" height="14" rx="7" fill="#DCF8C6"/>
-          <text x="95" y="50" text-anchor="middle" font-size="6" fill="#333">Hi! I want to know about CRM</text>
-          <rect x="70" y="60" width="72" height="14" rx="7" fill="#E8E8E8"/>
-          <text x="106" y="70" text-anchor="middle" font-size="6" fill="#333">Sure! Here are our plans...</text>
-          <rect x="60" y="80" width="50" height="14" rx="7" fill="#DCF8C6"/>
-          <text x="85" y="90" text-anchor="middle" font-size="6" fill="#333">Book a demo?</text>
-          <circle cx="145" cy="48" r="10" fill="#25D366"/>
-          <path d="M141 48l3 3 6-6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <text x="145" y="68" text-anchor="middle" font-size="5" font-weight="700" fill="#25D366">AUTO</text>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/whatsapp.jpg" alt="WhatsApp Business automation on smartphone" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--orange-bg);color:var(--orange)">Automation</span>
@@ -215,29 +143,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 5: Inventory -->
     <a href="inventory-management-mistakes.html" class="blog-card">
       <div class="bc-color" style="background:#0891B2"></div>
-      <div class="bc-illust" style="background:#ECFEFF">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="20" y="10" width="160" height="100" rx="10" fill="#fff" stroke="#A5F3FC" stroke-width="1.5"/>
-          <rect x="32" y="24" width="136" height="18" rx="5" fill="#ECFEFF" stroke="#A5F3FC"/>
-          <text x="100" y="36" text-anchor="middle" font-size="8" font-weight="700" fill="#0891B2">WAREHOUSE A — RACK 3B</text>
-          <rect x="32" y="50" width="40" height="28" rx="6" fill="#fff" stroke="#A5F3FC"/>
-          <rect x="38" y="56" width="28" height="4" rx="2" fill="#A5F3FC"/>
-          <rect x="38" y="64" width="20" height="4" rx="2" fill="#CFFAFE"/>
-          <text x="52" y="76" text-anchor="middle" font-size="5" font-weight="700" fill="#0891B2">250 pcs</text>
-          <rect x="80" y="50" width="40" height="28" rx="6" fill="#fff" stroke="#A5F3FC"/>
-          <rect x="86" y="56" width="28" height="4" rx="2" fill="#A5F3FC"/>
-          <rect x="86" y="64" width="20" height="4" rx="2" fill="#CFFAFE"/>
-          <text x="100" y="76" text-anchor="middle" font-size="5" font-weight="700" fill="#DC2626">12 pcs</text>
-          <rect x="128" y="50" width="40" height="28" rx="6" fill="#fff" stroke="#A5F3FC"/>
-          <rect x="134" y="56" width="28" height="4" rx="2" fill="#A5F3FC"/>
-          <rect x="134" y="64" width="20" height="4" rx="2" fill="#CFFAFE"/>
-          <text x="148" y="76" text-anchor="middle" font-size="5" font-weight="700" fill="#0891B2">180 pcs</text>
-          <circle cx="100" cy="62" r="8" fill="#FEF2F2" stroke="#DC2626" stroke-width="1"/>
-          <text x="100" y="65" text-anchor="middle" font-size="7" font-weight="800" fill="#DC2626">!</text>
-          <rect x="32" y="86" width="136" height="14" rx="5" fill="#ECFEFF"/>
-          <rect x="32" y="86" width="82" height="14" rx="5" fill="#0891B2" opacity=".2"/>
-          <text x="100" y="96" text-anchor="middle" font-size="6" font-weight="600" fill="#0891B2">Stock Level: 60%</text>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/inventory.jpg" alt="Warehouse inventory management system" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#ECFEFF;color:#0891B2">Inventory</span>
@@ -253,22 +160,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 6: HR & Payroll -->
     <a href="hr-payroll-compliance-india.html" class="blog-card">
       <div class="bc-color" style="background:#DC2626"></div>
-      <div class="bc-illust" style="background:#FEF2F2">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="25" y="10" width="150" height="100" rx="10" fill="#fff" stroke="#FECACA" stroke-width="1.5"/>
-          <rect x="37" y="22" width="70" height="8" rx="3" fill="#FECACA"/>
-          <text x="72" y="29" text-anchor="middle" font-size="7" font-weight="700" fill="#DC2626">PAYSLIP — MAR 2026</text>
-          <rect x="37" y="38" width="126" height="1" fill="#FEE2E2"/>
-          <text x="37" y="52" font-size="6" fill="#666">Basic</text><text x="120" y="52" font-size="6" fill="#333" font-weight="600" text-anchor="end">&#8377;25,000</text>
-          <text x="37" y="62" font-size="6" fill="#666">HRA</text><text x="120" y="62" font-size="6" fill="#333" font-weight="600" text-anchor="end">&#8377;10,000</text>
-          <text x="37" y="72" font-size="6" fill="#666">PF (12%)</text><text x="120" y="72" font-size="6" fill="#DC2626" font-weight="600" text-anchor="end">-&#8377;3,000</text>
-          <text x="37" y="82" font-size="6" fill="#666">ESI (0.75%)</text><text x="120" y="82" font-size="6" fill="#DC2626" font-weight="600" text-anchor="end">-&#8377;263</text>
-          <text x="37" y="92" font-size="6" fill="#666">Prof Tax</text><text x="120" y="92" font-size="6" fill="#DC2626" font-weight="600" text-anchor="end">-&#8377;200</text>
-          <rect x="37" y="96" width="126" height="1" fill="#DC2626"/>
-          <text x="37" y="106" font-size="7" font-weight="700" fill="#DC2626">Net Pay</text><text x="120" y="106" font-size="7" fill="#059669" font-weight="700" text-anchor="end">&#8377;31,537</text>
-          <circle cx="152" cy="30" r="12" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.5"/>
-          <path d="M148 30l3 3 6-6" stroke="#DC2626" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/hr-payroll.jpg" alt="HR payroll processing and compliance" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#FEF2F2;color:#DC2626">HR & Payroll</span>
@@ -284,28 +177,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 7: E-Commerce -->
     <a href="ecommerce-website-vs-marketplace.html" class="blog-card">
       <div class="bc-color" style="background:#4F46E5"></div>
-      <div class="bc-illust" style="background:#EEF2FF">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="15" width="80" height="90" rx="10" fill="#fff" stroke="#C7D2FE" stroke-width="1.5"/>
-          <rect x="22" y="27" width="56" height="8" rx="3" fill="#C7D2FE"/>
-          <text x="50" y="33" text-anchor="middle" font-size="6" font-weight="700" fill="#4F46E5">YOUR STORE</text>
-          <rect x="22" y="42" width="24" height="20" rx="4" fill="#EEF2FF" stroke="#C7D2FE"/>
-          <rect x="52" y="42" width="24" height="20" rx="4" fill="#EEF2FF" stroke="#C7D2FE"/>
-          <text x="34" y="55" text-anchor="middle" font-size="5" fill="#4F46E5">&#8377;999</text>
-          <text x="64" y="55" text-anchor="middle" font-size="5" fill="#4F46E5">&#8377;1499</text>
-          <rect x="22" y="70" width="56" height="10" rx="4" fill="#4F46E5"/>
-          <text x="50" y="78" text-anchor="middle" font-size="6" font-weight="600" fill="#fff">BUY NOW</text>
-          <rect x="26" y="86" width="18" height="8" rx="3" fill="#EEF2FF"/><text x="35" y="92" text-anchor="middle" font-size="5" fill="#4F46E5">UPI</text>
-          <rect x="48" y="86" width="18" height="8" rx="3" fill="#EEF2FF"/><text x="57" y="92" text-anchor="middle" font-size="5" fill="#4F46E5">COD</text>
-          <text x="135" y="30" text-anchor="middle" font-size="9" font-weight="800" fill="#4F46E5">VS</text>
-          <rect x="110" y="40" width="80" height="65" rx="10" fill="#fff" stroke="#C7D2FE" stroke-width="1.5"/>
-          <rect x="122" y="50" width="56" height="8" rx="3" fill="#FEF2F2"/>
-          <text x="150" y="56" text-anchor="middle" font-size="5" font-weight="700" fill="#DC2626">MARKETPLACE</text>
-          <text x="150" y="72" text-anchor="middle" font-size="7" fill="#DC2626" font-weight="700">-25%</text>
-          <text x="150" y="82" text-anchor="middle" font-size="5" fill="#666">Commission</text>
-          <rect x="130" y="90" width="40" height="8" rx="3" fill="#FEE2E2"/>
-          <text x="150" y="96" text-anchor="middle" font-size="5" fill="#DC2626">Low Margin</text>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/ecommerce.jpg" alt="E-commerce online shopping website" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#EEF2FF;color:#4F46E5">E-Commerce</span>
@@ -321,25 +194,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 8: Automation Guide -->
     <a href="business-process-automation-guide.html" class="blog-card">
       <div class="bc-color" style="background:var(--orange)"></div>
-      <div class="bc-illust" style="background:var(--orange-bg)">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="30" y="20" width="44" height="28" rx="7" fill="#fff" stroke="#FED7AA" stroke-width="1.5"/>
-          <text x="52" y="32" text-anchor="middle" font-size="6" font-weight="700" fill="#D97706">MANUAL</text>
-          <text x="52" y="42" text-anchor="middle" font-size="5" fill="#999">Task</text>
-          <path d="M74 34 L90 34" stroke="#FED7AA" stroke-width="2" marker-end="url(#arrowOrange)"/>
-          <rect x="90" y="20" width="44" height="28" rx="7" fill="#FFF7ED" stroke="#D97706" stroke-width="1.5"/>
-          <text x="112" y="32" text-anchor="middle" font-size="6" font-weight="700" fill="#D97706">AUTO</text>
-          <circle cx="112" cy="42" r="4" fill="#D97706"/><path d="M110 42l1.5 1.5 3-3" stroke="#fff" stroke-width="1" fill="none"/>
-          <path d="M134 34 L150 34" stroke="#FED7AA" stroke-width="2" marker-end="url(#arrowOrange)"/>
-          <rect x="150" y="20" width="30" height="28" rx="7" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
-          <text x="165" y="37" text-anchor="middle" font-size="7" font-weight="700" fill="#059669">DONE</text>
-          <rect x="50" y="62" width="100" height="36" rx="8" fill="#fff" stroke="#FED7AA" stroke-width="1.5"/>
-          <text x="100" y="76" text-anchor="middle" font-size="6" font-weight="700" fill="#D97706">TIME SAVED</text>
-          <rect x="62" y="82" width="76" height="8" rx="4" fill="#FFF7ED"/>
-          <rect x="62" y="82" width="54" height="8" rx="4" fill="#D97706" opacity=".25"/>
-          <text x="100" y="89" text-anchor="middle" font-size="5" font-weight="600" fill="#D97706">70% faster</text>
-          <defs><marker id="arrowOrange" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto"><path d="M0 0 L6 2 L0 4" fill="#D97706"/></marker></defs>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/automation.jpg" alt="Business process automation workflow" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--orange-bg);color:var(--orange)">Automation</span>
@@ -355,30 +211,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 9: Field Service -->
     <a href="field-sales-team-mobile-app.html" class="blog-card">
       <div class="bc-color" style="background:#0D9488"></div>
-      <div class="bc-illust" style="background:#F0FDFA">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="70" y="6" width="60" height="108" rx="12" fill="#fff" stroke="#99F6E4" stroke-width="1.5"/>
-          <rect x="70" y="6" width="60" height="20" rx="12" fill="#0D9488"/>
-          <rect x="82" y="6" width="48" height="20" fill="#0D9488"/>
-          <text x="100" y="19" text-anchor="middle" font-size="7" font-weight="700" fill="#fff">FIELD APP</text>
-          <circle cx="82" cy="38" r="5" fill="#F0FDFA" stroke="#0D9488" stroke-width="1"/>
-          <text x="82" y="41" text-anchor="middle" font-size="5" font-weight="700" fill="#0D9488">1</text>
-          <text x="92" y="40" font-size="5" fill="#333">Check-in</text>
-          <circle cx="82" cy="52" r="5" fill="#F0FDFA" stroke="#0D9488" stroke-width="1"/>
-          <text x="82" y="55" text-anchor="middle" font-size="5" font-weight="700" fill="#0D9488">2</text>
-          <text x="92" y="54" font-size="5" fill="#333">Visit</text>
-          <circle cx="82" cy="66" r="5" fill="#F0FDFA" stroke="#0D9488" stroke-width="1"/>
-          <text x="82" y="69" text-anchor="middle" font-size="5" font-weight="700" fill="#0D9488">3</text>
-          <text x="92" y="68" font-size="5" fill="#333">Order</text>
-          <rect x="78" y="78" width="44" height="12" rx="5" fill="#0D9488"/>
-          <text x="100" y="87" text-anchor="middle" font-size="6" font-weight="600" fill="#fff">SUBMIT</text>
-          <circle cx="100" cy="104" r="4" fill="#0D9488" opacity=".3"/>
-          <circle cx="30" cy="50" r="16" fill="#F0FDFA" stroke="#99F6E4" stroke-width="1.5"/>
-          <text x="30" y="47" text-anchor="middle" font-size="6" fill="#0D9488">GPS</text>
-          <circle cx="30" cy="55" r="2" fill="#0D9488"/>
-          <circle cx="170" cy="50" r="16" fill="#F0FDFA" stroke="#99F6E4" stroke-width="1.5"/>
-          <text x="170" y="53" text-anchor="middle" font-size="8" fill="#0D9488">&#128205;</text>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/field-service.jpg" alt="Field sales team using mobile app" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#F0FDFA;color:#0D9488">Field Service</span>
@@ -394,34 +228,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 10: DMS -->
     <a href="document-management-hidden-cost.html" class="blog-card">
       <div class="bc-color" style="background:#475569"></div>
-      <div class="bc-illust" style="background:#F8FAFC">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="30" y="14" width="56" height="68" rx="6" fill="#fff" stroke="#CBD5E1" stroke-width="1.5"/>
-          <rect x="38" y="22" width="24" height="4" rx="2" fill="#CBD5E1"/>
-          <rect x="38" y="30" width="40" height="3" rx="1.5" fill="#E2E8F0"/>
-          <rect x="38" y="37" width="36" height="3" rx="1.5" fill="#E2E8F0"/>
-          <rect x="38" y="44" width="40" height="3" rx="1.5" fill="#E2E8F0"/>
-          <rect x="38" y="54" width="20" height="8" rx="3" fill="#475569"/>
-          <text x="48" y="60" text-anchor="middle" font-size="5" font-weight="600" fill="#fff">PDF</text>
-          <rect x="72" y="30" width="56" height="68" rx="6" fill="#fff" stroke="#CBD5E1" stroke-width="1.5"/>
-          <rect x="80" y="38" width="24" height="4" rx="2" fill="#CBD5E1"/>
-          <rect x="80" y="46" width="40" height="3" rx="1.5" fill="#E2E8F0"/>
-          <rect x="80" y="53" width="36" height="3" rx="1.5" fill="#E2E8F0"/>
-          <rect x="80" y="60" width="40" height="3" rx="1.5" fill="#E2E8F0"/>
-          <rect x="80" y="70" width="20" height="8" rx="3" fill="#059669"/>
-          <text x="90" y="76" text-anchor="middle" font-size="5" font-weight="600" fill="#fff">XLS</text>
-          <rect x="114" y="46" width="56" height="68" rx="6" fill="#fff" stroke="#CBD5E1" stroke-width="1.5"/>
-          <rect x="122" y="54" width="24" height="4" rx="2" fill="#CBD5E1"/>
-          <rect x="122" y="62" width="40" height="3" rx="1.5" fill="#E2E8F0"/>
-          <rect x="122" y="69" width="36" height="3" rx="1.5" fill="#E2E8F0"/>
-          <rect x="122" y="76" width="40" height="3" rx="1.5" fill="#E2E8F0"/>
-          <rect x="122" y="86" width="20" height="8" rx="3" fill="#1557FF"/>
-          <text x="132" y="92" text-anchor="middle" font-size="5" font-weight="600" fill="#fff">DOC</text>
-          <circle cx="160" cy="24" r="14" fill="#F8FAFC" stroke="#475569" stroke-width="1.5"/>
-          <line x1="160" y1="18" x2="160" y2="28" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="160" cy="14" r="1.5" fill="#475569"/>
-          <line x1="170" y1="34" x2="178" y2="42" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/dms.jpg" alt="Document management and file organization" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#F8FAFC;color:#475569">DMS</span>
@@ -437,28 +245,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 11: School Management -->
     <a href="school-management-software-guide.html" class="blog-card">
       <div class="bc-color" style="background:#0284C7"></div>
-      <div class="bc-illust" style="background:#F0F9FF">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="30" y="12" width="140" height="96" rx="10" fill="#fff" stroke="#BAE6FD" stroke-width="1.5"/>
-          <rect x="42" y="24" width="80" height="10" rx="4" fill="#F0F9FF" stroke="#BAE6FD"/>
-          <text x="82" y="32" text-anchor="middle" font-size="7" font-weight="700" fill="#0284C7">STUDENT PORTAL</text>
-          <rect x="42" y="42" width="36" height="24" rx="5" fill="#F0F9FF" stroke="#BAE6FD"/>
-          <text x="60" y="52" text-anchor="middle" font-size="6" font-weight="600" fill="#0284C7">Fees</text>
-          <text x="60" y="62" text-anchor="middle" font-size="5" fill="#059669" font-weight="700">PAID</text>
-          <rect x="84" y="42" width="36" height="24" rx="5" fill="#F0F9FF" stroke="#BAE6FD"/>
-          <text x="102" y="52" text-anchor="middle" font-size="6" font-weight="600" fill="#0284C7">Attend</text>
-          <text x="102" y="62" text-anchor="middle" font-size="5" fill="#0284C7" font-weight="700">94%</text>
-          <rect x="126" y="42" width="36" height="24" rx="5" fill="#F0F9FF" stroke="#BAE6FD"/>
-          <text x="144" y="52" text-anchor="middle" font-size="6" font-weight="600" fill="#0284C7">Grade</text>
-          <text x="144" y="62" text-anchor="middle" font-size="5" fill="#7C3AED" font-weight="700">A+</text>
-          <rect x="42" y="74" width="120" height="10" rx="4" fill="#0284C7" opacity=".1"/>
-          <rect x="42" y="74" width="84" height="10" rx="4" fill="#0284C7" opacity=".2"/>
-          <text x="102" y="82" text-anchor="middle" font-size="5" font-weight="600" fill="#0284C7">Term Progress: 70%</text>
-          <rect x="42" y="90" width="50" height="10" rx="4" fill="#0284C7"/>
-          <text x="67" y="97" text-anchor="middle" font-size="5" font-weight="600" fill="#fff">Report Card</text>
-          <circle cx="155" cy="22" r="8" fill="#F0F9FF" stroke="#0284C7" stroke-width="1"/>
-          <text x="155" y="25" text-anchor="middle" font-size="8" fill="#0284C7">&#127891;</text>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/school.jpg" alt="School management and student education" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#F0F9FF;color:#0284C7">EdTech</span>
@@ -474,25 +262,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 12: Fleet & Logistics -->
     <a href="fleet-logistics-tracking.html" class="blog-card">
       <div class="bc-color" style="background:#059669"></div>
-      <div class="bc-illust" style="background:#ECFDF5">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="20" y="30" width="160" height="70" rx="10" fill="#fff" stroke="#A7F3D0" stroke-width="1.5"/>
-          <path d="M30 88 Q60 50 100 65 Q140 80 170 45" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"/>
-          <circle cx="60" cy="58" r="6" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
-          <circle cx="60" cy="58" r="2" fill="#059669"/>
-          <circle cx="100" cy="65" r="6" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
-          <circle cx="100" cy="65" r="2" fill="#059669"/>
-          <circle cx="140" cy="55" r="6" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
-          <circle cx="140" cy="55" r="2" fill="#059669"/>
-          <rect x="26" y="34" width="40" height="12" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
-          <text x="46" y="43" text-anchor="middle" font-size="6" font-weight="700" fill="#059669">LIVE</text>
-          <circle cx="32" cy="40" r="2" fill="#059669"><animate attributeName="opacity" values="1;0;1" dur="1.5s" repeatCount="indefinite"/></circle>
-          <rect x="130" y="34" width="44" height="12" rx="4" fill="#059669"/>
-          <text x="152" y="43" text-anchor="middle" font-size="6" font-weight="600" fill="#fff">3 Trucks</text>
-          <text x="60" y="18" text-anchor="middle" font-size="6" fill="#059669" font-weight="600">Chennai</text>
-          <text x="100" y="110" text-anchor="middle" font-size="6" fill="#059669" font-weight="600">Bangalore</text>
-          <text x="145" y="18" text-anchor="middle" font-size="6" fill="#059669" font-weight="600">Hyderabad</text>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/fleet.jpg" alt="Fleet logistics and truck tracking" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#ECFDF5;color:#059669">Logistics</span>
@@ -508,30 +279,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 13: Business Intelligence -->
     <a href="business-dashboard-guide.html" class="blog-card">
       <div class="bc-color" style="background:#7C3AED"></div>
-      <div class="bc-illust" style="background:#F5F3FF">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="15" y="10" width="170" height="100" rx="10" fill="#fff" stroke="#DDD6FE" stroke-width="1.5"/>
-          <rect x="25" y="22" width="50" height="36" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
-          <text x="50" y="34" text-anchor="middle" font-size="6" font-weight="700" fill="#7C3AED">REVENUE</text>
-          <text x="50" y="48" text-anchor="middle" font-size="10" font-weight="800" fill="#7C3AED">&#8377;42L</text>
-          <rect x="80" y="22" width="50" height="36" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
-          <text x="105" y="34" text-anchor="middle" font-size="6" font-weight="700" fill="#059669">ORDERS</text>
-          <text x="105" y="48" text-anchor="middle" font-size="10" font-weight="800" fill="#059669">284</text>
-          <rect x="135" y="22" width="42" height="36" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
-          <text x="156" y="34" text-anchor="middle" font-size="6" font-weight="700" fill="#DC2626">DUE</text>
-          <text x="156" y="48" text-anchor="middle" font-size="10" font-weight="800" fill="#DC2626">&#8377;8L</text>
-          <rect x="25" y="66" width="80" height="36" rx="6" fill="#fff" stroke="#DDD6FE"/>
-          <rect x="33" y="82" width="8" height="14" rx="2" fill="#EDE9FE"/><rect x="33" y="88" width="8" height="8" rx="2" fill="#7C3AED"/>
-          <rect x="45" y="82" width="8" height="14" rx="2" fill="#EDE9FE"/><rect x="45" y="84" width="8" height="12" rx="2" fill="#7C3AED"/>
-          <rect x="57" y="82" width="8" height="14" rx="2" fill="#EDE9FE"/><rect x="57" y="78" width="8" height="18" rx="2" fill="#7C3AED"/>
-          <rect x="69" y="82" width="8" height="14" rx="2" fill="#EDE9FE"/><rect x="69" y="76" width="8" height="20" rx="2" fill="#7C3AED"/>
-          <rect x="81" y="82" width="8" height="14" rx="2" fill="#EDE9FE"/><rect x="81" y="74" width="8" height="22" rx="2" fill="#7C3AED"/>
-          <rect x="93" y="82" width="8" height="14" rx="2" fill="#EDE9FE"/><rect x="93" y="72" width="8" height="24" rx="2" fill="#7C3AED"/>
-          <rect x="110" y="66" width="67" height="36" rx="6" fill="#fff" stroke="#DDD6FE"/>
-          <circle cx="143" cy="84" r="14" fill="none" stroke="#7C3AED" stroke-width="4" stroke-dasharray="55 33"/>
-          <circle cx="143" cy="84" r="14" fill="none" stroke="#DDD6FE" stroke-width="4" stroke-dasharray="33 55" stroke-dashoffset="-55"/>
-          <text x="143" y="87" text-anchor="middle" font-size="7" font-weight="800" fill="#7C3AED">63%</text>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/analytics.jpg" alt="Business analytics KPI dashboard" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#F5F3FF;color:#7C3AED">Analytics</span>
@@ -547,27 +296,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 14: Appointment Booking -->
     <a href="appointment-booking-software.html" class="blog-card">
       <div class="bc-color" style="background:#DB2777"></div>
-      <div class="bc-illust" style="background:#FDF2F8">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="30" y="10" width="140" height="100" rx="10" fill="#fff" stroke="#FBCFE8" stroke-width="1.5"/>
-          <rect x="42" y="22" width="116" height="14" rx="5" fill="#FDF2F8" stroke="#FBCFE8"/>
-          <text x="100" y="32" text-anchor="middle" font-size="7" font-weight="700" fill="#DB2777">BOOK APPOINTMENT</text>
-          <rect x="42" y="44" width="36" height="24" rx="5" fill="#fff" stroke="#FBCFE8"/>
-          <text x="60" y="54" text-anchor="middle" font-size="5" font-weight="600" fill="#DB2777">10:00</text>
-          <circle cx="60" cy="62" r="3" fill="#DB2777"/><path d="M58 62l1.5 1.5 3-3" stroke="#fff" stroke-width="1" fill="none"/>
-          <rect x="82" y="44" width="36" height="24" rx="5" fill="#fff" stroke="#FBCFE8"/>
-          <text x="100" y="54" text-anchor="middle" font-size="5" font-weight="600" fill="#DB2777">11:30</text>
-          <text x="100" y="64" text-anchor="middle" font-size="6" fill="#999">Open</text>
-          <rect x="122" y="44" width="36" height="24" rx="5" fill="#fff" stroke="#FBCFE8"/>
-          <text x="140" y="54" text-anchor="middle" font-size="5" font-weight="600" fill="#DB2777">14:00</text>
-          <text x="140" y="64" text-anchor="middle" font-size="6" fill="#999">Open</text>
-          <rect x="42" y="76" width="116" height="14" rx="5" fill="#DB2777"/>
-          <text x="100" y="86" text-anchor="middle" font-size="7" font-weight="600" fill="#fff">CONFIRM BOOKING</text>
-          <rect x="42" y="96" width="50" height="8" rx="3" fill="#FCE7F3"/>
-          <text x="67" y="102" text-anchor="middle" font-size="5" fill="#DB2777">WhatsApp &#10003;</text>
-          <rect x="96" y="96" width="62" height="8" rx="3" fill="#FCE7F3"/>
-          <text x="127" y="102" text-anchor="middle" font-size="5" fill="#DB2777">SMS Reminder &#10003;</text>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/booking.jpg" alt="Appointment booking and scheduling calendar" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#FDF2F8;color:#DB2777">Booking</span>
@@ -583,27 +313,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 15: Helpdesk -->
     <a href="helpdesk-ticket-management.html" class="blog-card">
       <div class="bc-color" style="background:#D97706"></div>
-      <div class="bc-illust" style="background:#FFFBEB">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="20" y="10" width="160" height="100" rx="10" fill="#fff" stroke="#FDE68A" stroke-width="1.5"/>
-          <rect x="32" y="22" width="90" height="10" rx="4" fill="#FFFBEB" stroke="#FDE68A"/>
-          <text x="77" y="30" text-anchor="middle" font-size="7" font-weight="700" fill="#D97706">SUPPORT TICKETS</text>
-          <rect x="32" y="40" width="136" height="16" rx="5" fill="#FEF3C7" stroke="#FDE68A"/>
-          <circle cx="42" cy="48" r="4" fill="#DC2626"/><text x="42" y="51" text-anchor="middle" font-size="5" font-weight="700" fill="#fff">!</text>
-          <text x="52" y="51" font-size="6" fill="#333" font-weight="600">TK-042</text>
-          <text x="95" y="51" font-size="5" fill="#666">Payment issue</text>
-          <rect x="140" y="44" width="22" height="8" rx="3" fill="#DC2626"/><text x="151" y="50" text-anchor="middle" font-size="4" font-weight="600" fill="#fff">URGENT</text>
-          <rect x="32" y="60" width="136" height="16" rx="5" fill="#fff" stroke="#FDE68A"/>
-          <circle cx="42" cy="68" r="4" fill="#D97706"/><text x="42" y="71" text-anchor="middle" font-size="5" font-weight="700" fill="#fff">&#8635;</text>
-          <text x="52" y="71" font-size="6" fill="#333" font-weight="600">TK-041</text>
-          <text x="95" y="71" font-size="5" fill="#666">Login error</text>
-          <rect x="140" y="64" width="22" height="8" rx="3" fill="#D97706"/><text x="151" y="70" text-anchor="middle" font-size="4" font-weight="600" fill="#fff">OPEN</text>
-          <rect x="32" y="80" width="136" height="16" rx="5" fill="#fff" stroke="#FDE68A"/>
-          <circle cx="42" cy="88" r="4" fill="#059669"/><path d="M40 88l1.5 1.5 3-3" stroke="#fff" stroke-width="1" fill="none"/>
-          <text x="52" y="91" font-size="6" fill="#333" font-weight="600">TK-040</text>
-          <text x="95" y="91" font-size="5" fill="#666">Feature request</text>
-          <rect x="140" y="84" width="22" height="8" rx="3" fill="#059669"/><text x="151" y="90" text-anchor="middle" font-size="4" font-weight="600" fill="#fff">DONE</text>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/helpdesk.jpg" alt="Customer support helpdesk tickets" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#FFFBEB;color:#D97706">Support</span>
@@ -619,31 +330,8 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 16: Real Estate -->
     <a href="real-estate-crm-software.html" class="blog-card">
       <div class="bc-color" style="background:#E11D48"></div>
-      <div class="bc-illust" style="background:#FFF1F2">
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <rect x="20" y="14" width="160" height="92" rx="10" fill="#fff" stroke="#FECDD3" stroke-width="1.5"/>
-          <rect x="32" y="26" width="70" height="10" rx="4" fill="#FFF1F2" stroke="#FECDD3"/>
-          <text x="67" y="34" text-anchor="middle" font-size="6" font-weight="700" fill="#E11D48">PROPERTY CRM</text>
-          <rect x="32" y="44" width="30" height="36" rx="5" fill="#FFF1F2" stroke="#FECDD3"/>
-          <rect x="38" y="50" width="18" height="10" rx="2" fill="#FECDD3"/>
-          <text x="47" y="57" text-anchor="middle" font-size="4" fill="#E11D48">2BHK</text>
-          <text x="47" y="70" text-anchor="middle" font-size="5" font-weight="700" fill="#059669">SOLD</text>
-          <rect x="68" y="44" width="30" height="36" rx="5" fill="#FFF1F2" stroke="#FECDD3"/>
-          <rect x="74" y="50" width="18" height="10" rx="2" fill="#FECDD3"/>
-          <text x="83" y="57" text-anchor="middle" font-size="4" fill="#E11D48">3BHK</text>
-          <text x="83" y="70" text-anchor="middle" font-size="5" font-weight="700" fill="#E11D48">OPEN</text>
-          <rect x="104" y="44" width="30" height="36" rx="5" fill="#FFF1F2" stroke="#FECDD3"/>
-          <rect x="110" y="50" width="18" height="10" rx="2" fill="#FECDD3"/>
-          <text x="119" y="57" text-anchor="middle" font-size="4" fill="#E11D48">3BHK</text>
-          <text x="119" y="70" text-anchor="middle" font-size="5" font-weight="700" fill="#D97706">HOLD</text>
-          <rect x="140" y="26" width="32" height="54" rx="5" fill="#fff" stroke="#FECDD3"/>
-          <text x="156" y="38" text-anchor="middle" font-size="5" font-weight="700" fill="#E11D48">Leads</text>
-          <text x="156" y="52" text-anchor="middle" font-size="12" font-weight="800" fill="#E11D48">47</text>
-          <text x="156" y="62" text-anchor="middle" font-size="5" fill="#059669" font-weight="600">+12 new</text>
-          <rect x="32" y="86" width="136" height="12" rx="5" fill="#E11D48" opacity=".1"/>
-          <rect x="32" y="86" width="95" height="12" rx="5" fill="#E11D48" opacity=".2"/>
-          <text x="100" y="94" text-anchor="middle" font-size="5" font-weight="600" fill="#E11D48">Sales Pipeline: 70% target</text>
-        </svg>
+      <div class="bc-illust">
+        <img src="../assets/blog/real-estate.jpg" alt="Real estate property and buildings" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#FFF1F2;color:#E11D48">Real Estate</span>
@@ -664,29 +352,48 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
         <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:6px">Get insights delivered to your inbox</div>
         <div style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.65">Practical CRM, ERP & business automation tips every week. No spam.</div>
       </div>
-      <form class="blog-nl-form" action="https://eb65560b.sibforms.com/serve/MUIFACP2rFDETv2p-mUPqyHo3glJtZhcD0GG3f63ikM49xDLRJyQdEWUq0PBoF0ksGw1g_N182HgQUpPssTKQKbO_o-YEB7N347_FS22M6QudGfXoY8QkWZ93gPvVtu8RVTgz--uNpErO1Xd4RccAsEDFLg3mci83OfHVyaJWN0sybuGWiTH50Rmf6Jh_BRVN1HTSAYIwS2z6SKAUw==" method="POST" novalidate style="display:flex;gap:10px;flex:1;min-width:280px" onsubmit="event.preventDefault();var e=this.querySelector('input[type=email]');if(!e.value||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.value)){e.style.borderColor='#DC2626';return}this.style.display='none';this.nextElementSibling.style.display='block'">
+      <iframe name="nl-iframe" style="display:none"></iframe>
+      <form class="blog-nl-form" id="blog-nl-form" action="https://eb65560b.sibforms.com/serve/MUIFACP2rFDETv2p-mUPqyHo3glJtZhcD0GG3f63ikM49xDLRJyQdEWUq0PBoF0ksGw1g_N182HgQUpPssTKQKbO_o-YEB7N347_FS22M6QudGfXoY8QkWZ93gPvVtu8RVTgz--uNpErO1Xd4RccAsEDFLg3mci83OfHVyaJWN0sybuGWiTH50Rmf6Jh_BRVN1HTSAYIwS2z6SKAUw==" method="POST" target="nl-iframe" novalidate style="display:flex;gap:10px;flex:1;min-width:280px">
         <input type="hidden" name="locale" value="en">
-        <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" style="flex:1;padding:13px 16px;border-radius:10px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-family:var(--font);font-size:14px" oninput="this.style.borderColor='rgba(255,255,255,.15)'">
-        <button type="submit" style="padding:13px 24px;border-radius:10px;border:none;background:var(--blue);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+        <input type="email" name="EMAIL" id="blog-nl-email" placeholder="your@email.com" required aria-label="Email address" style="flex:1;padding:13px 16px;border-radius:10px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-family:var(--font);font-size:14px" oninput="this.style.borderColor='rgba(255,255,255,.15)'">
+        <button type="submit" id="blog-nl-btn" style="padding:13px 24px;border-radius:10px;border:none;background:var(--blue);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
       </form>
-      <div style="display:none;color:var(--green);font-size:14px;font-weight:600;flex:1;min-width:280px;text-align:center"><i class="fa-solid fa-circle-check"></i> Subscribed! Check your inbox.</div>
+      <div id="blog-nl-success" style="display:none;color:var(--green);font-size:14px;font-weight:600;flex:1;min-width:280px;text-align:center"><i class="fa-solid fa-circle-check"></i> Subscribed! Check your inbox.</div>
+      <script>
+      (function(){
+        var form=document.getElementById('blog-nl-form');
+        if(!form)return;
+        var emailInput=document.getElementById('blog-nl-email');
+        form.addEventListener('submit',function(e){
+          var email=emailInput?emailInput.value.trim():'';
+          if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+            e.preventDefault();
+            if(emailInput)emailInput.style.borderColor='#DC2626';return;
+          }
+          var btn=document.getElementById('blog-nl-btn');
+          if(btn){btn.disabled=true;btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Subscribing...';}
+          setTimeout(function(){
+            form.style.display='none';
+            document.getElementById('blog-nl-success').style.display='block';
+          },1500);
+        });
+      })();
+      </script>
     </div>
   </section>
 </main>
 <footer class="pfooter">
   <div>&copy; 2026 Softwaller Technologies Private Limited. All rights reserved. <a href="../index.html">Home</a> <a href="../index.html#services">Services</a> <a href="../index.html#contact">Contact</a></div>
 </footer>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69c94e34d2d96c1c3cdc0170/1jkt5ivim';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+<!--Start of Tawk.to Script — loaded only if cookie consent accepted-->
+<script>
+if(localStorage.getItem('sw_cookie')==='accepted'){
+  var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+  var s1=document.createElement("script");s1.async=true;
+  s1.src='https://embed.tawk.to/69c94e34d2d96c1c3cdc0170/1jkt5ivim';
+  s1.charset='UTF-8';s1.setAttribute('crossorigin','*');
+  document.head.appendChild(s1);
+}
 </script>
 <!--End of Tawk.to Script-->
 

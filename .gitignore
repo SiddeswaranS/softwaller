@@ -1,5 +1,11 @@
 audit.log
+*.log
 open_claude_tabs.bat
 SoftwallerBrandKit/
 screenshots/
 .playwright-mcp/
+.env
+.env.*
+node_modules/
+.DS_Store
+Thumbs.db

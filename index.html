@@ -5,11 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Softwaller — Custom CRM, ERP & Business Software Development</title>
 <meta name="description" content="Custom CRM, ERP, inventory management, HR payroll & e-commerce software development. 18+ business solutions. Free consultation. Chennai-based.">
-<meta name="keywords" content="custom software development, CRM software, ERP software, inventory management system, HR payroll software, e-commerce development, GST billing software, business software Chennai, custom web application, WhatsApp business automation, field service management, warehouse management system, helpdesk software, project management tool, business intelligence dashboard, appointment booking system, fleet management software, document management system, school management software, real estate software, custom business application, software company Chennai, enterprise software development, business automation software, SaaS development company">
-<meta name="language" content="English">
-<meta name="revisit-after" content="7 days">
-<meta name="distribution" content="global">
-<meta name="rating" content="general">
 <!-- google-site-verification: verified via domain property in GSC -->
 <meta http-equiv="content-language" content="en-IN">
 <link rel="alternate" hreflang="x-default" href="https://www.softwaller.com/">
@@ -61,7 +56,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" integrity="sha256-ohsW1KkP6RfCe24qro+KdGrtJ4T+sv8ZrvVZEJHz5k0=" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <link rel="stylesheet" href="assets/shared.css">
 <link rel="stylesheet" href="assets/home.css">
@@ -128,7 +123,7 @@
 <header id="site-header">
   <nav role="navigation" aria-label="Main navigation">
     <a href="#home" class="n-logo" aria-label="Softwaller Technologies Home">
-      <img src="assets/softwaller-technologies-logo-light.png" alt="Softwaller Technologies - Custom CRM, ERP & Business Software" height="42">
+      <img src="assets/softwaller-technologies-logo-light.png" alt="Softwaller Technologies - Custom CRM, ERP & Business Software" height="42" width="160">
     </a>
     <ul class="n-links" role="list">
       <li><a href="#home" id="nl-home" class="active">Home</a></li>
@@ -1260,7 +1255,7 @@
                 <input class="form-ctrl" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" required aria-describedby="phone-err">
                 <div class="form-err" id="phone-err">Please enter a valid phone number (10 digits)</div>
               </div>
-              <button type="button" class="form-submit" id="form-next-btn" onclick="formNextStep()">
+              <button type="button" class="form-submit" id="form-next-btn" data-action="formNextStep">
                 Continue <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -1323,7 +1318,7 @@
               </div>
               <input type="checkbox" name="botcheck" class="hidden" style="display:none">
               <div style="display:flex;gap:10px">
-                <button type="button" class="btn-outline" style="flex:0 0 auto;padding:13px 20px" onclick="formPrevStep()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                <button type="button" class="btn-outline" style="flex:0 0 auto;padding:13px 20px" data-action="formPrevStep"><i class="fa-solid fa-arrow-left"></i> Back</button>
                 <button type="submit" class="form-submit" id="submit-btn" style="flex:1">
                   <i class="fa-solid fa-paper-plane"></i> Send Message &amp; Get Free Consultation
                 </button>
@@ -1360,26 +1355,24 @@
 <!-- Exit-intent popup (desktop only, fires once per session) -->
 <div class="exit-overlay" id="exit-popup" role="dialog" aria-modal="true" aria-labelledby="exit-title">
   <div class="exit-modal">
-    <button class="exit-close" onclick="closeExitPopup()" aria-label="Close">&times;</button>
+    <button class="exit-close" data-action="closeExitPopup" aria-label="Close">&times;</button>
     <div class="exit-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
     <div class="exit-title" id="exit-title">Wait — Before You Go!</div>
     <p class="exit-desc">Get a <strong>free consultation</strong> on how custom software can automate your business. No obligation, no hard selling.</p>
-    <a href="#contact" class="btn-primary" onclick="closeExitPopup()" style="width:100%;justify-content:center"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+    <a href="#contact" class="btn-primary" data-action="closeExitPopup" style="width:100%;justify-content:center"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
     <a href="https://cal.com/softwaller/30min" target="_blank" rel="noopener" class="exit-book"><i class="fa-solid fa-calendar-check"></i> Or book a 30-min call</a>
   </div>
 </div>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69c94e34d2d96c1c3cdc0170/1jkt5ivim';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+<!--Start of Tawk.to Script — loaded only if cookie consent accepted-->
+<script>
+if(localStorage.getItem('sw_cookie')==='accepted'){
+  var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+  var s1=document.createElement("script");s1.async=true;
+  s1.src='https://embed.tawk.to/69c94e34d2d96c1c3cdc0170/1jkt5ivim';
+  s1.charset='UTF-8';s1.setAttribute('crossorigin','*');
+  document.head.appendChild(s1);
+}
 </script>
 <!--End of Tawk.to Script-->
 
@@ -1391,7 +1384,7 @@ s0.parentNode.insertBefore(s1,s0);
       <div class="footer-grid">
         <div class="footer-brand-mob">
           <div class="fb-logo">
-            <img src="assets/softwaller-technologies-logo-dark.png" alt="Softwaller Technologies - Custom CRM, ERP & Business Software" height="56" loading="lazy">
+            <img src="assets/softwaller-technologies-logo-dark.png" alt="Softwaller Technologies - Custom CRM, ERP & Business Software" height="56" width="214" loading="lazy">
           </div>
           <p class="fb-desc">Softwaller Technologies Private Limited — building intelligent business software for growing enterprises since 2024. CRM, ERP, IMS, HR &amp; Payroll, GST Billing and custom solutions.</p>
           <div class="fb-socials">
