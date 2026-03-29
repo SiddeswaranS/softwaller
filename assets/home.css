@@ -500,7 +500,7 @@ summary.fc-head{font-size:11px;font-weight:700;color:rgba(255,255,255,.9);text-t
 .exit-overlay{display:none;position:fixed;inset:0;z-index:3000;background:rgba(10,15,30,.6);align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 .exit-overlay.open{display:flex}
 .exit-modal{background:var(--white);border-radius:var(--r3);max-width:420px;width:100%;padding:40px 32px;text-align:center;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.2);animation:fadeUp .4s ease}
-.exit-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--surf);cursor:pointer;font-size:18px;color:var(--muted);display:flex;align-items:center;justify-content:center;transition:all .15s;line-height:1}
+.exit-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--surf);cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;transition:all .15s;line-height:1}
 .exit-close:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
 .exit-icon{width:56px;height:56px;border-radius:14px;background:var(--blue-bg);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 18px}
 .exit-title{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin-bottom:10px}
