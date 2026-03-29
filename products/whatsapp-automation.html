@@ -43,10 +43,14 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pnav-back:hover{background:var(--blue-bg)}
 .phero{padding:120px 0 60px;background:var(--surf);position:relative;overflow:hidden}
 .phero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
-.phero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1;text-align:center}
-.phero-icon{width:80px;height:80px;border-radius:20px;display:inline-flex;align-items:center;justify-content:center;font-size:34px;margin-bottom:24px}
-.phero h1{font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
-.phero p{font-size:17px;color:var(--muted);max-width:650px;margin:0 auto;line-height:1.75}
+.phero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1;display:flex;align-items:center;gap:48px}
+.phero-text{flex:1}
+.phero-icon{width:64px;height:64px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+.phero h1{font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+.phero p{font-size:16px;color:var(--muted);max-width:500px;line-height:1.75}
+.phero-visual{flex:0 0 420px;display:flex;align-items:center;justify-content:center}
+.phero-visual svg{width:100%;height:auto;filter:drop-shadow(0 8px 24px rgba(10,15,30,.08))}
+@media(max-width:768px){.phero-inner{flex-direction:column;text-align:center}.phero-visual{flex:none;width:280px;margin-top:32px}.phero p{margin:0 auto}}
 .pfeatures{padding:80px 0}
 .pfeatures-inner{max-width:1200px;margin:0 auto;padding:0 28px}
 .pfeatures h2{font-size:clamp(24px,3vw,36px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
@@ -99,9 +103,14 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 
 <section class="phero">
   <div class="phero-inner">
-    <div class="phero-icon" style="background:#ECFDF5;color:#25D366"><i class="fa-brands fa-whatsapp"></i></div>
-    <h1>WhatsApp Business Automation</h1>
-    <p>Automate customer communication with the official WhatsApp Business API. From chatbots and bulk messaging to order alerts and CRM integration, all in one platform.</p>
+    <div class="phero-text">
+      <div class="phero-icon" style="background:#ECFDF5;color:#25D366"><i class="fa-brands fa-whatsapp"></i></div>
+      <h1>WhatsApp Business Automation</h1>
+      <p>Automate customer communication with the official WhatsApp Business API. From chatbots and bulk messaging to order alerts and CRM integration, all in one platform.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="100" y="10" width="200" height="280" rx="20" fill="#0A0F1E" stroke="#384165" stroke-width="1.5"/><rect x="108" y="18" width="184" height="264" rx="16" fill="#E5DDD5"/><rect x="108" y="18" width="184" height="40" rx="16" fill="#075E54"/><rect x="108" y="42" width="184" height="16" fill="#075E54"/><circle cx="130" cy="38" r="12" fill="#128C7E"/><text x="130" y="42" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="10" font-weight="700" fill="#fff">S</text><text x="150" y="36" font-family="'Plus Jakarta Sans',sans-serif" font-size="10" font-weight="600" fill="#fff">Softwaller Bot</text><text x="150" y="48" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#A7F3D0">online</text><rect x="118" y="70" width="130" height="32" rx="8" fill="#fff"/><text x="126" y="84" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#0A0F1E">Hi! Welcome to our store.</text><text x="126" y="95" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#0A0F1E">How can I help you? 😊</text><text x="242" y="98" font-family="'Plus Jakarta Sans',sans-serif" font-size="6" fill="#6B7694">10:30</text><rect x="188" y="112" width="96" height="22" rx="8" fill="#DCF8C6"/><text x="196" y="126" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#0A0F1E">Check order status</text><rect x="118" y="144" width="140" height="42" rx="8" fill="#fff"/><text x="126" y="158" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#0A0F1E">Your order #ORD-4521</text><text x="126" y="170" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#059669">✅ Shipped — Out for delivery</text><text x="126" y="180" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#6B7694">Expected: Today by 5 PM</text><rect x="118" y="196" width="150" height="24" rx="8" fill="#fff"/><text x="126" y="212" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#0A0F1E">Need anything else? 👇</text><rect x="120" y="228" width="56" height="18" rx="9" fill="#25D366"/><text x="148" y="240" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" font-weight="600" fill="#fff">Track 📦</text><rect x="182" y="228" width="56" height="18" rx="9" fill="#25D366"/><text x="210" y="240" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" font-weight="600" fill="#fff">Support 💬</text><rect x="118" y="258" width="164" height="18" rx="9" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><text x="132" y="270" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#9BA3BF">Type a message...</text></svg>
+    </div>
   </div>
 </section>
 

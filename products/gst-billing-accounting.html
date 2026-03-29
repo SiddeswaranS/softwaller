@@ -42,10 +42,14 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pnav-back:hover{background:var(--blue-bg)}
 .phero{padding:120px 0 60px;background:var(--surf);position:relative;overflow:hidden}
 .phero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
-.phero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1;text-align:center}
-.phero-icon{width:80px;height:80px;border-radius:20px;display:inline-flex;align-items:center;justify-content:center;font-size:34px;margin-bottom:24px}
-.phero h1{font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
-.phero p{font-size:17px;color:var(--muted);max-width:650px;margin:0 auto;line-height:1.75}
+.phero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1;display:flex;align-items:center;gap:48px}
+.phero-text{flex:1}
+.phero-icon{width:64px;height:64px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+.phero h1{font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+.phero p{font-size:16px;color:var(--muted);max-width:500px;line-height:1.75}
+.phero-visual{flex:0 0 420px;display:flex;align-items:center;justify-content:center}
+.phero-visual svg{width:100%;height:auto;filter:drop-shadow(0 8px 24px rgba(10,15,30,.08))}
+@media(max-width:768px){.phero-inner{flex-direction:column;text-align:center}.phero-visual{flex:none;width:280px;margin-top:32px}.phero p{margin:0 auto}}
 .pfeatures{padding:80px 0}
 .pfeatures-inner{max-width:1200px;margin:0 auto;padding:0 28px}
 .pfeatures h2{font-size:clamp(24px,3vw,36px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
@@ -99,9 +103,14 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 
 <section class="phero">
   <div class="phero-inner">
-    <div class="phero-icon" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-    <h1>GST Billing & Accounting</h1>
-    <p>100% GST-compliant billing with e-invoice, e-way bill, and GSTR filing support. Automate your accounting, reconcile banks, and stay audit-ready at all times.</p>
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+      <h1>GST Billing & Accounting</h1>
+      <p>100% GST-compliant billing with e-invoice, e-way bill, and GSTR filing support. Automate your accounting, reconcile banks, and stay audit-ready at all times.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="30" y="20" width="340" height="260" rx="10" fill="#fff" stroke="#FBCFE8" stroke-width="1"/><rect x="30" y="20" width="340" height="50" rx="10" fill="#FDF2F8"/><text x="50" y="42" font-family="'Plus Jakarta Sans',sans-serif" font-size="10" font-weight="700" fill="#DB2777">TAX INVOICE</text><text x="50" y="56" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">INV-2026-0847</text><rect x="280" y="32" width="72" height="22" rx="6" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/><text x="316" y="47" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="600" fill="#059669">e-Invoice</text><rect x="45" y="82" width="310" height="28" rx="4" fill="#F7F8FC"/><text x="55" y="100" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="600" fill="#384165">Item</text><text x="220" y="100" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="600" fill="#384165">HSN</text><text x="280" y="100" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="600" fill="#384165">GST</text><text x="340" y="100" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="600" fill="#384165">Amount</text><line x1="45" y1="115" x2="355" y2="115" stroke="#E4E7F0" stroke-width="1"/><text x="55" y="132" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#0A0F1E">CRM License</text><text x="220" y="132" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#6B7694">998314</text><text x="280" y="132" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#6B7694">18%</text><text x="340" y="132" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#0A0F1E">&#x20B9;45,000</text><text x="55" y="152" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#0A0F1E">Support AMC</text><text x="220" y="152" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#6B7694">998316</text><text x="280" y="152" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#6B7694">18%</text><text x="340" y="152" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#0A0F1E">&#x20B9;12,000</text><line x1="45" y1="165" x2="355" y2="165" stroke="#E4E7F0" stroke-width="1"/><text x="240" y="182" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#6B7694">Subtotal</text><text x="340" y="182" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#0A0F1E">&#x20B9;57,000</text><text x="240" y="198" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#6B7694">CGST (9%)</text><text x="340" y="198" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#0A0F1E">&#x20B9;5,130</text><text x="240" y="214" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#6B7694">SGST (9%)</text><text x="340" y="214" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#0A0F1E">&#x20B9;5,130</text><rect x="230" y="222" width="125" height="24" rx="4" fill="#FDF2F8"/><text x="240" y="239" font-family="'Plus Jakarta Sans',sans-serif" font-size="10" font-weight="700" fill="#DB2777">Total</text><text x="340" y="239" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-size="10" font-weight="700" fill="#DB2777">&#x20B9;67,260</text><rect x="45" y="252" width="120" height="20" rx="4" fill="#EBF0FF"/><text x="105" y="266" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#1557FF">IRN: Generated &#x2713;</text><rect x="175" y="252" width="100" height="20" rx="4" fill="#ECFEFF"/><text x="225" y="266" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#0891B2">QR Code &#x2713;</text></svg>
+    </div>
   </div>
 </section>
 

@@ -42,10 +42,14 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pnav-back:hover{background:var(--blue-bg)}
 .phero{padding:120px 0 60px;background:var(--surf);position:relative;overflow:hidden}
 .phero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
-.phero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1;text-align:center}
-.phero-icon{width:80px;height:80px;border-radius:20px;display:inline-flex;align-items:center;justify-content:center;font-size:34px;margin-bottom:24px}
-.phero h1{font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
-.phero p{font-size:17px;color:var(--muted);max-width:650px;margin:0 auto;line-height:1.75}
+.phero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1;display:flex;align-items:center;gap:48px}
+.phero-text{flex:1}
+.phero-icon{width:64px;height:64px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+.phero h1{font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+.phero p{font-size:16px;color:var(--muted);max-width:500px;line-height:1.75}
+.phero-visual{flex:0 0 420px;display:flex;align-items:center;justify-content:center}
+.phero-visual svg{width:100%;height:auto;filter:drop-shadow(0 8px 24px rgba(10,15,30,.08))}
+@media(max-width:768px){.phero-inner{flex-direction:column;text-align:center}.phero-visual{flex:none;width:280px;margin-top:32px}.phero p{margin:0 auto}}
 .pfeatures{padding:80px 0}
 .pfeatures-inner{max-width:1200px;margin:0 auto;padding:0 28px}
 .pfeatures h2{font-size:clamp(24px,3vw,36px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
@@ -99,9 +103,14 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 
 <section class="phero">
   <div class="phero-inner">
-    <div class="phero-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-chart-line"></i></div>
-    <h1>CRM Software</h1>
-    <p>Capture every lead, nurture relationships, and close deals faster with a CRM built for your sales team. From first contact to final handshake — manage it all in one place.</p>
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-chart-line"></i></div>
+      <h1>CRM Software</h1>
+      <p>Capture every lead, nurture relationships, and close deals faster with a CRM built for your sales team. From first contact to final handshake — manage it all in one place.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="20" y="20" width="360" height="36" rx="8" fill="#F7F8FC"/><circle cx="40" cy="38" r="6" fill="#DC2626"/><circle cx="58" cy="38" r="6" fill="#D97706"/><circle cx="76" cy="38" r="6" fill="#059669"/><text x="200" y="43" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="12" font-weight="700" fill="#6B7694">Sales Pipeline</text><rect x="30" y="76" width="80" height="90" rx="10" fill="#EBF0FF" stroke="#C2CFFF" stroke-width="1"/><text x="70" y="98" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#1557FF">NEW</text><rect x="38" y="108" width="64" height="8" rx="4" fill="#C2CFFF"/><rect x="38" y="122" width="48" height="8" rx="4" fill="#C2CFFF"/><rect x="38" y="136" width="56" height="8" rx="4" fill="#C2CFFF"/><rect x="125" y="76" width="80" height="90" rx="10" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/><text x="165" y="98" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#7C3AED">QUAL</text><rect x="133" y="108" width="64" height="8" rx="4" fill="#DDD6FE"/><rect x="133" y="122" width="40" height="8" rx="4" fill="#DDD6FE"/><rect x="220" y="76" width="80" height="90" rx="10" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/><text x="260" y="98" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#EA580C">PROP</text><rect x="228" y="108" width="64" height="8" rx="4" fill="#FED7AA"/><rect x="315" y="76" width="60" height="90" rx="10" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/><text x="345" y="98" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#059669">WON</text><rect x="323" y="108" width="44" height="8" rx="4" fill="#A7F3D0"/><rect x="30" y="186" width="165" height="90" rx="10" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><text x="45" y="206" font-family="'Plus Jakarta Sans',sans-serif" font-size="10" font-weight="700" fill="#0A0F1E">Revenue</text><polyline points="45,260 75,240 105,250 135,225 165,220 180,210" fill="none" stroke="#1557FF" stroke-width="2.5" stroke-linecap="round"/><circle cx="180" cy="210" r="4" fill="#1557FF"/><rect x="210" y="186" width="165" height="90" rx="10" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><text x="225" y="206" font-family="'Plus Jakarta Sans',sans-serif" font-size="10" font-weight="700" fill="#0A0F1E">Leads</text><rect x="225" y="218" width="16" height="48" rx="3" fill="#EBF0FF"/><rect x="225" y="238" width="16" height="28" rx="3" fill="#1557FF"/><rect x="249" y="218" width="16" height="48" rx="3" fill="#EBF0FF"/><rect x="249" y="228" width="16" height="38" rx="3" fill="#1557FF"/><rect x="273" y="218" width="16" height="48" rx="3" fill="#EBF0FF"/><rect x="273" y="222" width="16" height="44" rx="3" fill="#1557FF"/><rect x="297" y="218" width="16" height="48" rx="3" fill="#EBF0FF"/><rect x="297" y="232" width="16" height="34" rx="3" fill="#1557FF"/><rect x="321" y="218" width="16" height="48" rx="3" fill="#EBF0FF"/><rect x="321" y="226" width="16" height="40" rx="3" fill="#1557FF"/><rect x="345" y="218" width="16" height="48" rx="3" fill="#EBF0FF"/><rect x="345" y="220" width="16" height="46" rx="3" fill="#1557FF"/></svg>
+    </div>
   </div>
 </section>
 

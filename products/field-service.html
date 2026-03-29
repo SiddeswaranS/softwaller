@@ -42,10 +42,14 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pnav-back:hover{background:var(--blue-bg)}
 .phero{padding:120px 0 60px;background:var(--surf);position:relative;overflow:hidden}
 .phero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
-.phero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1;text-align:center}
-.phero-icon{width:80px;height:80px;border-radius:20px;display:inline-flex;align-items:center;justify-content:center;font-size:34px;margin-bottom:24px}
-.phero h1{font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
-.phero p{font-size:17px;color:var(--muted);max-width:650px;margin:0 auto;line-height:1.75}
+.phero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1;display:flex;align-items:center;gap:48px}
+.phero-text{flex:1}
+.phero-icon{width:64px;height:64px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+.phero h1{font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+.phero p{font-size:16px;color:var(--muted);max-width:500px;line-height:1.75}
+.phero-visual{flex:0 0 420px;display:flex;align-items:center;justify-content:center}
+.phero-visual svg{width:100%;height:auto;filter:drop-shadow(0 8px 24px rgba(10,15,30,.08))}
+@media(max-width:768px){.phero-inner{flex-direction:column;text-align:center}.phero-visual{flex:none;width:280px;margin-top:32px}.phero p{margin:0 auto}}
 .pfeatures{padding:80px 0}
 .pfeatures-inner{max-width:1200px;margin:0 auto;padding:0 28px}
 .pfeatures h2{font-size:clamp(24px,3vw,36px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
@@ -98,9 +102,14 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 
 <section class="phero">
   <div class="phero-inner">
-    <div class="phero-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-location-crosshairs"></i></div>
-    <h1>Field Service & Sales Force</h1>
-    <p>Empower your field team with GPS tracking, mobile order booking, expense management, and real-time reporting to maximize productivity and accountability.</p>
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-location-crosshairs"></i></div>
+      <h1>Field Service & Sales Force</h1>
+      <p>Empower your field team with GPS tracking, mobile order booking, expense management, and real-time reporting to maximize productivity and accountability.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="20" y="20" width="360" height="260" rx="10" fill="#F7F8FC"/><text x="40" y="45" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#EA580C">Live Field Tracking</text><path d="M30,80 Q100,60 170,90 T330,70 L370,100 L370,250 L30,250 Z" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/><path d="M30,120 Q120,100 200,130 T370,110 L370,250 L30,250 Z" fill="#EBF0FF" opacity=".4"/><circle cx="100" cy="120" r="14" fill="#1557FF" opacity=".9"/><text x="100" y="124" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#fff">R1</text><circle cx="100" cy="120" r="22" fill="none" stroke="#1557FF" stroke-width="1" opacity=".3"/><circle cx="220" cy="100" r="14" fill="#059669" opacity=".9"/><text x="220" y="104" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#fff">R2</text><circle cx="220" cy="100" r="22" fill="none" stroke="#059669" stroke-width="1" opacity=".3"/><circle cx="310" cy="140" r="14" fill="#7C3AED" opacity=".9"/><text x="310" y="144" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#fff">R3</text><circle cx="310" cy="140" r="22" fill="none" stroke="#7C3AED" stroke-width="1" opacity=".3"/><path d="M100,120 L150,105 L220,100" fill="none" stroke="#1557FF" stroke-width="1.5" stroke-dasharray="4,3" opacity=".5"/><rect x="40" y="180" width="95" height="55" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><circle cx="58" cy="197" r="8" fill="#EBF0FF"/><text x="58" y="200" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#1557FF">✓</text><text x="72" y="200" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#0A0F1E">Rahul — 8 visits</text><text x="55" y="218" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#059669">● Active now</text><rect x="152" y="180" width="95" height="55" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><circle cx="170" cy="197" r="8" fill="#ECFDF5"/><text x="170" y="200" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#059669">✓</text><text x="184" y="200" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#0A0F1E">Priya — 6 visits</text><text x="167" y="218" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#059669">● Active now</text><rect x="264" y="180" width="95" height="55" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><circle cx="282" cy="197" r="8" fill="#F5F3FF"/><text x="282" y="200" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#7C3AED">✓</text><text x="296" y="200" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#0A0F1E">Amit — 5 visits</text><text x="279" y="218" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#D97706">● In transit</text></svg>
+    </div>
   </div>
 </section>
 

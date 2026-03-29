@@ -42,10 +42,14 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pnav-back:hover{background:var(--blue-bg)}
 .phero{padding:120px 0 60px;background:var(--surf);position:relative;overflow:hidden}
 .phero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
-.phero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1;text-align:center}
-.phero-icon{width:80px;height:80px;border-radius:20px;display:inline-flex;align-items:center;justify-content:center;font-size:34px;margin-bottom:24px}
-.phero h1{font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
-.phero p{font-size:17px;color:var(--muted);max-width:650px;margin:0 auto;line-height:1.75}
+.phero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1;display:flex;align-items:center;gap:48px}
+.phero-text{flex:1}
+.phero-icon{width:64px;height:64px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+.phero h1{font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+.phero p{font-size:16px;color:var(--muted);max-width:500px;line-height:1.75}
+.phero-visual{flex:0 0 420px;display:flex;align-items:center;justify-content:center}
+.phero-visual svg{width:100%;height:auto;filter:drop-shadow(0 8px 24px rgba(10,15,30,.08))}
+@media(max-width:768px){.phero-inner{flex-direction:column;text-align:center}.phero-visual{flex:none;width:280px;margin-top:32px}.phero p{margin:0 auto}}
 .pfeatures{padding:80px 0}
 .pfeatures-inner{max-width:1200px;margin:0 auto;padding:0 28px}
 .pfeatures h2{font-size:clamp(24px,3vw,36px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
@@ -99,9 +103,14 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 
 <section class="phero">
   <div class="phero-inner">
-    <div class="phero-icon" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-gears"></i></div>
-    <h1>Custom Business Apps</h1>
-    <p>Got a unique business challenge? We build custom web apps, mobile apps, portals, and automation tools tailored exactly to your requirements. If you can dream it, we can build it.</p>
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-gears"></i></div>
+      <h1>Custom Business Apps</h1>
+      <p>Got a unique business challenge? We build custom web apps, mobile apps, portals, and automation tools tailored exactly to your requirements. If you can dream it, we can build it.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="20" y="20" width="180" height="260" rx="10" fill="#0A0F1E"/><rect x="30" y="30" width="160" height="14" rx="3" fill="#1C2340"/><circle cx="40" cy="37" r="3" fill="#DC2626"/><circle cx="50" cy="37" r="3" fill="#D97706"/><circle cx="60" cy="37" r="3" fill="#059669"/><text x="35" y="60" font-family="'Courier New',monospace" font-size="8" fill="#7C3AED">class</text><text x="65" y="60" font-family="'Courier New',monospace" font-size="8" fill="#059669"> OrderService</text><text x="35" y="74" font-family="'Courier New',monospace" font-size="8" fill="#6B7694">  {</text><text x="35" y="88" font-family="'Courier New',monospace" font-size="8" fill="#1557FF">    async</text><text x="75" y="88" font-family="'Courier New',monospace" font-size="8" fill="#D97706"> CreateOrder</text><text x="35" y="102" font-family="'Courier New',monospace" font-size="8" fill="#6B7694">    {</text><text x="35" y="116" font-family="'Courier New',monospace" font-size="8" fill="#7C3AED">      var</text><text x="60" y="116" font-family="'Courier New',monospace" font-size="8" fill="#E4E7F0"> order =</text><text x="35" y="130" font-family="'Courier New',monospace" font-size="8" fill="#1557FF">        new</text><text x="60" y="130" font-family="'Courier New',monospace" font-size="8" fill="#059669"> Order()</text><text x="35" y="158" font-family="'Courier New',monospace" font-size="8" fill="#7C3AED">      await</text><text x="75" y="158" font-family="'Courier New',monospace" font-size="8" fill="#D97706"> Save()</text><text x="35" y="172" font-family="'Courier New',monospace" font-size="8" fill="#6B7694">    }</text><text x="35" y="186" font-family="'Courier New',monospace" font-size="8" fill="#6B7694">  }</text><rect x="220" y="30" width="160" height="70" rx="10" fill="#ECFEFF" stroke="#A5F3FC" stroke-width="1"/><text x="240" y="52" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#0891B2">Web App</text><rect x="232" y="60" width="40" height="28" rx="4" fill="#fff"/><rect x="280" y="60" width="40" height="28" rx="4" fill="#fff"/><rect x="332" y="60" width="40" height="28" rx="4" fill="#fff"/><rect x="220" y="115" width="160" height="70" rx="10" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/><text x="240" y="137" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#7C3AED">Mobile App</text><rect x="270" y="145" width="35" height="30" rx="6" fill="#fff" stroke="#DDD6FE" stroke-width="1"/><rect x="315" y="145" width="35" height="30" rx="6" fill="#fff" stroke="#DDD6FE" stroke-width="1"/><rect x="220" y="200" width="160" height="70" rx="10" fill="#EBF0FF" stroke="#C2CFFF" stroke-width="1"/><text x="240" y="222" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#1557FF">REST API</text><rect x="232" y="232" width="136" height="10" rx="3" fill="#fff"/><text x="240" y="240" font-family="'Courier New',monospace" font-size="7" fill="#1557FF">GET /api/orders</text><rect x="232" y="248" width="136" height="10" rx="3" fill="#fff"/><text x="240" y="256" font-family="'Courier New',monospace" font-size="7" fill="#059669">POST /api/orders</text></svg>
+    </div>
   </div>
 </section>
 
