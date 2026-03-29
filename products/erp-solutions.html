@@ -50,36 +50,39 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pfeatures-inner{max-width:1200px;margin:0 auto;padding:0 28px}
 .pfeatures h2{font-size:clamp(24px,3vw,36px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
 .pfeatures .sub{font-size:15px;color:var(--muted);text-align:center;margin-bottom:48px}
-.pfeat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.pfeat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r2);padding:28px 24px;transition:all .25s}
-.pfeat-card:hover{box-shadow:var(--sh-lg);transform:translateY(-4px)}
-.pfeat-card:hover .pfeat-ic{transform:scale(1.1)}
-.pfeat-ic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;transition:transform .25s}
-.pfeat-card h3{font-size:15.5px;font-weight:700;margin-bottom:8px;letter-spacing:-.2px}
-.pfeat-card p{font-size:13.5px;color:var(--muted);line-height:1.7}
+.feat-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;list-style:none;padding:0}
+.feat-item{display:flex;gap:16px;align-items:flex-start;padding:22px 20px;background:var(--white);border:1px solid var(--line);border-radius:var(--r2);transition:all .25s}
+.feat-item:hover{border-color:var(--blue-br);box-shadow:var(--sh-md);transform:translateY(-2px)}
+.feat-ic{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:transform .25s}
+.feat-item:hover .feat-ic{transform:scale(1.1)}
+.feat-body{flex:1;min-width:0}
+.feat-body .feat-num{font-size:10px;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;display:block}
+.feat-body h3{font-size:15px;font-weight:700;margin-bottom:5px;letter-spacing:-.2px;color:var(--ink)}
+.feat-body p{font-size:13.5px;color:var(--muted);line-height:1.65;margin:0}
 .pwhy{padding:80px 0;background:var(--surf)}
 .pwhy-inner{max-width:1200px;margin:0 auto;padding:0 28px;text-align:center}
 .pwhy h2{font-size:clamp(24px,3vw,36px);font-weight:800;margin-bottom:12px;letter-spacing:-1px}
 .pwhy .sub{font-size:15px;color:var(--muted);margin-bottom:48px}
 .pwhy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
 .pwhy-item{display:flex;gap:14px;align-items:flex-start}
-.pwhy-item i{font-size:20px;color:var(--purple);margin-top:3px;flex-shrink:0}
+.pwhy-item i{font-size:20px;color:var(--blue);margin-top:3px;flex-shrink:0}
 .pwhy-item h4{font-size:14.5px;font-weight:700;margin-bottom:4px}
 .pwhy-item p{font-size:13.5px;color:var(--muted);line-height:1.65}
 .pcta{padding:80px 0;text-align:center}
 .pcta-inner{max-width:1200px;margin:0 auto;padding:0 28px}
 .pcta h2{font-size:clamp(24px,3vw,36px);font-weight:800;margin-bottom:12px;letter-spacing:-1px}
 .pcta p{font-size:16px;color:var(--muted);margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7}
-.pcta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:11px;font-size:15px;font-weight:600;color:#fff;background:var(--purple);border:none;cursor:pointer;transition:all .2s;font-family:var(--font);box-shadow:0 6px 28px rgba(124,58,237,.28)}
-.pcta-btn:hover{background:#8B5CF6;transform:translateY(-2px)}
+.pcta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:11px;font-size:15px;font-weight:600;color:#fff;background:var(--blue);border:none;cursor:pointer;transition:all .2s;font-family:var(--font);box-shadow:var(--sh-blue)}
+.pcta-btn:hover{background:var(--blue2);transform:translateY(-2px)}
 .pfooter{background:var(--ink);color:rgba(255,255,255,.6);padding:32px 0;text-align:center;font-size:13px}
 .pfooter a{color:var(--blue2);margin:0 8px}
 @media(max-width:768px){
-  .pfeat-grid,.pwhy-grid{grid-template-columns:1fr}
+  .feat-list{grid-template-columns:1fr}
+  .pwhy-grid{grid-template-columns:1fr}
   .phero{padding:100px 0 40px}
 }
 @media(min-width:769px) and (max-width:1024px){
-  .pfeat-grid,.pwhy-grid{grid-template-columns:repeat(2,1fr)}
+  .pwhy-grid{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -102,72 +105,120 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
   </div>
 </section>
 
-<section class="pfeatures">
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
   <div class="pfeatures-inner">
     <h2>Complete Business Management</h2>
     <p class="sub">12 integrated modules to run your entire operation from a single dashboard.</p>
-    <div class="pfeat-grid">
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-calculator"></i></div>
-        <h3>Finance & Accounts</h3>
-        <p>General ledger, accounts payable/receivable, trial balance, and profit & loss — all automated and accurate.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-file-contract"></i></div>
-        <h3>Purchase Order</h3>
-        <p>Vendor management, PO creation, and GRN tracking. Streamline procurement from indent to delivery.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-gears"></i></div>
-        <h3>Production Planning</h3>
-        <p>Bill of materials, work orders, and production scheduling. Plan and track manufacturing in real time.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-building"></i></div>
-        <h3>Multi-Branch</h3>
-        <p>Manage multiple branches from a single dashboard with consolidated reporting and inter-branch transfers.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-chart-bar"></i></div>
-        <h3>MIS Reports</h3>
-        <p>Management dashboards with drill-down analytics. Get insights at every level — company, branch, department.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-receipt"></i></div>
-        <h3>Sales Management</h3>
-        <p>Quotation to invoice with credit management. Track the complete sales cycle with payment follow-ups.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-warehouse"></i></div>
-        <h3>Store & Inventory</h3>
-        <p>Stock tracking with bin locations and batch management. Know exactly what's where at all times.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-users-gear"></i></div>
-        <h3>HR Integration</h3>
-        <p>Employee data, attendance, and payroll linked directly to your ERP for seamless workforce management.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-toolbox"></i></div>
-        <h3>Asset Management</h3>
-        <p>Track fixed assets, depreciation schedules, and maintenance history. Maximize asset lifecycle value.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-clipboard-check"></i></div>
-        <h3>Quality Control</h3>
-        <p>Inspection checklists, rejection tracking, and CAPA management. Maintain quality standards consistently.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-check-double"></i></div>
-        <h3>Approval Workflows</h3>
-        <p>Multi-level approvals for purchase orders, indents, and expenses. Nothing goes through without proper sign-off.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-clock-rotate-left"></i></div>
-        <h3>Audit Trail</h3>
-        <p>Complete change log for compliance and accountability. Track who changed what, when, and why.</p>
-      </div>
-    </div>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-calculator"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Finance & Accounts</h3>
+          <p itemprop="description">General ledger, accounts payable/receivable, trial balance, and profit & loss — all automated and accurate.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-file-contract"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Purchase Order</h3>
+          <p itemprop="description">Vendor management, PO creation, and GRN tracking. Streamline procurement from indent to delivery.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-gears"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Production Planning</h3>
+          <p itemprop="description">Bill of materials, work orders, and production scheduling. Plan and track manufacturing in real time.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-building"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">Multi-Branch</h3>
+          <p itemprop="description">Manage multiple branches from a single dashboard with consolidated reporting and inter-branch transfers.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-chart-bar"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">MIS Reports</h3>
+          <p itemprop="description">Management dashboards with drill-down analytics. Get insights at every level — company, branch, department.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-receipt"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Sales Management</h3>
+          <p itemprop="description">Quotation to invoice with credit management. Track the complete sales cycle with payment follow-ups.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-warehouse"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Store & Inventory</h3>
+          <p itemprop="description">Stock tracking with bin locations and batch management. Know exactly what's where at all times.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-users-gear"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">HR Integration</h3>
+          <p itemprop="description">Employee data, attendance, and payroll linked directly to your ERP for seamless workforce management.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-toolbox"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Asset Management</h3>
+          <p itemprop="description">Track fixed assets, depreciation schedules, and maintenance history. Maximize asset lifecycle value.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-clipboard-check"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Quality Control</h3>
+          <p itemprop="description">Inspection checklists, rejection tracking, and CAPA management. Maintain quality standards consistently.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-check-double"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Approval Workflows</h3>
+          <p itemprop="description">Multi-level approvals for purchase orders, indents, and expenses. Nothing goes through without proper sign-off.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-clock-rotate-left"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Audit Trail</h3>
+          <p itemprop="description">Complete change log for compliance and accountability. Track who changed what, when, and why.</p>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 

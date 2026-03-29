@@ -50,36 +50,39 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pfeatures-inner{max-width:1200px;margin:0 auto;padding:0 28px}
 .pfeatures h2{font-size:clamp(24px,3vw,36px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
 .pfeatures .sub{font-size:15px;color:var(--muted);text-align:center;margin-bottom:48px}
-.pfeat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.pfeat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r2);padding:28px 24px;transition:all .25s}
-.pfeat-card:hover{box-shadow:var(--sh-lg);transform:translateY(-4px)}
-.pfeat-card:hover .pfeat-ic{transform:scale(1.1)}
-.pfeat-ic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;transition:transform .25s}
-.pfeat-card h3{font-size:15.5px;font-weight:700;margin-bottom:8px;letter-spacing:-.2px}
-.pfeat-card p{font-size:13.5px;color:var(--muted);line-height:1.7}
+.feat-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;list-style:none;padding:0}
+.feat-item{display:flex;gap:16px;align-items:flex-start;padding:22px 20px;background:var(--white);border:1px solid var(--line);border-radius:var(--r2);transition:all .25s}
+.feat-item:hover{border-color:var(--blue-br);box-shadow:var(--sh-md);transform:translateY(-2px)}
+.feat-ic{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:transform .25s}
+.feat-item:hover .feat-ic{transform:scale(1.1)}
+.feat-body{flex:1;min-width:0}
+.feat-body .feat-num{font-size:10px;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;display:block}
+.feat-body h3{font-size:15px;font-weight:700;margin-bottom:5px;letter-spacing:-.2px;color:var(--ink)}
+.feat-body p{font-size:13.5px;color:var(--muted);line-height:1.65;margin:0}
 .pwhy{padding:80px 0;background:var(--surf)}
 .pwhy-inner{max-width:1200px;margin:0 auto;padding:0 28px;text-align:center}
 .pwhy h2{font-size:clamp(24px,3vw,36px);font-weight:800;margin-bottom:12px;letter-spacing:-1px}
 .pwhy .sub{font-size:15px;color:var(--muted);margin-bottom:48px}
 .pwhy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
 .pwhy-item{display:flex;gap:14px;align-items:flex-start}
-.pwhy-item i{font-size:20px;color:var(--orange);margin-top:3px;flex-shrink:0}
+.pwhy-item i{font-size:20px;color:var(--blue);margin-top:3px;flex-shrink:0}
 .pwhy-item h4{font-size:14.5px;font-weight:700;margin-bottom:4px}
 .pwhy-item p{font-size:13.5px;color:var(--muted);line-height:1.65}
 .pcta{padding:80px 0;text-align:center}
 .pcta-inner{max-width:1200px;margin:0 auto;padding:0 28px}
 .pcta h2{font-size:clamp(24px,3vw,36px);font-weight:800;margin-bottom:12px;letter-spacing:-1px}
 .pcta p{font-size:16px;color:var(--muted);margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7}
-.pcta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:11px;font-size:15px;font-weight:600;color:#fff;background:var(--orange);border:none;cursor:pointer;transition:all .2s;font-family:var(--font);box-shadow:0 6px 28px rgba(234,88,12,.28)}
-.pcta-btn:hover{background:#F97316;transform:translateY(-2px)}
+.pcta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:11px;font-size:15px;font-weight:600;color:#fff;background:var(--blue);border:none;cursor:pointer;transition:all .2s;font-family:var(--font);box-shadow:var(--sh-blue)}
+.pcta-btn:hover{background:var(--blue2);transform:translateY(-2px)}
 .pfooter{background:var(--ink);color:rgba(255,255,255,.6);padding:32px 0;text-align:center;font-size:13px}
 .pfooter a{color:var(--blue2);margin:0 8px}
 @media(max-width:768px){
-  .pfeat-grid,.pwhy-grid{grid-template-columns:1fr}
+  .feat-list{grid-template-columns:1fr}
+  .pwhy-grid{grid-template-columns:1fr}
   .phero{padding:100px 0 40px}
 }
 @media(min-width:769px) and (max-width:1024px){
-  .pfeat-grid,.pwhy-grid{grid-template-columns:repeat(2,1fr)}
+  .pwhy-grid{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -102,72 +105,120 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
   </div>
 </section>
 
-<section class="pfeatures">
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
   <div class="pfeatures-inner">
     <h2>Complete Stock Control</h2>
     <p class="sub">12 features to eliminate stockouts, reduce waste, and optimize your supply chain.</p>
-    <div class="pfeat-grid">
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-warehouse"></i></div>
-        <h3>Multi-Warehouse</h3>
-        <p>Manage stock across unlimited warehouses with real-time visibility into every location's inventory.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-barcode"></i></div>
-        <h3>Barcode / QR Scanning</h3>
-        <p>Scan items for receiving, picking, and dispatch. Eliminate manual errors and speed up operations.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-rotate"></i></div>
-        <h3>Auto Reorder</h3>
-        <p>Automatic purchase order generation when stock hits reorder level. Never run out of critical items.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-layer-group"></i></div>
-        <h3>Batch Tracking</h3>
-        <p>Track items by batch number with full traceability from supplier to customer for recalls and compliance.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-truck-field"></i></div>
-        <h3>Supplier Reports</h3>
-        <p>Supplier performance, lead time, and quality reports. Make informed decisions about your supply partners.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-calendar-xmark"></i></div>
-        <h3>Expiry Management</h3>
-        <p>FEFO-based picking, expiry alerts, and auto-holds. Minimize waste and ensure product freshness.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-right-left"></i></div>
-        <h3>Stock Transfer</h3>
-        <p>Inter-warehouse transfer with transit tracking. Move stock between locations with full audit trail.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-indian-rupee-sign"></i></div>
-        <h3>Stock Valuation</h3>
-        <p>FIFO, LIFO, and weighted average valuation methods. Accurate stock value for financial reporting.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-clipboard-list"></i></div>
-        <h3>Cycle Count</h3>
-        <p>Scheduled cycle counts without shutting down operations. Maintain accuracy without full physical audits.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-hashtag"></i></div>
-        <h3>Serial Number Tracking</h3>
-        <p>Track individual items by serial number. Know the exact history and location of every unit.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-triangle-exclamation"></i></div>
-        <h3>Low Stock Alerts</h3>
-        <p>Real-time notifications when stock falls below threshold. Stay proactive, not reactive.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-arrow-rotate-left"></i></div>
-        <h3>Returns Processing</h3>
-        <p>Manage customer and supplier returns with reason tracking. Full visibility into return trends and causes.</p>
-      </div>
-    </div>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-warehouse"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Multi-Warehouse</h3>
+          <p itemprop="description">Manage stock across unlimited warehouses with real-time visibility into every location's inventory.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-barcode"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Barcode / QR Scanning</h3>
+          <p itemprop="description">Scan items for receiving, picking, and dispatch. Eliminate manual errors and speed up operations.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-rotate"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Auto Reorder</h3>
+          <p itemprop="description">Automatic purchase order generation when stock hits reorder level. Never run out of critical items.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-layer-group"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">Batch Tracking</h3>
+          <p itemprop="description">Track items by batch number with full traceability from supplier to customer for recalls and compliance.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-truck-field"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">Supplier Reports</h3>
+          <p itemprop="description">Supplier performance, lead time, and quality reports. Make informed decisions about your supply partners.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-calendar-xmark"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Expiry Management</h3>
+          <p itemprop="description">FEFO-based picking, expiry alerts, and auto-holds. Minimize waste and ensure product freshness.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-right-left"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Stock Transfer</h3>
+          <p itemprop="description">Inter-warehouse transfer with transit tracking. Move stock between locations with full audit trail.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Stock Valuation</h3>
+          <p itemprop="description">FIFO, LIFO, and weighted average valuation methods. Accurate stock value for financial reporting.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-clipboard-list"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Cycle Count</h3>
+          <p itemprop="description">Scheduled cycle counts without shutting down operations. Maintain accuracy without full physical audits.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-hashtag"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Serial Number Tracking</h3>
+          <p itemprop="description">Track individual items by serial number. Know the exact history and location of every unit.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Low Stock Alerts</h3>
+          <p itemprop="description">Real-time notifications when stock falls below threshold. Stay proactive, not reactive.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Returns Processing</h3>
+          <p itemprop="description">Manage customer and supplier returns with reason tracking. Full visibility into return trends and causes.</p>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 

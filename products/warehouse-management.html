@@ -50,13 +50,15 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pfeatures-inner{max-width:1200px;margin:0 auto;padding:0 28px}
 .pfeatures h2{font-size:clamp(24px,3vw,36px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
 .pfeatures .sub{font-size:15px;color:var(--muted);text-align:center;margin-bottom:48px}
-.pfeat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.pfeat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r2);padding:28px 24px;transition:all .25s}
-.pfeat-card:hover{box-shadow:var(--sh-lg);transform:translateY(-4px)}
-.pfeat-card:hover .pfeat-ic{transform:scale(1.1)}
-.pfeat-ic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;transition:transform .25s}
-.pfeat-card h3{font-size:15.5px;font-weight:700;margin-bottom:8px;letter-spacing:-.2px}
-.pfeat-card p{font-size:13.5px;color:var(--muted);line-height:1.7}
+.feat-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;list-style:none;padding:0}
+.feat-item{display:flex;gap:16px;align-items:flex-start;padding:22px 20px;background:var(--white);border:1px solid var(--line);border-radius:var(--r2);transition:all .25s}
+.feat-item:hover{border-color:var(--blue-br);box-shadow:var(--sh-md);transform:translateY(-2px)}
+.feat-ic{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:transform .25s}
+.feat-item:hover .feat-ic{transform:scale(1.1)}
+.feat-body{flex:1;min-width:0}
+.feat-body .feat-num{font-size:10px;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;display:block}
+.feat-body h3{font-size:15px;font-weight:700;margin-bottom:5px;letter-spacing:-.2px;color:var(--ink)}
+.feat-body p{font-size:13.5px;color:var(--muted);line-height:1.65;margin:0}
 .pwhy{padding:80px 0;background:var(--surf)}
 .pwhy-inner{max-width:1200px;margin:0 auto;padding:0 28px;text-align:center}
 .pwhy h2{font-size:clamp(24px,3vw,36px);font-weight:800;margin-bottom:12px;letter-spacing:-1px}
@@ -75,11 +77,12 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pfooter{background:var(--ink);color:rgba(255,255,255,.6);padding:32px 0;text-align:center;font-size:13px}
 .pfooter a{color:var(--blue2);margin:0 8px}
 @media(max-width:768px){
-  .pfeat-grid,.pwhy-grid{grid-template-columns:1fr}
+  .feat-list{grid-template-columns:1fr}
+  .pwhy-grid{grid-template-columns:1fr}
   .phero{padding:100px 0 40px}
 }
 @media(min-width:769px) and (max-width:1024px){
-  .pfeat-grid,.pwhy-grid{grid-template-columns:repeat(2,1fr)}
+  .pwhy-grid{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -102,72 +105,120 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
   </div>
 </section>
 
-<section class="pfeatures">
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
   <div class="pfeatures-inner">
     <h2>Complete Warehouse Control</h2>
     <p class="sub">12 powerful features to run your warehouse with precision and speed.</p>
-    <div class="pfeat-grid">
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-boxes-packing"></i></div>
-        <h3>Pick / Pack / Ship</h3>
-        <p>Optimized workflows with pick lists and packing slips. Reduce errors and speed up order fulfillment from shelf to truck.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-location-dot"></i></div>
-        <h3>Bin Locations</h3>
-        <p>Organize your warehouse into zones, aisles, racks, and bins. Every item has a home for instant retrieval.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-barcode"></i></div>
-        <h3>Barcode Scanning</h3>
-        <p>Scan items at every step for accuracy and speed. Eliminate manual data entry and reduce picking errors to near zero.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-truck-ramp-box"></i></div>
-        <h3>3PL Integration</h3>
-        <p>Integrate with third-party logistics providers seamlessly. Sync orders, inventory, and shipping across partners.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-rotate-left"></i></div>
-        <h3>Returns Processing</h3>
-        <p>Manage inbound returns with inspection and restocking workflows. Track return reasons and process refunds efficiently.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-        <h3>Put-Away Rules</h3>
-        <p>Auto-suggest bin locations based on product type and velocity. Intelligent slotting to minimize travel time.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-layer-group"></i></div>
-        <h3>Wave Planning</h3>
-        <p>Group orders into waves for efficient batch picking. Optimize pick paths and reduce warehouse travel time.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-bullseye"></i></div>
-        <h3>Inventory Accuracy</h3>
-        <p>Cycle counts, adjustments, and variance reports. Maintain 99%+ inventory accuracy without full shutdowns.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-clipboard-check"></i></div>
-        <h3>Receiving & QC</h3>
-        <p>Goods receipt with quality inspection checkpoints. Verify quantities, check conditions, and flag discrepancies instantly.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-right-left"></i></div>
-        <h3>Cross-Docking</h3>
-        <p>Direct transfer from receiving to shipping dock. Skip storage for fast-moving items and reduce handling costs.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-users-gear"></i></div>
-        <h3>Labor Management</h3>
-        <p>Track worker productivity, pick rates, and efficiency. Identify top performers and optimize workforce allocation.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-chart-column"></i></div>
-        <h3>Dashboard & Reports</h3>
-        <p>Real-time warehouse KPIs, throughput, and utilization metrics. Make data-driven decisions with actionable insights.</p>
-      </div>
-    </div>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-boxes-packing"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Pick / Pack / Ship</h3>
+          <p itemprop="description">Optimized workflows with pick lists and packing slips. Reduce errors and speed up order fulfillment from shelf to truck.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Bin Locations</h3>
+          <p itemprop="description">Organize your warehouse into zones, aisles, racks, and bins. Every item has a home for instant retrieval.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-barcode"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Barcode Scanning</h3>
+          <p itemprop="description">Scan items at every step for accuracy and speed. Eliminate manual data entry and reduce picking errors to near zero.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-truck-ramp-box"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">3PL Integration</h3>
+          <p itemprop="description">Integrate with third-party logistics providers seamlessly. Sync orders, inventory, and shipping across partners.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-rotate-left"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">Returns Processing</h3>
+          <p itemprop="description">Manage inbound returns with inspection and restocking workflows. Track return reasons and process refunds efficiently.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Put-Away Rules</h3>
+          <p itemprop="description">Auto-suggest bin locations based on product type and velocity. Intelligent slotting to minimize travel time.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-layer-group"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Wave Planning</h3>
+          <p itemprop="description">Group orders into waves for efficient batch picking. Optimize pick paths and reduce warehouse travel time.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-bullseye"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Inventory Accuracy</h3>
+          <p itemprop="description">Cycle counts, adjustments, and variance reports. Maintain 99%+ inventory accuracy without full shutdowns.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-clipboard-check"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Receiving & QC</h3>
+          <p itemprop="description">Goods receipt with quality inspection checkpoints. Verify quantities, check conditions, and flag discrepancies instantly.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-right-left"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Cross-Docking</h3>
+          <p itemprop="description">Direct transfer from receiving to shipping dock. Skip storage for fast-moving items and reduce handling costs.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-users-gear"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Labor Management</h3>
+          <p itemprop="description">Track worker productivity, pick rates, and efficiency. Identify top performers and optimize workforce allocation.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-chart-column"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Dashboard & Reports</h3>
+          <p itemprop="description">Real-time warehouse KPIs, throughput, and utilization metrics. Make data-driven decisions with actionable insights.</p>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 

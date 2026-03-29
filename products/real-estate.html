@@ -50,13 +50,15 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pfeatures-inner{max-width:1200px;margin:0 auto;padding:0 28px}
 .pfeatures h2{font-size:clamp(24px,3vw,36px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
 .pfeatures .sub{font-size:15px;color:var(--muted);text-align:center;margin-bottom:48px}
-.pfeat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.pfeat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r2);padding:28px 24px;transition:all .25s}
-.pfeat-card:hover{box-shadow:var(--sh-lg);transform:translateY(-4px)}
-.pfeat-card:hover .pfeat-ic{transform:scale(1.1)}
-.pfeat-ic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;transition:transform .25s}
-.pfeat-card h3{font-size:15.5px;font-weight:700;margin-bottom:8px;letter-spacing:-.2px}
-.pfeat-card p{font-size:13.5px;color:var(--muted);line-height:1.7}
+.feat-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;list-style:none;padding:0}
+.feat-item{display:flex;gap:16px;align-items:flex-start;padding:22px 20px;background:var(--white);border:1px solid var(--line);border-radius:var(--r2);transition:all .25s}
+.feat-item:hover{border-color:var(--blue-br);box-shadow:var(--sh-md);transform:translateY(-2px)}
+.feat-ic{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:transform .25s}
+.feat-item:hover .feat-ic{transform:scale(1.1)}
+.feat-body{flex:1;min-width:0}
+.feat-body .feat-num{font-size:10px;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;display:block}
+.feat-body h3{font-size:15px;font-weight:700;margin-bottom:5px;letter-spacing:-.2px;color:var(--ink)}
+.feat-body p{font-size:13.5px;color:var(--muted);line-height:1.65;margin:0}
 .pwhy{padding:80px 0;background:var(--surf)}
 .pwhy-inner{max-width:1200px;margin:0 auto;padding:0 28px;text-align:center}
 .pwhy h2{font-size:clamp(24px,3vw,36px);font-weight:800;margin-bottom:12px;letter-spacing:-1px}
@@ -75,11 +77,12 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pfooter{background:var(--ink);color:rgba(255,255,255,.6);padding:32px 0;text-align:center;font-size:13px}
 .pfooter a{color:var(--blue2);margin:0 8px}
 @media(max-width:768px){
-  .pfeat-grid,.pwhy-grid{grid-template-columns:1fr}
+  .feat-list{grid-template-columns:1fr}
+  .pwhy-grid{grid-template-columns:1fr}
   .phero{padding:100px 0 40px}
 }
 @media(min-width:769px) and (max-width:1024px){
-  .pfeat-grid,.pwhy-grid{grid-template-columns:repeat(2,1fr)}
+  .pwhy-grid{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -102,72 +105,120 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
   </div>
 </section>
 
-<section class="pfeatures">
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
   <div class="pfeatures-inner">
     <h2>Complete Property Management Suite</h2>
     <p class="sub">12 powerful features to manage your real estate portfolio effortlessly.</p>
-    <div class="pfeat-grid">
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-images"></i></div>
-        <h3>Property Listings</h3>
-        <p>List properties with photos, floor plans, and amenities. Attractive listings that convert inquiries into visits.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-users"></i></div>
-        <h3>Tenant Management</h3>
-        <p>Tenant profiles, lease agreements, and communication. Complete tenant lifecycle from onboarding to move-out.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-money-bill-transfer"></i></div>
-        <h3>Rent Collection</h3>
-        <p>Automated rent invoices with online payment and reminders. Track payments, dues, and generate receipts instantly.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-        <h3>Maintenance Requests</h3>
-        <p>Tenants submit requests, track status, and give feedback. Resolve issues faster with automated workflows.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-house-user"></i></div>
-        <h3>Owner Portal</h3>
-        <p>Property owners view income, expenses, and occupancy reports. Full transparency with real-time financial visibility.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-magnifying-glass"></i></div>
-        <h3>Lead Tracking</h3>
-        <p>Track property inquiries from portals, website, and walk-ins. Never lose a potential tenant or buyer.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-file-contract"></i></div>
-        <h3>Agreement Generation</h3>
-        <p>Auto-generate rent/sale agreements from templates. Legal-ready documents in minutes, not days.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-calendar-day"></i></div>
-        <h3>Site Visit Scheduling</h3>
-        <p>Schedule and track property site visits with agents. Coordinate showings and follow up automatically.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-percent"></i></div>
-        <h3>Commission Tracking</h3>
-        <p>Calculate and track broker/agent commissions. Automated commission splits and payout reports.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-folder-open"></i></div>
-        <h3>Document Vault</h3>
-        <p>Store property documents, NOCs, and legal papers securely. Organized digital filing with search and access controls.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-door-open"></i></div>
-        <h3>Vacancy Management</h3>
-        <p>Track vacant properties with days-vacant and alerts. Minimize vacancy periods with proactive notifications.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-chart-line"></i></div>
-        <h3>Financial Reports</h3>
-        <p>Rent roll, P&L per property, and expense breakdown. Complete financial visibility across your entire portfolio.</p>
-      </div>
-    </div>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-images"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Property Listings</h3>
+          <p itemprop="description">List properties with photos, floor plans, and amenities. Attractive listings that convert inquiries into visits.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-users"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Tenant Management</h3>
+          <p itemprop="description">Tenant profiles, lease agreements, and communication. Complete tenant lifecycle from onboarding to move-out.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-money-bill-transfer"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Rent Collection</h3>
+          <p itemprop="description">Automated rent invoices with online payment and reminders. Track payments, dues, and generate receipts instantly.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">Maintenance Requests</h3>
+          <p itemprop="description">Tenants submit requests, track status, and give feedback. Resolve issues faster with automated workflows.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-house-user"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">Owner Portal</h3>
+          <p itemprop="description">Property owners view income, expenses, and occupancy reports. Full transparency with real-time financial visibility.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Lead Tracking</h3>
+          <p itemprop="description">Track property inquiries from portals, website, and walk-ins. Never lose a potential tenant or buyer.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-file-contract"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Agreement Generation</h3>
+          <p itemprop="description">Auto-generate rent/sale agreements from templates. Legal-ready documents in minutes, not days.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-calendar-day"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Site Visit Scheduling</h3>
+          <p itemprop="description">Schedule and track property site visits with agents. Coordinate showings and follow up automatically.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-percent"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Commission Tracking</h3>
+          <p itemprop="description">Calculate and track broker/agent commissions. Automated commission splits and payout reports.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-folder-open"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Document Vault</h3>
+          <p itemprop="description">Store property documents, NOCs, and legal papers securely. Organized digital filing with search and access controls.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-door-open"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Vacancy Management</h3>
+          <p itemprop="description">Track vacant properties with days-vacant and alerts. Minimize vacancy periods with proactive notifications.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Financial Reports</h3>
+          <p itemprop="description">Rent roll, P&L per property, and expense breakdown. Complete financial visibility across your entire portfolio.</p>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 

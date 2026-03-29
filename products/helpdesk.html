@@ -50,13 +50,15 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pfeatures-inner{max-width:1200px;margin:0 auto;padding:0 28px}
 .pfeatures h2{font-size:clamp(24px,3vw,36px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
 .pfeatures .sub{font-size:15px;color:var(--muted);text-align:center;margin-bottom:48px}
-.pfeat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.pfeat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r2);padding:28px 24px;transition:all .25s}
-.pfeat-card:hover{box-shadow:var(--sh-lg);transform:translateY(-4px)}
-.pfeat-card:hover .pfeat-ic{transform:scale(1.1)}
-.pfeat-ic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;transition:transform .25s}
-.pfeat-card h3{font-size:15.5px;font-weight:700;margin-bottom:8px;letter-spacing:-.2px}
-.pfeat-card p{font-size:13.5px;color:var(--muted);line-height:1.7}
+.feat-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;list-style:none;padding:0}
+.feat-item{display:flex;gap:16px;align-items:flex-start;padding:22px 20px;background:var(--white);border:1px solid var(--line);border-radius:var(--r2);transition:all .25s}
+.feat-item:hover{border-color:var(--blue-br);box-shadow:var(--sh-md);transform:translateY(-2px)}
+.feat-ic{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:transform .25s}
+.feat-item:hover .feat-ic{transform:scale(1.1)}
+.feat-body{flex:1;min-width:0}
+.feat-body .feat-num{font-size:10px;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;display:block}
+.feat-body h3{font-size:15px;font-weight:700;margin-bottom:5px;letter-spacing:-.2px;color:var(--ink)}
+.feat-body p{font-size:13.5px;color:var(--muted);line-height:1.65;margin:0}
 .pwhy{padding:80px 0;background:var(--surf)}
 .pwhy-inner{max-width:1200px;margin:0 auto;padding:0 28px;text-align:center}
 .pwhy h2{font-size:clamp(24px,3vw,36px);font-weight:800;margin-bottom:12px;letter-spacing:-1px}
@@ -75,11 +77,12 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pfooter{background:var(--ink);color:rgba(255,255,255,.6);padding:32px 0;text-align:center;font-size:13px}
 .pfooter a{color:var(--blue2);margin:0 8px}
 @media(max-width:768px){
-  .pfeat-grid,.pwhy-grid{grid-template-columns:1fr}
+  .feat-list{grid-template-columns:1fr}
+  .pwhy-grid{grid-template-columns:1fr}
   .phero{padding:100px 0 40px}
 }
 @media(min-width:769px) and (max-width:1024px){
-  .pfeat-grid,.pwhy-grid{grid-template-columns:repeat(2,1fr)}
+  .pwhy-grid{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -101,72 +104,120 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
   </div>
 </section>
 
-<section class="pfeatures">
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
   <div class="pfeatures-inner">
     <h2>Streamline Your Support Operations</h2>
     <p class="sub">12 modules to manage customer tickets, track SLAs, and deliver world-class support.</p>
-    <div class="pfeat-grid">
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-ticket"></i></div>
-        <h3>Ticket System</h3>
-        <p>Create and manage tickets via email, web form, WhatsApp, or phone with a unified inbox for all channels.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-hourglass-half"></i></div>
-        <h3>SLA Tracking</h3>
-        <p>Define response and resolution SLAs with automated escalation alerts when deadlines are approaching.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-shuffle"></i></div>
-        <h3>Auto Assignment</h3>
-        <p>Round-robin or skill-based ticket assignment to distribute workload evenly across your support team.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-book"></i></div>
-        <h3>Knowledge Base</h3>
-        <p>Searchable help articles and FAQs for customer self-service, reducing ticket volume and wait times.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-face-smile"></i></div>
-        <h3>CSAT Surveys</h3>
-        <p>Customer satisfaction surveys sent automatically after ticket resolution to measure service quality.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-arrow-up-from-bracket"></i></div>
-        <h3>Escalation Rules</h3>
-        <p>Auto-escalate overdue or high-priority tickets to supervisors with configurable escalation paths.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-inbox"></i></div>
-        <h3>Multi-Channel</h3>
-        <p>Unified inbox for email, WhatsApp, web, and phone tickets so no customer query falls through the cracks.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-reply"></i></div>
-        <h3>Canned Responses</h3>
-        <p>Pre-written replies for common queries to save time and ensure consistent, professional responses.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-flag"></i></div>
-        <h3>Ticket Prioritization</h3>
-        <p>Auto-prioritize tickets based on customer tier, issue type, and SLA urgency for smarter triage.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-note-sticky"></i></div>
-        <h3>Internal Notes</h3>
-        <p>Private team notes on tickets for internal collaboration without exposing comments to customers.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-chart-column"></i></div>
-        <h3>Reporting & Analytics</h3>
-        <p>Response time, resolution time, and agent performance metrics to identify bottlenecks and improve.</p>
-      </div>
-      <div class="pfeat-card">
-        <div class="pfeat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-object-group"></i></div>
-        <h3>Parent-Child Tickets</h3>
-        <p>Link related tickets together and track them as a group for complex issues that span multiple requests.</p>
-      </div>
-    </div>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-ticket"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Ticket System</h3>
+          <p itemprop="description">Create and manage tickets via email, web form, WhatsApp, or phone with a unified inbox for all channels.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-hourglass-half"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">SLA Tracking</h3>
+          <p itemprop="description">Define response and resolution SLAs with automated escalation alerts when deadlines are approaching.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-shuffle"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Auto Assignment</h3>
+          <p itemprop="description">Round-robin or skill-based ticket assignment to distribute workload evenly across your support team.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-book"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">Knowledge Base</h3>
+          <p itemprop="description">Searchable help articles and FAQs for customer self-service, reducing ticket volume and wait times.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-face-smile"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">CSAT Surveys</h3>
+          <p itemprop="description">Customer satisfaction surveys sent automatically after ticket resolution to measure service quality.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-arrow-up-from-bracket"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Escalation Rules</h3>
+          <p itemprop="description">Auto-escalate overdue or high-priority tickets to supervisors with configurable escalation paths.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-inbox"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Multi-Channel</h3>
+          <p itemprop="description">Unified inbox for email, WhatsApp, web, and phone tickets so no customer query falls through the cracks.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-reply"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Canned Responses</h3>
+          <p itemprop="description">Pre-written replies for common queries to save time and ensure consistent, professional responses.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-flag"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Ticket Prioritization</h3>
+          <p itemprop="description">Auto-prioritize tickets based on customer tier, issue type, and SLA urgency for smarter triage.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-note-sticky"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Internal Notes</h3>
+          <p itemprop="description">Private team notes on tickets for internal collaboration without exposing comments to customers.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-chart-column"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Reporting & Analytics</h3>
+          <p itemprop="description">Response time, resolution time, and agent performance metrics to identify bottlenecks and improve.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-object-group"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Parent-Child Tickets</h3>
+          <p itemprop="description">Link related tickets together and track them as a group for complex issues that span multiple requests.</p>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 
