@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days">
 <meta name="distribution" content="global">
 <meta name="rating" content="general">
-<meta name="google-site-verification" content=""> <!-- Already verified via domain property in GSC -->
+<!-- google-site-verification: verified via domain property in GSC -->
 <meta http-equiv="content-language" content="en-IN">
 <link rel="alternate" hreflang="x-default" href="https://www.softwaller.com/">
 <link rel="alternate" hreflang="en-IN" href="https://www.softwaller.com/">
@@ -56,9 +56,11 @@
   ]
 }
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Softwaller Technologies Private Limited","image":"https://www.softwaller.com/assets/og-image.jpg","url":"https://www.softwaller.com","telephone":"+91-95859-99819","email":"info@softwaller.com","address":{"@type":"PostalAddress","streetAddress":"3-15/8 Singandi Lakshmana, Mudhali St Tharamangalam","addressLocality":"Salem","addressRegion":"Tamil Nadu","postalCode":"636502","addressCountry":"IN"},"openingHours":"Mo-Sa 09:00-18:00","priceRange":"$$","taxID":"U62099TN2024PTC172175"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <link rel="stylesheet" href="assets/shared.css">
 <link rel="stylesheet" href="assets/home.css">
@@ -134,6 +136,8 @@
       <li><a href="#process" id="nl-process">Process</a></li>
       <li><a href="#testimonials" id="nl-testimonials">Reviews</a></li>
       <li><a href="#faq" id="nl-faq">FAQ</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="blog/">Blog</a></li>
     </ul>
     <div class="n-right">
       <a class="n-demo" href="#contact">Get Demo</a>
@@ -150,10 +154,12 @@
 <!-- Mobile Menu -->
 <div class="mob-menu" id="mob-menu" role="navigation" aria-label="Mobile navigation">
   <a href="#home" class="active"><i class="fa-solid fa-house" style="width:16px;text-align:center"></i>Home</a>
-  <a href="#about"><i class="fa-solid fa-building" style="width:16px;text-align:center"></i>About Us</a>
+  <a href="about.html"><i class="fa-solid fa-building" style="width:16px;text-align:center"></i>About Us</a>
   <a href="#services"><i class="fa-solid fa-grid-2" style="width:16px;text-align:center"></i>Services</a>
-  <a href="#process"><i class="fa-solid fa-diagram-project" style="width:16px;text-align:center"></i>How We Work</a>
-  <a href="#testimonials"><i class="fa-solid fa-star" style="width:16px;text-align:center"></i>Client Reviews</a>
+  <a href="case-studies.html"><i class="fa-solid fa-trophy" style="width:16px;text-align:center"></i>Case Studies</a>
+  <a href="portfolio.html"><i class="fa-solid fa-briefcase" style="width:16px;text-align:center"></i>Portfolio</a>
+  <a href="industries.html"><i class="fa-solid fa-industry" style="width:16px;text-align:center"></i>Industries</a>
+  <a href="blog/"><i class="fa-solid fa-newspaper" style="width:16px;text-align:center"></i>Blog</a>
   <a href="#faq"><i class="fa-solid fa-circle-question" style="width:16px;text-align:center"></i>FAQ</a>
   <a class="mob-cta" href="#contact"><i class="fa-solid fa-phone"></i>Free Consultation</a>
 </div>
@@ -162,7 +168,6 @@
 <!-- ══════════════════════════════════════
      HERO
 ══════════════════════════════════════ -->
-<main>
 <section id="home" aria-labelledby="hero-heading">
   <div class="hero-mesh" aria-hidden="true"></div>
   <div class="hero-grid" aria-hidden="true"></div>
@@ -180,10 +185,10 @@
           <strong>CRM, ERP, Inventory Management, HR & Payroll</strong> and custom business software — designed around your exact workflow, built to scale as you grow.
         </p>
         <div class="hero-btns">
-          <button class="btn-primary" onclick="goto('contact')">
+          <button class="btn-primary" data-goto="contact">
             <i class="fa-solid fa-phone"></i> Book Free Consultation
           </button>
-          <button class="btn-outline" onclick="goto('services')">
+          <button class="btn-outline" data-goto="services">
             <i class="fa-solid fa-grid-2"></i> View Our Services
           </button>
         </div>
@@ -859,6 +864,71 @@
 </section>
 
 <!-- ══════════════════════════════════════
+     TECHNOLOGY STACK
+══════════════════════════════════════ -->
+<section id="tech-stack" class="sec-pad" aria-labelledby="tech-heading" style="background:var(--white)">
+  <div class="container">
+    <div style="text-align:center;max-width:540px;margin:0 auto" class="reveal">
+      <div class="sec-tag">Our Stack</div>
+      <h2 class="sec-h" id="tech-heading">Technologies We <em>Work With</em></h2>
+      <p class="sec-p" style="margin-bottom:48px">We use proven, enterprise-grade technologies to build software that scales reliably and performs under pressure.</p>
+    </div>
+    <div class="tech-grid reveal d1">
+      <div class="tech-item">
+        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 456 528" width="30" height="34"><path d="M0 264L228 0l228 264-228 264L0 264z" fill="#512BD4"/><path d="M227.8 132l-95.8 132 95.8 132 95.8-132-95.8-132z" fill="#fff"/><path d="M323.6 264l-47.9-66-47.9 66 47.9 66 47.9-66z" fill="#512BD4"/></svg></div>
+        <div class="tech-name">.NET / C#</div>
+        <div class="tech-desc">Backend & API</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 326" width="26" height="32"><path d="M160 0c1 0 11 2 14 13l17 59c3 10-2 20-12 24l-4 1-50 14c-10 3-20-3-23-13L86 40c-3-10 3-21 13-24l5-1L160 0z" fill="#512BD4"/><path d="M210 120c9 4 14 14 11 24l-17 59c-3 10-13 16-23 14l-5-2-49-22c-9-4-14-14-11-24l17-59c3-10 13-16 23-14l5 2 49 22z" fill="#512BD4"/><path d="M128 224c10-1 20 6 22 16l10 60c2 10-5 21-16 23h-5l-53 3c-11 1-20-7-22-17l-10-60c-1-10 5-20 16-22h5l53-3z" fill="#512BD4"/></svg></div>
+        <div class="tech-name">Blazor</div>
+        <div class="tech-desc">Web Apps</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 256" width="30" height="30"><rect width="256" height="256" rx="28" fill="#CC2927"/><path d="M80 80h40v96H80zm56 0h40v96h-40z" fill="#fff"/><path d="M80 116h96v24H80z" fill="#fff"/></svg></div>
+        <div class="tech-name">SQL Server</div>
+        <div class="tech-desc">Database</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 161 129" width="32" height="26"><path d="M57 0L0 56l21 23L57 0z" fill="#0089D6"/><path d="M57 0l40 79H57l-36 50h140L57 0z" fill="#0089D6"/></svg></div>
+        <div class="tech-name">Azure</div>
+        <div class="tech-desc">Cloud Hosting</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 256" width="30" height="30"><circle cx="128" cy="128" r="128" fill="#512BD4"/><path d="M72 80h32v96H72zm40 0h32v96h-32zm40 0h32v96h-32z" fill="#fff"/><path d="M72 116h112v24H72z" fill="#fff"/></svg></div>
+        <div class="tech-name">.NET MAUI</div>
+        <div class="tech-desc">Mobile Apps</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 256" width="30" height="30"><rect width="256" height="256" fill="#F7DF1E"/><path d="M67 214l15-9c3 5 5 10 11 10 6 0 9-2 9-11v-60h18v60c0 18-10 26-26 26-14 0-22-7-27-16m64-2l15-9c4 7 9 12 18 12 7 0 12-4 12-9 0-6-5-8-13-12l-4-2c-13-6-22-13-22-27 0-14 10-24 26-24 11 0 20 4 25 14l-14 9c-3-5-6-7-11-7s-9 3-9 7c0 5 3 7 11 11l5 2c16 7 24 13 24 29 0 16-13 25-30 25-17 0-28-8-33-19" fill="#000"/></svg></div>
+        <div class="tech-name">JavaScript</div>
+        <div class="tech-desc">Frontend</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 292" width="26" height="30"><path d="M24 0l21 236 83 24 83-24L232 0H24z" fill="#E34F26"/><path d="M128 267l67-19 18-197H128v216z" fill="#EF652A"/><path d="M128 109h-40l-3-30h43V50H56l1 10 8 90h63v-41z" fill="#EBEBEB"/><path d="M128 109v30h37l-4 40-33 9v34l63-18 1-7 7-77 1-11H128z" fill="#fff"/></svg></div>
+        <div class="tech-name">HTML / CSS</div>
+        <div class="tech-desc">UI Design</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 256" width="30" height="30"><rect width="256" height="256" rx="28" fill="#0089D6"/><path d="M56 96h20v64H56zm42-24h20v88H98zm42-16h20v104h-20zm42 24h20v64h-20z" fill="#fff" opacity=".9"/><path d="M48 176h160v8H48z" fill="#fff"/></svg></div>
+        <div class="tech-name">REST APIs</div>
+        <div class="tech-desc">Integrations</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 256" width="30" height="30"><path d="M251 119L137 5c-5-5-12-5-17 0l-24 24 30 30c7-2 15-1 20 5 6 6 7 14 4 21l29 29c7-3 15-1 21 4 8 8 8 21 0 29s-21 8-29 0c-6-6-8-15-4-22l-27-27v71c2 1 4 2 5 4 8 8 8 21 0 29-8 8-21 8-29 0-8-8-8-21 0-29 2-2 5-4 7-5V116c-2-1-5-3-7-5-6-6-7-15-4-22L83 59 5 137c-5 5-5 12 0 17l114 114c5 5 12 5 17 0L251 136c5-5 5-12 0-17z" fill="#F05033"/></svg></div>
+        <div class="tech-name">Git / DevOps</div>
+        <div class="tech-desc">CI/CD</div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon tech-icon-svg"><svg viewBox="0 0 256 341" width="22" height="30"><rect x="147" y="0" width="75" height="341" rx="10" fill="#F2C811"/><rect x="74" y="60" width="75" height="281" rx="10" fill="#F2C811" opacity=".7"/><rect x="0" y="120" width="75" height="221" rx="10" fill="#F2C811" opacity=".5"/></svg></div>
+        <div class="tech-name">Power BI</div>
+        <div class="tech-desc">Analytics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
      PROCESS
 ══════════════════════════════════════ -->
 <section id="process" class="sec-pad" aria-labelledby="process-heading">
@@ -962,7 +1032,7 @@
         <div class="faq-list" role="list">
 
           <div class="faq-item" role="listitem">
-            <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
               <span>How long does it take to build custom software?</span>
               <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
             </div>
@@ -972,7 +1042,7 @@
           </div>
 
           <div class="faq-item" role="listitem">
-            <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
               <span>Do you provide support after the software goes live?</span>
               <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
             </div>
@@ -982,7 +1052,7 @@
           </div>
 
           <div class="faq-item" role="listitem">
-            <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
               <span>Is the software fully GST compliant?</span>
               <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
             </div>
@@ -992,7 +1062,7 @@
           </div>
 
           <div class="faq-item" role="listitem">
-            <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
               <span>Can it integrate with Tally / WhatsApp / payment gateways?</span>
               <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
             </div>
@@ -1002,7 +1072,7 @@
           </div>
 
           <div class="faq-item" role="listitem">
-            <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
               <span>Will it work on mobile phones and tablets?</span>
               <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
             </div>
@@ -1012,7 +1082,7 @@
           </div>
 
           <div class="faq-item" role="listitem">
-            <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
               <span>What is the typical cost / pricing model?</span>
               <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
             </div>
@@ -1030,7 +1100,7 @@
           <div class="faq-right-tag">Free Consultation</div>
           <div class="faq-right-h">Still Have Questions?</div>
           <p class="faq-right-p">Book a free 30-minute call with our technical team. We will analyze your current setup, answer all your questions, and give you a clear recommendation — with no sales pressure.</p>
-          <button class="faq-cta-btn" onclick="goto('contact')">
+          <button class="faq-cta-btn" data-goto="contact">
             <i class="fa-solid fa-calendar-check"></i> Book Free Call Now
           </button>
           <div class="faq-info-list">
@@ -1058,10 +1128,10 @@
         <p class="cta-p">Book a free consultation today. We will review your current process and show you exactly how we can help — no obligation.</p>
       </div>
       <div class="cta-acts reveal d1">
-        <button class="btn-white" onclick="goto('contact')">
+        <button class="btn-white" data-goto="contact">
           <i class="fa-solid fa-calendar-check" style="color:var(--blue)"></i> Book Free Call
         </button>
-        <button class="btn-wh-out" onclick="goto('services')">View Services</button>
+        <button class="btn-wh-out" data-goto="services">View Services</button>
       </div>
     </div>
   </div>
@@ -1125,83 +1195,107 @@
           <div id="form-body">
             <div class="cf-title">Send Us a Message</div>
             <div class="cf-sub">We respond within 24 hours on business days.</div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="fname">First Name<span class="req">*</span></label>
-                <input class="form-ctrl" type="text" id="fname" name="first_name" placeholder="Ravi" autocomplete="given-name" required>
-                <div class="form-err">Please enter your first name</div>
+            <!-- Step indicator -->
+            <div class="form-steps-bar">
+              <div class="fsb-step active" data-step="1"><span class="fsb-num">1</span> Contact</div>
+              <div class="fsb-line"><div class="fsb-line-fill"></div></div>
+              <div class="fsb-step" data-step="2"><span class="fsb-num">2</span> Project</div>
+            </div>
+            <!-- Step 1: Contact info -->
+            <div class="form-step" id="form-step-1">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="fname">First Name<span class="req">*</span></label>
+                  <input class="form-ctrl" type="text" id="fname" name="first_name" placeholder="Ravi" autocomplete="given-name" required aria-describedby="fname-err">
+                  <div class="form-err" id="fname-err">Please enter your first name</div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="lname">Last Name<span class="req">*</span></label>
+                  <input class="form-ctrl" type="text" id="lname" name="last_name" placeholder="Kumar" autocomplete="family-name" required aria-describedby="lname-err">
+                  <div class="form-err" id="lname-err">Please enter your last name</div>
+                </div>
               </div>
               <div class="form-group">
-                <label class="form-label" for="lname">Last Name<span class="req">*</span></label>
-                <input class="form-ctrl" type="text" id="lname" name="last_name" placeholder="Kumar" autocomplete="family-name" required>
-                <div class="form-err">Please enter your last name</div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="email">Business Email<span class="req">*</span></label>
-              <input class="form-ctrl" type="email" id="email" name="email" placeholder="ravi@yourcompany.com" autocomplete="email" required>
-              <div class="form-err">Please enter a valid email address</div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="phone">Phone / WhatsApp<span class="req">*</span></label>
-              <input class="form-ctrl" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" required>
-              <div class="form-err">Please enter a valid Indian phone number (10 digits)</div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="company">Company Name<span class="req">*</span></label>
-              <input class="form-ctrl" type="text" id="company" name="company" placeholder="Your Company Pvt Ltd" autocomplete="organization" required>
-              <div class="form-err">Please enter your company name</div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="service">Service Needed<span class="req">*</span></label>
-                <select class="form-ctrl" id="service" name="service" required>
-                  <option value="">Select a service...</option>
-                  <option>CRM Software</option>
-                  <option>ERP Solutions</option>
-                  <option>Inventory Management</option>
-                  <option>HR &amp; Payroll</option>
-                  <option>GST Billing &amp; Accounting</option>
-                  <option>E-Commerce &amp; Online Store</option>
-                  <option>Field Service &amp; Sales Force</option>
-                  <option>WhatsApp Business Automation</option>
-                  <option>Project &amp; Task Management</option>
-                  <option>Helpdesk &amp; Ticket Management</option>
-                  <option>Document Management (DMS)</option>
-                  <option>Warehouse Management (WMS)</option>
-                  <option>Fleet &amp; Logistics Management</option>
-                  <option>Appointment &amp; Booking System</option>
-                  <option>Business Intelligence &amp; Dashboards</option>
-                  <option>School &amp; Institute Management</option>
-                  <option>Real Estate &amp; Property Management</option>
-                  <option>Custom Business App</option>
-                  <option>Multiple / Not Sure Yet</option>
-                </select>
-                <div class="form-err">Please select a service</div>
+                <label class="form-label" for="email">Business Email<span class="req">*</span></label>
+                <input class="form-ctrl" type="email" id="email" name="email" placeholder="ravi@yourcompany.com" autocomplete="email" required aria-describedby="email-err">
+                <div class="form-err" id="email-err">Please enter a valid email address</div>
               </div>
               <div class="form-group">
-                <label class="form-label" for="budget">Approx. Budget</label>
-                <select class="form-ctrl" id="budget" name="budget">
-                  <option value="">Select range...</option>
-                  <option>Under ₹1 Lakh</option>
-                  <option>₹1 – 3 Lakhs</option>
-                  <option>₹3 – 6 Lakhs</option>
-                  <option>₹6 Lakhs &amp; above</option>
-                  <option>Not decided yet</option>
-                </select>
+                <label class="form-label" for="phone">Phone / WhatsApp<span class="req">*</span></label>
+                <input class="form-ctrl" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" required aria-describedby="phone-err">
+                <div class="form-err" id="phone-err">Please enter a valid phone number (10 digits)</div>
               </div>
+              <button type="button" class="form-submit" id="form-next-btn" onclick="formNextStep()">
+                Continue <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="message">Tell Us About Your Requirements<span class="req">*</span></label>
-              <textarea class="form-ctrl" id="message" name="message" placeholder="Describe your current process, what problems you face, and what you'd like to achieve with new software..." required></textarea>
-              <div class="form-err">Please describe your requirements</div>
+            <!-- Step 2: Project details -->
+            <div class="form-step" id="form-step-2" style="display:none">
+              <div class="form-group">
+                <label class="form-label" for="company">Company Name<span class="req">*</span></label>
+                <input class="form-ctrl" type="text" id="company" name="company" placeholder="Your Company Pvt Ltd" autocomplete="organization" required aria-describedby="company-err">
+                <div class="form-err" id="company-err">Please enter your company name</div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="service">Service Needed<span class="req">*</span></label>
+                  <select class="form-ctrl" id="service" name="service" required aria-describedby="service-err">
+                    <option value="">Select a service...</option>
+                    <option>CRM Software</option>
+                    <option>ERP Solutions</option>
+                    <option>Inventory Management</option>
+                    <option>HR &amp; Payroll</option>
+                    <option>GST Billing &amp; Accounting</option>
+                    <option>E-Commerce &amp; Online Store</option>
+                    <option>Field Service &amp; Sales Force</option>
+                    <option>WhatsApp Business Automation</option>
+                    <option>Project &amp; Task Management</option>
+                    <option>Helpdesk &amp; Ticket Management</option>
+                    <option>Document Management (DMS)</option>
+                    <option>Warehouse Management (WMS)</option>
+                    <option>Fleet &amp; Logistics Management</option>
+                    <option>Appointment &amp; Booking System</option>
+                    <option>Business Intelligence &amp; Dashboards</option>
+                    <option>School &amp; Institute Management</option>
+                    <option>Real Estate &amp; Property Management</option>
+                    <option>Custom Business App</option>
+                    <option>Multiple / Not Sure Yet</option>
+                  </select>
+                  <div class="form-err" id="service-err">Please select a service</div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="budget">Approx. Budget</label>
+                  <select class="form-ctrl" id="budget" name="budget">
+                    <option value="">Select range...</option>
+                    <option>Under &#8377;1 Lakh</option>
+                    <option>&#8377;1 – 3 Lakhs</option>
+                    <option>&#8377;3 – 6 Lakhs</option>
+                    <option>&#8377;6 Lakhs &amp; above</option>
+                    <option>Not decided yet</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Tell Us About Your Requirements<span class="req">*</span></label>
+                <textarea class="form-ctrl" id="message" name="message" placeholder="Describe your current process, what problems you face, and what you'd like to achieve with new software..." required aria-describedby="message-err"></textarea>
+                <div class="form-err" id="message-err">Please describe your requirements</div>
+              </div>
+              <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+              <div style="display:flex;gap:10px">
+                <button type="button" class="btn-outline" style="flex:0 0 auto;padding:13px 20px" onclick="formPrevStep()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                <button type="submit" class="form-submit" id="submit-btn" style="flex:1">
+                  <i class="fa-solid fa-paper-plane"></i> Send Message &amp; Get Free Consultation
+                </button>
+              </div>
+              <p class="form-note"><i class="fa-solid fa-lock"></i>Your information is 100% secure and never shared.</p>
             </div>
-            <!-- Web3Forms honeypot for spam prevention -->
-            <input type="checkbox" name="botcheck" class="hidden" style="display:none">
-            <button type="submit" class="form-submit" id="submit-btn">
-              <i class="fa-solid fa-paper-plane"></i> Send Message &amp; Get Free Consultation
-            </button>
-            <p class="form-note"><i class="fa-solid fa-lock"></i>Your information is 100% secure and never shared.</p>
+            <!-- Or book a call -->
+            <div class="form-or">
+              <span class="form-or-line"></span><span class="form-or-text">or</span><span class="form-or-line"></span>
+            </div>
+            <a href="https://cal.com/softwaller/30min" target="_blank" rel="noopener" class="form-book-call" id="book-call-btn">
+              <i class="fa-solid fa-calendar-check"></i> Book a Free 30-Min Call
+            </a>
           </div>
           <div class="form-success" id="form-success" aria-live="polite">
             <div class="fs-circle"><i class="fa-solid fa-check"></i></div>
@@ -1213,7 +1307,7 @@
             <div class="fe-h">Couldn't Send Message</div>
             <p class="fe-p">Our contact form is temporarily unavailable. Please email us directly and we'll get back to you within 24 business hours.</p>
             <a class="fe-mailto" id="fe-mailto-link" href="mailto:info@softwaller.com"><i class="fa-solid fa-envelope"></i> Email info@softwaller.com</a>
-            <br><button class="fe-retry" onclick="retryForm()"><i class="fa-solid fa-arrow-rotate-right"></i> Try the form again</button>
+            <br><button class="fe-retry" data-action="retryForm"><i class="fa-solid fa-arrow-rotate-right"></i> Try the form again</button>
           </div>
         </form>
       </div>
@@ -1221,6 +1315,32 @@
   </div>
 </section>
 </main>
+
+<!-- Exit-intent popup (desktop only, fires once per session) -->
+<div class="exit-overlay" id="exit-popup" role="dialog" aria-modal="true" aria-labelledby="exit-title">
+  <div class="exit-modal">
+    <button class="exit-close" onclick="closeExitPopup()" aria-label="Close">&times;</button>
+    <div class="exit-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+    <div class="exit-title" id="exit-title">Wait — Before You Go!</div>
+    <p class="exit-desc">Get a <strong>free consultation</strong> on how custom software can automate your business. No obligation, no hard selling.</p>
+    <a href="#contact" class="btn-primary" onclick="closeExitPopup()" style="width:100%;justify-content:center"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+    <a href="https://cal.com/softwaller/30min" target="_blank" rel="noopener" class="exit-book"><i class="fa-solid fa-calendar-check"></i> Or book a 30-min call</a>
+  </div>
+</div>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69c94e34d2d96c1c3cdc0170/1jkt5ivim';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 
 <!-- ══════════════════════════════════════
      FOOTER
@@ -1230,15 +1350,15 @@
       <div class="footer-grid">
         <div class="footer-brand-mob">
           <div class="fb-logo">
-            <img src="assets/softwaller-technologies-logo-dark.png" alt="Softwaller Technologies - Custom CRM, ERP & Business Software" height="56">
+            <img src="assets/softwaller-technologies-logo-dark.png" alt="Softwaller Technologies - Custom CRM, ERP & Business Software" height="56" loading="lazy">
           </div>
           <p class="fb-desc">Softwaller Technologies Private Limited — building intelligent business software for growing enterprises since 2024. CRM, ERP, IMS, HR &amp; Payroll, GST Billing and custom solutions.</p>
           <div class="fb-socials">
-            <a href="https://www.linkedin.com/company/softwaller" target="_blank" rel="noopener" class="fb-soc" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.facebook.com/softwaller" target="_blank" rel="noopener" class="fb-soc" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://twitter.com/softwallertech" target="_blank" rel="noopener" class="fb-soc" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/softwallertech" target="_blank" rel="noopener" class="fb-soc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://wa.me/919585999819" target="_blank" rel="noopener" class="fb-soc" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/company/softwaller" target="_blank" rel="noopener noreferrer" class="fb-soc" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/softwaller" target="_blank" rel="noopener noreferrer" class="fb-soc" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/softwallertech" target="_blank" rel="noopener noreferrer" class="fb-soc" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/softwallertech" target="_blank" rel="noopener noreferrer" class="fb-soc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/919585999819" target="_blank" rel="noopener noreferrer" class="fb-soc" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
         <details class="fc-col">
@@ -1259,11 +1379,11 @@
             Company <i class="fa-solid fa-chevron-down fc-toggle"></i>
           </summary>
           <nav class="fc-links" aria-label="Company links">
-            <a href="#about"><i class="fa-solid fa-building"></i>About Us</a>
-            <a href="#process"><i class="fa-solid fa-diagram-project"></i>How We Work</a>
-            <a href="#testimonials"><i class="fa-solid fa-star"></i>Client Reviews</a>
-            <a href="#faq"><i class="fa-solid fa-circle-question"></i>FAQ</a>
-            <a href="#contact"><i class="fa-solid fa-briefcase"></i>Work With Us</a>
+            <a href="about.html"><i class="fa-solid fa-building"></i>About Us</a>
+            <a href="case-studies.html"><i class="fa-solid fa-trophy"></i>Case Studies</a>
+            <a href="portfolio.html"><i class="fa-solid fa-briefcase"></i>Portfolio</a>
+            <a href="industries.html"><i class="fa-solid fa-industry"></i>Industries</a>
+            <a href="blog/"><i class="fa-solid fa-newspaper"></i>Blog</a>
             <a href="#contact"><i class="fa-solid fa-envelope"></i>Contact Us</a>
           </nav>
         </details>
@@ -1287,10 +1407,10 @@
     <div class="footer-bottom">
       <span class="fb-copy">&copy; 2026 Softwaller Technologies Private Limited. All rights reserved.</span>
       <div class="fb-rights">
-        <a onclick="openPolicy('privacy')">Privacy Policy</a>
-        <a onclick="openPolicy('terms')">Terms of Service</a>
-        <a onclick="openPolicy('refund')">Refund Policy</a>
-        <a onclick="openPolicy('sitemap')">Sitemap</a>
+        <a href="#" data-open-policy="privacy">Privacy Policy</a>
+        <a href="#" data-open-policy="terms">Terms of Service</a>
+        <a href="#" data-open-policy="refund">Refund Policy</a>
+        <a href="#" data-open-policy="sitemap">Sitemap</a>
       </div>
     </div>
   </div>
@@ -1303,26 +1423,26 @@
 <div id="wa-tooltip" role="tooltip">Chat with us on WhatsApp</div>
 
 <!-- Back to top -->
-<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+<button id="btt" data-action="scrollTop" aria-label="Back to top">
   <i class="fa-solid fa-chevron-up"></i>
 </button>
 
 <!-- Cookie Banner -->
 <div id="cookie" role="dialog" aria-label="Cookie notice">
-  <p class="cookie-txt"><strong>We use cookies</strong> to improve your experience on our website. By continuing to browse, you agree to our use of cookies as described in our <a onclick="openPolicy('privacy')" style="color:#93BBFF;cursor:pointer">Privacy Policy</a>.</p>
+  <p class="cookie-txt"><strong>We use cookies</strong> to improve your experience on our website. By continuing to browse, you agree to our use of cookies as described in our <a href="#" data-open-policy="privacy" style="color:#93BBFF;cursor:pointer">Privacy Policy</a>.</p>
   <div class="cookie-acts">
-    <button class="ck-ok" onclick="acceptCookie()">Accept All</button>
-    <button class="ck-no" onclick="rejectCookie()">Reject All</button>
+    <button class="ck-ok" data-action="acceptCookie">Accept All</button>
+    <button class="ck-no" data-action="rejectCookie">Reject All</button>
   </div>
 </div>
 
 <!-- ══ POLICY MODALS ══ -->
 <!-- Privacy Policy -->
-<div class="pol-overlay" id="pol-privacy" role="dialog" aria-modal="true" aria-labelledby="pp-title" onclick="if(event.target===this)closePolicy('privacy')">
+<div class="pol-overlay" id="pol-privacy" role="dialog" aria-modal="true" aria-labelledby="pp-title">
   <div class="pol-modal">
     <div class="pol-header">
       <div class="pol-title" id="pp-title"><i class="fa-solid fa-shield-halved" style="color:var(--blue);margin-right:8px"></i>Privacy Policy</div>
-      <button class="pol-close" onclick="closePolicy('privacy')" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <button class="pol-close" data-close-policy="privacy" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="pol-body">
       <p class="pol-date">Last updated: 1 March 2026 &nbsp;|&nbsp; Softwaller Technologies Private Limited</p>
@@ -1373,11 +1493,11 @@
 </div>
 
 <!-- Terms of Service -->
-<div class="pol-overlay" id="pol-terms" role="dialog" aria-modal="true" aria-labelledby="tos-title" onclick="if(event.target===this)closePolicy('terms')">
+<div class="pol-overlay" id="pol-terms" role="dialog" aria-modal="true" aria-labelledby="tos-title">
   <div class="pol-modal">
     <div class="pol-header">
       <div class="pol-title" id="tos-title"><i class="fa-solid fa-file-contract" style="color:var(--blue);margin-right:8px"></i>Terms of Service</div>
-      <button class="pol-close" onclick="closePolicy('terms')" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <button class="pol-close" data-close-policy="terms" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="pol-body">
       <p class="pol-date">Last updated: 1 March 2026 &nbsp;|&nbsp; Softwaller Technologies Private Limited</p>
@@ -1410,11 +1530,11 @@
 </div>
 
 <!-- Refund Policy -->
-<div class="pol-overlay" id="pol-refund" role="dialog" aria-modal="true" aria-labelledby="rp-title" onclick="if(event.target===this)closePolicy('refund')">
+<div class="pol-overlay" id="pol-refund" role="dialog" aria-modal="true" aria-labelledby="rp-title">
   <div class="pol-modal">
     <div class="pol-header">
       <div class="pol-title" id="rp-title"><i class="fa-solid fa-rotate-left" style="color:var(--blue);margin-right:8px"></i>Refund Policy</div>
-      <button class="pol-close" onclick="closePolicy('refund')" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <button class="pol-close" data-close-policy="refund" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="pol-body">
       <p class="pol-date">Last updated: 1 March 2026 &nbsp;|&nbsp; Softwaller Technologies Private Limited</p>
@@ -1442,24 +1562,24 @@
 </div>
 
 <!-- Sitemap -->
-<div class="pol-overlay" id="pol-sitemap" role="dialog" aria-modal="true" aria-labelledby="sm-title" onclick="if(event.target===this)closePolicy('sitemap')">
+<div class="pol-overlay" id="pol-sitemap" role="dialog" aria-modal="true" aria-labelledby="sm-title">
   <div class="pol-modal">
     <div class="pol-header">
       <div class="pol-title" id="sm-title"><i class="fa-solid fa-sitemap" style="color:var(--blue);margin-right:8px"></i>Sitemap</div>
-      <button class="pol-close" onclick="closePolicy('sitemap')" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <button class="pol-close" data-close-policy="sitemap" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="pol-body">
       <p class="pol-date">Softwaller Technologies Private Limited &nbsp;|&nbsp; www.softwaller.com</p>
       <h2>Main Pages</h2>
       <ul>
-        <li><a onclick="closePolicy('sitemap');goto('home')">Home — Overview, hero, stats</a></li>
-        <li><a onclick="closePolicy('sitemap');goto('about')">About Us — Company story, team values, milestones</a></li>
-        <li><a onclick="closePolicy('sitemap');goto('services')">Services — All software solutions we offer</a></li>
-        <li><a onclick="closePolicy('sitemap');goto('why')">Why Softwaller — Our differentiators</a></li>
-        <li><a onclick="closePolicy('sitemap');goto('process')">How We Work — Our development process</a></li>
-        <li><a onclick="closePolicy('sitemap');goto('testimonials')">Client Reviews — Testimonials from our clients</a></li>
-        <li><a onclick="closePolicy('sitemap');goto('faq')">FAQ — Frequently asked questions</a></li>
-        <li><a onclick="closePolicy('sitemap');goto('contact')">Contact Us — Enquiry form and contact details</a></li>
+        <li><a href="#" data-sitemap-goto="home">Home — Overview, hero, stats</a></li>
+        <li><a href="#" data-sitemap-goto="about">About Us — Company story, team values, milestones</a></li>
+        <li><a href="#" data-sitemap-goto="services">Services — All software solutions we offer</a></li>
+        <li><a href="#" data-sitemap-goto="why">Why Softwaller — Our differentiators</a></li>
+        <li><a href="#" data-sitemap-goto="process">How We Work — Our development process</a></li>
+        <li><a href="#" data-sitemap-goto="testimonials">Client Reviews — Testimonials from our clients</a></li>
+        <li><a href="#" data-sitemap-goto="faq">FAQ — Frequently asked questions</a></li>
+        <li><a href="#" data-sitemap-goto="contact">Contact Us — Enquiry form and contact details</a></li>
       </ul>
       <h2>Services</h2>
       <ul>
@@ -1472,9 +1592,9 @@
       </ul>
       <h2>Legal Pages</h2>
       <ul>
-        <li><a onclick="closePolicy('sitemap');openPolicy('privacy')">Privacy Policy</a></li>
-        <li><a onclick="closePolicy('sitemap');openPolicy('terms')">Terms of Service</a></li>
-        <li><a onclick="closePolicy('sitemap');openPolicy('refund')">Refund Policy</a></li>
+        <li><a href="#" data-sitemap-policy="privacy">Privacy Policy</a></li>
+        <li><a href="#" data-sitemap-policy="terms">Terms of Service</a></li>
+        <li><a href="#" data-sitemap-policy="refund">Refund Policy</a></li>
       </ul>
       <h2>Contact Information</h2>
       <ul>
@@ -1491,7 +1611,7 @@
 </div>
 
 <!-- JS extracted to assets/main.js -->
-<script src="assets/main.js"></script>
+<script src="assets/main.js" defer></script>
 
 </body>
 </html>

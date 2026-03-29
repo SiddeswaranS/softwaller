@@ -10,19 +10,21 @@ function trackEvent(action, category, label) {
   }
 }
 
+/* ── Cached DOM elements ── */
+var cachedProgressBar = document.getElementById('progress-bar');
+var cachedHeader = document.getElementById('site-header');
+var cachedBtt = document.getElementById('btt');
+
 /* ── Scroll progress bar ── */
 window.addEventListener('scroll', function () {
-  var el = document.getElementById('progress-bar');
   var h = document.body.scrollHeight - window.innerHeight;
-  if (el && h > 0) el.style.width = (window.scrollY / h * 100) + '%';
+  if (cachedProgressBar && h > 0) cachedProgressBar.style.width = (window.scrollY / h * 100) + '%';
 
   /* Header shadow on scroll */
-  var header = document.getElementById('site-header');
-  if (header) header.classList.toggle('scrolled', window.scrollY > 20);
+  if (cachedHeader) cachedHeader.classList.toggle('scrolled', window.scrollY > 20);
 
   /* Back to top visibility */
-  var btt = document.getElementById('btt');
-  if (btt) btt.classList.toggle('visible', window.scrollY > 400);
+  if (cachedBtt) cachedBtt.classList.toggle('visible', window.scrollY > 400);
 });
 
 /* ── Smooth goto ── */
@@ -94,11 +96,13 @@ if ('IntersectionObserver' in window) {
 
 /* ── FAQ accordion ── */
 function toggleFaq(btn) {
+  if (!btn || !btn.parentElement) return;
   var item = btn.parentElement;
   var open = item.classList.contains('open');
   document.querySelectorAll('.faq-item').forEach(function (i) {
     i.classList.remove('open');
-    i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    var q = i.querySelector('.faq-q');
+    if (q) q.setAttribute('aria-expanded', 'false');
   });
   if (!open) {
     item.classList.add('open');
@@ -106,20 +110,29 @@ function toggleFaq(btn) {
   }
 }
 document.querySelectorAll('.faq-q').forEach(function (q) {
+  q.addEventListener('click', function () { toggleFaq(q); });
   q.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(q); } });
 });
 
 /* ── Stat counter animation ── */
+var COUNTER_STEPS = 50;
+var COUNTER_INTERVAL_MS = 26;
 function animateCounter(el) {
   var target = parseInt(el.dataset.count) || 0;
   var suf = el.dataset.suf || '';
   var n = 0;
-  var inc = Math.ceil(target / 50);
+  var inc = Math.ceil(target / COUNTER_STEPS);
+  var numNode = document.createTextNode('');
+  var span = document.createElement('span');
+  span.textContent = suf;
+  el.textContent = '';
+  el.appendChild(numNode);
+  el.appendChild(span);
   var t = setInterval(function () {
     n = Math.min(n + inc, target);
-    el.innerHTML = n + '<span>' + suf + '</span>';
+    numNode.nodeValue = n;
     if (n >= target) clearInterval(t);
-  }, 26);
+  }, COUNTER_INTERVAL_MS);
 }
 var statIO = new IntersectionObserver(function (entries) {
   entries.forEach(function (e) {
@@ -141,7 +154,7 @@ if (form) {
     this.querySelectorAll('[required]').forEach(function (field) {
       var empty = field.value.trim() === '';
       var emailInvalid = field.type === 'email' && field.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value);
-      /* Phone validation: Indian format */
+      /* Phone validation: Indian format — +91 (optional) followed by 6-9 and 9 digits */
       var phoneInvalid = false;
       if (field.type === 'tel' && field.value.trim()) {
         var phone = field.value.replace(/[\s\-\(\)]/g, '');
@@ -156,7 +169,11 @@ if (form) {
     if (!valid) return;
     var btn = document.getElementById('submit-btn');
     btn.disabled = true;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+    btn.textContent = '';
+    var spinner = document.createElement('i');
+    spinner.className = 'fa-solid fa-spinner fa-spin';
+    btn.appendChild(spinner);
+    btn.appendChild(document.createTextNode(' Sending...'));
     var action = this.action;
     try {
       var res = await fetch(action, { method: 'POST', body: new FormData(this), headers: { Accept: 'application/json' } });
@@ -172,30 +189,47 @@ if (form) {
     f.addEventListener('input', function () { f.classList.remove('error'); });
   });
 }
+function resetSubmitBtn() {
+  var btn = document.getElementById('submit-btn');
+  if (!btn) return;
+  btn.disabled = false;
+  btn.textContent = '';
+  var icon = document.createElement('i');
+  icon.className = 'fa-solid fa-paper-plane';
+  btn.appendChild(icon);
+  btn.appendChild(document.createTextNode(' Send Message & Get Free Consultation'));
+}
 function showSuccess() {
-  document.getElementById('form-body').style.display = 'none';
-  document.getElementById('form-error').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
+  var formBody = document.getElementById('form-body');
+  var formError = document.getElementById('form-error');
+  var formSuccess = document.getElementById('form-success');
+  if (formBody) formBody.style.display = 'none';
+  if (formError) formError.style.display = 'none';
+  if (formSuccess) formSuccess.style.display = 'block';
 }
 function showError() {
-  var btn = document.getElementById('submit-btn');
-  btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message & Get Free Consultation';
+  resetSubmitBtn();
   var f = document.getElementById('contact-form');
+  if (!f) return;
   var name = ((f.querySelector('[name="first_name"]')?.value || '') + ' ' + (f.querySelector('[name="last_name"]')?.value || '')).trim();
   var email = f.querySelector('[name="email"]')?.value || '';
   var phone = f.querySelector('[name="phone"]')?.value || '';
   var msg = f.querySelector('[name="message"]')?.value || '';
   var subject = encodeURIComponent('Website Enquiry from ' + name);
   var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\n\n' + msg);
-  document.getElementById('fe-mailto-link').href = 'mailto:info@softwaller.com?subject=' + subject + '&body=' + body;
-  document.getElementById('form-body').style.display = 'none';
-  document.getElementById('form-error').style.display = 'block';
+  var mailtoLink = document.getElementById('fe-mailto-link');
+  if (mailtoLink) mailtoLink.href = 'mailto:info@softwaller.com?subject=' + subject + '&body=' + body;
+  var formBody = document.getElementById('form-body');
+  var formError = document.getElementById('form-error');
+  if (formBody) formBody.style.display = 'none';
+  if (formError) formError.style.display = 'block';
 }
 function retryForm() {
-  document.getElementById('form-error').style.display = 'none';
-  document.getElementById('form-body').style.display = 'block';
-  var btn = document.getElementById('submit-btn');
-  btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message &amp; Get Free Consultation';
+  var formError = document.getElementById('form-error');
+  var formBody = document.getElementById('form-body');
+  if (formError) formError.style.display = 'none';
+  if (formBody) formBody.style.display = 'block';
+  resetSubmitBtn();
 }
 
 /* ── Cookie consent — DPDPA compliant ── */
@@ -235,7 +269,9 @@ function loadGA4() {
   s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EXWE1WLTVE';
   document.head.appendChild(s);
   window.dataLayer = window.dataLayer || [];
-  window.gtag = function () { dataLayer.push(arguments); };
+  if (!window.gtag) {
+    window.gtag = function () { dataLayer.push(arguments); };
+  }
   gtag('js', new Date());
   gtag('config', 'G-EXWE1WLTVE');
 }
@@ -265,7 +301,11 @@ function initFooterCols() {
   }
 }
 initFooterCols();
-window.addEventListener('resize', initFooterCols);
+var resizeTimer;
+window.addEventListener('resize', function () {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(initFooterCols, 150);
+});
 
 /* ── Policy modals with focus trap ── */
 var lastFocusedElement = null;
@@ -273,6 +313,7 @@ var lastFocusedElement = null;
 function openPolicy(id) {
   lastFocusedElement = document.activeElement;
   var modal = document.getElementById('pol-' + id);
+  if (!modal) return;
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
   /* Move focus to close button */
@@ -282,6 +323,7 @@ function openPolicy(id) {
 
 function closePolicy(id) {
   var modal = document.getElementById('pol-' + id);
+  if (!modal) return;
   modal.classList.remove('open');
   document.body.style.overflow = '';
   /* Return focus */
@@ -313,6 +355,46 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+/* ── Event delegation — replaces all inline onclick handlers ── */
+document.addEventListener('click', function (e) {
+  /* data-goto="sectionId" — smooth scroll navigation */
+  var gotoEl = e.target.closest('[data-goto]');
+  if (gotoEl) { e.preventDefault(); goto(gotoEl.dataset.goto); return; }
+
+  /* data-open-policy="policyId" — open policy modal */
+  var openPol = e.target.closest('[data-open-policy]');
+  if (openPol) { e.preventDefault(); openPolicy(openPol.dataset.openPolicy); return; }
+
+  /* data-close-policy="policyId" — close policy modal */
+  var closePol = e.target.closest('[data-close-policy]');
+  if (closePol) { e.preventDefault(); closePolicy(closePol.dataset.closePolicy); return; }
+
+  /* data-action="retryForm" */
+  var actionEl = e.target.closest('[data-action]');
+  if (actionEl) {
+    var action = actionEl.dataset.action;
+    if (action === 'retryForm') { retryForm(); }
+    else if (action === 'acceptCookie') { acceptCookie(); }
+    else if (action === 'rejectCookie') { rejectCookie(); }
+    else if (action === 'scrollTop') { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    return;
+  }
+
+  /* Policy overlay click-to-close (click on overlay background) */
+  if (e.target.classList.contains('pol-overlay') && e.target.classList.contains('open')) {
+    var polId = e.target.id.replace('pol-', '');
+    closePolicy(polId);
+    return;
+  }
+
+  /* Sitemap links: data-sitemap-goto / data-sitemap-policy */
+  var smGoto = e.target.closest('[data-sitemap-goto]');
+  if (smGoto) { e.preventDefault(); closePolicy('sitemap'); goto(smGoto.dataset.sitemapGoto); return; }
+
+  var smPol = e.target.closest('[data-sitemap-policy]');
+  if (smPol) { e.preventDefault(); closePolicy('sitemap'); openPolicy(smPol.dataset.sitemapPolicy); return; }
+});
+
 /* ── GA4 Event Tracking — CTA clicks, WhatsApp, phone ── */
 document.addEventListener('click', function (e) {
   /* WhatsApp button */
@@ -334,4 +416,84 @@ document.addEventListener('click', function (e) {
   if (svcLink) {
     trackEvent('click', 'service_link', svcLink.href);
   }
+  /* Book-a-call link */
+  if (e.target.closest('#book-call-btn, .exit-book')) {
+    trackEvent('click', 'cta', 'book_a_call');
+  }
+});
+
+/* ── Multi-step form ── */
+function formNextStep() {
+  var step1 = document.getElementById('form-step-1');
+  if (!step1) return;
+  var valid = true;
+  step1.querySelectorAll('[required]').forEach(function (field) {
+    var empty = field.value.trim() === '';
+    var emailInvalid = field.type === 'email' && field.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value);
+    var phoneInvalid = false;
+    if (field.type === 'tel' && field.value.trim()) {
+      var phone = field.value.replace(/[\s\-\(\)]/g, '');
+      phoneInvalid = !/^(\+91)?[6-9]\d{9}$/.test(phone);
+    }
+    if (empty || emailInvalid || phoneInvalid) {
+      field.classList.add('error'); valid = false;
+    } else {
+      field.classList.remove('error');
+    }
+  });
+  if (!valid) return;
+  var step2 = document.getElementById('form-step-2');
+  if (!step2) return;
+  step1.style.display = 'none';
+  step2.style.display = 'block';
+  /* Update step bar */
+  document.querySelectorAll('.fsb-step').forEach(function (s) {
+    if (s.dataset.step === '1') { s.classList.remove('active'); s.classList.add('done'); }
+    if (s.dataset.step === '2') { s.classList.add('active'); }
+  });
+  var fill = document.querySelector('.fsb-line-fill');
+  if (fill) fill.style.width = '100%';
+  trackEvent('form_step', 'contact', 'step2_reached');
+}
+function formPrevStep() {
+  var step2 = document.getElementById('form-step-2');
+  var step1 = document.getElementById('form-step-1');
+  if (!step2 || !step1) return;
+  step2.style.display = 'none';
+  step1.style.display = 'block';
+  document.querySelectorAll('.fsb-step').forEach(function (s) {
+    if (s.dataset.step === '1') { s.classList.add('active'); s.classList.remove('done'); }
+    if (s.dataset.step === '2') { s.classList.remove('active'); }
+  });
+  var fill = document.querySelector('.fsb-line-fill');
+  if (fill) fill.style.width = '0';
+}
+
+/* ── Exit-intent popup (desktop only, once per session) ── */
+var exitShown = false;
+function showExitPopup() {
+  if (exitShown) return;
+  if (sessionStorage.getItem('sw_exit_shown')) return;
+  if (document.getElementById('form-success')?.style.display === 'block') return;
+  var popup = document.getElementById('exit-popup');
+  if (popup) {
+    popup.classList.add('open');
+    exitShown = true;
+    sessionStorage.setItem('sw_exit_shown', '1');
+    trackEvent('popup', 'exit_intent', 'shown');
+  }
+}
+function closeExitPopup() {
+  var popup = document.getElementById('exit-popup');
+  if (popup) popup.classList.remove('open');
+}
+/* Trigger on mouse leaving viewport (desktop only) */
+if (window.innerWidth > 768) {
+  document.addEventListener('mouseleave', function (e) {
+    if (e.clientY < 10) showExitPopup();
+  });
+}
+/* Close on Escape */
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeExitPopup();
 });

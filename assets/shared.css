@@ -5,7 +5,8 @@
 
 /* Reset */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;font-size:16px}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+html{font-size:16px}
 img{max-width:100%;display:block}
 button,input,select,textarea{font-family:inherit}
 a{text-decoration:none;color:inherit}
@@ -48,7 +49,7 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .btn-outline:hover{border-color:var(--blue);color:var(--blue)}
 
 /* Product/404 Nav */
-.pnav{position:fixed;top:0;left:0;right:0;z-index:500;background:#fff;border-bottom:1px solid var(--line);backdrop-filter:blur(20px)}
+.pnav{position:fixed;top:0;left:0;right:0;z-index:500;background:var(--white);border-bottom:1px solid var(--line);backdrop-filter:blur(20px)}
 .pnav-inner{max-width:1200px;margin:0 auto;padding:0 28px;height:66px;display:flex;align-items:center;justify-content:space-between}
 .pnav-logo{display:flex;align-items:center;gap:10px}
 .pnav-logo img{height:42px;width:auto}

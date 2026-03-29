@@ -20,7 +20,7 @@
 .pfeatures h2{font-size:clamp(24px,3vw,36px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
 .pfeatures .sub{font-size:15px;color:var(--muted);text-align:center;margin-bottom:48px}
 .feat-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;list-style:none;padding:0}
-.feat-item{display:flex;gap:16px;align-items:flex-start;padding:22px 20px;background:var(--white);border:1px solid var(--line);border-radius:var(--r2);transition:all .25s}
+.feat-item{display:flex;gap:16px;align-items:flex-start;padding:22px 20px;background:var(--white);border:1px solid var(--line);border-radius:var(--r2);transition:border-color .25s,box-shadow .25s,transform .25s}
 .feat-item:hover{border-color:var(--blue-br);box-shadow:var(--sh-md);transform:translateY(-2px)}
 .feat-ic{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:transform .25s}
 .feat-item:hover .feat-ic{transform:scale(1.1)}
