@@ -3,5 +3,5 @@ Allow: /
 Disallow: /404.html
 
 # Sitemaps
-Sitemap: https://www.softwaller.in/sitemap.xml
+Sitemap: https://www.softwaller.com/sitemap.xml
 Sitemap: https://www.softwaller.com/sitemap.xml
