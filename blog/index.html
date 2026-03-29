@@ -32,6 +32,8 @@ body{min-height:100vh;display:flex;flex-direction:column}
 .blog-card{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:all .25s;display:flex;flex-direction:column}
 .blog-card:hover{box-shadow:0 12px 40px rgba(10,15,30,.12);transform:translateY(-4px)}
 .bc-color{height:6px}
+.bc-illust{height:160px;display:flex;align-items:center;justify-content:center;background:var(--surf);position:relative;overflow:hidden}
+.bc-illust svg{width:auto;height:100px;opacity:.9}
 .bc-body{padding:28px;flex:1;display:flex;flex-direction:column}
 .bc-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:14px;width:fit-content}
 .bc-title{font-size:20px;font-weight:800;color:var(--ink);letter-spacing:-.5px;line-height:1.25;margin-bottom:10px}
@@ -72,6 +74,28 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 1: CRM -->
     <a href="crm-vs-spreadsheets.html" class="blog-card">
       <div class="bc-color" style="background:var(--blue)"></div>
+      <div class="bc-illust" style="background:var(--blue-bg)">
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="10" width="180" height="100" rx="10" fill="#fff" stroke="#C2CFFF" stroke-width="1.5"/>
+          <rect x="22" y="24" width="50" height="32" rx="6" fill="#EBF0FF" stroke="#C2CFFF"/>
+          <text x="47" y="44" text-anchor="middle" font-size="8" font-weight="700" fill="#1557FF">NEW</text>
+          <rect x="28" y="48" width="36" height="4" rx="2" fill="#C2CFFF"/>
+          <rect x="80" y="24" width="50" height="32" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
+          <text x="105" y="44" text-anchor="middle" font-size="8" font-weight="700" fill="#7C3AED">QUAL</text>
+          <rect x="86" y="48" width="30" height="4" rx="2" fill="#DDD6FE"/>
+          <rect x="138" y="24" width="44" height="32" rx="6" fill="#ECFDF5" stroke="#A7F3D0"/>
+          <text x="160" y="44" text-anchor="middle" font-size="8" font-weight="700" fill="#059669">WON</text>
+          <rect x="144" y="48" width="28" height="4" rx="2" fill="#A7F3D0"/>
+          <rect x="22" y="68" width="80" height="32" rx="6" fill="#fff" stroke="#E4E7F0"/>
+          <polyline points="30,92 45,82 60,86 75,76 90,72" fill="none" stroke="#1557FF" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="90" cy="72" r="3" fill="#1557FF"/>
+          <rect x="110" y="68" width="72" height="32" rx="6" fill="#fff" stroke="#E4E7F0"/>
+          <rect x="118" y="78" width="10" height="16" rx="2" fill="#EBF0FF"/><rect x="118" y="86" width="10" height="8" rx="2" fill="#1557FF"/>
+          <rect x="132" y="78" width="10" height="16" rx="2" fill="#EBF0FF"/><rect x="132" y="82" width="10" height="12" rx="2" fill="#1557FF"/>
+          <rect x="146" y="78" width="10" height="16" rx="2" fill="#EBF0FF"/><rect x="146" y="80" width="10" height="14" rx="2" fill="#1557FF"/>
+          <rect x="160" y="78" width="10" height="16" rx="2" fill="#EBF0FF"/><rect x="160" y="84" width="10" height="10" rx="2" fill="#1557FF"/>
+        </svg>
+      </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--blue-bg);color:var(--blue)">CRM</span>
         <h2 class="bc-title">CRM vs Spreadsheets: Why Growing Businesses Need Custom CRM Software</h2>
@@ -86,6 +110,27 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 2: GST -->
     <a href="gst-billing-software.html" class="blog-card">
       <div class="bc-color" style="background:var(--green)"></div>
+      <div class="bc-illust" style="background:var(--green-bg)">
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <rect x="30" y="8" width="140" height="104" rx="10" fill="#fff" stroke="#A7F3D0" stroke-width="1.5"/>
+          <rect x="42" y="20" width="60" height="8" rx="3" fill="#A7F3D0"/>
+          <text x="72" y="27" text-anchor="middle" font-size="7" font-weight="700" fill="#059669">TAX INVOICE</text>
+          <rect x="120" y="20" width="38" height="8" rx="3" fill="#ECFDF5" stroke="#A7F3D0"/>
+          <text x="139" y="27" text-anchor="middle" font-size="6" font-weight="600" fill="#059669">GST</text>
+          <rect x="42" y="36" width="116" height="1" fill="#E4E7F0"/>
+          <rect x="42" y="44" width="80" height="5" rx="2" fill="#E4E7F0"/>
+          <rect x="42" y="54" width="60" height="5" rx="2" fill="#E4E7F0"/>
+          <rect x="42" y="64" width="90" height="5" rx="2" fill="#E4E7F0"/>
+          <rect x="42" y="74" width="70" height="5" rx="2" fill="#E4E7F0"/>
+          <rect x="42" y="86" width="116" height="1" fill="#A7F3D0"/>
+          <rect x="42" y="94" width="40" height="6" rx="2" fill="#059669"/>
+          <text x="62" y="99" text-anchor="middle" font-size="5" font-weight="700" fill="#fff">TOTAL</text>
+          <rect x="100" y="94" width="58" height="6" rx="2" fill="#ECFDF5"/>
+          <text x="129" y="99" text-anchor="middle" font-size="5" font-weight="700" fill="#059669">&#8377;24,500.00</text>
+          <circle cx="160" cy="30" r="12" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
+          <path d="M155 30l3 3 6-6" stroke="#059669" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--green-bg);color:var(--green)">GST</span>
         <h2 class="bc-title">How GST Billing Software Saves 20+ Hours Per Month</h2>
@@ -100,6 +145,30 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 3: ERP -->
     <a href="custom-erp-vs-readymade.html" class="blog-card">
       <div class="bc-color" style="background:var(--purple)"></div>
+      <div class="bc-illust" style="background:var(--purple-bg)">
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <rect x="60" y="10" width="80" height="28" rx="8" fill="#fff" stroke="#DDD6FE" stroke-width="1.5"/>
+          <text x="100" y="28" text-anchor="middle" font-size="9" font-weight="800" fill="#7C3AED">ERP</text>
+          <line x1="70" y1="38" x2="40" y2="56" stroke="#DDD6FE" stroke-width="1.5"/>
+          <line x1="100" y1="38" x2="100" y2="56" stroke="#DDD6FE" stroke-width="1.5"/>
+          <line x1="130" y1="38" x2="160" y2="56" stroke="#DDD6FE" stroke-width="1.5"/>
+          <rect x="10" y="56" width="60" height="24" rx="6" fill="#fff" stroke="#DDD6FE"/>
+          <text x="40" y="71" text-anchor="middle" font-size="7" font-weight="600" fill="#7C3AED">Inventory</text>
+          <rect x="70" y="56" width="60" height="24" rx="6" fill="#fff" stroke="#DDD6FE"/>
+          <text x="100" y="71" text-anchor="middle" font-size="7" font-weight="600" fill="#7C3AED">Finance</text>
+          <rect x="130" y="56" width="60" height="24" rx="6" fill="#fff" stroke="#DDD6FE"/>
+          <text x="160" y="71" text-anchor="middle" font-size="7" font-weight="600" fill="#7C3AED">HR</text>
+          <line x1="40" y1="80" x2="40" y2="90" stroke="#DDD6FE" stroke-width="1.5"/>
+          <line x1="100" y1="80" x2="100" y2="90" stroke="#DDD6FE" stroke-width="1.5"/>
+          <line x1="160" y1="80" x2="160" y2="90" stroke="#DDD6FE" stroke-width="1.5"/>
+          <rect x="10" y="90" width="60" height="20" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
+          <text x="40" y="103" text-anchor="middle" font-size="6" fill="#7C3AED">Production</text>
+          <rect x="70" y="90" width="60" height="20" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
+          <text x="100" y="103" text-anchor="middle" font-size="6" fill="#7C3AED">GST Billing</text>
+          <rect x="130" y="90" width="60" height="20" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
+          <text x="160" y="103" text-anchor="middle" font-size="6" fill="#7C3AED">Payroll</text>
+        </svg>
+      </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--purple-bg);color:var(--purple)">ERP</span>
         <h2 class="bc-title">Custom ERP vs Ready-Made ERP: Which Is Right for Your Business?</h2>
@@ -114,6 +183,23 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <!-- Card 4: Automation -->
     <a href="whatsapp-automation-signs.html" class="blog-card">
       <div class="bc-color" style="background:var(--orange)"></div>
+      <div class="bc-illust" style="background:var(--orange-bg)">
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <rect x="50" y="8" width="100" height="104" rx="14" fill="#fff" stroke="#FED7AA" stroke-width="1.5"/>
+          <rect x="50" y="8" width="100" height="22" rx="14" fill="#25D366"/>
+          <rect x="64" y="8" width="86" height="22" fill="#25D366"/>
+          <text x="100" y="23" text-anchor="middle" font-size="8" font-weight="700" fill="#fff">WhatsApp Business</text>
+          <rect x="60" y="40" width="70" height="14" rx="7" fill="#DCF8C6"/>
+          <text x="95" y="50" text-anchor="middle" font-size="6" fill="#333">Hi! I want to know about CRM</text>
+          <rect x="70" y="60" width="72" height="14" rx="7" fill="#E8E8E8"/>
+          <text x="106" y="70" text-anchor="middle" font-size="6" fill="#333">Sure! Here are our plans...</text>
+          <rect x="60" y="80" width="50" height="14" rx="7" fill="#DCF8C6"/>
+          <text x="85" y="90" text-anchor="middle" font-size="6" fill="#333">Book a demo?</text>
+          <circle cx="145" cy="48" r="10" fill="#25D366"/>
+          <path d="M141 48l3 3 6-6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <text x="145" y="68" text-anchor="middle" font-size="5" font-weight="700" fill="#25D366">AUTO</text>
+        </svg>
+      </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--orange-bg);color:var(--orange)">Automation</span>
         <h2 class="bc-title">5 Signs Your Business Needs WhatsApp Automation</h2>
