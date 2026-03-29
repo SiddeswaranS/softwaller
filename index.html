@@ -483,6 +483,14 @@ textarea.form-ctrl{resize:vertical;min-height:96px}
 .fs-circle{width:64px;height:64px;border-radius:50%;background:var(--green-bg);border:2px solid var(--green-br);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:26px;color:var(--green)}
 .fs-h{font-size:22px;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-.5px}
 .fs-p{font-size:14px;color:var(--muted);line-height:1.7;max-width:320px;margin:0 auto}
+.form-error{display:none;text-align:center;padding:32px 16px}
+.fe-circle{width:64px;height:64px;border-radius:50%;background:#fff3f3;border:2px solid #ffcdd2;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:26px;color:#e53935}
+.fe-h{font-size:22px;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-.5px}
+.fe-p{font-size:14px;color:var(--muted);line-height:1.7;max-width:360px;margin:0 auto 16px}
+.fe-mailto{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--blue);color:#fff;border-radius:11px;font-family:var(--font);font-size:14px;font-weight:700;text-decoration:none;transition:all .2s;box-shadow:var(--sh-blue)}
+.fe-mailto:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 12px 32px rgba(21,87,255,.38)}
+.fe-retry{display:inline-block;margin-top:12px;font-size:13px;color:var(--blue);cursor:pointer;font-weight:600;background:none;border:none;font-family:var(--font)}
+.fe-retry:hover{text-decoration:underline}
 
 /* ══════════════════════════════════════
    FOOTER
@@ -1777,6 +1785,13 @@ summary.fc-head{
             <div class="fs-h">Message Received!</div>
             <p class="fs-p">Thank you for reaching out. Our team will review your requirements and contact you within 24 business hours with a personalized recommendation.</p>
           </div>
+          <div class="form-error" id="form-error" aria-live="polite">
+            <div class="fe-circle"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div class="fe-h">Couldn't Send Message</div>
+            <p class="fe-p">Our contact form is temporarily unavailable. Please email us directly and we'll get back to you within 24 business hours.</p>
+            <a class="fe-mailto" id="fe-mailto-link" href="mailto:info@softwaller.com"><i class="fa-solid fa-envelope"></i> Email info@softwaller.com</a>
+            <br><button class="fe-retry" onclick="retryForm()"><i class="fa-solid fa-arrow-rotate-right"></i> Try the form again</button>
+          </div>
         </form>
       </div>
     </div>
@@ -1844,7 +1859,7 @@ summary.fc-head{
         </details>
       </div>
     <div class="footer-gst">
-      Softwaller Technologies Private Limited &nbsp;|&nbsp; GST: 33AAQCS1234A1Z5 &nbsp;|&nbsp; MSME Registered
+      Softwaller Technologies Private Limited &nbsp;|&nbsp; CIN: U62099TN2024PTC172175 &nbsp;|&nbsp; MSME Registered
     </div>
     <div class="footer-bottom">
       <span class="fb-copy">&copy; 2026 Softwaller Technologies Private Limited. All rights reserved.</span>
@@ -2208,11 +2223,9 @@ if(form){
       const res=await fetch(action,{method:'POST',body:new FormData(this),headers:{Accept:'application/json'}});
       const data=await res.json();
       if(data.success){showSuccess();}
-      else{btn.disabled=false;btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Send Message & Get Free Consultation';alert('Something went wrong. Please email us at info@softwaller.com');}
+      else{showError();}
     }catch(err){
-      btn.disabled=false;
-      btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Send Message & Get Free Consultation';
-      alert('Network error. Please email us directly at info@softwaller.com');
+      showError();
     }
   });
   // Real-time validation clear
@@ -2222,7 +2235,29 @@ if(form){
 }
 function showSuccess(){
   document.getElementById('form-body').style.display='none';
+  document.getElementById('form-error').style.display='none';
   document.getElementById('form-success').style.display='block';
+}
+function showError(){
+  const btn=document.getElementById('submit-btn');
+  btn.disabled=false;btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Send Message & Get Free Consultation';
+  // Pre-fill mailto with form data so user doesn't have to retype
+  const f=document.getElementById('contact-form');
+  const name=((f.querySelector('[name="first_name"]')?.value||'')+' '+(f.querySelector('[name="last_name"]')?.value||'')).trim();
+  const email=f.querySelector('[name="email"]')?.value||'';
+  const phone=f.querySelector('[name="phone"]')?.value||'';
+  const msg=f.querySelector('[name="message"]')?.value||'';
+  const subject=encodeURIComponent('Website Enquiry from '+name);
+  const body=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nPhone: '+phone+'\n\n'+msg);
+  document.getElementById('fe-mailto-link').href='mailto:info@softwaller.com?subject='+subject+'&body='+body;
+  document.getElementById('form-body').style.display='none';
+  document.getElementById('form-error').style.display='block';
+}
+function retryForm(){
+  document.getElementById('form-error').style.display='none';
+  document.getElementById('form-body').style.display='block';
+  const btn=document.getElementById('submit-btn');
+  btn.disabled=false;btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Send Message &amp; Get Free Consultation';
 }
 
 /* ── Cookie banner ── */
