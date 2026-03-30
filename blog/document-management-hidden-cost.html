@@ -59,7 +59,7 @@ body{min-height:100vh;display:flex;flex-direction:column}
 .pr-card h4{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px}
 .pr-card p{font-size:12.5px;color:var(--muted);line-height:1.5}
 .pfooter{margin-top:auto}
-@media(max-width:768px){.blog-grid{grid-template-columns:1fr}.post-related-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.blog-grid{grid-template-columns:1fr}.post-related-grid{grid-template-columns:1fr}.post-cta .btn-primary,.post-cta .btn-outline{display:block;width:100%;text-align:center;margin:8px 0}}
 </style>
 <script>
 if(localStorage.getItem('sw_cookie')==='accepted'){
@@ -232,7 +232,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
   <div style="background:var(--ink);border-radius:20px;padding:36px;text-align:center">
     <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:6px">Enjoyed this article?</div>
     <div style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.65;margin-bottom:20px">Get practical business software insights delivered to your inbox every week.</div>
-    <form action="https://eb65560b.sibforms.com/serve/MUIFACP2rFDETv2p-mUPqyHo3glJtZhcD0GG3f63ikM49xDLRJyQdEWUq0PBoF0ksGw1g_N182HgQUpPssTKQKbO_o-YEB7N347_FS22M6QudGfXoY8QkWZ93gPvVtu8RVTgz--uNpErO1Xd4RccAsEDFLg3mci83OfHVyaJWN0sybuGWiTH50Rmf6Jh_BRVN1HTSAYIwS2z6SKAUw==" method="POST" novalidate style="display:flex;gap:10px;max-width:440px;margin:0 auto" target="nl-iframe" onsubmit="var e=this.querySelector('input[type=email]');if(!e.value||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.value)){event.preventDefault();e.style.borderColor='#DC2626';return}var f=this;setTimeout(function(){f.style.display='none';f.nextElementSibling.style.display='block'},1500)">
+    <form action="https://eb65560b.sibforms.com/serve/MUIFACP2rFDETv2p-mUPqyHo3glJtZhcD0GG3f63ikM49xDLRJyQdEWUq0PBoF0ksGw1g_N182HgQUpPssTKQKbO_o-YEB7N347_FS22M6QudGfXoY8QkWZ93gPvVtu8RVTgz--uNpErO1Xd4RccAsEDFLg3mci83OfHVyaJWN0sybuGWiTH50Rmf6Jh_BRVN1HTSAYIwS2z6SKAUw==" method="POST" novalidate style="display:flex;flex-wrap:wrap;gap:10px;max-width:440px;margin:0 auto" target="nl-iframe" onsubmit="var e=this.querySelector('input[type=email]');if(!e.value||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.value)){event.preventDefault();e.style.borderColor='#DC2626';return}var f=this;setTimeout(function(){f.style.display='none';f.nextElementSibling.style.display='block'},1500)">
       <input type="hidden" name="locale" value="en">
       <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" style="flex:1;padding:13px 16px;border-radius:10px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-family:var(--font);font-size:14px" oninput="this.style.borderColor='rgba(255,255,255,.15)'">
       <button type="submit" style="padding:13px 24px;border-radius:10px;border:none;background:var(--blue);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>

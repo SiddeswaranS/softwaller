@@ -53,11 +53,20 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pnav-inner{max-width:1200px;margin:0 auto;padding:0 28px;height:66px;display:flex;align-items:center;justify-content:space-between}
 .pnav-logo{display:flex;align-items:center;gap:10px}
 .pnav-logo img{height:42px;width:auto}
+@media(max-width:768px){
+  .pnav-inner{padding:0 16px}
+  .pnav-logo img{height:32px}
+  .pnav-back{font-size:12px;padding:6px 12px;gap:4px;white-space:nowrap}
+  .blog-nl-form input[type="email"],.blog-nl-form button[type="submit"]{flex:1 1 100%!important}
+}
+@media(max-width:500px){
+  form[target="nl-iframe"] input[type="email"],form[target="nl-iframe"] button[type="submit"]{flex:1 1 100%!important}
+}
 .pnav-back{font-size:13.5px;font-weight:600;color:var(--blue);display:flex;align-items:center;gap:6px;padding:8px 18px;border-radius:9px;border:1.5px solid var(--blue-br);transition:all .15s}
 .pnav-back:hover{background:var(--blue-bg)}
 
 /* Product/404 Footer */
-.pfooter{background:var(--ink);color:rgba(255,255,255,.6);padding:32px 0;text-align:center;font-size:13px}
+.pfooter{background:var(--ink);color:rgba(255,255,255,.6);padding:32px 20px;text-align:center;font-size:13px}
 .pfooter a{color:var(--blue2);margin:0 8px}
 
 /* Print Styles */
