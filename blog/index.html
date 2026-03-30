@@ -17,6 +17,7 @@
 <meta name="twitter:title" content="Blog — Softwaller Technologies">
 <meta name="twitter:description" content="Practical guides on CRM, ERP, GST billing, inventory, HR payroll, and business automation. Tips to save time and drive growth from Softwaller Technologies.">
 <meta name="twitter:site" content="@softwaller">
+<meta name="theme-color" content="#1557FF">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='7' fill='%23070D1A' stroke='%232563EB' stroke-width='1'/%3E%3Cline x1='16' y1='7' x2='16' y2='25' stroke='%2364748B' stroke-width='.8'/%3E%3Cline x1='7' y1='16' x2='25' y2='16' stroke='%2364748B' stroke-width='.8'/%3E%3Crect x='5' y='5' width='9' height='9' rx='2.5' fill='%232563EB'/%3E%3Crect x='18' y='5' width='9' height='9' rx='2.5' fill='%230891B2'/%3E%3Crect x='5' y='18' width='9' height='9' rx='2.5' fill='%23059669'/%3E%3Crect x='18' y='18' width='9' height='9' rx='2.5' fill='%23D97706'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23DC2626'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +25,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="../assets/shared.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/shared.min.css?v=1.0.3">
 <style>
 body{min-height:100vh;display:flex;flex-direction:column}
 .blog-hero{padding:120px 0 48px;background:var(--surf);text-align:center;position:relative;overflow:hidden}
@@ -63,7 +64,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <nav class="pnav">
   <div class="pnav-inner">
     <a href="../" class="pnav-logo">
-      <img src="../assets/softwaller-technologies-logo-light.png" alt="Softwaller Technologies" height="42" width="210">
+      <img src="../assets/softwaller-technologies-logo-light.webp" alt="Softwaller Technologies" height="42" width="210" fetchpriority="high">
     </a>
     <a href="../" class="pnav-back"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
   </div>
@@ -81,7 +82,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="crm-vs-spreadsheets.html" class="blog-card">
       <div class="bc-color" style="background:var(--blue)"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/crm.jpg" alt="CRM software dashboard showing sales pipeline" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/crm.webp" alt="CRM software dashboard showing sales pipeline" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--blue-bg);color:var(--blue)">CRM</span>
@@ -98,7 +99,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="gst-billing-software.html" class="blog-card">
       <div class="bc-color" style="background:var(--green)"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/gst.jpg" alt="GST invoice and billing software" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/gst.webp" alt="GST invoice and billing software" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--green-bg);color:var(--green)">GST</span>
@@ -115,7 +116,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="custom-erp-vs-readymade.html" class="blog-card">
       <div class="bc-color" style="background:var(--purple)"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/erp.jpg" alt="ERP system for manufacturing and business" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/erp.webp" alt="ERP system for manufacturing and business" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--purple-bg);color:var(--purple)">ERP</span>
@@ -132,7 +133,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="whatsapp-automation-signs.html" class="blog-card">
       <div class="bc-color" style="background:var(--orange)"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/whatsapp.jpg" alt="WhatsApp Business automation on smartphone" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/whatsapp.webp" alt="WhatsApp Business automation on smartphone" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--orange-bg);color:var(--orange)">Automation</span>
@@ -149,7 +150,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="inventory-management-mistakes.html" class="blog-card">
       <div class="bc-color" style="background:#0891B2"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/inventory.jpg" alt="Warehouse inventory management system" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/inventory.webp" alt="Warehouse inventory management system" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#ECFEFF;color:#0891B2">Inventory</span>
@@ -166,7 +167,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="hr-payroll-compliance-india.html" class="blog-card">
       <div class="bc-color" style="background:#DC2626"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/hr-payroll.jpg" alt="HR payroll processing and compliance" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/hr-payroll.webp" alt="HR payroll processing and compliance" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#FEF2F2;color:#DC2626">HR & Payroll</span>
@@ -183,7 +184,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="ecommerce-website-vs-marketplace.html" class="blog-card">
       <div class="bc-color" style="background:#4F46E5"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/ecommerce.jpg" alt="E-commerce online shopping website" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/ecommerce.webp" alt="E-commerce online shopping website" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#EEF2FF;color:#4F46E5">E-Commerce</span>
@@ -200,7 +201,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="business-process-automation-guide.html" class="blog-card">
       <div class="bc-color" style="background:var(--orange)"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/automation.jpg" alt="Business process automation workflow" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/automation.webp" alt="Business process automation workflow" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:var(--orange-bg);color:var(--orange)">Automation</span>
@@ -217,7 +218,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="field-sales-team-mobile-app.html" class="blog-card">
       <div class="bc-color" style="background:#0D9488"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/field-service.jpg" alt="Field sales team using mobile app" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/field-service.webp" alt="Field sales team using mobile app" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#F0FDFA;color:#0D9488">Field Service</span>
@@ -234,7 +235,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="document-management-hidden-cost.html" class="blog-card">
       <div class="bc-color" style="background:#475569"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/dms.jpg" alt="Document management and file organization" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/dms.webp" alt="Document management and file organization" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#F8FAFC;color:#475569">DMS</span>
@@ -251,7 +252,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="school-management-software-guide.html" class="blog-card">
       <div class="bc-color" style="background:#0284C7"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/school.jpg" alt="School management and student education" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/school.webp" alt="School management and student education" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#F0F9FF;color:#0284C7">EdTech</span>
@@ -268,7 +269,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="fleet-logistics-tracking.html" class="blog-card">
       <div class="bc-color" style="background:#059669"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/fleet.jpg" alt="Fleet logistics and truck tracking" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/fleet.webp" alt="Fleet logistics and truck tracking" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#ECFDF5;color:#059669">Logistics</span>
@@ -285,7 +286,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="business-dashboard-guide.html" class="blog-card">
       <div class="bc-color" style="background:#7C3AED"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/analytics.jpg" alt="Business analytics KPI dashboard" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/analytics.webp" alt="Business analytics KPI dashboard" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#F5F3FF;color:#7C3AED">Analytics</span>
@@ -302,7 +303,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="appointment-booking-software.html" class="blog-card">
       <div class="bc-color" style="background:#DB2777"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/booking.jpg" alt="Appointment booking and scheduling calendar" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/booking.webp" alt="Appointment booking and scheduling calendar" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#FDF2F8;color:#DB2777">Booking</span>
@@ -319,7 +320,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="helpdesk-ticket-management.html" class="blog-card">
       <div class="bc-color" style="background:#D97706"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/helpdesk.jpg" alt="Customer support helpdesk tickets" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/helpdesk.webp" alt="Customer support helpdesk tickets" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#FFFBEB;color:#D97706">Support</span>
@@ -336,7 +337,7 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <a href="real-estate-crm-software.html" class="blog-card">
       <div class="bc-color" style="background:#E11D48"></div>
       <div class="bc-illust">
-        <img src="../assets/blog/real-estate.jpg" alt="Real estate property and buildings" width="600" height="400" loading="lazy">
+        <img src="../assets/blog/real-estate.webp" alt="Real estate property and buildings" width="600" height="400" loading="lazy">
       </div>
       <div class="bc-body">
         <span class="bc-tag" style="background:#FFF1F2;color:#E11D48">Real Estate</span>
