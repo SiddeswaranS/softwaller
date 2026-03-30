@@ -37,7 +37,7 @@
 .pwhy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
 .pwhy-item{display:flex;gap:14px;align-items:flex-start}
 .pwhy-item i{font-size:20px;color:var(--blue);margin-top:3px;flex-shrink:0}
-.pwhy-item h4{font-size:14.5px;font-weight:700;margin-bottom:4px}
+.pwhy-item h3{font-size:14.5px;font-weight:700;margin-bottom:4px}
 .pwhy-item p{font-size:13.5px;color:var(--muted);line-height:1.65}
 
 /* CTA Section */
