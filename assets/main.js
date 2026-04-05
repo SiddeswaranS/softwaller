@@ -66,7 +66,7 @@ function closeMenu() {
 }
 
 /* ── Active nav (scroll-based, RAF-throttled) ── */
-var sects = ['home', 'about', 'services', 'showcase', 'why', 'process', 'testimonials', 'faq', 'contact'];
+var sects = ['home', 'about', 'services', 'showcase', 'why', 'process', 'solutions', 'faq', 'contact'];
 var navTicking = false;
 function updateActiveNav() {
   var scrollY = window.scrollY + 200;

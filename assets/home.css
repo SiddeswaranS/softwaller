@@ -292,8 +292,8 @@ nav{max-width:1200px;margin:0 auto;padding:0 28px;height:var(--nav-h);display:fl
 .ps-title{font-size:14.5px;font-weight:700;color:var(--ink);margin-bottom:8px}
 .ps-desc{font-size:13px;color:var(--muted);line-height:1.65}
 
-/* Testimonials */
-#testimonials{background:var(--surf)}
+/* Solutions */
+#solutions{background:var(--surf)}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .tc{background:var(--white);border:1px solid var(--line);border-radius:var(--r2);padding:26px;transition:all .25s;cursor:default}
 .tc:hover{box-shadow:var(--sh-md);transform:translateY(-4px)}
@@ -414,7 +414,7 @@ textarea.form-ctrl{resize:vertical;min-height:96px}
 
 /* Footer */
 footer{background:var(--ink);padding:60px 0 0}
-.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.3fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12);align-items:start}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.8fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12);align-items:start}
 .fb-logo{display:flex;align-items:center;gap:9px;margin-bottom:14px}
 .fb-lm{width:32px;height:32px;border-radius:0;background:none;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .fb-lm svg{width:32px;height:32px}
