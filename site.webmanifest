@@ -3,7 +3,7 @@
   "short_name": "Softwaller",
   "icons": [
     {
-      "src": "/assets/softwaller-icon-dark.png",
+      "src": "/assets/softwaller-icon-light.png",
       "sizes": "192x192",
       "type": "image/png"
     },
