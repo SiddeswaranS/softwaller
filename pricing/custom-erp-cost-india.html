@@ -666,12 +666,70 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 
 </main>
 
-<footer class="pfooter">
-  <div style="max-width:1100px;margin:0 auto;padding:0 28px">
-    <p style="font-size:12px;color:var(--muted);line-height:1.7;margin:0 0 8px">SAP, SAP Business One, Oracle, Oracle NetSuite, Microsoft Dynamics, Microsoft Dynamics 365, and Tally are registered trademarks of their respective owners. Pricing references are based on publicly available list prices and industry estimates as of 2026-04-26 and may have changed since. Softwaller Technologies Private Limited is independent and not affiliated with, endorsed by, or sponsored by SAP SE, Oracle Corporation, Microsoft Corporation, or Tally Solutions Pvt Ltd.</p>
-    <div>&copy; 2026 Softwaller Technologies Private Limited. All rights reserved. <a href="../">Home</a> <a href="../#services">Services</a> <a href="../#contact">Contact</a></div>
+<section class="trademark-attr" aria-label="Trademark attribution">
+  <div class="ta-inner">
+    <p><strong>Trademark Notice:</strong> SAP, Oracle, NetSuite, Microsoft Dynamics, and Tally are registered trademarks of their respective owners. Pricing references are based on publicly available list prices and industry estimates as of 2026-04-26 and may have changed since. Softwaller is not affiliated with or endorsed by any of these companies.</p>
+  </div>
+</section>
+<style>
+.trademark-attr{background:#F7F8FC;padding:24px 24px;border-top:1px solid #E4E7F0}
+.ta-inner{max-width:1200px;margin:0 auto;font-size:12.5px;color:#6B7694;line-height:1.6}
+.ta-inner strong{color:#0A0F1E;font-weight:600}
+</style>
+
+<footer class="pfooter" aria-label="Site footer">
+  <div class="pfooter-grid">
+    <div class="pfooter-col">
+      <h3>Services</h3>
+      <a href="../products/crm-software.html">CRM Software</a>
+      <a href="../products/erp-solutions.html">ERP Solutions</a>
+      <a href="../products/inventory-management.html">Inventory & WMS</a>
+      <a href="../products/gst-billing-accounting.html">GST Billing</a>
+      <a href="../products/hr-payroll.html">HR & Payroll</a>
+      <a href="../products/whatsapp-automation.html">WhatsApp Business API</a>
+      <a href="../#services">All Services →</a>
+    </div>
+    <div class="pfooter-col">
+      <h3>By Location</h3>
+      <a href="../locations/chennai.html">Chennai</a>
+      <a href="../locations/coimbatore.html">Coimbatore</a>
+      <a href="../locations/salem.html">Salem</a>
+      <a href="../locations/madurai.html">Madurai</a>
+    </div>
+    <div class="pfooter-col">
+      <h3>By Industry</h3>
+      <a href="../industries/textile-erp.html">Textile ERP</a>
+      <a href="../industries/jewellery-erp.html">Jewellery ERP</a>
+      <a href="../industries/distributor.html">Distributor DMS</a>
+      <a href="../industries/manufacturing.html">Manufacturing ERP</a>
+      <a href="../industries.html">All Industries →</a>
+    </div>
+    <div class="pfooter-col">
+      <h3>Resources</h3>
+      <a href="../pricing/custom-erp-cost-india.html">Custom ERP Cost</a>
+      <a href="../pricing/custom-crm-cost-india.html">Custom CRM Cost</a>
+      <a href="../compare/custom-erp-vs-tally.html">ERP vs Tally</a>
+      <a href="../compare/custom-crm-vs-zoho.html">CRM vs Zoho</a>
+      <a href="../guides/e-invoicing-india-2026.html">E-Invoicing Guide 2026</a>
+      <a href="../blog/">Blog</a>
+    </div>
+  </div>
+  <div class="pfooter-bottom">
+    &copy; 2026 Softwaller Technologies Private Limited &middot; <a href="../">Home</a> &middot; <a href="../about.html">About</a> &middot; <a href="../#contact">Contact</a> &middot; <a href="../privacy-policy.html">Privacy</a> &middot; <a href="../terms-of-service.html">Terms</a>
   </div>
 </footer>
+<style>
+.pfooter{background:#0A0F1E;color:#A8B0C2;padding:48px 24px 24px;margin-top:64px}
+.pfooter-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.08)}
+.pfooter-col h3{color:#fff;font-size:14px;font-weight:700;margin:0 0 14px;letter-spacing:.3px;text-transform:uppercase}
+.pfooter-col a{display:block;color:#A8B0C2;text-decoration:none;padding:5px 0;font-size:14px;line-height:1.5;transition:color .15s}
+.pfooter-col a:hover{color:#fff}
+.pfooter-bottom{max-width:1200px;margin:0 auto;padding-top:20px;font-size:13px;text-align:center;color:#7A8298}
+.pfooter-bottom a{color:#A8B0C2;text-decoration:none}
+.pfooter-bottom a:hover{color:#fff}
+@media (max-width:768px){.pfooter-grid{grid-template-columns:repeat(2,1fr);gap:24px}}
+@media (max-width:480px){.pfooter-grid{grid-template-columns:1fr}}
+</style>
 
 <!--Start of Tawk.to Script — loaded only if cookie consent accepted-->
 <script>
