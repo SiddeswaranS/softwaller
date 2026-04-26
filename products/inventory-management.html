@@ -43,6 +43,19 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.softwaller.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.softwaller.com/#services"},{"@type":"ListItem","position":3,"name":"Inventory Management"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Inventory Management","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Inventory management software with real-time multi-warehouse visibility, barcode scanning, auto-reorder alerts & batch/serial tracking. Free consultation.","url":"https://www.softwaller.com/products/inventory-management.html","provider":{"@type":"Organization","name":"Softwaller Technologies Private Limited","url":"https://www.softwaller.com"},"offers":{"@type":"Offer","price":"0","priceCurrency":"INR","description":"Free consultation"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does the system handle multi-warehouse stock?","acceptedAnswer":{"@type":"Answer","text":"Each warehouse, branch, or store operates as a separate stock location with its own bin structure. Transfers, allocations, and consolidated reporting work across all locations with role-based visibility."}},{"@type":"Question","name":"Does the system support batch, serial, and expiry tracking?","acceptedAnswer":{"@type":"Answer","text":"Yes. We track stock by batch number, serial number, manufacturing date, and expiry date with FIFO, FEFO, or LIFO costing. This is critical for pharma, FMCG, and electronics businesses."}},{"@type":"Question","name":"Can it integrate with barcode and RFID scanners?","acceptedAnswer":{"@type":"Answer","text":"Yes. We support all major barcode formats (Code 128, EAN-13, QR), RFID readers, and mobile scanners on Android and iOS. Picking, putaway, and stock counts run from handheld devices."}},{"@type":"Question","name":"How accurate is the stock vs system match in real-world use?","acceptedAnswer":{"@type":"Answer","text":"Customers using barcode-based picking and cycle counts maintain 98 to 99.5 percent accuracy. Our shrinkage and adjustment reports flag the exact items, locations, and users where discrepancies occur."}}]}</script>
+<style>
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -252,6 +265,29 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <h2>Ready to Optimize Your Inventory?</h2>
     <p>Get a free consultation and see how our system can eliminate stockouts and reduce waste.</p>
     <a href="../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>How does the system handle multi-warehouse stock?</summary>
+      <div class="faq-answer">Each warehouse, branch, or store operates as a separate stock location with its own bin structure. Transfers, allocations, and consolidated reporting work across all locations with role-based visibility.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does the system support batch, serial, and expiry tracking?</summary>
+      <div class="faq-answer">Yes. We track stock by batch number, serial number, manufacturing date, and expiry date with FIFO, FEFO, or LIFO costing. This is critical for pharma, FMCG, and electronics businesses.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can it integrate with barcode and RFID scanners?</summary>
+      <div class="faq-answer">Yes. We support all major barcode formats (Code 128, EAN-13, QR), RFID readers, and mobile scanners on Android and iOS. Picking, putaway, and stock counts run from handheld devices.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How accurate is the stock vs system match in real-world use?</summary>
+      <div class="faq-answer">Customers using barcode-based picking and cycle counts maintain 98 to 99.5 percent accuracy. Our shrinkage and adjustment reports flag the exact items, locations, and users where discrepancies occur.</div>
+    </details>
   </div>
 </section>
 

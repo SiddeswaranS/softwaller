@@ -43,6 +43,19 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.softwaller.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.softwaller.com/#services"},{"@type":"ListItem","position":3,"name":"CRM Software"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CRM Software","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Powerful CRM software with lead capture, sales pipeline management, automated follow-ups, contact management, and deal tracking. Free consultation available.","url":"https://www.softwaller.com/products/crm-software.html","provider":{"@type":"Organization","name":"Softwaller Technologies Private Limited","url":"https://www.softwaller.com"},"offers":{"@type":"Offer","price":"0","priceCurrency":"INR","description":"Free consultation"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a custom CRM cost in India?","acceptedAnswer":{"@type":"Answer","text":"Custom CRM development with Softwaller starts at around Rs 1.5 lakh for a small sales team and scales by user count, modules, and integrations. We share a fixed quote after a free consultation, with no per-user SaaS fees."}},{"@type":"Question","name":"How long does CRM implementation take?","acceptedAnswer":{"@type":"Answer","text":"A standard CRM rollout takes 4 to 8 weeks: 1 week for requirements, 3 to 5 weeks for development and customization, 1 week for data import and training, and 1 week for go-live support."}},{"@type":"Question","name":"Can the CRM integrate with WhatsApp, email, and our existing ERP?","acceptedAnswer":{"@type":"Answer","text":"Yes. We integrate with WhatsApp Business API, Gmail, Outlook, IMAP, common ERPs (SAP, Tally, Zoho, Oracle), telephony providers, and accounting software through REST APIs and webhooks."}},{"@type":"Question","name":"Do you provide ongoing support and feature updates?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every project includes 3 months of free post-go-live support. Annual maintenance contracts (AMC) cover bug fixes, minor enhancements, server monitoring, backups, and a defined SLA for critical issues."}}]}</script>
+<style>
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -252,6 +265,29 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <h2>Ready to Close More Deals?</h2>
     <p>Get a free consultation and see how our CRM can transform your sales process.</p>
     <a href="../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>How much does a custom CRM cost in India?</summary>
+      <div class="faq-answer">Custom CRM development with Softwaller starts at around Rs 1.5 lakh for a small sales team and scales by user count, modules, and integrations. We share a fixed quote after a free consultation, with no per-user SaaS fees.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How long does CRM implementation take?</summary>
+      <div class="faq-answer">A standard CRM rollout takes 4 to 8 weeks: 1 week for requirements, 3 to 5 weeks for development and customization, 1 week for data import and training, and 1 week for go-live support.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can the CRM integrate with WhatsApp, email, and our existing ERP?</summary>
+      <div class="faq-answer">Yes. We integrate with WhatsApp Business API, Gmail, Outlook, IMAP, common ERPs (SAP, Tally, Zoho, Oracle), telephony providers, and accounting software through REST APIs and webhooks.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Do you provide ongoing support and feature updates?</summary>
+      <div class="faq-answer">Yes. Every project includes 3 months of free post-go-live support. Annual maintenance contracts (AMC) cover bug fixes, minor enhancements, server monitoring, backups, and a defined SLA for critical issues.</div>
+    </details>
   </div>
 </section>
 

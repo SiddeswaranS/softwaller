@@ -43,6 +43,19 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.softwaller.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.softwaller.com/#services"},{"@type":"ListItem","position":3,"name":"Appointment &amp; Booking System"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Appointment & Booking System","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Appointment booking software with calendar sync, automated SMS/email reminders, payment collection & multi-location scheduling. Free consultation.","url":"https://www.softwaller.com/products/appointment-booking.html","provider":{"@type":"Organization","name":"Softwaller Technologies Private Limited","url":"https://www.softwaller.com"},"offers":{"@type":"Offer","price":"0","priceCurrency":"INR","description":"Free consultation"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does online booking reduce no-shows?","acceptedAnswer":{"@type":"Answer","text":"Automated SMS and WhatsApp reminders 24 hours and 1 hour before the appointment cut no-shows by 30 to 50 percent in our customer base. Customers can also reschedule from the reminder link without calling."}},{"@type":"Question","name":"Can it sync with Google Calendar and Outlook?","acceptedAnswer":{"@type":"Answer","text":"Yes. Two-way sync with Google Calendar, Outlook, and Apple Calendar means staff see all appointments in one place and external blocks (lunch, holidays) reflect as unavailable in booking."}},{"@type":"Question","name":"Does it handle multi-staff and multi-location businesses?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each staff member has their own schedule, services, and availability. Customers pick a location first, then a service, then a staff member, all in one booking flow."}},{"@type":"Question","name":"Can customers pay during booking?","acceptedAnswer":{"@type":"Answer","text":"Yes. Razorpay, Cashfree, PhonePe, and UPI payment links are integrated. You can set full payment, partial advance, or pay-at-venue per service type."}}]}</script>
+<style>
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -252,6 +265,29 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <h2>Ready to Get Started?</h2>
     <p>Get a free consultation and see how our booking system can fill your calendar effortlessly.</p>
     <a href="../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>How does online booking reduce no-shows?</summary>
+      <div class="faq-answer">Automated SMS and WhatsApp reminders 24 hours and 1 hour before the appointment cut no-shows by 30 to 50 percent in our customer base. Customers can also reschedule from the reminder link without calling.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can it sync with Google Calendar and Outlook?</summary>
+      <div class="faq-answer">Yes. Two-way sync with Google Calendar, Outlook, and Apple Calendar means staff see all appointments in one place and external blocks (lunch, holidays) reflect as unavailable in booking.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does it handle multi-staff and multi-location businesses?</summary>
+      <div class="faq-answer">Yes. Each staff member has their own schedule, services, and availability. Customers pick a location first, then a service, then a staff member, all in one booking flow.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can customers pay during booking?</summary>
+      <div class="faq-answer">Yes. Razorpay, Cashfree, PhonePe, and UPI payment links are integrated. You can set full payment, partial advance, or pay-at-venue per service type.</div>
+    </details>
   </div>
 </section>
 

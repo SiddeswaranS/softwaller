@@ -43,6 +43,19 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.softwaller.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.softwaller.com/#services"},{"@type":"ListItem","position":3,"name":"Warehouse Management (WMS)"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Warehouse Management (WMS)","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"End-to-end warehouse management software with pick/pack/ship workflows, barcode scanning, zone management, and real-time inventory tracking. Free consultation.","url":"https://www.softwaller.com/products/warehouse-management.html","provider":{"@type":"Organization","name":"Softwaller Technologies Private Limited","url":"https://www.softwaller.com"},"offers":{"@type":"Offer","price":"0","priceCurrency":"INR","description":"Free consultation"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between WMS and inventory management?","acceptedAnswer":{"@type":"Answer","text":"Inventory management tracks how much stock you have. WMS tracks where exactly each item is (bin, rack, level), how it moves (putaway, picking, packing, dispatch), and who handled it. WMS is essential once you cross 5,000 SKUs or run multi-bin warehouses."}},{"@type":"Question","name":"Does WMS support wave picking and zone picking?","acceptedAnswer":{"@type":"Answer","text":"Yes. We support batch picking, wave picking, zone picking, and cluster picking. The system picks the most efficient strategy based on order profile, picker availability, and warehouse layout."}},{"@type":"Question","name":"Can WMS integrate with our ERP and shipping partners?","acceptedAnswer":{"@type":"Answer","text":"Yes. WMS syncs orders, stock, and dispatch data with ERPs (SAP, Tally, Oracle, Zoho) and connects to shipping APIs (Delhivery, Bluedart, Shiprocket, Shadowfax) for label generation and tracking."}},{"@type":"Question","name":"Does it work with handheld scanners and tablets?","acceptedAnswer":{"@type":"Answer","text":"Yes. Operators use rugged Android devices or tablets for receiving, putaway, picking, and packing. Voice-directed picking and pick-by-light hardware are supported for high-throughput warehouses."}}]}</script>
+<style>
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -252,6 +265,29 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <h2>Ready to Get Started?</h2>
     <p>Get a free consultation and see how our WMS can transform your warehouse operations.</p>
     <a href="../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>What is the difference between WMS and inventory management?</summary>
+      <div class="faq-answer">Inventory management tracks how much stock you have. WMS tracks where exactly each item is (bin, rack, level), how it moves (putaway, picking, packing, dispatch), and who handled it. WMS is essential once you cross 5,000 SKUs or run multi-bin warehouses.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does WMS support wave picking and zone picking?</summary>
+      <div class="faq-answer">Yes. We support batch picking, wave picking, zone picking, and cluster picking. The system picks the most efficient strategy based on order profile, picker availability, and warehouse layout.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can WMS integrate with our ERP and shipping partners?</summary>
+      <div class="faq-answer">Yes. WMS syncs orders, stock, and dispatch data with ERPs (SAP, Tally, Oracle, Zoho) and connects to shipping APIs (Delhivery, Bluedart, Shiprocket, Shadowfax) for label generation and tracking.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does it work with handheld scanners and tablets?</summary>
+      <div class="faq-answer">Yes. Operators use rugged Android devices or tablets for receiving, putaway, picking, and packing. Voice-directed picking and pick-by-light hardware are supported for high-throughput warehouses.</div>
+    </details>
   </div>
 </section>
 

@@ -43,6 +43,19 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.softwaller.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.softwaller.com/#services"},{"@type":"ListItem","position":3,"name":"Field Service &amp; Sales Force"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Field Service & Sales Force","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Field service software with GPS tracking, mobile order booking, route planning, expense management & real-time reporting. Free consultation.","url":"https://www.softwaller.com/products/field-service.html","provider":{"@type":"Organization","name":"Softwaller Technologies Private Limited","url":"https://www.softwaller.com"},"offers":{"@type":"Offer","price":"0","priceCurrency":"INR","description":"Free consultation"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does the technician mobile app work without internet?","acceptedAnswer":{"@type":"Answer","text":"The mobile app caches assigned jobs, customer details, parts inventory, and forms. Technicians complete jobs, capture photos, and get e-signatures offline. Data syncs automatically when connectivity returns."}},{"@type":"Question","name":"Can it track SLAs and escalate breaches?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each job carries a target response and resolution SLA based on contract type. The system warns supervisors before breach and auto-escalates to senior technicians or managers if missed."}},{"@type":"Question","name":"Does it handle parts inventory and spare allocation?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each technician has a virtual van stock. Parts consumed update the master inventory, trigger reorder when low, and flag warranty vs chargeable usage on the job card."}},{"@type":"Question","name":"Can customers track technician arrival like Uber?","acceptedAnswer":{"@type":"Answer","text":"Yes. Customers receive an SMS or WhatsApp link showing the technician name, photo, ETA, and live GPS location, just like ride-hailing apps. This reduces no-show calls and improves CSAT."}}]}</script>
+<style>
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -251,6 +264,29 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
     <h2>Ready to Get Started?</h2>
     <p>Tell us about your project and get a free consultation with our team. No commitments, no pressure.</p>
     <a href="../#contact" class="pcta-btn"><i class="fa-solid fa-calendar-check"></i> Book a Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>How does the technician mobile app work without internet?</summary>
+      <div class="faq-answer">The mobile app caches assigned jobs, customer details, parts inventory, and forms. Technicians complete jobs, capture photos, and get e-signatures offline. Data syncs automatically when connectivity returns.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can it track SLAs and escalate breaches?</summary>
+      <div class="faq-answer">Yes. Each job carries a target response and resolution SLA based on contract type. The system warns supervisors before breach and auto-escalates to senior technicians or managers if missed.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does it handle parts inventory and spare allocation?</summary>
+      <div class="faq-answer">Yes. Each technician has a virtual van stock. Parts consumed update the master inventory, trigger reorder when low, and flag warranty vs chargeable usage on the job card.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can customers track technician arrival like Uber?</summary>
+      <div class="faq-answer">Yes. Customers receive an SMS or WhatsApp link showing the technician name, photo, ETA, and live GPS location, just like ride-hailing apps. This reduces no-show calls and improves CSAT.</div>
+    </details>
   </div>
 </section>
 
