@@ -639,11 +639,11 @@ if (nlForm) {
 
 // Footer self-link aria-current marker (a11y)
 document.addEventListener('DOMContentLoaded', function() {
-  var path = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '/');
+  var path = window.location.pathname.replace(/\/index\.html$/, '/');
   var footerLinks = document.querySelectorAll('footer a, .pfooter a, .fc-links a');
   footerLinks.forEach(function(link) {
     try {
-      var linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '/');
+      var linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/index\.html$/, '/');
       if (linkPath === path && link.getAttribute('href').indexOf('#') === -1) {
         link.setAttribute('aria-current', 'page');
       }

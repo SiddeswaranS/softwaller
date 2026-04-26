@@ -21,6 +21,7 @@ ul{list-style:none}
   --blue-bg:#EBF0FF;--blue-br:#C2CFFF;
   --green:#059669;--green-bg:#ECFDF5;--green-br:#A7F3D0;
   --orange:#EA580C;--orange-bg:#FFF7ED;
+  --amber:#B45309;--amber-bg:#FEF3C7;
   --purple:#7C3AED;--purple-bg:#F5F3FF;
   --pink:#DB2777;--pink-bg:#FDF2F8;
   --cyan:#0891B2;--cyan-bg:#ECFEFF;
@@ -93,7 +94,12 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);line-heigh
 .pfooter-bottom a:hover{color:var(--footer-heading)}
 @media (max-width:768px){.pfooter-grid{grid-template-columns:repeat(2,1fr);gap:24px}}
 @media (max-width:480px){.pfooter-grid{grid-template-columns:1fr}}
-/* Simple footer fallback (blog/404 — direct <div> child, no grid) */
+/* Simple footer fallback for legacy pages (blog posts, 404, about, portfolio, case-studies, costwise legal pages, etc.).
+   CONTRACT: matches when <footer class="pfooter"> contains exactly ONE direct <div> child and no other elements.
+   If you add a sibling element (e.g., a <style> block, extra <div>, or <p>) inside .pfooter on a simple-footer page,
+   this :only-child selector silently stops applying and the page falls through to the dark .pfooter base rule.
+   Either keep the simple-footer markup as <footer class="pfooter"><div>...</div></footer> with no siblings,
+   OR migrate the page to the rich .pfooter-grid layout. */
 .pfooter > div:only-child{max-width:1200px;margin:0 auto;text-align:center;font-size:13px}
 .pfooter > div:only-child a{color:var(--blue2);margin:0 8px;text-decoration:none}
 .pfooter > div:only-child a:hover{color:var(--footer-heading)}
