@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Custom Field Sales App with GPS and Order Booking | Softwaller";
+const description = "Custom field sales app with GPS tracking, mobile order booking, beat planning, and expense capture. Offline-first for low-connectivity areas. 8 weeks.";
+const canonical = "https://www.softwaller.com/products/field-service.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Custom Field Sales App with GPS and Order Booking | Softwaller";
+const ogDescription = "Custom field sales app with GPS tracking, mobile order booking, beat planning, and expense capture. Offline-first for low-connectivity areas.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.softwaller.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Field Service &amp; Sales Force"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Field Service & Sales Force",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Custom field sales app with GPS tracking, mobile order booking, beat planning, and expense capture. Offline-first for low-connectivity areas. 8 weeks.",
+    "url": "https://www.softwaller.com/products/field-service.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "url": "https://www.softwaller.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "description": "Free consultation"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the technician mobile app work without internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The mobile app caches assigned jobs, customer details, parts inventory, and forms. Technicians complete jobs, capture photos, and get e-signatures offline. Data syncs automatically when connectivity returns."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can it track SLAs and escalate breaches?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Each job carries a target response and resolution SLA based on contract type. The system warns supervisors before breach and auto-escalates to senior technicians or managers if missed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it handle parts inventory and spare allocation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Each technician has a virtual van stock. Parts consumed update the master inventory, trigger reorder when low, and flag warranty vs chargeable usage on the job card."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can customers track technician arrival like Uber?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Customers receive an SMS or WhatsApp link showing the technician name, photo, ETA, and live GPS location, just like ride-hailing apps. This reduces no-show calls and improves CSAT."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <style is:global slot="head-css" set:html={`
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+<section class="phero">
+  <div class="phero-inner">
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-location-crosshairs"></i></div>
+      <h1>Custom Field Sales App with GPS & Order Booking</h1>
+      <p>GPS-verified visits, beat planning, on-the-go order booking, expense claims with photo receipts, and offline mode for low-connectivity territories. Live dashboards for managers, daily reports for reps.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="20" y="20" width="360" height="260" rx="10" fill="#F7F8FC"/><text x="40" y="45" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#EA580C">Live Field Tracking</text><path d="M30,80 Q100,60 170,90 T330,70 L370,100 L370,250 L30,250 Z" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/><path d="M30,120 Q120,100 200,130 T370,110 L370,250 L30,250 Z" fill="#EBF0FF" opacity=".4"/><circle cx="100" cy="120" r="14" fill="#1557FF" opacity=".9"/><text x="100" y="124" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#fff">R1</text><circle cx="100" cy="120" r="22" fill="none" stroke="#1557FF" stroke-width="1" opacity=".3"/><circle cx="220" cy="100" r="14" fill="#059669" opacity=".9"/><text x="220" y="104" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#fff">R2</text><circle cx="220" cy="100" r="22" fill="none" stroke="#059669" stroke-width="1" opacity=".3"/><circle cx="310" cy="140" r="14" fill="#7C3AED" opacity=".9"/><text x="310" y="144" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#fff">R3</text><circle cx="310" cy="140" r="22" fill="none" stroke="#7C3AED" stroke-width="1" opacity=".3"/><path d="M100,120 L150,105 L220,100" fill="none" stroke="#1557FF" stroke-width="1.5" stroke-dasharray="4,3" opacity=".5"/><rect x="40" y="180" width="95" height="55" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><circle cx="58" cy="197" r="8" fill="#EBF0FF"/><text x="58" y="200" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#1557FF">✓</text><text x="72" y="200" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#0A0F1E">Rahul — 8 visits</text><text x="55" y="218" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#059669">● Active now</text><rect x="152" y="180" width="95" height="55" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><circle cx="170" cy="197" r="8" fill="#ECFDF5"/><text x="170" y="200" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#059669">✓</text><text x="184" y="200" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#0A0F1E">Priya — 6 visits</text><text x="167" y="218" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#059669">● Active now</text><rect x="264" y="180" width="95" height="55" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><circle cx="282" cy="197" r="8" fill="#F5F3FF"/><text x="282" y="200" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#7C3AED">✓</text><text x="296" y="200" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#0A0F1E">Amit — 5 visits</text><text x="279" y="218" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#D97706">● In transit</text></svg>
+    </div>
+  </div>
+</section>
+
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
+  <div class="pfeatures-inner">
+    <h2>Complete Field Force Management</h2>
+    <p class="sub">12 powerful modules to track, manage, and optimize your field sales and service operations.</p>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-map-location-dot"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">GPS Visit Tracking</h3>
+          <p itemprop="description">Real-time location tracking with geo-fenced check-in and check-out to verify field visits automatically.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Mobile Order Booking</h3>
+          <p itemprop="description">Place orders on-the-go with a full product catalog, customer-specific pricing, and instant order confirmation.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-receipt"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Expense Claims</h3>
+          <p itemprop="description">Submit expenses with photo receipts and auto-approval workflows to streamline reimbursement processing.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-file-lines"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">Daily Reports</h3>
+          <p itemprop="description">End-of-day reports with visit summary, orders placed, collections made, and key highlights for managers.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-tower-broadcast"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">Offline Mode</h3>
+          <p itemprop="description">Full functionality without internet connectivity, with automatic data sync when connection is restored.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-route"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Route Planning</h3>
+          <p itemprop="description">Optimized daily routes to minimize travel time and fuel costs with intelligent sequencing algorithms.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-map-pin"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Beat Planning</h3>
+          <p itemprop="description">Assign territories and routes to field reps with weekly/monthly schedules and coverage tracking.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Collection Tracking</h3>
+          <p itemprop="description">Record cash and cheque collections in real-time with instant reports for accounts and management.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-clock-rotate-left"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Customer Visit History</h3>
+          <p itemprop="description">View past visits, orders, payments, and feedback at each customer stop for informed conversations.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-calendar-check"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Leave & Attendance</h3>
+          <p itemprop="description">Mark attendance via GPS location, apply for leave from the app, and track team availability in real-time.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-camera"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Photo & Note Capture</h3>
+          <p itemprop="description">Capture site photos, customer feedback, and detailed visit notes with timestamps and location tags.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-gauge-high"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Manager Dashboard</h3>
+          <p itemprop="description">Real-time view of all field reps, their locations, visit status, and performance metrics on a single screen.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="pwhy">
+  <div class="pwhy-inner">
+    <h2>Why Choose Softwaller</h2>
+    <p class="sub">We build software that works as hard as you do. Here's what sets us apart.</p>
+    <div class="pwhy-grid">
+      <div class="pwhy-item">
+        <i class="fa-solid fa-sliders"></i>
+        <div><h3>Built for Your Workflow</h3><p>Custom-designed to match how your team actually works.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-arrow-up-right-dots"></i>
+        <div><h3>Scale as You Grow</h3><p>Architecture designed to handle 500+ concurrent users.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <div><h3>Mobile Ready</h3><p>Access from any device, anywhere, anytime.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-plug"></i>
+        <div><h3>Integration Ready</h3><p>Connect with Tally, WhatsApp, payment gateways, and more.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-headset"></i>
+        <div><h3>Ongoing Support</h3><p>3 months free support + AMC options after go-live.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div><h3>Data Security</h3><p>Role-based access, encryption, and audit trails.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-related">
+  <div class="p-related-inner">
+    <h2>Related Solutions</h2>
+    <p class="sub">Explore other software that works great alongside this solution.</p>
+    <div class="p-related-grid">
+      <a href="/crm-software.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>CRM Software</h3>
+        <p>Manage leads, pipeline &amp; sales</p>
+        <div class="pr-link">CRM Software <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/fleet-logistics.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-truck-fast"></i></div>
+        <h3>Fleet &amp; Logistics</h3>
+        <p>Fleet &amp; delivery tracking</p>
+        <div class="pr-link">Fleet &amp; Logistics <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/project-management.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-diagram-project"></i></div>
+        <h3>Project Management</h3>
+        <p>Tasks, timelines &amp; teams</p>
+        <div class="pr-link">Project Management <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pcta">
+  <div class="pcta-inner">
+    <h2>Ready to Get Started?</h2>
+    <p>Tell us about your project and get a free consultation with our team. No commitments, no pressure.</p>
+    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-calendar-check"></i> Book a Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>How does the technician mobile app work without internet?</summary>
+      <div class="faq-answer">The mobile app caches assigned jobs, customer details, parts inventory, and forms. Technicians complete jobs, capture photos, and get e-signatures offline. Data syncs automatically when connectivity returns.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can it track SLAs and escalate breaches?</summary>
+      <div class="faq-answer">Yes. Each job carries a target response and resolution SLA based on contract type. The system warns supervisors before breach and auto-escalates to senior technicians or managers if missed.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does it handle parts inventory and spare allocation?</summary>
+      <div class="faq-answer">Yes. Each technician has a virtual van stock. Parts consumed update the master inventory, trigger reorder when low, and flag warranty vs chargeable usage on the job card.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can customers track technician arrival like Uber?</summary>
+      <div class="faq-answer">Yes. Customers receive an SMS or WhatsApp link showing the technician name, photo, ETA, and live GPS location, just like ride-hailing apps. This reduces no-show calls and improves CSAT.</div>
+    </details>
+  </div>
+</section>
+
+`} />
+</BaseLayout>

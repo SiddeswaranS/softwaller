@@ -1,0 +1,401 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Custom CRM vs Zoho CRM — Which Wins for Indian SMEs (2026) | Softwaller";
+const description = "Fair, side-by-side comparison of custom CRM and Zoho CRM for Indian SMEs. 3-year TCO at 20/50/100 users, when to stay on Zoho, when to build custom, and the hybrid approach.";
+const canonical = "https://www.softwaller.com/compare/custom-crm-vs-zoho.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Custom CRM vs Zoho CRM — Which Wins for Indian SMEs (2026)";
+const ogDescription = "Fair comparison: 3-year TCO, customization limits, when to stay on Zoho CRM, when to build custom, and the hybrid Zoho-plus-custom approach.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Compare",
+        "item": "https://www.softwaller.com/compare/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Custom CRM vs Zoho CRM"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Custom CRM vs Zoho CRM — Which Wins for Indian SMEs (2026)?",
+    "description": "Fair, side-by-side comparison of custom CRM and Zoho CRM for Indian SMEs. 3-year TCO at 20/50/100 users, customization limits, when to stay on Zoho, when to build custom, and the hybrid Zoho-plus-custom approach.",
+    "author": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "url": "https://www.softwaller.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.softwaller.com/assets/softwaller-technologies-logo-light.webp"
+      }
+    },
+    "datePublished": "2026-04-26",
+    "dateModified": "2026-04-26",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.softwaller.com/compare/custom-crm-vs-zoho.html"
+    },
+    "image": "https://www.softwaller.com/assets/og-image.jpg"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Zoho CRM bad?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Zoho CRM is one of the strongest SaaS CRMs available, especially for Indian SMEs. It is fast to deploy, priced in INR, supported locally, and updated frequently. It only stops being the right tool when per-user fees scale beyond your budget or when your industry-specific data model and workflows hit the configuration ceiling of the Enterprise tier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I leave Zoho CRM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Consider leaving Zoho CRM when you cross 50 active users, when you need deep customization that the Enterprise or Ultimate plan still cannot deliver, when industry-specific data models (real estate units, jewellery items, pharma SKUs) require painful workarounds, when DPDP Act data residency demands self-hosting, or when you need to white-label the CRM for your customers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I export my data from Zoho to a custom CRM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Zoho provides REST APIs and bulk export tools for leads, contacts, accounts, deals, activities, attachments, and custom modules. A standard migration uses the Zoho REST API to export data in CSV or JSON, then imports it into the custom CRM with field-level mapping. We typically run Zoho in read-only mode for 30 days post-cutover as a safety net."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the break-even point between Zoho CRM and a custom CRM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most Indian SMEs the break-even point sits between 18 and 30 months at 30-50 active users on the Zoho CRM Enterprise plan. Below 20 users, Zoho almost always wins on speed and cost. Above 50 users with industry-specific workflows, custom CRM wins on 3-year total cost of ownership and product fit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I keep Zoho CRM and add a custom mobile app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The hybrid approach keeps Zoho CRM as the system of record for leads, contacts, deals, and pipelines while adding a custom mobile app, custom dashboards, or industry-specific modules on top via the Zoho REST API. This often costs less than either pure Zoho Ultimate or a full custom build, and preserves your existing Zoho automations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does custom CRM mean I lose Zoho's frequent feature updates?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You lose the automatic feature pipeline that Zoho ships, but you gain control over your own roadmap. With a custom CRM you decide which features to build and when. AMC contracts cover bug fixes, security patches, and minor enhancements. Major feature additions are scoped as separate change requests and prioritised by your business value, not by a vendor's product roadmap."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost to migrate from Zoho CRM to a custom CRM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Migration alone typically costs Rs 50,000 to Rs 1.5 lakh, depending on data volume, number of custom modules, and attachment size. The full custom CRM build (including migration) starts at around Rs 4 lakh for a small team and Rs 8-12 lakh for a 50-100 user deployment with industry-specific modules and integrations."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <style is:global slot="head-css" set:html={`
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+.cmp-section{max-width:1080px;margin:0 auto;padding:36px 28px}
+.cmp-section h2{font-size:26px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 10px}
+.cmp-section p.cmp-sub{font-size:15px;color:var(--muted);margin:0 0 22px;line-height:1.7}
+.cmp-section p,.cmp-section li{font-size:15px;color:var(--ink);line-height:1.75}
+.cmp-section h3{font-size:18px;font-weight:700;color:var(--ink);margin:18px 0 8px}
+.cmp-grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}
+.cmp-card{border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:var(--white)}
+.cmp-card h3{font-size:16px;font-weight:800;color:var(--ink);margin:0 0 6px;display:flex;align-items:center;gap:8px}
+.cmp-card p{font-size:14px;color:var(--muted);margin:0;line-height:1.7}
+.cmp-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin:14px 0 8px;background:var(--white)}
+.cmp-table{width:100%;border-collapse:collapse;min-width:600px;font-size:14px}
+.cmp-table th,.cmp-table td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.cmp-table thead th{background:#F7F8FC;font-weight:800;color:var(--ink);font-size:13px;text-transform:uppercase;letter-spacing:.4px}
+.cmp-table tbody tr:last-child td{border-bottom:none}
+.cmp-table td:first-child{font-weight:700;color:var(--ink);width:30%}
+.cmp-pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
+.cmp-pill.win{background:#ECFDF5;color:#059669}
+.cmp-pill.tie{background:#F7F8FC;color:#6B7694}
+.cmp-pill.lose{background:#FEF2F2;color:#DC2626}
+.cmp-cost-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
+.cmp-cost-card{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--white)}
+.cmp-cost-card h3{font-size:15px;font-weight:800;color:var(--ink);margin:0 0 4px}
+.cmp-cost-card .cmp-cost-sub{font-size:12px;color:var(--muted);margin:0 0 10px;text-transform:uppercase;letter-spacing:.4px;font-weight:700}
+.cmp-cost-card table{width:100%;border-collapse:collapse;font-size:13.5px}
+.cmp-cost-card td{padding:7px 0;border-bottom:1px dashed var(--line)}
+.cmp-cost-card tr:last-child td{border-bottom:none;font-weight:800;color:var(--blue);padding-top:10px}
+.cmp-cost-card td:last-child{text-align:right}
+.cmp-callout{border-left:3px solid var(--blue);background:var(--blue-bg);padding:14px 18px;border-radius:8px;margin:18px 0;font-size:14.5px;color:var(--ink);line-height:1.75}
+.cmp-callout strong{color:var(--blue)}
+.cmp-list-check li{margin-bottom:6px}
+.cmp-list-check li i{color:#059669;margin-right:6px}
+.cmp-list-x li i{color:#DC2626;margin-right:6px}
+@media (max-width:760px){
+  .cmp-grid2{grid-template-columns:1fr}
+  .cmp-cost-grid{grid-template-columns:1fr}
+}
+.tm-footer{font-size:12px;color:var(--muted);max-width:1080px;margin:0 auto 24px;padding:14px 28px;border-top:1px solid var(--line);line-height:1.7}
+`}></style>
+  <Fragment set:html={`
+<section class="phero">
+  <div class="phero-inner">
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-scale-balanced"></i></div>
+      <h1>Custom CRM vs Zoho CRM &mdash; Which Wins for Indian SMEs (2026)?</h1>
+      <p>An honest, side-by-side comparison of Zoho CRM and a custom-built CRM for Indian businesses. 3-year cost math, customization ceilings, and the hybrid path that often beats both.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Custom CRM vs Zoho CRM comparison illustration"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="22" y="22" width="170" height="256" rx="12" fill="#F7F8FC" stroke="#E4E7F0"/><rect x="208" y="22" width="170" height="256" rx="12" fill="#EBF0FF" stroke="#C2CFFF"/><text x="107" y="58" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="13" font-weight="800" fill="#0A0F1E">Zoho CRM</text><text x="293" y="58" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="13" font-weight="800" fill="#1557FF">Custom CRM</text><text x="107" y="84" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" fill="#6B7694">SaaS, per user</text><text x="293" y="84" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" fill="#6B7694">One-time + AMC</text><rect x="38" y="100" width="138" height="32" rx="6" fill="#fff" stroke="#E4E7F0"/><text x="107" y="120" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#0A0F1E">Live in days</text><rect x="224" y="100" width="138" height="32" rx="6" fill="#fff" stroke="#C2CFFF"/><text x="293" y="120" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#1557FF">Live in 6-8 weeks</text><rect x="38" y="142" width="138" height="32" rx="6" fill="#fff" stroke="#E4E7F0"/><text x="107" y="162" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#0A0F1E">Standard fields</text><rect x="224" y="142" width="138" height="32" rx="6" fill="#fff" stroke="#C2CFFF"/><text x="293" y="162" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#1557FF">Industry data model</text><rect x="38" y="184" width="138" height="32" rx="6" fill="#fff" stroke="#E4E7F0"/><text x="107" y="204" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#0A0F1E">Vendor cloud</text><rect x="224" y="184" width="138" height="32" rx="6" fill="#fff" stroke="#C2CFFF"/><text x="293" y="204" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#1557FF">Your cloud / DC</text><rect x="38" y="226" width="138" height="32" rx="6" fill="#fff" stroke="#E4E7F0"/><text x="107" y="246" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#0A0F1E">No source IP</text><rect x="224" y="226" width="138" height="32" rx="6" fill="#fff" stroke="#C2CFFF"/><text x="293" y="246" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#1557FF">You own source</text></svg>
+    </div>
+  </div>
+</section>
+
+<section class="cmp-section">
+  <h2>The short answer first</h2>
+  <p class="cmp-sub">Skip ahead to the details below, or use this quick rule of thumb.</p>
+  <p>For Indian SMEs running under 20 active sales users with a fairly standard sales funnel, <strong>Zoho CRM usually wins</strong>. It is faster to launch, priced in INR, supported in India, and ships with a stable feature set out of the box. Once you cross 50 users, or when your business needs an industry-specific data model (real estate units, jewellery items, pharma SKUs, beam-and-roll textile traceability, multi-stage construction billing) and deep workflow control, a <strong>custom CRM can beat per-user SaaS on 3-year total cost of ownership and product fit</strong>. Zoho Corporation publishes its current list pricing for Zoho CRM tiers (Bigin, Standard, Professional, Enterprise, Ultimate) on the official Zoho CRM pricing page &mdash; please refer there for current per-user-per-month figures. Once you have those numbers, multiply by your user count and 36 months to estimate a 3-year SaaS subscription. A custom CRM build of comparable scope from Softwaller typically costs Rs 4&ndash;8 lakh as a one-time investment, plus an annual maintenance contract of Rs 1&ndash;1.5 lakh. For mid-market sales teams, custom builds can save meaningfully over a 3-year window &mdash; and you keep the source code. This page lays out the fair version of the trade-off, including a hybrid approach where you keep Zoho CRM for the parts it is great at and add a custom layer where it stops fitting.</p>
+  <div class="cmp-callout"><strong>TL;DR:</strong> Under 20 users and standard sales process &rarr; stay on Zoho CRM. Above 50 users with industry-specific workflows &rarr; custom CRM. In between &rarr; consider the hybrid path (Zoho + custom mobile and dashboards).</div>
+</section>
+
+<section class="cmp-section">
+  <h2>What Zoho CRM does brilliantly</h2>
+  <p class="cmp-sub">Credit where it is due. Zoho Corporation has shipped one of the strongest SaaS CRM products in the Indian market, and it would be dishonest to pretend otherwise.</p>
+  <div class="cmp-grid2">
+    <div class="cmp-card"><h3><i class="fa-solid fa-bolt" style="color:#1557FF"></i> Fast time-to-value</h3><p>A small sales team can be live in days, not weeks. Standard lead, contact, account, deal and pipeline modules work out of the box. Email, web forms and basic automation are pre-wired. For a business that needs CRM running by next quarter, nothing else gets you there as fast.</p></div>
+    <div class="cmp-card"><h3><i class="fa-solid fa-indian-rupee-sign" style="color:#059669"></i> Indian product, INR pricing, local support</h3><p>Zoho is headquartered in Chennai. Pricing is published in INR. Support, documentation, partner network and learning resources are all available locally. For an Indian SME, that removes a lot of friction compared to Salesforce or HubSpot.</p></div>
+    <div class="cmp-card"><h3><i class="fa-solid fa-toolbox" style="color:#7C3AED"></i> Strong out-of-box features</h3><p>Lead capture, contact management, pipeline tracking, email integration, workflows, basic reports, mobile app &mdash; all built and refined over more than a decade. You get a working CRM, not a kit of parts.</p></div>
+    <div class="cmp-card"><h3><i class="fa-solid fa-circle-dollar-to-slot" style="color:#EA580C"></i> Affordable starter tiers</h3><p>Bigin (Zoho's CRM-for-small-business product) is positioned as a low-cost entry tier &mdash; refer to Zoho's official pricing page for the current per-user-per-month rate. For a 5-person team this is typically a few thousand rupees a month, and a custom CRM cannot compete with that on day-zero economics.</p></div>
+    <div class="cmp-card"><h3><i class="fa-solid fa-people-group" style="color:#DC2626"></i> Massive partner ecosystem</h3><p>Hundreds of Zoho Authorised Partners across India will configure, customise and train. Marketplace extensions cover telephony, e-signature, GST and more. If you want a partner-led implementation, the supply is deep.</p></div>
+    <div class="cmp-card"><h3><i class="fa-solid fa-cloud" style="color:#0EA5E9"></i> Reliable cloud, frequent updates</h3><p>Zoho runs its own data centres including in India. The product receives meaningful updates several times a year &mdash; new AI features, integrations, mobile improvements &mdash; without you lifting a finger.</p></div>
+  </div>
+</section>
+
+<section class="cmp-section">
+  <h2>Where Zoho CRM hits its ceiling</h2>
+  <p class="cmp-sub">Every SaaS product has a shape. Zoho CRM is no exception. These are the places we most often see Indian SMEs run into walls and start looking at custom builds.</p>
+  <ol>
+    <li><strong>Per-user fees compound at 50+ users.</strong> Multiply Zoho's current Enterprise list price (refer to Zoho's official pricing page) by 50 users and 12 months to see the annual run-rate; at 100 users it doubles. That bill recurs forever and grows with headcount and any vendor price changes. For a stable mid-market sales team, this is the single biggest reason customers explore custom alternatives.</li>
+    <li><strong>Deep customization is gated behind Enterprise and Ultimate tiers.</strong> Custom modules, advanced workflow rules, sandbox environments, territory management and similar features are only available on the higher plans &mdash; which sit at the top of Zoho's published per-user pricing.</li>
+    <li><strong>Workflow customization has hard limits.</strong> Zoho's blueprint and workflow engines are powerful but bounded. Multi-step approval chains with conditional branching, custom validation logic that depends on related records, or complex commission calculations frequently end up half-implemented in CRM and half-implemented in spreadsheets.</li>
+    <li><strong>Industry-specific data models need workarounds.</strong> Real estate inventory (tower &rarr; floor &rarr; unit with status, area, view, parking), jewellery items (purity, weight, making charges, hallmark), pharma SKUs (batch, expiry, schedule, GST HSN) &mdash; these need first-class data models. In Zoho they end up as custom fields glued onto Products or Deals, which works but creates fragile reporting.</li>
+    <li><strong>Data residency and DPDP Act control are limited.</strong> Your data sits in Zoho's chosen data centre. The Digital Personal Data Protection Act 2023 raises the bar on consent, purpose limitation and data principal rights. If your compliance team needs your CRM data to live on infrastructure you control, SaaS does not give you that lever.</li>
+    <li><strong>White-label and source code IP are not on offer.</strong> If your product strategy needs a CRM that you ship to your own customers under your brand, or if you simply want to own the source code so you are not dependent on Zoho's roadmap, SaaS is the wrong shape. Read more in our analysis of <a href="/../blog/no-code-vs-custom-software.html">no-code vs custom software</a>.</li>
+  </ol>
+</section>
+
+<section class="cmp-section">
+  <h2>When you should stay on Zoho CRM</h2>
+  <p class="cmp-sub">If any of these match you, building custom is almost certainly the wrong call. Stay on Zoho.</p>
+  <ul class="cmp-list-check">
+    <li><i class="fa-solid fa-circle-check"></i> <strong>You have a small sales team (under 20 users).</strong> The per-user math works in Zoho's favour. A custom build will take longer to recover its cost than your business plan can absorb.</li>
+    <li><i class="fa-solid fa-circle-check"></i> <strong>Your sales process is broadly standard.</strong> Lead &rarr; qualify &rarr; quote &rarr; negotiate &rarr; win/lose, with email and WhatsApp Business follow-ups. Zoho was built for exactly this shape.</li>
+    <li><i class="fa-solid fa-circle-check"></i> <strong>You need to be live this month.</strong> Speed is a feature. A custom CRM takes 6-8 weeks minimum from kick-off to go-live. Zoho takes days.</li>
+    <li><i class="fa-solid fa-circle-check"></i> <strong>You do not have budget for a one-time investment.</strong> Custom CRM trades monthly fees for a higher upfront spend plus AMC. If cash flow is the binding constraint, monthly SaaS is the right shape.</li>
+    <li><i class="fa-solid fa-circle-check"></i> <strong>You do not have an in-house IT person to coordinate AMC.</strong> A custom CRM is your software. You need someone (internal or via the AMC) to triage support, sign off on releases and own the relationship. Zoho takes that off your plate.</li>
+  </ul>
+</section>
+
+<section class="cmp-section">
+  <h2>When you should build a custom CRM</h2>
+  <p class="cmp-sub">If two or more of these match you, the custom path very likely beats the SaaS path on 3-year economics and on product fit.</p>
+  <ul class="cmp-list-x">
+    <li><i class="fa-solid fa-circle-xmark"></i> <strong>You have 50+ active users (and you are growing).</strong> The break-even point flips. Per-user SaaS fees stop being trivial line items and become a meaningful share of your software budget. See <a href="/../pricing/custom-crm-cost-india.html">custom CRM cost in India</a> for the numbers.</li>
+    <li><i class="fa-solid fa-circle-xmark"></i> <strong>Your data model is industry-specific.</strong> Real estate units and bookings, jewellery item-level traceability, pharma batch and expiry, distributor route-and-beat planning. These are first-class entities in your business and they should be first-class entities in your CRM.</li>
+    <li><i class="fa-solid fa-circle-xmark"></i> <strong>Your workflows are deep and frequently changing.</strong> Multi-step approvals with conditional logic, dynamic pricing, split commissions, integrated production scheduling. If your process changes every quarter, you need a system you can change at the speed of your business.</li>
+    <li><i class="fa-solid fa-circle-xmark"></i> <strong>You need white-label or platform plays.</strong> If your customers see your CRM, or you are a franchise/consulting brand wanting to ship CRM-as-part-of-service, SaaS does not bend that way.</li>
+    <li><i class="fa-solid fa-circle-xmark"></i> <strong>You have a data residency or DPDP Act control requirement.</strong> Self-hosted custom CRM lets you place data exactly where your compliance, audit and customer contracts demand.</li>
+  </ul>
+</section>
+
+<section class="cmp-section">
+  <h2>Side-by-side comparison: 12 capabilities</h2>
+  <p class="cmp-sub">A like-for-like view of Zoho CRM Enterprise (refer to Zoho's official pricing page for the current per-user-per-month rate) and a custom CRM built by Softwaller. No marketing fluff &mdash; just where each shape genuinely wins.</p>
+  <div class="cmp-table-wrap">
+    <table class="cmp-table">
+      <thead><tr><th>Capability</th><th>Zoho CRM Enterprise</th><th>Custom Softwaller CRM</th></tr></thead>
+      <tbody>
+        <tr><td>Cost model</td><td>Per user per month, recurring forever</td><td>One-time build + annual AMC <span class="cmp-pill win">flexible</span></td></tr>
+        <tr><td>Time to live</td><td>Days <span class="cmp-pill win">faster</span></td><td>6-8 weeks for core scope</td></tr>
+        <tr><td>Customization depth</td><td>Strong &mdash; bounded by Enterprise/Ultimate features</td><td>Unlimited at code level <span class="cmp-pill win">deeper</span></td></tr>
+        <tr><td>Industry-specific data models</td><td>Custom fields and modules; reporting can get fragile</td><td>First-class entities <span class="cmp-pill win">native fit</span></td></tr>
+        <tr><td>Mobile app</td><td>Polished, generic Zoho CRM app</td><td>Custom mobile app, your workflows <span class="cmp-pill win">tailored</span></td></tr>
+        <tr><td>WhatsApp Business integration</td><td>Available via marketplace extensions and Zoho's own integrations</td><td>Native, deep integration <span class="cmp-pill tie">parity</span></td></tr>
+        <tr><td>Per-user cost</td><td>Per Zoho's published list pricing (verify on official site)</td><td>Effectively zero per added user <span class="cmp-pill win">scales free</span></td></tr>
+        <tr><td>3-year TCO at 50 users</td><td>SaaS price &times; 50 users &times; 36 months</td><td>~Rs 8&ndash;12.5 lakh build + AMC <span class="cmp-pill win">often substantially lower</span></td></tr>
+        <tr><td>Source code IP</td><td>Owned by Zoho Corporation</td><td>Owned by you <span class="cmp-pill win">your asset</span></td></tr>
+        <tr><td>Data residency</td><td>Zoho's data centres (region selectable, vendor controlled)</td><td>Your cloud, your DC, on-prem option <span class="cmp-pill win">full control</span></td></tr>
+        <tr><td>White-label</td><td>Not available</td><td>Available <span class="cmp-pill win">brandable</span></td></tr>
+        <tr><td>Vendor lock-in</td><td>Pricing, roadmap and EULA controlled by vendor</td><td>You control roadmap; can switch AMC partner <span class="cmp-pill win">portable</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:var(--muted);margin-top:8px"><em>Pricing references describe Zoho's publicly available list pricing model in general terms only. Specific per-user rates change over time &mdash; always verify current pricing on the official Zoho CRM pricing page before any purchase decision.</em></p>
+</section>
+
+<section class="cmp-section">
+  <h2>3-year cost framework at 20, 50 and 100 users</h2>
+  <p class="cmp-sub">Build your own SaaS cost picture using your vendor's current per-user-per-month list price, then compare against a typical Softwaller custom CRM build for an Indian SME. Custom build figures are illustrative ranges from typical engagements.</p>
+  <div class="cmp-callout" style="margin-bottom:18px"><strong>SaaS estimation formula:</strong> Annual SaaS cost = vendor's current per-user-per-month list price &times; user count &times; 12. 3-year SaaS cost = annual cost &times; 3 (assuming flat pricing &mdash; SaaS list prices have generally trended upward, so build a buffer in). Verify your vendor's current per-user pricing on their official pricing page before relying on any number.</div>
+  <div class="cmp-cost-grid">
+    <div class="cmp-cost-card">
+      <h3>20 users</h3>
+      <p class="cmp-cost-sub">Small sales team</p>
+      <table>
+        <tr><td>SaaS / yr</td><td>vendor list &times; 20 &times; 12</td></tr>
+        <tr><td>SaaS 3-year total</td><td>annual &times; 3</td></tr>
+        <tr><td>Custom CRM build</td><td>~Rs 4&ndash;6 L</td></tr>
+        <tr><td>AMC over 3 years</td><td>~Rs 3&ndash;4 L</td></tr>
+        <tr><td>Custom 3-year total</td><td>~Rs 7&ndash;10 L</td></tr>
+      </table>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:10px">Verdict: usually a closer call &mdash; SaaS speed often wins under 20 users.</p>
+    </div>
+    <div class="cmp-cost-card">
+      <h3>50 users</h3>
+      <p class="cmp-cost-sub">Mid-market sales org</p>
+      <table>
+        <tr><td>SaaS / yr</td><td>vendor list &times; 50 &times; 12</td></tr>
+        <tr><td>SaaS 3-year total</td><td>annual &times; 3</td></tr>
+        <tr><td>Custom CRM build</td><td>~Rs 4&ndash;8 L</td></tr>
+        <tr><td>AMC over 3 years</td><td>~Rs 3&ndash;4.5 L</td></tr>
+        <tr><td>Custom 3-year total</td><td>~Rs 8&ndash;12.5 L</td></tr>
+      </table>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:10px">Verdict: typical tipping point &mdash; custom often becomes the cheaper 3-year option.</p>
+    </div>
+    <div class="cmp-cost-card">
+      <h3>100 users</h3>
+      <p class="cmp-cost-sub">Scaled sales org</p>
+      <table>
+        <tr><td>SaaS / yr</td><td>vendor list &times; 100 &times; 12</td></tr>
+        <tr><td>SaaS 3-year total</td><td>annual &times; 3</td></tr>
+        <tr><td>Custom CRM build</td><td>~Rs 8&ndash;15 L</td></tr>
+        <tr><td>AMC over 3 years</td><td>~Rs 4.5&ndash;6 L</td></tr>
+        <tr><td>Custom 3-year total</td><td>~Rs 12.5&ndash;21 L</td></tr>
+      </table>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:10px">Verdict: custom is typically dramatically cheaper at this scale; year 4+ savings compound.</p>
+    </div>
+  </div>
+  <div class="cmp-callout"><strong>In our project experience:</strong> custom-build break-even vs SaaS typically lands between 18 and 30 months for a mid-market Indian SME with industry-specific workflows. SaaS subscriptions tend to increase year-on-year (revisit your vendor's published renewal terms) while reusable custom-build architecture amortises across future modules.</p></div>
+</section>
+
+<section class="cmp-section">
+  <h2>The hybrid approach: Zoho CRM + a custom layer</h2>
+  <p class="cmp-sub">For some businesses, the smart answer is not Zoho or custom &mdash; it is both.</p>
+  <p>The hybrid path keeps Zoho CRM as the system of record for the things it is genuinely great at &mdash; lead capture, contact management, deal pipelines, email tracking, standard automation &mdash; and adds a custom layer on top, talking to Zoho via the official REST API. The custom layer typically covers three categories:</p>
+  <ol>
+    <li><strong>A custom mobile app for field sales</strong> with offline-first behaviour, GPS check-in, route planning and the exact 6-tap order-entry flow your reps actually need. Reads and writes back to Zoho CRM via API. See <a href="/../blog/field-sales-team-mobile-app.html">field sales mobile app</a>.</li>
+    <li><strong>Custom dashboards and BI</strong> on top of Zoho data &mdash; drill-down by branch, beat, item category, distributor, dealer-on-time-payment, slab-based commissions. Pulls Zoho data nightly, layers it with ERP and Tally numbers, surfaces what your management actually meets on.</li>
+    <li><strong>Industry-specific add-on modules</strong> &mdash; a real estate booking and unit-availability module, a jewellery item ledger, a service-AMC scheduler &mdash; sitting alongside Zoho but linking back to deals and contacts.</li>
+  </ol>
+  <p>Indicative cost: a Zoho CRM Professional or Enterprise tier (refer to Zoho's official pricing page for current per-user rates) + Softwaller custom layer (Rs 3&ndash;6 lakh one-time + AMC). For many businesses with 30&ndash;60 users, this is typically cheaper than Zoho Ultimate alone and far cheaper than a full custom replacement, while preserving Zoho's automation and update pipeline. We discuss this pattern further in <a href="/../blog/crm-vs-spreadsheets.html">CRM vs spreadsheets</a> and <a href="/../products/custom-business-apps.html">custom business apps</a>.</p>
+</section>
+
+<section class="cmp-section">
+  <h2>Migration: from Zoho CRM to a custom CRM</h2>
+  <p class="cmp-sub">If you have decided to move, here is the safe 5-step path Softwaller uses for Zoho-to-custom migrations.</p>
+  <ol>
+    <li><strong>API export and audit.</strong> Pull leads, contacts, accounts, deals, activities, attachments and custom modules out of Zoho CRM via the Zoho REST API. Audit data quality &mdash; duplicates, dead records, inconsistent picklists. Decide what to migrate and what to archive.</li>
+    <li><strong>Master data setup in custom CRM.</strong> Stand up the custom CRM, configure users, roles, territories, picklists, products, price books and the new workflow stages. Map every Zoho field to a destination field with explicit transformations.</li>
+    <li><strong>Custom CRM build and parity check.</strong> Build the custom modules and screens that Zoho could not handle natively. Run a parity check &mdash; for the workflows you are keeping, the new system should match Zoho behaviour or improve on it. Nothing should silently regress.</li>
+    <li><strong>UAT with real users.</strong> Run user acceptance testing with the actual sales team for at least two weeks. Catch the small-but-fatal items &mdash; the field they tab to without thinking, the report they open every Monday, the WhatsApp Business template that quotes the right price.</li>
+    <li><strong>Cutover with read-only Zoho archive.</strong> Switch live traffic to the custom CRM. Keep Zoho CRM live in read-only mode for 30 days as a safety net &mdash; not for daily use, but for any data you discover you missed. After 30 days, export final state and decommission.</li>
+  </ol>
+</section>
+
+<section class="cmp-section">
+  <h2>Adjacent reading</h2>
+  <p class="cmp-sub">Decisions like this rarely happen in isolation. These pages cover the questions that usually come next.</p>
+  <ul>
+    <li><a href="/../products/crm-software.html">Custom CRM development</a> &mdash; what Softwaller actually builds.</li>
+    <li><a href="/../products/whatsapp-automation.html">WhatsApp Business automation</a> &mdash; how WhatsApp fits the CRM, whether you stay on Zoho or move.</li>
+    <li><a href="/../pricing/custom-crm-cost-india.html">Custom CRM cost in India</a> &mdash; deeper pricing breakdown.</li>
+    <li><a href="/../pricing/custom-erp-cost-india.html">Custom ERP cost in India</a> &mdash; the ERP-side equivalent of this analysis.</li>
+    <li><a href="/custom-erp-vs-tally.html">Custom ERP vs Tally</a> &mdash; the same shape of comparison for accounting and ERP.</li>
+    <li><a href="/../blog/crm-vs-spreadsheets.html">CRM vs spreadsheets</a> &mdash; the step before this decision.</li>
+    <li><a href="/../blog/no-code-vs-custom-software.html">No-code vs custom software</a> &mdash; another way to think about the build/buy axis.</li>
+    <li><a href="/../about.html">About Softwaller</a> &mdash; who we are, where we are based, how we work.</li>
+  </ul>
+</section>
+
+<section class="pcta">
+  <div class="pcta-inner">
+    <h2>Need a fair second opinion on Zoho vs custom?</h2>
+    <p>Tell us your user count, industry and current pain points. We will tell you honestly whether Zoho CRM, a custom build, or the hybrid path is the right call for you.</p>
+    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get a Free CRM Strategy Call</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Honest answers to the questions Indian SMEs ask us most about Zoho CRM and custom CRM.</p>
+    <details class="faq-item">
+      <summary>Is Zoho CRM bad?</summary>
+      <div class="faq-answer">No. Zoho CRM is one of the strongest SaaS CRMs available, especially for Indian SMEs. It is fast to deploy, priced in INR, supported locally, and updated frequently. It only stops being the right tool when per-user fees scale beyond your budget or when your industry-specific data model and workflows hit the configuration ceiling of the Enterprise tier.</div>
+    </details>
+    <details class="faq-item">
+      <summary>When should I leave Zoho CRM?</summary>
+      <div class="faq-answer">Consider leaving Zoho CRM when you cross 50 active users, when you need deep customization that the Enterprise or Ultimate plan still cannot deliver, when industry-specific data models (real estate units, jewellery items, pharma SKUs) require painful workarounds, when DPDP Act data residency demands self-hosting, or when you need to white-label the CRM for your customers.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I export my data from Zoho to a custom CRM?</summary>
+      <div class="faq-answer">Yes. Zoho provides REST APIs and bulk export tools for leads, contacts, accounts, deals, activities, attachments and custom modules. A standard migration uses the Zoho REST API to export data in CSV or JSON, then imports it into the custom CRM with field-level mapping. We typically run Zoho in read-only mode for 30 days post-cutover as a safety net.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What is the break-even point between Zoho and custom?</summary>
+      <div class="faq-answer">For most Indian SMEs the break-even point sits between 18 and 30 months at 30-50 active users on the Zoho CRM Enterprise plan. Below 20 users, Zoho almost always wins on speed and cost. Above 50 users with industry-specific workflows, custom CRM wins on 3-year total cost of ownership and product fit.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I keep Zoho and add a custom mobile app?</summary>
+      <div class="faq-answer">Yes. The hybrid approach keeps Zoho CRM as the system of record for leads, contacts, deals and pipelines while adding a custom mobile app, custom dashboards or industry-specific modules on top via the Zoho REST API. This often costs less than either pure Zoho Ultimate or a full custom build, and preserves your existing Zoho automations.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does custom CRM mean I lose Zoho's frequent feature updates?</summary>
+      <div class="faq-answer">You lose the automatic feature pipeline that Zoho ships, but you gain control over your own roadmap. With a custom CRM you decide which features to build and when. AMC contracts cover bug fixes, security patches and minor enhancements. Major feature additions are scoped as separate change requests and prioritised by your business value, not by a vendor's product roadmap.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How much does it cost to migrate from Zoho CRM?</summary>
+      <div class="faq-answer">Migration alone typically costs Rs 50,000 to Rs 1.5 lakh, depending on data volume, number of custom modules and attachment size. The full custom CRM build (including migration) starts at around Rs 4 lakh for a small team and Rs 8-12 lakh for a 50-100 user deployment with industry-specific modules and integrations.</div>
+    </details>
+  </div>
+</section>
+
+`} />
+</BaseLayout>

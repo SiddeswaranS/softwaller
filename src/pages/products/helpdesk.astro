@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Custom Helpdesk Software with Multi-Channel Tickets | Softwaller";
+const description = "Custom helpdesk with multi-channel tickets (email, WhatsApp Business, calls), SLA tracking, knowledge base, and CSAT analytics. Live in 6 weeks.";
+const canonical = "https://www.softwaller.com/products/helpdesk.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Custom Helpdesk Software with Multi-Channel Tickets | Softwaller";
+const ogDescription = "Custom helpdesk with multi-channel tickets (email, WhatsApp Business, calls), SLA tracking, knowledge base, and CSAT analytics. 6 weeks.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.softwaller.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Helpdesk &amp; Ticket Management"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Helpdesk & Ticket Management",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Custom helpdesk with multi-channel tickets (email, WhatsApp Business, calls), SLA tracking, knowledge base, and CSAT analytics. Live in 6 weeks.",
+    "url": "https://www.softwaller.com/products/helpdesk.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "url": "https://www.softwaller.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "description": "Free consultation"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What channels can the helpdesk capture tickets from?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Email, WhatsApp, web form, customer portal, mobile app, phone (with telephony integration), Twitter and Facebook DMs. All channels merge into a single thread per customer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it support SLA management and escalation matrix?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. SLAs are configurable by ticket type, priority, customer tier, and business hours. Escalations trigger automatically with email, SMS, and WhatsApp notifications to the right manager."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we build a self-service knowledge base for customers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We include a KB module with categories, articles, search, and ticket deflection. Articles can be public or restricted to logged-in customers, and analytics show which articles deflect tickets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a customer portal for tracking ticket status?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Customers log in to see all their tickets, add comments, attach files, approve quotes, and rate resolution. The portal is white-labeled with your branding."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <style is:global slot="head-css" set:html={`
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+<section class="phero">
+  <div class="phero-inner">
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-headset"></i></div>
+      <h1>Custom Helpdesk with Multi-Channel Ticket Management</h1>
+      <p>Email, WhatsApp Business, calls, and web forms in one queue — with SLA tracking, knowledge base, and CSAT analytics. Built for Indian SME support teams. Live in 6–8 weeks.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="20" y="20" width="360" height="32" rx="8" fill="#F5F3FF"/><text x="200" y="40" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#7C3AED">Support Dashboard</text><rect x="30" y="65" width="85" height="50" rx="8" fill="#EBF0FF" stroke="#C2CFFF" stroke-width="1"/><text x="72" y="85" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="18" font-weight="800" fill="#1557FF">24</text><text x="72" y="100" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">Open Tickets</text><rect x="125" y="65" width="85" height="50" rx="8" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/><text x="167" y="85" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="18" font-weight="800" fill="#EA580C">5</text><text x="167" y="100" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">Overdue</text><rect x="220" y="65" width="85" height="50" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/><text x="262" y="85" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="18" font-weight="800" fill="#059669">142</text><text x="262" y="100" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">Resolved</text><rect x="315" y="65" width="55" height="50" rx="8" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/><text x="342" y="85" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="18" font-weight="800" fill="#7C3AED">4.6</text><text x="342" y="100" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">CSAT ⭐</text><rect x="30" y="128" width="340" height="30" rx="6" fill="#F7F8FC"/><text x="45" y="148" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#384165">Ticket</text><text x="160" y="148" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#384165">Subject</text><text x="280" y="148" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#384165">Priority</text><text x="345" y="148" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#384165">Status</text><rect x="30" y="162" width="340" height="28" rx="0" fill="#fff"/><text x="45" y="180" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#1557FF">#1847</text><text x="160" y="180" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#0A0F1E">Login issue</text><rect x="268" y="172" width="40" height="14" rx="4" fill="#FDF2F8"/><text x="288" y="182" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" font-weight="600" fill="#DB2777">High</text><rect x="322" y="172" width="40" height="14" rx="4" fill="#FFF7ED"/><text x="342" y="182" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" font-weight="600" fill="#EA580C">Open</text><rect x="30" y="194" width="340" height="28" rx="0" fill="#F7F8FC"/><text x="45" y="212" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#1557FF">#1846</text><text x="160" y="212" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#0A0F1E">Payment failed</text><rect x="268" y="204" width="40" height="14" rx="4" fill="#FFF7ED"/><text x="288" y="214" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" font-weight="600" fill="#EA580C">Med</text><rect x="322" y="204" width="40" height="14" rx="4" fill="#EBF0FF"/><text x="342" y="214" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" font-weight="600" fill="#1557FF">Assigned</text><rect x="30" y="226" width="340" height="28" rx="0" fill="#fff"/><text x="45" y="244" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#1557FF">#1845</text><text x="160" y="244" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#0A0F1E">Feature request</text><rect x="268" y="236" width="40" height="14" rx="4" fill="#EBF0FF"/><text x="288" y="246" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" font-weight="600" fill="#1557FF">Low</text><rect x="322" y="236" width="40" height="14" rx="4" fill="#ECFDF5"/><text x="342" y="246" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" font-weight="600" fill="#059669">Solved</text></svg>
+    </div>
+  </div>
+</section>
+
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
+  <div class="pfeatures-inner">
+    <h2>Streamline Your Support Operations</h2>
+    <p class="sub">12 modules to manage customer tickets, track SLAs, and deliver world-class support.</p>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-ticket"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Ticket System</h3>
+          <p itemprop="description">Create and manage tickets via email, web form, WhatsApp, or phone with a unified inbox for all channels.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-hourglass-half"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">SLA Tracking</h3>
+          <p itemprop="description">Define response and resolution SLAs with automated escalation alerts when deadlines are approaching.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-shuffle"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Auto Assignment</h3>
+          <p itemprop="description">Round-robin or skill-based ticket assignment to distribute workload evenly across your support team.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-book"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">Knowledge Base</h3>
+          <p itemprop="description">Searchable help articles and FAQs for customer self-service, reducing ticket volume and wait times.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-face-smile"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">CSAT Surveys</h3>
+          <p itemprop="description">Customer satisfaction surveys sent automatically after ticket resolution to measure service quality.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-arrow-up-from-bracket"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Escalation Rules</h3>
+          <p itemprop="description">Auto-escalate overdue or high-priority tickets to supervisors with configurable escalation paths.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-inbox"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Multi-Channel</h3>
+          <p itemprop="description">Unified inbox for email, WhatsApp, web, and phone tickets so no customer query falls through the cracks.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-reply"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Canned Responses</h3>
+          <p itemprop="description">Pre-written replies for common queries to save time and ensure consistent, professional responses.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-flag"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Ticket Prioritization</h3>
+          <p itemprop="description">Auto-prioritize tickets based on customer tier, issue type, and SLA urgency for smarter triage.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-note-sticky"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Internal Notes</h3>
+          <p itemprop="description">Private team notes on tickets for internal collaboration without exposing comments to customers.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-chart-column"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Reporting & Analytics</h3>
+          <p itemprop="description">Response time, resolution time, and agent performance metrics to identify bottlenecks and improve.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-object-group"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Parent-Child Tickets</h3>
+          <p itemprop="description">Link related tickets together and track them as a group for complex issues that span multiple requests.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="pwhy">
+  <div class="pwhy-inner">
+    <h2>Why Choose Softwaller</h2>
+    <p class="sub">We build software that works as hard as you do. Here's what sets us apart.</p>
+    <div class="pwhy-grid">
+      <div class="pwhy-item">
+        <i class="fa-solid fa-sliders"></i>
+        <div><h3>Built for Your Workflow</h3><p>Custom-designed to match how your team actually works.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-arrow-up-right-dots"></i>
+        <div><h3>Scale as You Grow</h3><p>Architecture designed to handle 500+ concurrent users.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <div><h3>Mobile Ready</h3><p>Access from any device, anywhere, anytime.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-plug"></i>
+        <div><h3>Integration Ready</h3><p>Connect with Tally, WhatsApp, payment gateways, and more.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-headset"></i>
+        <div><h3>Ongoing Support</h3><p>3 months free support + AMC options after go-live.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div><h3>Data Security</h3><p>Role-based access, encryption, and audit trails.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-related">
+  <div class="p-related-inner">
+    <h2>Related Solutions</h2>
+    <p class="sub">Explore other software that works great alongside this solution.</p>
+    <div class="p-related-grid">
+      <a href="/crm-software.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>CRM Software</h3>
+        <p>Manage leads, pipeline &amp; sales</p>
+        <div class="pr-link">CRM Software <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/whatsapp-automation.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--green-bg);color:#25D366"><i class="fa-brands fa-whatsapp"></i></div>
+        <h3>WhatsApp Automation</h3>
+        <p>Automated messaging</p>
+        <div class="pr-link">WhatsApp Automation <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/project-management.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-diagram-project"></i></div>
+        <h3>Project Management</h3>
+        <p>Tasks, timelines &amp; teams</p>
+        <div class="pr-link">Project Management <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pcta">
+  <div class="pcta-inner">
+    <h2>Ready to Get Started?</h2>
+    <p>Tell us about your project and get a free consultation with our team. No commitments, no pressure.</p>
+    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-calendar-check"></i> Book a Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>What channels can the helpdesk capture tickets from?</summary>
+      <div class="faq-answer">Email, WhatsApp, web form, customer portal, mobile app, phone (with telephony integration), Twitter and Facebook DMs. All channels merge into a single thread per customer.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does it support SLA management and escalation matrix?</summary>
+      <div class="faq-answer">Yes. SLAs are configurable by ticket type, priority, customer tier, and business hours. Escalations trigger automatically with email, SMS, and WhatsApp notifications to the right manager.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can we build a self-service knowledge base for customers?</summary>
+      <div class="faq-answer">Yes. We include a KB module with categories, articles, search, and ticket deflection. Articles can be public or restricted to logged-in customers, and analytics show which articles deflect tickets.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Is there a customer portal for tracking ticket status?</summary>
+      <div class="faq-answer">Yes. Customers log in to see all their tickets, add comments, attach files, approve quotes, and rate resolution. The portal is white-labeled with your branding.</div>
+    </details>
+  </div>
+</section>
+
+`} />
+</BaseLayout>

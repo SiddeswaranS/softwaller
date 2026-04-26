@@ -1,0 +1,588 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Jewellery Billing Software & ERP in Coimbatore, Madurai, Chennai | Softwaller";
+const description = "Custom jewellery billing software & ERP for Indian retailers, wholesalers, karigars. Live gold rate sync, BIS HUID tracking, RFID stock, old-gold exchange, GST e-invoicing. Live in 6–10 weeks.";
+const canonical = "https://www.softwaller.com/industries/jewellery-erp.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Jewellery Billing Software & ERP in Coimbatore, Madurai, Chennai | Softwaller";
+const ogDescription = "Custom jewellery billing software & ERP for Indian retailers, wholesalers, karigars. Live gold rate sync, BIS HUID tracking, RFID stock, old-gold exchange, GST e-invoicing.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Industries",
+        "item": "https://www.softwaller.com/#industries"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Jewellery ERP"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Jewellery ERP & Billing Software",
+    "serviceType": "Custom Software Development",
+    "description": "Custom jewellery billing software and ERP for retailers, wholesalers, and manufacturers in India. Live gold rate sync, BIS HUID tracking, RFID stock management, old-gold exchange, karigar job-work, multi-branch, GST e-invoicing.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "url": "https://www.softwaller.com"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Jewellery retailers, wholesalers, manufacturers, karigars"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": "300000",
+      "description": "Single-showroom jewellery billing from ₹3L"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the system update gold rate automatically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our jewellery ERP polls live bullion-rate feeds (BSE/MCX-linked supplier APIs or your trusted bullion dealer's webhook) at intervals you set — typically every 15 to 60 minutes. The new rate flows into the billing screen, item master valuation, and approval-voucher revaluation. Branch managers can override with a four-eye approval, and every rate change is logged for audit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it support BIS hallmark and HUID tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Each piece is tagged with its 6-character HUID, BIS hallmark centre code, purity (14k/18k/22k), and assay date. The HUID is printed on the tax invoice and is searchable for warranty, repair, and buy-back. Bulk HUID import from the BIS Hallmark portal is supported, and the system blocks billing of any item without a valid HUID for hallmarked categories."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can RFID auto-take stock without scanning each item?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. With UHF RFID tags on every piece, a handheld or fixed reader scans an entire tray, drawer, or showcase in seconds. The ERP reconciles the read list against the system's expected stock and flags missing, mis-located, or unauthorised pieces. A 5,000-piece showroom audit that used to take a full day drops to under 30 minutes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does old-gold exchange work in the software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The exchange screen captures gross weight, purity (carat/touch from XRF or stone test), stone weight to deduct, and computes net pure-gold value at the day's rate minus your wastage and melt-loss policy. The customer's adjustment voucher posts directly against the new sale invoice, and a bullion-account journal records the inward fine gold. Full audit trail with photos of the old item is stored."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it handle karigar (artisan) job-work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The karigar module issues raw gold/silver weight against a job order, tracks design and expected weight, and on receipt records final weight, stones added, wastage absorbed, and labour due. Karigar-wise wastage % trends, ageing of issued metal, and outstanding bullion balances are visible on a single dashboard — solving the biggest leakage point in manufacturing jewellery."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is e-invoicing supported for B2B jewellery sales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. For B2B invoices above the GST e-invoicing threshold, the ERP generates IRN through GSP/IRP integration, prints the QR code on the tax invoice, creates the e-way bill where applicable, and pushes data to GSTR-1. Multi-GSTIN setups for jewellers with branches in Tamil Nadu, Karnataka, Kerala, and beyond are fully supported."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can it integrate with our existing showroom hardware (RFID readers, barcode printers)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We integrate with mainstream UHF RFID readers (handheld and fixed-portal), thermal jewellery tag printers, weighing scales with serial/USB output, XRF purity testers, customer-display poles, and cash drawers. If you already own hardware, share the make and model and we will build the driver shim — no need to replace working equipment."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <style is:global slot="head-css" set:html={`
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+.prose-section{max-width:880px;margin:0 auto;padding:48px 28px 16px}
+.prose-section h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 14px}
+.prose-section p{font-size:15px;color:var(--ink);line-height:1.8;margin:0 0 14px}
+.prose-section ul{padding-left:22px;margin:0 0 14px}
+.prose-section ul li{font-size:15px;color:var(--ink);line-height:1.85;margin:0 0 6px}
+.prose-section .stat{background:var(--blue-bg);border-left:4px solid var(--blue);padding:14px 18px;border-radius:8px;margin:14px 0;font-size:14.5px;color:var(--ink);line-height:1.7}
+.audience-grid{max-width:1080px;margin:0 auto;padding:32px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.aud-card{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--white);transition:transform .2s,box-shadow .2s}
+.aud-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(10,15,30,.06)}
+.aud-card .ic{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:12px}
+.aud-card h3{font-size:16px;font-weight:700;color:var(--ink);margin:0 0 6px}
+.aud-card p{font-size:13.5px;color:var(--muted);line-height:1.65;margin:0}
+.cmp-wrap{max-width:1000px;margin:0 auto;padding:32px 28px;overflow-x:auto}
+.cmp-wrap table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp-wrap th,.cmp-wrap td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
+.cmp-wrap thead th{background:#F8FAFF;font-weight:700;color:var(--ink);font-size:13.5px;text-transform:uppercase;letter-spacing:.4px}
+.cmp-wrap tbody tr:last-child td{border-bottom:none}
+.cmp-wrap td.yes{color:#059669;font-weight:700}
+.cmp-wrap td.no{color:#DC2626;font-weight:700}
+.cmp-wrap td.partial{color:#D97706;font-weight:700}
+.steps-grid{max-width:1080px;margin:0 auto;padding:32px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.step-card{border:1px solid var(--line);border-radius:14px;padding:20px;background:var(--white);position:relative}
+.step-card .num{position:absolute;top:-14px;left:18px;background:var(--blue);color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
+.step-card h3{font-size:15px;font-weight:700;color:var(--ink);margin:8px 0 6px}
+.step-card p{font-size:13.5px;color:var(--muted);line-height:1.65;margin:0}
+.price-grid{max-width:1080px;margin:0 auto;padding:32px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.price-card{border:1px solid var(--line);border-radius:14px;padding:24px;background:var(--white)}
+.price-card h3{font-size:16px;font-weight:700;color:var(--ink);margin:0 0 4px}
+.price-card .amt{font-size:22px;font-weight:800;color:var(--blue);margin:6px 0}
+.price-card .tl{font-size:13px;color:var(--muted);margin:0 0 10px}
+.price-card ul{padding-left:18px;margin:8px 0 0}
+.price-card ul li{font-size:13.5px;color:var(--ink);line-height:1.7;margin:0 0 4px}
+`}></style>
+  <Fragment set:html={`
+<section class="phero">
+  <div class="phero-inner">
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-gem"></i></div>
+      <h1>Custom Jewellery Billing Software & ERP for Indian Retailers</h1>
+      <p>Softwaller builds custom jewellery billing software and ERP for retailers, wholesalers, and karigars across the <a href="/../locations/coimbatore.html">Coimbatore jewellery cluster</a>, <a href="/../locations/madurai.html">Madurai jewellers</a>, <a href="/../locations/chennai.html">Chennai modern retail</a> and beyond. Live gold rate sync, RFID stock, BIS HUID tracking, old-gold exchange, multi-branch, karigar job-work — all GST e-invoicing compliant. Live in 6 to 10 weeks for a single showroom; 3 to 4 months for multi-branch ERP. We visit your shop, map your real workflow (the bullion sale screen, the approval voucher pad, the karigar issue register), and deliver software that mirrors how your team already works — not a rigid product that forces you to re-train staff. Single-showroom builds start at ₹3L.</p>
+      <p style="margin-top:14px"><a href="/../#contact" class="pcta-btn" style="display:inline-flex"><i class="fa-solid fa-paper-plane"></i> Get a Free Showroom Audit</a></p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jewellery ERP module diagram">
+        <rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/>
+        <circle cx="200" cy="150" r="42" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1.5"/>
+        <text x="200" y="146" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="800" fill="#EA580C">Jewellery</text>
+        <text x="200" y="160" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#EA580C">ERP Core</text>
+        <line x1="200" y1="108" x2="200" y2="55" stroke="#FED7AA" stroke-width="1.5"/>
+        <rect x="160" y="20" width="80" height="35" rx="8" fill="#FEF3C7" stroke="#FCD34D" stroke-width="1"/>
+        <text x="200" y="42" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#B45309">Live Gold Rate</text>
+        <line x1="158" y1="135" x2="95" y2="100" stroke="#A7F3D0" stroke-width="1.5"/>
+        <rect x="40" y="75" width="80" height="35" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+        <text x="80" y="97" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#059669">BIS / HUID</text>
+        <line x1="242" y1="135" x2="305" y2="100" stroke="#FBCFE8" stroke-width="1.5"/>
+        <rect x="280" y="75" width="80" height="35" rx="8" fill="#FDF2F8" stroke="#FBCFE8" stroke-width="1"/>
+        <text x="320" y="97" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#DB2777">RFID Stock</text>
+        <line x1="158" y1="165" x2="95" y2="200" stroke="#C2CFFF" stroke-width="1.5"/>
+        <rect x="40" y="190" width="80" height="35" rx="8" fill="#EBF0FF" stroke="#C2CFFF" stroke-width="1"/>
+        <text x="80" y="212" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#1557FF">Old-Gold</text>
+        <line x1="242" y1="165" x2="305" y2="200" stroke="#A5F3FC" stroke-width="1.5"/>
+        <rect x="280" y="190" width="80" height="35" rx="8" fill="#ECFEFF" stroke="#A5F3FC" stroke-width="1"/>
+        <text x="320" y="212" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#0891B2">Karigar</text>
+        <line x1="200" y1="192" x2="200" y2="245" stroke="#DDD6FE" stroke-width="1.5"/>
+        <rect x="160" y="245" width="80" height="35" rx="8" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+        <text x="200" y="267" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#7C3AED">Multi-Branch</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="prose-section">
+  <h2>Why Generic Billing Software Fails Jewellers</h2>
+  <p>If you have tried running a jewellery showroom on a general retail or accounting package, you already know the friction. The biller types the gold rate from a chalkboard. The making-charge percent is calculated on a calculator and re-keyed. The HUID is written on the tag in pen and never enters the database. Old-gold exchange takes 10 minutes per customer because purity, melt-loss, and stone deduction all run on a sheet of paper.</p>
+  <p>Generic systems were not designed for an industry where the cost of goods sold changes by the hour, where a single piece is split between gold weight, stone weight, and labour, where the regulator (BIS) demands per-piece traceability, and where a 50-gram bracelet sitting with a customer on approval is technically your stock but physically not in the showroom. The gaps that hurt every day:</p>
+  <ul>
+    <li><strong>Gold rate is static.</strong> When MCX moves 1% in a morning, your billing screen still shows yesterday's rate, eroding margin or angering customers.</li>
+    <li><strong>Making charges are manual.</strong> Designwise, customer-grade-wise, and per-gram-versus-percent rules cannot be coded into a generic invoice line.</li>
+    <li><strong>HUID is an afterthought.</strong> The 6-character BIS Hallmark Unique ID never makes it into the master, so warranty and buy-back lookups are still done on the physical tag.</li>
+    <li><strong>RFID is unsupported.</strong> The system cannot read 500 pieces in a tray at once, so stocktake remains a once-a-year shutter-down event.</li>
+    <li><strong>Karigar leakage is invisible.</strong> Bullion goes out, jewellery comes back, but wastage trends per artisan are nowhere on a dashboard.</li>
+  </ul>
+  <div class="stat"><strong>Industry context:</strong> India's gems and jewellery market is projected at <strong>$85–100 billion by 2026</strong>, the second-largest contributor to non-food retail (sources: World Gold Council and IBEF estimates). Tamil Nadu alone hosts hundreds of organised retail showrooms, with Coimbatore commonly described as a major South Indian jewellery hub alongside Chennai and Madurai.</div>
+  <div class="stat"><strong>Compliance:</strong> BIS HUID hallmarking has been mandatory for 14k, 18k, and 22k gold jewellery sold by registered jewellers from <strong>June 2021 onwards</strong> (BIS notification on mandatory hallmarking). Selling un-hallmarked covered jewellery without HUID is a regulatory violation — your software must enforce this at the billing screen, not after the fact.</div>
+</section>
+
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
+  <div class="pfeatures-inner">
+    <h2>12 Modules Built for Jewellery Operations</h2>
+    <p class="sub">Every module shaped by real showroom and karigar workflows — not adapted from a generic retail template.</p>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Live Gold & Silver Rate Sync</h3>
+          <p itemprop="description">Auto-pull bullion rates from BSE/MCX-linked supplier feeds or your trusted bullion dealer's API at 15 to 60 minute intervals. Branch-level override with four-eye approval. Every rate change logged for audit.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-list-ol"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Item Master with Stone & Gold Split</h3>
+          <p itemprop="description">Per-piece capture of gross weight, net gold weight, stone weight (CT), stone value, purity (14k/18k/22k), design code, and image. The bill computes gold value, stone value, and labour separately — exactly how the customer wants to see it.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-percent"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Making Charges Engine</h3>
+          <p itemprop="description">Designwise, categorywise, customer-gradewise rules. Choose percent of gold value, flat per-gram, or per-piece. Wastage % auto-applied. Promotional waivers for Akshaya Tritiya or Diwali bookable in advance.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">BIS Hallmark & HUID Tracking</h3>
+          <p itemprop="description">6-character HUID, hallmark centre code, and assay date stored per piece. Bulk import from the BIS Hallmark portal. Billing blocked for any covered item without a valid HUID. Searchable for warranty, repair, and buy-back.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-tag"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">RFID Stock Management</h3>
+          <p itemprop="description">UHF RFID tags read entire trays in seconds via handheld or fixed-portal readers. Reconcile with system stock, flag missing or unauthorised pieces, and shrink an annual stocktake from 8 hours to 30 minutes. Anti-theft alerts on door portals.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-arrows-rotate"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Old-Gold Exchange Calculator</h3>
+          <p itemprop="description">Capture gross weight, purity from XRF or stone test, stone deduction, melt loss, and policy wastage. Computes net pure-gold value at the day's rate, posts a customer adjustment voucher, and journals fine gold inward to the bullion account.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-clipboard-list"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Approval Voucher</h3>
+          <p itemprop="description">Track pieces given to a customer for trial or to a wholesale buyer for selection. Auto-revaluation as gold rate moves. Ageing alerts beyond 24/48/72 hours. Conversion to invoice or return with a single click.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Gold Schemes & Chits</h3>
+          <p itemprop="description">Run 11+1, 12+1, fixed-weight, and Akshaya Tritiya schemes. Member portal for installment payments, gold-rate-protect logic, maturity bonus calculation, and KYC capture. Compliance-ready ledger for every scheme member.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-hammer"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Karigar (Job-Work) Module</h3>
+          <p itemprop="description">Issue raw bullion against a job order, track expected versus received weight, stones added, wastage absorbed, and labour due. Karigar-wise wastage trends, bullion ageing, and outstanding metal balance on a single dashboard.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-building"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Multi-Branch + Central Ratecard</h3>
+          <p itemprop="description">Head office sets the gold rate, making-charge rules, and scheme catalogue once. Every branch applies it instantly. Branch-wise stock, sales, and bullion balance. Inter-branch stock transfer with HUID-level traceability.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-file-invoice"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">GST E-Invoicing for B2B</h3>
+          <p itemprop="description">3% GST on gold, 5% GST on making charges, automatic IRN generation through GSP/IRP, QR code on invoice, e-way bill, and GSTR-1 push. Multi-GSTIN setups for jewellers operating across Tamil Nadu, Karnataka, and Kerala.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-chart-pie"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">MIS Dashboard</h3>
+          <p itemprop="description">Daily sales by branch, salesperson, design category, and customer segment. Stock ageing, fast-moving and dead-stock alerts, scheme collection trends, karigar wastage, and gold-rate margin impact — all in real time.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="prose-section">
+  <h2>Who We Serve</h2>
+  <p>From a single-counter family showroom to a multi-state wholesale chain, the architecture flexes to fit. Common buyer profiles:</p>
+</section>
+<div class="audience-grid">
+  <div class="aud-card">
+    <div class="ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-store"></i></div>
+    <h3>Retail Showrooms</h3>
+    <p>Family-owned or chain showrooms in Coimbatore, Madurai, Chennai, Salem, and Erode running 1 to 20 branches. Live rate, BIS HUID, RFID, schemes — all-in-one.</p>
+  </div>
+  <div class="aud-card">
+    <div class="ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-coins"></i></div>
+    <h3>Wholesale Bullion</h3>
+    <p>B2B traders selling to jewellers across South India. Multi-GSTIN e-invoicing, bullion accounting separate from inventory, party-wise rate cards.</p>
+  </div>
+  <div class="aud-card">
+    <div class="ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-gem"></i></div>
+    <h3>Diamond & Gemstone</h3>
+    <p>Per-stone CT, clarity, colour, cut tracking. Certificate (IGI/GIA) attachment per piece. Memo-out and consignment support for high-value SKUs.</p>
+  </div>
+  <div class="aud-card">
+    <div class="ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+    <h3>Karigar / Manufacturing</h3>
+    <p>Job-work units issuing bullion to artisans. Wastage analytics per karigar, design library, and full reconciliation from raw weight to finished SKU.</p>
+  </div>
+  <div class="aud-card">
+    <div class="ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-globe"></i></div>
+    <h3>Online D2C Jewellery</h3>
+    <p>Website and marketplace order capture into the same ERP. Live rate refresh on the storefront, COD/prepaid logic, and courier-integrated dispatch.</p>
+  </div>
+  <div class="aud-card">
+    <div class="ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-handshake"></i></div>
+    <h3>Corporate / Bank Tie-ups</h3>
+    <p>Gold loan jewellery handling, auction reconciliation, and corporate gifting tie-ups with structured invoicing and PO matching.</p>
+  </div>
+</div>
+
+<section class="prose-section">
+  <h2>Generic Billing vs Custom Jewellery ERP</h2>
+  <p>How a typical generic retail or accounting package compares to a Softwaller-built jewellery ERP, on the workflows that actually matter:</p>
+</section>
+<div class="cmp-wrap">
+  <table>
+    <thead>
+      <tr><th>Capability</th><th>Generic Retail / Accounting Package</th><th>Softwaller Jewellery ERP</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Live gold & silver rate auto-sync</td><td class="no">No (manual entry)</td><td class="yes">Yes — 15–60 min poll, audit log</td></tr>
+      <tr><td>BIS Hallmark / HUID per piece</td><td class="no">No</td><td class="yes">Yes — bulk import, billing block</td></tr>
+      <tr><td>RFID tray-scan stock-take</td><td class="no">No</td><td class="yes">Yes — handheld + fixed portal</td></tr>
+      <tr><td>Old-gold exchange calculator</td><td class="partial">Partial (line item only)</td><td class="yes">Yes — purity, melt-loss, bullion journal</td></tr>
+      <tr><td>Karigar job-work & wastage</td><td class="no">No</td><td class="yes">Yes — per-artisan analytics</td></tr>
+      <tr><td>Multi-branch with central ratecard</td><td class="partial">Branch-level only</td><td class="yes">Yes — head-office push</td></tr>
+      <tr><td>GST e-invoicing (3% gold + 5% making)</td><td class="partial">Generic GST only</td><td class="yes">Yes — jewellery line splits</td></tr>
+      <tr><td>Approval voucher with revaluation</td><td class="no">No</td><td class="yes">Yes — auto rate-revaluation</td></tr>
+      <tr><td>Gold schemes / chits</td><td class="no">No</td><td class="yes">Yes — 11+1, fixed-weight, etc.</td></tr>
+      <tr><td>Custom workflow changes post-launch</td><td class="no">Vendor roadmap only</td><td class="yes">Yes — your code, your changes</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<section class="prose-section">
+  <h2>Implementation Process</h2>
+  <p>A predictable, jeweller-friendly delivery plan. We do not disappear after the kick-off call.</p>
+</section>
+<div class="steps-grid">
+  <div class="step-card"><div class="num">1</div><h3>Showroom Audit</h3><p>We visit your shop in Coimbatore, Madurai, Chennai, or wherever you operate. We watch the bill, the karigar register, and the approval pad.</p></div>
+  <div class="step-card"><div class="num">2</div><h3>Process Mapping</h3><p>Document rate-feed source, RFID hardware spec, branch list, scheme catalogue, GSTIN structure, and pain points. Sign-off before we code.</p></div>
+  <div class="step-card"><div class="num">3</div><h3>Sprint Development</h3><p>Two-week sprints with showroom-visible demos. Billing screen first, then HUID, RFID, old-gold, karigar, schemes — in your priority order.</p></div>
+  <div class="step-card"><div class="num">4</div><h3>UAT with Staff</h3><p>Counter staff and karigar supervisors test on real (anonymised) data. Go-live readiness checklist signed by the owner before cutover.</p></div>
+  <div class="step-card"><div class="num">5</div><h3>Go-Live + 6 Months Support</h3><p>On-site for the first 3 days. 6 months free support thereafter, then AMC. Source code escrow optional for full ownership confidence.</p></div>
+</div>
+
+<section class="prose-section">
+  <h2>Pricing & Timeline</h2>
+  <p>Indicative budgets — final scope confirmed after the showroom audit. Hardware (RFID readers, tag printers, scales) is quoted separately or you reuse what you have.</p>
+</section>
+<div class="price-grid">
+  <div class="price-card">
+    <h3>Single-Showroom Billing</h3>
+    <div class="amt">₹3L – ₹6L</div>
+    <p class="tl">6–8 weeks to go-live</p>
+    <ul>
+      <li>Live gold rate, item master, billing</li>
+      <li>BIS HUID, GST invoice (B2C)</li>
+      <li>Old-gold exchange, basic schemes</li>
+      <li>1 branch, up to 5 users</li>
+    </ul>
+  </div>
+  <div class="price-card">
+    <h3>Multi-Branch ERP</h3>
+    <div class="amt">₹8L – ₹15L</div>
+    <p class="tl">3–4 months to go-live</p>
+    <ul>
+      <li>Everything in single-showroom</li>
+      <li>Central ratecard, inter-branch transfer</li>
+      <li>GST e-invoicing (B2B), multi-GSTIN</li>
+      <li>MIS dashboard, approval voucher</li>
+    </ul>
+  </div>
+  <div class="price-card">
+    <h3>Manufacturing / Karigar ERP</h3>
+    <div class="amt">₹12L – ₹20L</div>
+    <p class="tl">~4 months to go-live</p>
+    <ul>
+      <li>Everything in multi-branch</li>
+      <li>Karigar job-work full lifecycle</li>
+      <li>Bullion accounting, design library</li>
+      <li>Wastage & ageing analytics</li>
+    </ul>
+  </div>
+  <div class="price-card">
+    <h3>RFID Implementation Add-on</h3>
+    <div class="amt">₹2L – ₹5L</div>
+    <p class="tl">3–4 weeks alongside ERP</p>
+    <ul>
+      <li>UHF tag spec & supplier shortlist</li>
+      <li>Reader integration (handheld + portal)</li>
+      <li>Bulk-tag import & SKU mapping</li>
+      <li>Anti-theft alerting workflow</li>
+    </ul>
+  </div>
+</div>
+
+<section class="pwhy">
+  <div class="pwhy-inner">
+    <h2>Why Jewellers Choose Softwaller</h2>
+    <p class="sub">Salem-based, India-wide. We understand the bullion sale screen because we have sat behind it.</p>
+    <div class="pwhy-grid">
+      <div class="pwhy-item">
+        <i class="fa-solid fa-eye"></i>
+        <div><h3>Showroom-First Discovery</h3><p>We visit before we quote. Your real workflow shapes the build — not a prefab demo.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-arrow-up-right-dots"></i>
+        <div><h3>Built for Multi-Branch Scale</h3><p>500+ concurrent users, 50,000+ HUID SKUs, branch-wise stock — handled out of the box.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <div><h3>Counter & Mobile Ready</h3><p>POS-grade desktop billing plus a counter-staff mobile view for stock lookup and approval voucher.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-plug"></i>
+        <div><h3>Hardware-Friendly</h3><p>UHF RFID readers, thermal tag printers, weighing scales, XRF testers, customer-display poles — we integrate what you own.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-headset"></i>
+        <div><h3>6 Months Free Support</h3><p>On-site for the first 3 days, then 6 months free issue resolution. AMC starts only after that.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div><h3>Source-Code Ownership</h3><p>Optional source-code escrow. The software is yours to keep, modify, or hand to another vendor — no lock-in.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-related">
+  <div class="p-related-inner">
+    <h2>Related Solutions</h2>
+    <p class="sub">Modules and integrations that work alongside the jewellery ERP.</p>
+    <div class="p-related-grid">
+      <a href="/../products/erp-solutions.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-industry"></i></div>
+        <h3>ERP Solutions</h3>
+        <p>Manufacturing & multi-branch ERP base</p>
+        <div class="pr-link">ERP Solutions <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/../products/inventory-management.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-boxes-stacked"></i></div>
+        <h3>Inventory Management</h3>
+        <p>Real-time stock, RFID, batches</p>
+        <div class="pr-link">Inventory Management <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/../products/gst-billing-accounting.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h3>GST Billing & Accounting</h3>
+        <p>3% gold + 5% making, e-invoicing</p>
+        <div class="pr-link">GST Billing & Accounting <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/../products/whatsapp-automation.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-comments"></i></div>
+        <h3>WhatsApp Business Automation</h3>
+        <p>Scheme reminders, ready-for-pickup, rate alerts</p>
+        <div class="pr-link">WhatsApp Business Automation <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/../products/hr-payroll.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-users"></i></div>
+        <h3>HR & Payroll</h3>
+        <p>Counter-staff incentives, attendance</p>
+        <div class="pr-link">HR & Payroll <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/../case-studies.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-trophy"></i></div>
+        <h3>Case Studies</h3>
+        <p>Real client outcomes</p>
+        <div class="pr-link">Case Studies <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pcta">
+  <div class="pcta-inner">
+    <h2>Ready for a Showroom That Runs Itself?</h2>
+    <p>Free 60-minute audit at your showroom anywhere in Tamil Nadu. We come prepared, sign your NDA, and leave you with a written scope. <a href="/../about.html" style="color:#fff;text-decoration:underline">Learn about Softwaller</a>.</p>
+    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Book a Free Showroom Audit</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions jewellers ask before choosing a billing & ERP partner.</p>
+    <details class="faq-item">
+      <summary>How does the system update gold rate automatically?</summary>
+      <div class="faq-answer">Our jewellery ERP polls live bullion-rate feeds (BSE/MCX-linked supplier APIs or your trusted bullion dealer's webhook) at intervals you set — typically every 15 to 60 minutes. The new rate flows into the billing screen, item master valuation, and approval-voucher revaluation. Branch managers can override with a four-eye approval, and every rate change is logged for audit.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does it support BIS hallmark and HUID tracking?</summary>
+      <div class="faq-answer">Yes. Each piece is tagged with its 6-character HUID, BIS hallmark centre code, purity (14k/18k/22k), and assay date. The HUID is printed on the tax invoice and is searchable for warranty, repair, and buy-back. Bulk HUID import from the BIS Hallmark portal is supported, and the system blocks billing of any item without a valid HUID for hallmarked categories.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can RFID auto-take stock without scanning each item?</summary>
+      <div class="faq-answer">Yes. With UHF RFID tags on every piece, a handheld or fixed reader scans an entire tray, drawer, or showcase in seconds. The ERP reconciles the read list against the system's expected stock and flags missing, mis-located, or unauthorised pieces. A 5,000-piece showroom audit that used to take a full day drops to under 30 minutes.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How does old-gold exchange work in the software?</summary>
+      <div class="faq-answer">The exchange screen captures gross weight, purity (carat/touch from XRF or stone test), stone weight to deduct, and computes net pure-gold value at the day's rate minus your wastage and melt-loss policy. The customer's adjustment voucher posts directly against the new sale invoice, and a bullion-account journal records the inward fine gold. Full audit trail with photos of the old item is stored.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does it handle karigar (artisan) job-work?</summary>
+      <div class="faq-answer">Yes. The karigar module issues raw gold/silver weight against a job order, tracks design and expected weight, and on receipt records final weight, stones added, wastage absorbed, and labour due. Karigar-wise wastage % trends, ageing of issued metal, and outstanding bullion balances are visible on a single dashboard — solving the biggest leakage point in manufacturing jewellery.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Is e-invoicing supported for B2B jewellery sales?</summary>
+      <div class="faq-answer">Yes. For B2B invoices above the GST e-invoicing threshold, the ERP generates IRN through GSP/IRP integration, prints the QR code on the tax invoice, creates the e-way bill where applicable, and pushes data to GSTR-1. Multi-GSTIN setups for jewellers with branches in Tamil Nadu, Karnataka, Kerala, and beyond are fully supported.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can it integrate with our existing showroom hardware (RFID readers, barcode printers)?</summary>
+      <div class="faq-answer">Yes. We integrate with mainstream UHF RFID readers (handheld and fixed-portal), thermal jewellery tag printers, weighing scales with serial/USB output, XRF purity testers, customer-display poles, and cash drawers. If you already own hardware, share the make and model and we will build the driver shim — no need to replace working equipment.</div>
+    </details>
+  </div>
+</section>
+
+`} />
+</BaseLayout>

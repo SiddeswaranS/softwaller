@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Custom Inventory Software with Barcode + GST | Softwaller";
+const description = "Custom inventory software with barcode scanning, batch and serial tracking, multi-warehouse visibility, and auto-reorder alerts. GST-ready. Live in 6 weeks.";
+const canonical = "https://www.softwaller.com/products/inventory-management.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Custom Inventory Software with Barcode + GST | Softwaller";
+const ogDescription = "Custom inventory software with barcode scanning, batch and serial tracking, multi-warehouse visibility, and auto-reorder alerts. GST-ready. 6 weeks.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.softwaller.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Inventory Management"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Inventory Management",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Custom inventory software with barcode scanning, batch and serial tracking, multi-warehouse visibility, and auto-reorder alerts. GST-ready. Live in 6 weeks.",
+    "url": "https://www.softwaller.com/products/inventory-management.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "url": "https://www.softwaller.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "description": "Free consultation"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the system handle multi-warehouse stock?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each warehouse, branch, or store operates as a separate stock location with its own bin structure. Transfers, allocations, and consolidated reporting work across all locations with role-based visibility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the system support batch, serial, and expiry tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We track stock by batch number, serial number, manufacturing date, and expiry date with FIFO, FEFO, or LIFO costing. This is critical for pharma, FMCG, and electronics businesses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can it integrate with barcode and RFID scanners?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We support all major barcode formats (Code 128, EAN-13, QR), RFID readers, and mobile scanners on Android and iOS. Picking, putaway, and stock counts run from handheld devices."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is the stock vs system match in real-world use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Customers using barcode-based picking and cycle counts maintain 98 to 99.5 percent accuracy. Our shrinkage and adjustment reports flag the exact items, locations, and users where discrepancies occur."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <style is:global slot="head-css" set:html={`
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+<section class="phero">
+  <div class="phero-inner">
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-boxes-stacked"></i></div>
+      <h1>Custom Inventory Software with Barcode, Batch & GST</h1>
+      <p>Multi-warehouse stock visibility, FEFO batch and serial tracking, auto-reorder alerts, and GST-ready costing built in. Integrates with Tally and barcode scanners. Live in 6 weeks.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="30" y="40" width="340" height="220" rx="10" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/><text x="200" y="65" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#EA580C">Warehouse A — Real-time Stock</text><rect x="50" y="85" width="90" height="65" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><rect x="58" y="93" width="30" height="20" rx="3" fill="#EBF0FF"/><rect x="92" y="93" width="30" height="20" rx="3" fill="#ECFDF5"/><rect x="58" y="118" width="30" height="20" rx="3" fill="#F5F3FF"/><rect x="92" y="118" width="30" height="20" rx="3" fill="#FDF2F8"/><text x="95" y="155" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">Zone A</text><rect x="155" y="85" width="90" height="65" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><rect x="163" y="93" width="30" height="20" rx="3" fill="#ECFDF5"/><rect x="197" y="93" width="30" height="20" rx="3" fill="#EBF0FF"/><rect x="163" y="118" width="30" height="20" rx="3" fill="#FFF7ED"/><rect x="197" y="118" width="30" height="20" rx="3" fill="#ECFEFF"/><text x="200" y="155" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">Zone B</text><rect x="260" y="85" width="90" height="65" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><rect x="268" y="93" width="30" height="20" rx="3" fill="#FDF2F8"/><rect x="302" y="93" width="30" height="20" rx="3" fill="#F5F3FF"/><rect x="268" y="118" width="30" height="20" rx="3" fill="#EBF0FF"/><rect x="302" y="118" width="30" height="20" rx="3" fill="#ECFDF5"/><text x="305" y="155" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">Zone C</text><rect x="50" y="170" width="140" height="40" rx="6" fill="#fff" stroke="#A7F3D0" stroke-width="1.5"/><circle cx="68" cy="190" r="8" fill="#ECFDF5"/><text x="68" y="193" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#059669">&#x2713;</text><text x="85" y="186" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#059669">In Stock: 2,847</text><text x="85" y="198" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#6B7694">Items tracked</text><rect x="210" y="170" width="140" height="40" rx="6" fill="#fff" stroke="#FED7AA" stroke-width="1.5"/><circle cx="228" cy="190" r="8" fill="#FFF7ED"/><text x="228" y="193" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#EA580C">!</text><text x="245" y="186" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#EA580C">Low Stock: 23</text><text x="245" y="198" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#6B7694">Reorder alerts</text><rect x="50" y="222" width="300" height="24" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><rect x="54" y="226" width="200" height="16" rx="4" fill="#EBF0FF"/><rect x="54" y="226" width="140" height="16" rx="4" fill="#1557FF" opacity=".8"/><text x="310" y="240" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="600" fill="#1557FF">78%</text></svg>
+    </div>
+  </div>
+</section>
+
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
+  <div class="pfeatures-inner">
+    <h2>Complete Stock Control</h2>
+    <p class="sub">12 features to eliminate stockouts, reduce waste, and optimize your supply chain.</p>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-warehouse"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Multi-Warehouse</h3>
+          <p itemprop="description">Manage stock across unlimited warehouses with real-time visibility into every location's inventory.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-barcode"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Barcode / QR Scanning</h3>
+          <p itemprop="description">Scan items for receiving, picking, and dispatch. Eliminate manual errors and speed up operations.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-rotate"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Auto Reorder</h3>
+          <p itemprop="description">Automatic purchase order generation when stock hits reorder level. Never run out of critical items.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-layer-group"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">Batch Tracking</h3>
+          <p itemprop="description">Track items by batch number with full traceability from supplier to customer for recalls and compliance.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-truck-field"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">Supplier Reports</h3>
+          <p itemprop="description">Supplier performance, lead time, and quality reports. Make informed decisions about your supply partners.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-calendar-xmark"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Expiry Management</h3>
+          <p itemprop="description">FEFO-based picking, expiry alerts, and auto-holds. Minimize waste and ensure product freshness.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-right-left"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Stock Transfer</h3>
+          <p itemprop="description">Inter-warehouse transfer with transit tracking. Move stock between locations with full audit trail.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Stock Valuation</h3>
+          <p itemprop="description">FIFO, LIFO, and weighted average valuation methods. Accurate stock value for financial reporting.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-clipboard-list"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Cycle Count</h3>
+          <p itemprop="description">Scheduled cycle counts without shutting down operations. Maintain accuracy without full physical audits.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-hashtag"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Serial Number Tracking</h3>
+          <p itemprop="description">Track individual items by serial number. Know the exact history and location of every unit.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Low Stock Alerts</h3>
+          <p itemprop="description">Real-time notifications when stock falls below threshold. Stay proactive, not reactive.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Returns Processing</h3>
+          <p itemprop="description">Manage customer and supplier returns with reason tracking. Full visibility into return trends and causes.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="pwhy">
+  <div class="pwhy-inner">
+    <h2>Why Choose Softwaller</h2>
+    <p class="sub">We don't just build software — we build solutions that grow with your business.</p>
+    <div class="pwhy-grid">
+      <div class="pwhy-item">
+        <i class="fa-solid fa-pencil-ruler"></i>
+        <div><h3>Built for Your Workflow</h3><p>Custom-designed to match how your team actually works, not the other way around.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-arrow-up-right-dots"></i>
+        <div><h3>Scale as You Grow</h3><p>Architecture designed to handle 500+ concurrent users without breaking a sweat.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <div><h3>Mobile Ready</h3><p>Access from any device, anywhere, anytime. Your office travels with you.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-plug"></i>
+        <div><h3>Integration Ready</h3><p>Connect with Tally, WhatsApp, payment gateways, and more out of the box.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-headset"></i>
+        <div><h3>Ongoing Support</h3><p>3 months free support plus AMC options after go-live. We're always here for you.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div><h3>Data Security</h3><p>Role-based access, encryption, and audit trails keep your business data safe.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-related">
+  <div class="p-related-inner">
+    <h2>Related Solutions</h2>
+    <p class="sub">Explore other software that works great alongside this solution.</p>
+    <div class="p-related-grid">
+      <a href="/warehouse-management.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-warehouse"></i></div>
+        <h3>Warehouse Management</h3>
+        <p>Warehouse operations</p>
+        <div class="pr-link">Warehouse Management <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/erp-solutions.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-building"></i></div>
+        <h3>ERP Solutions</h3>
+        <p>Unified business operations</p>
+        <div class="pr-link">ERP Solutions <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/gst-billing-accounting.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h3>GST Billing &amp; Accounting</h3>
+        <p>GST-compliant billing</p>
+        <div class="pr-link">GST Billing &amp; Accounting <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pcta">
+  <div class="pcta-inner">
+    <h2>Ready to Optimize Your Inventory?</h2>
+    <p>Get a free consultation and see how our system can eliminate stockouts and reduce waste.</p>
+    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>How does the system handle multi-warehouse stock?</summary>
+      <div class="faq-answer">Each warehouse, branch, or store operates as a separate stock location with its own bin structure. Transfers, allocations, and consolidated reporting work across all locations with role-based visibility.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does the system support batch, serial, and expiry tracking?</summary>
+      <div class="faq-answer">Yes. We track stock by batch number, serial number, manufacturing date, and expiry date with FIFO, FEFO, or LIFO costing. This is critical for pharma, FMCG, and electronics businesses.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can it integrate with barcode and RFID scanners?</summary>
+      <div class="faq-answer">Yes. We support all major barcode formats (Code 128, EAN-13, QR), RFID readers, and mobile scanners on Android and iOS. Picking, putaway, and stock counts run from handheld devices.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How accurate is the stock vs system match in real-world use?</summary>
+      <div class="faq-answer">Customers using barcode-based picking and cycle counts maintain 98 to 99.5 percent accuracy. Our shrinkage and adjustment reports flag the exact items, locations, and users where discrepancies occur.</div>
+    </details>
+  </div>
+</section>
+
+`} />
+</BaseLayout>

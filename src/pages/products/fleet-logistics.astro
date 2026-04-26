@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Custom Fleet Tracking Software with GPS and Routes | Softwaller";
+const description = "Custom fleet tracking software with real-time GPS, route optimization, fuel monitoring, driver scoring, and proof of delivery. AIS-140 ready. Live in 8 weeks.";
+const canonical = "https://www.softwaller.com/products/fleet-logistics.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Custom Fleet Tracking Software with GPS and Routes | Softwaller";
+const ogDescription = "Custom fleet tracking software with real-time GPS, route optimization, fuel monitoring, driver scoring, and proof of delivery. AIS-140 ready.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.softwaller.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Fleet &amp; Logistics Management"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Fleet & Logistics Management",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Custom fleet tracking software with real-time GPS, route optimization, fuel monitoring, driver scoring, and proof of delivery. AIS-140 ready. Live in 8 weeks.",
+    "url": "https://www.softwaller.com/products/fleet-logistics.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "url": "https://www.softwaller.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "description": "Free consultation"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What hardware do I need for fleet tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AIS-140 certified GPS devices for commercial vehicles in India, plus optional fuel sensors, temperature sensors, and dashcams. We work with hardware partners or you can use existing devices that support standard protocols."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can it detect fuel theft and unauthorized stops?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Capacitive fuel sensors detect sudden drops outside fuel-station geofences. Engine-on without movement, route deviation, and after-hours use trigger immediate WhatsApp and SMS alerts to fleet managers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it integrate with FASTag and toll data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We pull FASTag transactions per vehicle, reconcile with route plans, flag mismatched tolls, and feed cost data into trip P&L for accurate per-trip profitability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can drivers use a mobile app for trip and POD management?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Drivers receive trip assignments, capture POD with photo and e-signature, log expenses, raise issues, and complete vehicle inspection checklists from a simple Android app that works offline."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <style is:global slot="head-css" set:html={`
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+<section class="phero">
+  <div class="phero-inner">
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-truck-fast"></i></div>
+      <h1>Custom Fleet Tracking with Live GPS, Routes & Driver Scoring</h1>
+      <p>AIS-140 ready fleet software built in Chennai — real-time GPS, route optimization, fuel monitoring, driver scoring, and digital proof of delivery. Tally and FASTag integration. Live in 8 weeks.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="20" y="20" width="360" height="260" rx="10" fill="#F7F8FC"/><text x="40" y="45" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#0891B2">Fleet Tracker — 12 Vehicles</text><rect x="320" y="28" width="50" height="20" rx="6" fill="#ECFEFF"/><text x="345" y="42" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#0891B2">Live</text><circle cx="314" cy="38" r="3" fill="#059669"/><path d="M30,100 Q100,70 200,110 T370,80 L370,200 L30,200 Z" fill="#ECFEFF" stroke="#A5F3FC" stroke-width="1"/><path d="M30,150 Q150,120 250,160 T370,130 L370,200 L30,200 Z" fill="#EBF0FF" opacity=".3"/><rect x="80" y="90" width="50" height="22" rx="6" fill="#0891B2"/><text x="105" y="104" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#fff">TN-01-A</text><rect x="190" y="110" width="50" height="22" rx="6" fill="#059669"/><text x="215" y="124" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#fff">TN-02-B</text><rect x="300" y="80" width="50" height="22" rx="6" fill="#7C3AED"/><text x="325" y="94" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#fff">TN-03-C</text><path d="M105,112 L130,120 L160,115 L215,110" fill="none" stroke="#0891B2" stroke-width="1.5" stroke-dasharray="4,3"/><rect x="35" y="210" width="100" height="55" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><text x="85" y="228" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#059669">On Route: 8</text><text x="85" y="245" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">ETA avg: 45 min</text><rect x="150" y="210" width="100" height="55" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><text x="200" y="228" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#1557FF">Delivered: 24</text><text x="200" y="245" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">Today so far</text><rect x="265" y="210" width="100" height="55" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><text x="315" y="228" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#EA580C">Idle: 2</text><text x="315" y="245" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">Maintenance</text></svg>
+    </div>
+  </div>
+</section>
+
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
+  <div class="pfeatures-inner">
+    <h2>Full Fleet Visibility & Control</h2>
+    <p class="sub">12 powerful features to manage your entire fleet and logistics operation.</p>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-map-location-dot"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Vehicle Tracking</h3>
+          <p itemprop="description">Real-time GPS tracking of all vehicles on a live map. Know exactly where every vehicle is at any moment.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-route"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Route Planning</h3>
+          <p itemprop="description">Optimized routes with ETA, traffic, and distance calculation. Save fuel and deliver faster with smart routing.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-id-card"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Driver Management</h3>
+          <p itemprop="description">Driver profiles, license tracking, and performance scores. Keep your team compliant and performing at their best.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-gas-pump"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">Fuel Tracking</h3>
+          <p itemprop="description">Record fuel fills, calculate mileage, and detect anomalies. Identify fuel theft and reduce your biggest fleet expense.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-signature"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">Proof of Delivery</h3>
+          <p itemprop="description">Capture signatures, photos, and timestamps on delivery. Eliminate disputes with digital proof for every consignment.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-map-pin"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Trip Management</h3>
+          <p itemprop="description">Plan trips with multiple stops, loads, and delivery windows. Optimize schedules for maximum efficiency.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-wrench"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Maintenance Scheduling</h3>
+          <p itemprop="description">Preventive maintenance alerts based on km or date. Reduce breakdowns and extend vehicle lifespan.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-file-shield"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Vehicle Documents</h3>
+          <p itemprop="description">Insurance, RC, PUC, and permit expiry tracking. Never miss a renewal with automated alerts.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-draw-polygon"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Geofence Alerts</h3>
+          <p itemprop="description">Get notified when vehicles enter or leave defined zones. Monitor unauthorized usage and route deviations.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-weight-hanging"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Load Optimization</h3>
+          <p itemprop="description">Maximize vehicle capacity and minimize empty runs. Smart load planning to reduce trips and cut costs.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-truck-moving"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Delivery Status</h3>
+          <p itemprop="description">Real-time delivery tracking shared with customers. Keep everyone informed with live status updates.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-chart-bar"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Fleet Reports</h3>
+          <p itemprop="description">Vehicle utilization, cost-per-km, and fleet health dashboard. Data-driven insights for smarter fleet decisions.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="pwhy">
+  <div class="pwhy-inner">
+    <h2>Why Choose Softwaller</h2>
+    <p class="sub">We don't just build software — we build solutions that grow with your business.</p>
+    <div class="pwhy-grid">
+      <div class="pwhy-item">
+        <i class="fa-solid fa-pencil-ruler"></i>
+        <div><h3>Built for Your Workflow</h3><p>Custom-designed to match how your team actually works, not the other way around.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-arrow-up-right-dots"></i>
+        <div><h3>Scale as You Grow</h3><p>Architecture designed to handle 500+ concurrent users without breaking a sweat.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <div><h3>Mobile Ready</h3><p>Access from any device, anywhere, anytime. Your office travels with you.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-plug"></i>
+        <div><h3>Integration Ready</h3><p>Connect with Tally, WhatsApp, payment gateways, and more out of the box.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-headset"></i>
+        <div><h3>Ongoing Support</h3><p>3 months free support plus AMC options after go-live. We're always here for you.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div><h3>Data Security</h3><p>Role-based access, encryption, and audit trails keep your business data safe.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-related">
+  <div class="p-related-inner">
+    <h2>Related Solutions</h2>
+    <p class="sub">Explore other software that works great alongside this solution.</p>
+    <div class="p-related-grid">
+      <a href="/warehouse-management.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-warehouse"></i></div>
+        <h3>Warehouse Management</h3>
+        <p>Warehouse operations</p>
+        <div class="pr-link">Warehouse Management <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/field-service.html" class="p-related-card">
+        <div class="pr-icon" style="background:#FFF5F5;color:var(--red)"><i class="fa-solid fa-location-dot"></i></div>
+        <h3>Field Service</h3>
+        <p>Field team tracking</p>
+        <div class="pr-link">Field Service <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/erp-solutions.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-building"></i></div>
+        <h3>ERP Solutions</h3>
+        <p>Unified business operations</p>
+        <div class="pr-link">ERP Solutions <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pcta">
+  <div class="pcta-inner">
+    <h2>Ready to Get Started?</h2>
+    <p>Get a free consultation and see how our fleet management system can optimize your logistics.</p>
+    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>What hardware do I need for fleet tracking?</summary>
+      <div class="faq-answer">AIS-140 certified GPS devices for commercial vehicles in India, plus optional fuel sensors, temperature sensors, and dashcams. We work with hardware partners or you can use existing devices that support standard protocols.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can it detect fuel theft and unauthorized stops?</summary>
+      <div class="faq-answer">Yes. Capacitive fuel sensors detect sudden drops outside fuel-station geofences. Engine-on without movement, route deviation, and after-hours use trigger immediate WhatsApp and SMS alerts to fleet managers.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does it integrate with FASTag and toll data?</summary>
+      <div class="faq-answer">Yes. We pull FASTag transactions per vehicle, reconcile with route plans, flag mismatched tolls, and feed cost data into trip P&amp;L for accurate per-trip profitability.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can drivers use a mobile app for trip and POD management?</summary>
+      <div class="faq-answer">Yes. Drivers receive trip assignments, capture POD with photo and e-signature, log expenses, raise issues, and complete vehicle inspection checklists from a simple Android app that works offline.</div>
+    </details>
+  </div>
+</section>
+
+`} />
+</BaseLayout>
