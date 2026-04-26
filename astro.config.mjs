@@ -14,7 +14,23 @@ export default defineConfig({
     format: 'preserve',
   },
   integrations: [
-    sitemap(),
+    sitemap({
+      // Astro's sitemap omits the .html extension and the trailing slash, but the
+      // actual files are .html (and blog uses an index.html in /blog/). Rewrite
+      // each URL so it matches an indexable file on disk.
+      serialize(item) {
+        const url = new URL(item.url);
+        if (url.pathname === '/') return item;
+        if (url.pathname === '/blog' || url.pathname === '/blog/') {
+          item.url = url.origin + '/blog/';
+          return item;
+        }
+        if (!url.pathname.endsWith('.html')) {
+          item.url = url.origin + url.pathname + '.html';
+        }
+        return item;
+      },
+    }),
     mdx(),
     compress({
       CSS: true,
