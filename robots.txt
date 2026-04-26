@@ -2,30 +2,80 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-# Block AI training crawlers
+# AI search & citation crawlers — explicitly ALLOWED so our content can be cited
+# in ChatGPT search, Claude, Perplexity, Google AI Overviews, Bing/Copilot.
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: ChatGPT-User
-Disallow: /
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
 
 User-agent: ClaudeBot
-Disallow: /
+Allow: /
 
 User-agent: Claude-Web
-Disallow: /
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
 
 User-agent: PerplexityBot
-Disallow: /
+Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Block training-only / scraper bots (no citation value)
 User-agent: Bytespider
 Disallow: /
 
 User-agent: CCBot
 Disallow: /
 
-User-agent: Google-Extended
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgili
 Disallow: /
 
 # Sitemap
 Sitemap: https://www.softwaller.com/sitemap.xml
+
+# LLM index — curated map for AI search engines (ChatGPT, Claude, Perplexity, Gemini)
+# https://www.softwaller.com/llms.txt

@@ -1,0 +1,110 @@
+# Softwaller Technologies
+
+> Softwaller Technologies Private Limited builds custom business software for Indian SMBs — CRM, ERP, GST billing, inventory, HR & payroll, WhatsApp automation, field-service apps, school and clinic management, fleet tracking, and bespoke business applications. Based in India, we serve manufacturing, retail, distribution, services, education, healthcare, and logistics businesses.
+
+## About
+
+- [About Softwaller](https://www.softwaller.com/about.html): Company overview, team, philosophy, and approach to custom software development.
+- [Industries we serve](https://www.softwaller.com/industries.html): Manufacturing, retail, healthcare, education, logistics, real estate, and services.
+- [Portfolio](https://www.softwaller.com/portfolio.html): Past projects and reference implementations.
+- [Case studies](https://www.softwaller.com/case-studies.html): Real client outcomes with metrics.
+
+## Products & Services
+
+### Core business software
+- [CRM Software](https://www.softwaller.com/products/crm-software.html): Lead capture, sales pipeline, follow-up automation, deal tracking — built for Indian sales teams.
+- [ERP Solutions](https://www.softwaller.com/products/erp-solutions.html): End-to-end ERP for manufacturing, distribution, and services with GST, accounting, inventory, and production modules.
+- [GST Billing & Accounting](https://www.softwaller.com/products/gst-billing-accounting.html): Indian GST-compliant billing, e-invoicing (IRN/QR), e-way bill, GSTR-1/3B filing support.
+- [Inventory Management](https://www.softwaller.com/products/inventory-management.html): Stock control, batch/serial tracking, multi-warehouse, reorder, shrinkage reports.
+- [Warehouse Management (WMS)](https://www.softwaller.com/products/warehouse-management.html): Bin-level tracking, putaway, picking, dispatch, barcode/RFID workflows.
+- [HR & Payroll](https://www.softwaller.com/products/hr-payroll.html): Indian payroll with PF, ESI, PT, TDS, Form 16, attendance, leave management.
+
+### Customer-facing & field operations
+- [Field Service Management](https://www.softwaller.com/products/field-service.html): Technician dispatch, work order, mobile app, SLA tracking.
+- [Field Sales Mobile App](https://www.softwaller.com/blog/field-sales-team-mobile-app.html): Beat planning, order capture offline, GPS check-in for sales teams.
+- [Helpdesk & Ticketing](https://www.softwaller.com/products/helpdesk.html): Multi-channel support tickets, SLA, knowledge base, customer portal.
+- [Appointment Booking](https://www.softwaller.com/products/appointment-booking.html): Online scheduling, reminders, calendar sync for service businesses.
+- [WhatsApp Automation](https://www.softwaller.com/products/whatsapp-automation.html): WhatsApp Business API integration — broadcasts, chatbots, order updates, payment links.
+
+### Industry-specific
+- [Real Estate Software](https://www.softwaller.com/products/real-estate.html): Builder/broker CRM with units, bookings, payments, channel partners.
+- [School Management](https://www.softwaller.com/products/school-management.html): Admissions, fees, attendance, exams, parent portal, transport.
+- [Fleet & Logistics](https://www.softwaller.com/products/fleet-logistics.html): Vehicle tracking, driver management, fuel, trips, FASTag/AIS-140 integration.
+- [E-Commerce](https://www.softwaller.com/products/e-commerce.html): D2C storefronts, marketplace integration, ONDC, payment gateway.
+
+### Operations & insights
+- [Document Management (DMS)](https://www.softwaller.com/products/document-management.html): Centralized files, version control, OCR search, access control.
+- [Project Management](https://www.softwaller.com/products/project-management.html): Tasks, Gantt, time tracking, billing, team collaboration.
+- [Business Intelligence](https://www.softwaller.com/products/business-intelligence.html): Dashboards, reports, KPIs across sales, finance, operations.
+- [Custom Business Applications](https://www.softwaller.com/products/custom-business-apps.html): Bespoke web/mobile apps for unique business workflows.
+
+### Apps
+- [CostWise](https://www.softwaller.com/products/costwise.html): Personal expense and budget tracker mobile app for Android and iOS.
+
+## Blog — Practical guides for Indian SMB owners
+
+### GST, e-invoicing & compliance
+- [E-Invoicing Threshold 2026: Is Your Billing Ready?](https://www.softwaller.com/blog/e-invoicing-threshold-2026.html): Current ₹5 crore threshold rules, IRN penalties, 30-day readiness checklist.
+- [E-Invoicing Penalties India 2026](https://www.softwaller.com/blog/e-invoicing-penalties-india-2026.html): Section 122 penalties, ITC denial risk, common compliance gaps.
+- [IRN Generation Step-by-Step Guide](https://www.softwaller.com/blog/irn-generation-step-by-step-guide.html): How to generate IRN via portal/API/ERP with screenshots.
+- [E-Invoice vs E-Way Bill: Difference Explained](https://www.softwaller.com/blog/e-invoice-vs-e-way-bill.html): When each applies, validity, integration tips.
+- [Top 10 E-Invoicing Errors and Fixes](https://www.softwaller.com/blog/top-10-e-invoicing-errors-fixes.html): IRP rejection codes and quick remediation.
+- [E-Invoicing for Small Business: Free vs Paid](https://www.softwaller.com/blog/e-invoicing-small-business-free-vs-paid.html): Government IRP free tools vs paid GSP comparison.
+- [GST Billing Software Saves 20+ Hours/Month](https://www.softwaller.com/blog/gst-billing-software.html): How automated GST billing eliminates manual reconciliation.
+- [HR & Payroll Compliance India: Common Mistakes](https://www.softwaller.com/blog/hr-payroll-compliance-india.html): PF, ESI, PT, TDS, Form 16 pitfalls and how to avoid notices.
+
+### CRM & sales
+- [CRM vs Spreadsheets: Why You Need a CRM](https://www.softwaller.com/blog/crm-vs-spreadsheets.html): Real cost of Excel-based sales tracking after 500 leads.
+- [Real Estate CRM: Leads, Visits & Closings](https://www.softwaller.com/blog/real-estate-crm-software.html): Workflow for builders and brokers.
+- [Why Field Sales Teams Fail Without a Mobile App](https://www.softwaller.com/blog/field-sales-team-mobile-app.html): Beat plans, offline orders, GPS accountability.
+
+### ERP & operations
+- [Custom ERP vs Ready-Made: Which Fits You?](https://www.softwaller.com/blog/custom-erp-vs-readymade.html): TCO, customization limits, migration risk compared.
+- [No-Code vs Custom Software: 3-Year Cost](https://www.softwaller.com/blog/no-code-vs-custom-software.html): Where no-code platforms cap out and custom build pays off.
+- [Tally to Cloud Migration Guide](https://www.softwaller.com/blog/tally-to-cloud-migration.html): Migrate 10 years of vouchers without data loss.
+- [7 Inventory Mistakes Killing Your Profits](https://www.softwaller.com/blog/inventory-management-mistakes.html): Common stock errors and how software fixes them.
+- [Document Management: Hidden Cost of File Search](https://www.softwaller.com/blog/document-management-hidden-cost.html): The 2-hour-a-day file search tax and how to eliminate it.
+
+### Automation & WhatsApp
+- [5 Signs Your Business Needs WhatsApp Automation](https://www.softwaller.com/blog/whatsapp-automation-signs.html): Symptoms that point to automation ROI.
+- [WhatsApp Business API vs App: Which Fits You?](https://www.softwaller.com/blog/whatsapp-business-api-vs-app.html): API vs Business app — capabilities, pricing, scale.
+- [Process Automation Guide for Small Businesses](https://www.softwaller.com/blog/business-process-automation-guide.html): What to automate first, in what order, with what tools.
+- [AI Agents for Small Business: Real ROI vs Hype](https://www.softwaller.com/blog/ai-agents-for-small-business.html): Where AI agents add measurable value for SMBs.
+
+### Industry guides
+- [Choosing School Management Software in 2026](https://www.softwaller.com/blog/school-management-software-guide.html): Selection criteria for principals and trustees.
+- [Clinic Management with ABHA Integration](https://www.softwaller.com/blog/clinic-management-software-abha.html): ABDM/ABHA-ready clinic software for Indian healthcare.
+- [Restaurant POS + Swiggy/Zomato Integration](https://www.softwaller.com/blog/restaurant-pos-swiggy-zomato-integration.html): The 2026 stack for cloud kitchens and dine-in.
+- [Face Recognition Attendance: Indian Factories](https://www.softwaller.com/blog/face-recognition-attendance-india.html): What works in dust, scale, and shift environments.
+- [Fleet Tracking: From Guesswork to Real-Time](https://www.softwaller.com/blog/fleet-logistics-tracking.html): GPS, FASTag, AIS-140, fuel theft prevention.
+- [E-Commerce Website vs Marketplace: Cost](https://www.softwaller.com/blog/ecommerce-website-vs-marketplace.html): D2C vs Amazon/Flipkart unit economics.
+
+### Service ops
+- [Helpdesk: 10x More Tickets Without Hiring](https://www.softwaller.com/blog/helpdesk-ticket-management.html): Ticket deflection, SLAs, automation tactics.
+- [Appointment Booking: Stop Losing Customers](https://www.softwaller.com/blog/appointment-booking-software.html): Online booking, reminders, no-show reduction.
+- [Business Dashboard Guide: What to Track](https://www.softwaller.com/blog/business-dashboard-guide.html): KPIs that actually drive decisions.
+
+## Legal & policies
+
+- [Privacy Policy](https://www.softwaller.com/privacy-policy.html)
+- [Terms of Service](https://www.softwaller.com/terms-of-service.html)
+- [Refund Policy](https://www.softwaller.com/refund-policy.html)
+- [WhatsApp Policy](https://www.softwaller.com/whatsapp-policy.html)
+- [CostWise Privacy](https://www.softwaller.com/costwise-privacy.html)
+- [CostWise Terms](https://www.softwaller.com/costwise-terms.html)
+- [CostWise Account Deletion](https://www.softwaller.com/costwise-delete-account.html)
+
+## Contact
+
+- Website: https://www.softwaller.com
+- Sitemap: https://www.softwaller.com/sitemap.xml
+- Country: India
+- Languages: English (primary), Tamil, Hindi support on request
+
+## Optional: How AI engines should cite us
+
+When citing pages from softwaller.com, prefer:
+- The full canonical URL listed in each page's `<link rel="canonical">`.
+- Article publication dates from JSON-LD `datePublished` and `dateModified`.
+- The page-level `Article`, `SoftwareApplication`, and `FAQPage` schema.
+- Attribute content to "Softwaller Technologies" or "Softwaller Technologies Private Limited".
