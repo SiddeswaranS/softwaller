@@ -30,7 +30,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="../assets/shared.min.css?v=1.0.4">
+<link rel="stylesheet" href="../assets/shared.min.css?v=1.0.9">
 <style>
 body{min-height:100vh;display:flex;flex-direction:column}
 .blog-hero{padding:120px 0 48px;background:var(--surf);text-align:center;position:relative;overflow:hidden}
@@ -98,14 +98,179 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
-<nav class="pnav">
-  <div class="pnav-inner">
-    <a href="../" class="pnav-logo">
-      <img src="../assets/softwaller-technologies-logo-light.webp" alt="Softwaller Technologies" height="42" width="210" fetchpriority="high">
+<header id="site-header" class="swh" role="banner">
+  <nav class="swh-nav" role="navigation" aria-label="Main navigation">
+    <a href="../" class="swh-logo" aria-label="Softwaller Technologies — Home">
+      <img src="../assets/softwaller-technologies-logo-light.webp" alt="Softwaller Technologies Private Limited — Custom CRM, ERP & Business Software" height="42" width="210" fetchpriority="high">
     </a>
-    <a href="../" class="pnav-back"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+
+    <ul class="swh-links" role="menubar">
+      <li role="none">
+        <button class="swh-link" role="menuitem" aria-haspopup="true" aria-expanded="false" type="button">
+          Products <i class="fa-solid fa-chevron-down swh-caret" aria-hidden="true"></i>
+        </button>
+        <div class="swh-mega cols-3 swh-mega-left" role="menu">
+          <div class="swh-mega-grid">
+            <div>
+              <h4 class="swh-mega-heading">Operations &amp; Sales</h4>
+              <a href="../products/erp-solutions.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-building"></i>ERP Solutions</a>
+              <a href="../products/crm-software.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-chart-line"></i>CRM Software</a>
+              <a href="../products/inventory-management.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-boxes-stacked"></i>Inventory Management</a>
+              <a href="../products/warehouse-management.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-warehouse"></i>Warehouse Management</a>
+              <a href="../products/e-commerce.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-cart-shopping"></i>E-Commerce</a>
+              <a href="../products/gst-billing-accounting.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-file-invoice-dollar"></i>GST Billing &amp; Accounting</a>
+            </div>
+            <div>
+              <h4 class="swh-mega-heading">People &amp; Service</h4>
+              <a href="../products/hr-payroll.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-users"></i>HR &amp; Payroll</a>
+              <a href="../products/helpdesk.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-headset"></i>Helpdesk</a>
+              <a href="../products/project-management.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-list-check"></i>Project Management</a>
+              <a href="../products/appointment-booking.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-calendar-check"></i>Appointment Booking</a>
+              <a href="../products/document-management.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-folder-open"></i>Document Management</a>
+              <a href="../products/field-service.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-screwdriver-wrench"></i>Field Service</a>
+            </div>
+            <div>
+              <h4 class="swh-mega-heading">Specialty &amp; Custom</h4>
+              <a href="../products/whatsapp-automation.html" class="swh-mega-item" role="menuitem"><i class="fa-brands fa-whatsapp"></i>WhatsApp Automation</a>
+              <a href="../products/business-intelligence.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-chart-pie"></i>Business Intelligence</a>
+              <a href="../products/fleet-logistics.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-truck-fast"></i>Fleet &amp; Logistics</a>
+              <a href="../products/school-management.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-graduation-cap"></i>School Management</a>
+              <a href="../products/real-estate.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-building-user"></i>Real Estate</a>
+              <a href="../products/custom-business-apps.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-gears"></i>Custom Business Apps</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li role="none">
+        <button class="swh-link" role="menuitem" aria-haspopup="true" aria-expanded="false" type="button">
+          Industries <i class="fa-solid fa-chevron-down swh-caret" aria-hidden="true"></i>
+        </button>
+        <div class="swh-mega cols-1" role="menu">
+          <div class="swh-mega-grid">
+            <div>
+              <h4 class="swh-mega-heading">By Industry</h4>
+              <a href="../industries/manufacturing.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-industry"></i>Manufacturing ERP</a>
+              <a href="../industries/jewellery-erp.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-gem"></i>Jewellery ERP</a>
+              <a href="../industries/textile-erp.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-shirt"></i>Textile ERP</a>
+              <a href="../industries.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-grip"></i>All Industries</a>
+              <div class="swh-mega-divider"></div>
+              <h4 class="swh-mega-heading">Locations</h4>
+              <div class="swh-mega-loc">
+                <a href="../locations/chennai.html">Chennai</a>
+                <a href="../locations/coimbatore.html">Coimbatore</a>
+                <a href="../locations/madurai.html">Madurai</a>
+                <a href="../locations/salem.html">Salem</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li role="none">
+        <button class="swh-link" role="menuitem" aria-haspopup="true" aria-expanded="false" type="button">
+          Pricing <i class="fa-solid fa-chevron-down swh-caret" aria-hidden="true"></i>
+        </button>
+        <div class="swh-mega cols-1" role="menu">
+          <div class="swh-mega-grid">
+            <div>
+              <a href="../pricing/custom-crm-cost-india.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-tag"></i>Custom CRM Cost India</a>
+              <a href="../pricing/custom-erp-cost-india.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-tags"></i>Custom ERP Cost India</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li role="none">
+        <button class="swh-link" role="menuitem" aria-haspopup="true" aria-expanded="false" type="button">
+          Resources <i class="fa-solid fa-chevron-down swh-caret" aria-hidden="true"></i>
+        </button>
+        <div class="swh-mega cols-2" role="menu">
+          <div class="swh-mega-grid">
+            <div>
+              <h4 class="swh-mega-heading">Read</h4>
+              <a href="../blog/" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-newspaper"></i>Blog</a>
+              <a href="../case-studies.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-trophy"></i>Case Studies</a>
+              <a href="../portfolio.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-briefcase"></i>Portfolio</a>
+              <a href="../guides/e-invoicing-india-2026.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-book"></i>E-Invoicing 2026</a>
+            </div>
+            <div>
+              <h4 class="swh-mega-heading">Compare</h4>
+              <a href="../compare/custom-crm-vs-zoho.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-scale-balanced"></i>Custom CRM vs Zoho</a>
+              <a href="../compare/custom-erp-vs-tally.html" class="swh-mega-item" role="menuitem"><i class="fa-solid fa-scale-balanced"></i>Custom ERP vs Tally</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li role="none"><a href="../about.html" class="swh-link" role="menuitem">About</a></li>
+      <li role="none"><a href="../#contact" class="swh-link" role="menuitem">Contact</a></li>
+    </ul>
+
+    <div class="swh-right">
+      <a class="swh-cta" href="../#contact"><i class="fa-solid fa-phone" aria-hidden="true"></i> Get Demo</a>
+      <button class="swh-ham" id="swh-ham" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="swh-mob" id="swh-mob" role="navigation" aria-label="Mobile navigation">
+  <button class="swh-mob-toggle" type="button">Products <i class="fa-solid fa-chevron-down"></i></button>
+  <div class="swh-mob-sub">
+    <a href="../products/erp-solutions.html"><i class="fa-solid fa-building"></i>ERP Solutions</a>
+    <a href="../products/crm-software.html"><i class="fa-solid fa-chart-line"></i>CRM Software</a>
+    <a href="../products/inventory-management.html"><i class="fa-solid fa-boxes-stacked"></i>Inventory Management</a>
+    <a href="../products/warehouse-management.html"><i class="fa-solid fa-warehouse"></i>Warehouse Management</a>
+    <a href="../products/e-commerce.html"><i class="fa-solid fa-cart-shopping"></i>E-Commerce</a>
+    <a href="../products/gst-billing-accounting.html"><i class="fa-solid fa-file-invoice-dollar"></i>GST Billing &amp; Accounting</a>
+    <a href="../products/hr-payroll.html"><i class="fa-solid fa-users"></i>HR &amp; Payroll</a>
+    <a href="../products/helpdesk.html"><i class="fa-solid fa-headset"></i>Helpdesk</a>
+    <a href="../products/project-management.html"><i class="fa-solid fa-list-check"></i>Project Management</a>
+    <a href="../products/appointment-booking.html"><i class="fa-solid fa-calendar-check"></i>Appointment Booking</a>
+    <a href="../products/document-management.html"><i class="fa-solid fa-folder-open"></i>Document Management</a>
+    <a href="../products/field-service.html"><i class="fa-solid fa-screwdriver-wrench"></i>Field Service</a>
+    <a href="../products/whatsapp-automation.html"><i class="fa-brands fa-whatsapp"></i>WhatsApp Automation</a>
+    <a href="../products/business-intelligence.html"><i class="fa-solid fa-chart-pie"></i>Business Intelligence</a>
+    <a href="../products/fleet-logistics.html"><i class="fa-solid fa-truck-fast"></i>Fleet &amp; Logistics</a>
+    <a href="../products/school-management.html"><i class="fa-solid fa-graduation-cap"></i>School Management</a>
+    <a href="../products/real-estate.html"><i class="fa-solid fa-building-user"></i>Real Estate</a>
+    <a href="../products/custom-business-apps.html"><i class="fa-solid fa-gears"></i>Custom Business Apps</a>
   </div>
-</nav>
+
+  <button class="swh-mob-toggle" type="button">Industries <i class="fa-solid fa-chevron-down"></i></button>
+  <div class="swh-mob-sub">
+    <a href="../industries/manufacturing.html"><i class="fa-solid fa-industry"></i>Manufacturing ERP</a>
+    <a href="../industries/jewellery-erp.html"><i class="fa-solid fa-gem"></i>Jewellery ERP</a>
+    <a href="../industries/textile-erp.html"><i class="fa-solid fa-shirt"></i>Textile ERP</a>
+    <a href="../industries.html"><i class="fa-solid fa-grip"></i>All Industries</a>
+    <a href="../locations/chennai.html"><i class="fa-solid fa-location-dot"></i>Chennai</a>
+    <a href="../locations/coimbatore.html"><i class="fa-solid fa-location-dot"></i>Coimbatore</a>
+    <a href="../locations/madurai.html"><i class="fa-solid fa-location-dot"></i>Madurai</a>
+    <a href="../locations/salem.html"><i class="fa-solid fa-location-dot"></i>Salem</a>
+  </div>
+
+  <button class="swh-mob-toggle" type="button">Pricing <i class="fa-solid fa-chevron-down"></i></button>
+  <div class="swh-mob-sub">
+    <a href="../pricing/custom-crm-cost-india.html"><i class="fa-solid fa-tag"></i>Custom CRM Cost India</a>
+    <a href="../pricing/custom-erp-cost-india.html"><i class="fa-solid fa-tags"></i>Custom ERP Cost India</a>
+  </div>
+
+  <button class="swh-mob-toggle" type="button">Resources <i class="fa-solid fa-chevron-down"></i></button>
+  <div class="swh-mob-sub">
+    <a href="../blog/"><i class="fa-solid fa-newspaper"></i>Blog</a>
+    <a href="../case-studies.html"><i class="fa-solid fa-trophy"></i>Case Studies</a>
+    <a href="../portfolio.html"><i class="fa-solid fa-briefcase"></i>Portfolio</a>
+    <a href="../guides/e-invoicing-india-2026.html"><i class="fa-solid fa-book"></i>E-Invoicing 2026</a>
+    <a href="../compare/custom-crm-vs-zoho.html"><i class="fa-solid fa-scale-balanced"></i>Custom CRM vs Zoho</a>
+    <a href="../compare/custom-erp-vs-tally.html"><i class="fa-solid fa-scale-balanced"></i>Custom ERP vs Tally</a>
+  </div>
+
+  <a class="swh-mob-link" href="../about.html">About</a>
+  <a class="swh-mob-link" href="../#contact">Contact</a>
+  <a class="swh-mob-cta" href="../#contact"><i class="fa-solid fa-phone"></i> Get Demo</a>
+</div>
 <main id="main">
   <section class="blog-hero">
     <div class="blog-hero-inner">
@@ -303,5 +468,6 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <!--End of Tawk.to Script-->
 
 <iframe name="nl-iframe" style="display:none"></iframe>
+<script src="../assets/nav.min.js?v=1.0.1" defer></script>
 </body>
 </html>

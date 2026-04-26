@@ -422,12 +422,14 @@ textarea.form-ctrl{resize:vertical;min-height:96px}
 
 /* Footer */
 footer{background:var(--ink);padding:60px 0 0}
-.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12);align-items:start}
-.footer-grid > *{min-width:0}
-.footer-brand-mob{grid-column:1 / -1;display:flex;align-items:flex-start;gap:36px;padding-bottom:28px;margin-bottom:12px;border-bottom:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
+.footer-grid{display:block;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12)}
+.footer-brand-mob{display:flex;align-items:flex-start;gap:36px;padding-bottom:28px;margin-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
 .footer-brand-mob .fb-logo{margin-bottom:0;flex-shrink:0}
 .footer-brand-mob .fb-desc{flex:1 1 460px;max-width:640px;margin-bottom:0}
 .footer-brand-mob .fb-socials{flex-shrink:0;margin-top:4px}
+.footer-row{display:flex;gap:48px;align-items:flex-start;margin-bottom:36px}
+.footer-row:last-child{margin-bottom:0}
+.footer-row > .fc-col{flex:1 1 0;min-width:0}
 .fb-logo{display:flex;align-items:center;gap:9px;margin-bottom:14px}
 .fb-lm{width:32px;height:32px;border-radius:0;background:none;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .fb-lm svg{width:32px;height:32px}
@@ -455,7 +457,9 @@ footer{background:var(--ink);padding:60px 0 0}
 .fb-rights a:hover{color:#fff}
 @media(max-width:768px){
   .footer-grid{display:block}
-  .footer-brand-mob{padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .footer-row{display:block;margin-bottom:0}
+  .footer-row > .fc-col{flex:none;min-width:0;max-width:none;width:100%}
+  .footer-brand-mob{padding-bottom:24px;margin-bottom:0;border-bottom:1px solid rgba(255,255,255,.08)}
   .fc-col{border-bottom:1px solid rgba(255,255,255,.08)}
   .fc-col:last-of-type{border-bottom:none}
   .fc-head{padding:17px 0;margin-bottom:0;font-size:13px}
@@ -595,9 +599,9 @@ footer{background:var(--ink);padding:60px 0 0}
   .process-steps::before{display:none}
   .cta-inner{flex-direction:column;text-align:center;padding:60px 0}
 }
-@media(min-width:769px) and (max-width:900px){
-  .footer-grid{grid-template-columns:repeat(2,1fr);gap:28px}
-  .footer-brand-mob{flex-direction:column;gap:14px}
+@media(min-width:769px) and (max-width:1024px){
+  .footer-row{gap:32px;margin-bottom:28px}
+  .footer-brand-mob{flex-direction:column;gap:14px;margin-bottom:28px}
   .footer-brand-mob .fb-desc{max-width:none;flex:none}
 }
 @media(max-width:640px){
