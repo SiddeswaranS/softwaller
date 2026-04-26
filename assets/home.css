@@ -422,7 +422,8 @@ textarea.form-ctrl{resize:vertical;min-height:96px}
 
 /* Footer */
 footer{background:var(--ink);padding:60px 0 0}
-.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1.4fr;gap:28px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12);align-items:start}
+.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12);align-items:start}
+.footer-grid > *{min-width:0}
 .footer-brand-mob{grid-column:1 / -1;display:flex;align-items:flex-start;gap:36px;padding-bottom:28px;margin-bottom:12px;border-bottom:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
 .footer-brand-mob .fb-logo{margin-bottom:0;flex-shrink:0}
 .footer-brand-mob .fb-desc{flex:1 1 460px;max-width:640px;margin-bottom:0}
@@ -435,16 +436,13 @@ footer{background:var(--ink);padding:60px 0 0}
 .fb-socials{display:flex;gap:7px;flex-wrap:wrap}
 .fb-soc{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(255,255,255,.7);cursor:pointer;transition:all .2s}
 .fb-soc:hover{background:var(--blue);border-color:var(--blue);color:#fff;transform:translateY(-2px)}
-details.fc-col{display:block;width:100%}
-details.fc-col summary{list-style:none}
-details.fc-col summary::-webkit-details-marker{display:none}
-details.fc-col summary::marker{display:none}
-summary.fc-head{font-size:11px;font-weight:700;color:rgba(255,255,255,.9);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;width:100%;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
+.fc-col{display:block;width:100%}
+.fc-head{font-size:11px;font-weight:700;color:rgba(255,255,255,.9);text-transform:uppercase;letter-spacing:1px;margin:0 0 16px;padding:0;display:flex;align-items:center;justify-content:space-between;width:100%;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none;background:none;border:none;font-family:inherit;text-align:left}
 .fc-toggle{display:none;color:rgba(255,255,255,.4);font-size:11px;transition:transform .3s ease;flex-shrink:0}
 @media(min-width:769px){
-  details.fc-col{display:block}
-  details.fc-col > .fc-links{display:flex !important;flex-direction:column;gap:7px;width:100%}
-  summary.fc-head{pointer-events:none;cursor:default}
+  .fc-col{display:block}
+  .fc-col > .fc-links{display:flex;flex-direction:column;gap:7px;width:100%}
+  .fc-head{pointer-events:none;cursor:default}
 }
 .fc-links a{display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(255,255,255,.7);cursor:pointer;transition:color .18s;padding:3px 0;text-align:left;line-height:1.5;width:100%}
 .fc-links a:hover{color:#fff}
@@ -458,12 +456,13 @@ summary.fc-head{font-size:11px;font-weight:700;color:rgba(255,255,255,.9);text-t
 @media(max-width:768px){
   .footer-grid{display:block}
   .footer-brand-mob{padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)}
-  details.fc-col{border-bottom:1px solid rgba(255,255,255,.08)}
-  details.fc-col:last-of-type{border-bottom:none}
-  summary.fc-head{padding:17px 0;margin-bottom:0;font-size:13px}
+  .fc-col{border-bottom:1px solid rgba(255,255,255,.08)}
+  .fc-col:last-of-type{border-bottom:none}
+  .fc-head{padding:17px 0;margin-bottom:0;font-size:13px}
   .fc-toggle{display:inline-block}
-  details[open] .fc-toggle{transform:rotate(180deg)}
-  details[open] .fc-links{display:flex;flex-direction:column;gap:0;padding:4px 0 16px 0;width:100%;height:auto;min-height:fit-content}
+  .fc-col > .fc-links{display:none;flex-direction:column;gap:0;padding:0;width:100%}
+  .fc-col.open > .fc-links{display:flex;padding:4px 0 16px 0}
+  .fc-col.open > .fc-head .fc-toggle{transform:rotate(180deg)}
   .fc-links a{padding:11px 0;font-size:14px;color:rgba(255,255,255,.55);border-bottom:1px solid rgba(255,255,255,.06);gap:12px}
   .fc-links a:last-child{border-bottom:none}
   .fc-links a i{font-size:13px;width:18px;opacity:.65}
@@ -596,8 +595,8 @@ summary.fc-head{font-size:11px;font-weight:700;color:rgba(255,255,255,.9);text-t
   .process-steps::before{display:none}
   .cta-inner{flex-direction:column;text-align:center;padding:60px 0}
 }
-@media(min-width:769px) and (max-width:1180px){
-  .footer-grid{grid-template-columns:repeat(3,1fr);gap:24px}
+@media(min-width:769px) and (max-width:900px){
+  .footer-grid{grid-template-columns:repeat(2,1fr);gap:28px}
   .footer-brand-mob{flex-direction:column;gap:14px}
   .footer-brand-mob .fb-desc{max-width:none;flex:none}
 }

@@ -329,11 +329,19 @@ window.addEventListener('load', function () {
 
 /* ── Footer accordion — open on desktop, collapsible on mobile ── */
 function initFooterCols() {
-  var cols = document.querySelectorAll('details.fc-col');
+  var cols = document.querySelectorAll('.fc-col');
   if (window.innerWidth > 768) {
-    cols.forEach(function (d) { d.setAttribute('open', ''); });
+    cols.forEach(function (d) {
+      d.classList.add('open');
+      var btn = d.querySelector('.fc-head');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    });
   } else {
-    cols.forEach(function (d) { d.removeAttribute('open'); });
+    cols.forEach(function (d) {
+      d.classList.remove('open');
+      var btn = d.querySelector('.fc-head');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
   }
 }
 initFooterCols();
@@ -341,6 +349,16 @@ var resizeTimer;
 window.addEventListener('resize', function () {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(initFooterCols, 150);
+});
+/* Mobile accordion toggle on .fc-head click */
+document.addEventListener('click', function (e) {
+  if (window.innerWidth > 768) return;
+  var head = e.target.closest('.fc-head');
+  if (!head) return;
+  var col = head.closest('.fc-col');
+  if (!col) return;
+  var open = col.classList.toggle('open');
+  head.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 
 /* ── Policy modals with focus trap ── */
