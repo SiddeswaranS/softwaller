@@ -208,8 +208,9 @@ function htmlToAstroPath(htmlPath) {
   // products/crm-software.html → products/crm-software.astro
   // blog/foo.html → blog/foo.astro (blog handled separately as collection — skip)
   const rel = path.relative(ROOT, htmlPath).split(path.sep).join('/');
-  // Skip 404 (already handled), blog/* (markdown collection), and node_modules
-  if (rel === '404.html' || rel.startsWith('blog/') || rel.includes('node_modules')) return null;
+  // Skip 404 (already handled by hand) + node_modules. Blog posts are migrated as
+  // .astro pages for now — converting to a content collection is a future cleanup.
+  if (rel === '404.html' || rel.includes('node_modules')) return null;
   // Output path
   const astroRel = rel.replace(/\.html$/, '.astro');
   return path.join(ROOT, 'src/pages', astroRel);

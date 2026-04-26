@@ -1,0 +1,344 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "E-Invoicing Penalties India 2026: Fines & Avoidance | Softwaller";
+const description = "Complete guide to e-invoicing penalties under GST in 2026. Section 122 fines, late fee per day, ITC loss to buyers, and a practical playbook to stay compliant.";
+const canonical = "https://www.softwaller.com/blog/e-invoicing-penalties-india-2026.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "E-Invoicing Penalties India 2026: Fines & Avoidance";
+const ogDescription = "Complete guide to e-invoicing penalties under GST in 2026. Section 122 fines, late fee per day, ITC loss to buyers, and a practical playbook to stay compliant.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "E-Invoicing Penalties India 2026: Fines & Avoidance",
+    "description": "Complete guide to e-invoicing penalties under GST in 2026. Section 122 fines, late fee per day, ITC loss to buyers, and a practical playbook to stay compliant.",
+    "author": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies",
+      "url": "https://www.softwaller.com"
+    },
+    "datePublished": "2026-04-20",
+    "dateModified": "2026-04-20",
+    "url": "https://www.softwaller.com/blog/e-invoicing-penalties-india-2026.html",
+    "image": "https://www.softwaller.com/assets/og-image.jpg"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.softwaller.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "E-Invoicing Penalties India 2026",
+        "item": "https://www.softwaller.com/blog/e-invoicing-penalties-india-2026.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the penalty for not generating an e-invoice in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under Section 122(1) of the CGST Act, the penalty for not issuing a tax invoice (or issuing one without an IRN when required) is Rs 10,000 or 100% of the tax involved, whichever is higher, per invoice. For an incorrect invoice, the penalty can be up to Rs 25,000 per invoice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a late fee for delayed e-invoice reporting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "From April 1, 2025, taxpayers with annual turnover of Rs 10 crore or more must report e-invoices to the IRP within 30 days of the invoice date. After 30 days, the IRP simply rejects the invoice — IRN generation is blocked. The invoice is then legally invalid for ITC, and the same Section 122 penalties apply."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can my buyer claim ITC on an invoice without IRN?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Under Rule 48(5) of the CGST Rules, an invoice issued by an e-invoicing-mandated business without a valid IRN is not a tax invoice. It will not appear in the buyer's GSTR-2B, so no input tax credit can be claimed against it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are e-invoicing penalties waived for first-time offenders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is no automatic waiver. Officers can use discretion under Section 126 (general disciplines) for minor breaches where the tax involved is under Rs 5,000 and there is no fraud. But repeated or wilful non-compliance attracts the full penalty plus interest under Section 50."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <style is:global slot="head-css" set:html={`
+body{min-height:100vh;display:flex;flex-direction:column}
+.blog-hero{padding:120px 0 48px;background:var(--surf);text-align:center;position:relative;overflow:hidden}
+.blog-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.blog-hero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+.blog-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:12px;color:var(--ink)}
+.blog-hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--blue)}
+.blog-hero p{font-size:16px;color:var(--muted);max-width:560px;margin:0 auto;line-height:1.75}
+.post-inner{max-width:760px;margin:0 auto;padding:48px 28px 80px}
+.post-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.post-body h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:32px 0 14px}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:24px 0 10px}
+.post-body p{font-size:15.5px;color:var(--muted);line-height:1.85;margin-bottom:16px}
+.post-body ul,.post-body ol{padding-left:20px;margin-bottom:16px}
+.post-body li{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:8px}
+.post-body strong{color:var(--ink)}
+.post-body blockquote{border-left:3px solid var(--blue);padding:16px 20px;margin:24px 0;background:var(--blue-bg);border-radius:0 10px 10px 0;font-size:15px;color:var(--ink3);font-style:italic;line-height:1.75}
+.post-cta{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:32px;text-align:center;margin-top:48px}
+.post-cta h3{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.post-cta p{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.post-related{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.post-related h3{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:20px}
+.post-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pr-card{padding:20px;border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:all .2s;display:block}
+.pr-card:hover{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.08)}
+.pr-card h4{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.pr-card p{font-size:12.5px;color:var(--muted);line-height:1.5}
+.pfooter{margin-top:auto}
+.penalty-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.penalty-table th{background:var(--surf);text-align:left;padding:12px;border:1px solid var(--line);font-weight:700;color:var(--ink);font-size:13px}
+.penalty-table td{padding:12px;border:1px solid var(--line);color:var(--muted);line-height:1.6}
+@media(max-width:768px){.post-related-grid{grid-template-columns:1fr}.post-cta .btn-primary,.post-cta .btn-outline{display:block;width:100%;text-align:center;margin:8px 0}.penalty-table{font-size:12.5px}.penalty-table th,.penalty-table td{padding:8px}}
+
+
+
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+  <section class="blog-hero">
+    <div class="blog-hero-inner">
+      <h1>E-Invoicing Penalties in India 2026 — Fines, Late Fees & <em>How to Avoid Them</em></h1>
+      <p>One missed IRN can cost your buyer their input tax credit and you a Rs 25,000 penalty per invoice. Here is exactly what the law says, what officers actually levy, and how to never trip over either.</p>
+    </div>
+  </section>
+
+  <article class="post-inner">
+    <div class="post-meta">
+      <span><i class="fa-regular fa-calendar"></i> April 20, 2026</span>
+      <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+      <span><i class="fa-solid fa-tag"></i> GST</span>
+    </div>
+
+    <div class="post-body">
+      <p>Most businesses think the penalty for missing an e-invoice is a fixed fine on a notice. It is not. The law is layered, the late-fee window has shifted, and the biggest cost is rarely on a government letterhead — it is on your customer's email demanding a re-issued invoice or a GST refund. With the e-invoicing threshold now at Rs 5 crore turnover and the GSTN's 30-day reporting rule active, the cost of a single oversight has become measurable in real money.</p>
+
+      <p>This post walks through every penalty that applies when an e-invoice is missing, late, or wrong — what the law says, what tax officers in India typically levy, and the operational changes that prevent any of it from happening.</p>
+
+      <h2>The Penalty Structure: Where Section 122 Bites</h2>
+
+      <p>The Central Goods and Services Tax (CGST) Act covers e-invoicing offences primarily under <strong>Section 122</strong>. The relevant clauses are:</p>
+
+      <table class="penalty-table">
+        <thead>
+          <tr><th>Offence</th><th>Penalty</th><th>Section</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Not issuing an invoice when required (or issuing one without IRN)</td>
+            <td>Rs 10,000 or 100% of tax, whichever is higher — per invoice</td>
+            <td>Sec 122(1)(i)</td>
+          </tr>
+          <tr>
+            <td>Issuing an incorrect or false invoice</td>
+            <td>Up to Rs 25,000 per invoice</td>
+            <td>Sec 122(3)</td>
+          </tr>
+          <tr>
+            <td>Issuing invoice without supply of goods/services (fake invoicing)</td>
+            <td>100% of tax evaded or ITC availed (minimum Rs 10,000)</td>
+            <td>Sec 122(1)(ii)</td>
+          </tr>
+          <tr>
+            <td>General penalty (no specific clause applies)</td>
+            <td>Up to Rs 25,000</td>
+            <td>Sec 125</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The "Rs 10,000 or 100% of tax, whichever is higher" formula is the trap. On a Rs 1 lakh invoice with 18% GST, the tax involved is Rs 18,000 — so the penalty is Rs 18,000, not Rs 10,000. On a Rs 5 lakh invoice, the same calculation lands at Rs 90,000 per invoice. A business issuing 50 such invoices without IRNs is staring at Rs 45 lakh in exposure.</p>
+
+      <h2>The 30-Day Reporting Rule (Effective April 2025)</h2>
+
+      <p>From <strong>April 1, 2025</strong>, the GSTN enforced a hard 30-day cap on e-invoice reporting for taxpayers with aggregate annual turnover of Rs 10 crore or more. The rule applies equally to invoices, credit notes, and debit notes.</p>
+
+      <p>Here is what changed practically: there is no late fee per se for delayed e-invoicing. Instead, the IRP simply <strong>refuses to generate an IRN</strong> after 30 days. The system returns an error and the invoice is then permanently outside the GST e-invoice ecosystem. That triggers two cascading consequences:</p>
+
+      <ol>
+        <li><strong>The invoice is no longer a valid tax invoice</strong> under Rule 48(5) of the CGST Rules. The buyer cannot claim ITC.</li>
+        <li><strong>Section 122(1)(i) penalty kicks in</strong> for "issuing an invoice without IRN when required" — Rs 10,000 or 100% of tax, whichever is higher.</li>
+      </ol>
+
+      <p>The 30-day rule is widely expected to extend to the Rs 5 crore turnover bracket within the next two GST Council meetings. Businesses operating at or near the Rs 10 crore boundary should already treat the rule as universal.</p>
+
+      <h2>Late Fee for GSTR Filings (Often Confused with E-Invoice Penalty)</h2>
+
+      <p>Many business owners conflate e-invoice penalties with GST return late fees. They are different. The late fee under Section 47 applies when GSTR-1, GSTR-3B, or GSTR-9 is filed past the due date:</p>
+
+      <ul>
+        <li><strong>GSTR-1 / GSTR-3B late fee:</strong> Rs 50 per day (Rs 25 CGST + Rs 25 SGST). Capped at Rs 5,000.</li>
+        <li><strong>Nil return late fee:</strong> Rs 20 per day (Rs 10 CGST + Rs 10 SGST). Capped at Rs 500.</li>
+        <li><strong>GSTR-9 (annual return) late fee:</strong> Rs 200 per day (Rs 100 CGST + Rs 100 SGST). Capped at 0.25% of turnover in the state.</li>
+      </ul>
+
+      <p>If you skip e-invoicing, you don't pay a "late fee" for the missed IRN — but the missing invoice almost always cascades into a wrong GSTR-1 filing, which then attracts the late fee on top of the Section 122 penalty when corrected.</p>
+
+      <h2>The Hidden Penalty: Your Customer's ITC Loss</h2>
+
+      <p>The largest commercial cost of skipping e-invoicing rarely shows up in a tax demand. It shows up in your accounts receivable.</p>
+
+      <p>When you issue a B2B invoice without an IRN, your buyer's GSTR-2B will not contain that invoice. Your buyer therefore cannot claim input tax credit against it. On a Rs 10 lakh invoice at 18% GST, that is Rs 1.8 lakh of ITC the buyer effectively loses. They will respond in one of three ways:</p>
+
+      <ul>
+        <li><strong>Withhold the GST portion of payment</strong> until you re-issue with a valid IRN — squeezing your cash flow for 30-60 days.</li>
+        <li><strong>Demand a credit note plus a re-issued e-invoice</strong>, which doubles your accounting workload and creates a 24-hour cancellation window risk.</li>
+        <li><strong>Quietly switch to a compliant supplier</strong> at the next renewal. This is the silent killer — you find out only when the order stops coming.</li>
+      </ul>
+
+      <blockquote>The Rs 25,000 penalty from the GST officer is one-time and noticeable. The Rs 50 lakh annual customer who quietly leaves because their accountant flagged your invoices is permanent and invisible — until it shows up in next year's revenue.</blockquote>
+
+      <h2>Interest on Tax: The Penalty That Compounds</h2>
+
+      <p>Beyond the flat penalties, Section 50 of the CGST Act imposes <strong>interest at 18% per annum</strong> on any tax that should have been paid but was not — for example, where a missing IRN led to an invoice being kept off your GSTR-1 and the corresponding tax was not deposited. Interest runs from the original due date until actual payment. For wrongly availed ITC, the interest rate is 24%.</p>
+
+      <p>On a Rs 5 lakh tax liability discovered 12 months later, that is Rs 90,000 of interest alone — payable on top of the Section 122 penalty. The cost of delay is not linear. It compounds.</p>
+
+      <h2>What Tax Officers Actually Levy in Practice</h2>
+
+      <p>The statutory maximums above are the legal ceiling. In day-to-day enforcement during routine scrutiny or audit, officers typically:</p>
+
+      <ul>
+        <li>Issue a <strong>Show Cause Notice (SCN)</strong> first, listing the missing IRNs and proposed penalty. Reply within 30 days is mandatory.</li>
+        <li>For genuine technical lapses where the buyer's ITC was eventually corrected via a re-issued e-invoice, levy a <strong>negotiated reduced penalty</strong> of Rs 5,000-10,000 per invoice rather than the statutory maximum.</li>
+        <li>For systemic non-compliance (no IRNs at all over multiple months), invoke the <strong>full Section 122 penalty</strong> per invoice plus interest. This is where exposure runs into lakhs.</li>
+        <li>For evidence of intent to evade tax (fake invoicing, circular trading), trigger <strong>Section 132 prosecution</strong> — which carries imprisonment of up to 5 years where tax evaded exceeds Rs 5 crore.</li>
+      </ul>
+
+      <p>The pattern is clear: lapses caught early and corrected voluntarily attract reduced penalties. Lapses caught by the department first attract the full statutory amount.</p>
+
+      <h2>The Penalty Avoidance Playbook</h2>
+
+      <p>Every business in the Rs 5 crore-plus turnover bracket should run the following six-control checklist on its billing process:</p>
+
+      <ol>
+        <li><strong>Same-day IRN generation.</strong> Configure your billing system to push every invoice to the IRP at the moment of creation — not at end-of-day, not as a batch. Same-day IRN means same-day visibility on rejections.</li>
+        <li><strong>IRP error monitoring.</strong> The IRP rejects 3-5% of invoices on first attempt for GSTIN, HSN, or amount-mismatch reasons. Assign one person to monitor the rejection queue daily. A 30-day backlog of rejected invoices is exactly what triggers the worst penalties.</li>
+        <li><strong>24-hour cancellation discipline.</strong> An e-invoice can be cancelled only within 24 hours of IRN generation. After that, you must issue a credit note (which itself needs an IRN). Train billing staff on the cutoff.</li>
+        <li><strong>QR code archival.</strong> Store the signed QR payload returned by the IRP, not just the printed image. During audit, the department asks for the cryptographic payload.</li>
+        <li><strong>Monthly reconciliation against GSTR-1.</strong> Run a script that compares every invoice issued during the month against the IRN list returned by the IRP. Missing IRNs flagged before GSTR-1 filing prevent both penalties and customer escalations.</li>
+        <li><strong>Buyer-side ITC matching.</strong> For your top 20 customers, share the IRN list at month-end so they can pre-validate against their own GSTR-2B. This single practice eliminates the most common payment dispute.</li>
+      </ol>
+
+      <h2>When Voluntary Disclosure Saves Money</h2>
+
+      <p>If you discover historic e-invoicing non-compliance — say, three months of B2B invoices issued without IRNs — the cheapest path is voluntary disclosure under Section 73 (non-fraud cases). Pay the tax (if not already paid), interest at 18%, and a reduced penalty of 10% of tax (capped at Rs 10,000 per case). This is far less than waiting for the department to detect it, where the penalty under Section 74 can reach 100% of tax for fraud and 25-50% for suppression.</p>
+
+      <p>The arithmetic almost always favours self-reporting. The procedural cost of disclosing past lapses is two days of accountant time. The cost of being caught is the difference between a 10% and a 50% penalty rate, multiplied across every affected invoice.</p>
+
+      <h2>The Real Compliance Question</h2>
+
+      <p>The real question is not "what is the penalty" — it is "why is the penalty even possible". An automated billing system that pushes every invoice to the IRP at creation, monitors rejections in real time, archives the QR payload, and reconciles against GSTR-1 monthly leaves no surface area for any of these penalties to apply. The cost of the software is a fraction of a single Section 122 penalty on a single mid-size invoice.</p>
+
+      <p>The Rs 5 crore threshold is not the ceiling. The GST Council has signalled further reductions to Rs 1 crore and eventually to all registered taxpayers. Building the controls now — before the threshold drops — is significantly cheaper than retrofitting them under audit pressure later.</p>
+
+      <!-- FAQ -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions about this topic.</p>
+    <details class="faq-item">
+      <summary>What is the penalty for not generating an e-invoice in India?</summary>
+      <div class="faq-answer">Under Section 122(1) of the CGST Act, the penalty for not issuing a tax invoice (or issuing one without an IRN when required) is Rs 10,000 or 100% of the tax involved, whichever is higher, per invoice. For an incorrect invoice, the penalty can be up to Rs 25,000 per invoice.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Is there a late fee for delayed e-invoice reporting?</summary>
+      <div class="faq-answer">From April 1, 2025, taxpayers with annual turnover of Rs 10 crore or more must report e-invoices to the IRP within 30 days of the invoice date. After 30 days, the IRP simply rejects the invoice — IRN generation is blocked. The invoice is then legally invalid for ITC, and the same Section 122 penalties apply.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can my buyer claim ITC on an invoice without IRN?</summary>
+      <div class="faq-answer">No. Under Rule 48(5) of the CGST Rules, an invoice issued by an e-invoicing-mandated business without a valid IRN is not a tax invoice. It will not appear in the buyer's GSTR-2B, so no input tax credit can be claimed against it.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Are e-invoicing penalties waived for first-time offenders?</summary>
+      <div class="faq-answer">There is no automatic waiver. Officers can use discretion under Section 126 (general disciplines) for minor breaches where the tax involved is under Rs 5,000 and there is no fraud. But repeated or wilful non-compliance attracts the full penalty plus interest under Section 50.</div>
+    </details>
+  </div>
+</section>
+
+      <!-- CTA -->
+      <div class="post-cta">
+        <h3>Stop Worrying About Section 122 Penalties</h3>
+        <p>Our GST billing platform pushes every invoice to the IRP at creation, archives signed QR payloads, and reconciles against GSTR-1 automatically. Zero missed IRNs, zero customer ITC complaints.</p>
+        <a href="/../products/gst-billing-accounting.html" class="btn-primary">Explore GST Billing Software <i class="fa-solid fa-arrow-right"></i></a>
+        &nbsp;&nbsp;
+        <a href="/../#contact" class="btn-outline">Book a Compliance Review</a>
+      </div>
+
+      <!-- Related Posts -->
+      <div class="post-related">
+        <h3>Related Articles</h3>
+        <div class="post-related-grid">
+          <a href="/e-invoicing-threshold-2026.html" class="pr-card">
+            <h4>E-Invoicing Threshold 2026: Is Your Billing Ready?</h4>
+            <p>Where the Rs 5 crore threshold stands today and the 30-day plan to get compliant.</p>
+          </a>
+          <a href="/gst-billing-software.html" class="pr-card">
+            <h4>GST Billing Software Saves 20+ Hours Per Month</h4>
+            <p>Where manual GST time leaks happen and how automation plugs every one of them.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+<!-- Newsletter signup -->
+<section style="max-width:800px;margin:0 auto;padding:0 28px 48px">
+  <div style="background:var(--ink);border-radius:20px;padding:36px;text-align:center">
+    <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:6px">Enjoyed this article?</div>
+    <div style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.65;margin-bottom:20px">Get practical business software insights delivered to your inbox every week.</div>
+    <form action="https://eb65560b.sibforms.com/serve/MUIFACP2rFDETv2p-mUPqyHo3glJtZhcD0GG3f63ikM49xDLRJyQdEWUq0PBoF0ksGw1g_N182HgQUpPssTKQKbO_o-YEB7N347_FS22M6QudGfXoY8QkWZ93gPvVtu8RVTgz--uNpErO1Xd4RccAsEDFLg3mci83OfHVyaJWN0sybuGWiTH50Rmf6Jh_BRVN1HTSAYIwS2z6SKAUw==" method="POST" novalidate style="display:flex;flex-wrap:wrap;gap:10px;max-width:440px;margin:0 auto" target="nl-iframe" onsubmit="var e=this.querySelector('input[type=email]');if(!e.value||!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(e.value)){event.preventDefault();e.style.borderColor='#DC2626';return}var f=this;setTimeout(function(){f.style.display='none';f.nextElementSibling.style.display='block'},1500)">
+      <input type="hidden" name="locale" value="en">
+      <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" style="flex:1;padding:13px 16px;border-radius:10px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-family:var(--font);font-size:14px" oninput="this.style.borderColor='rgba(255,255,255,.15)'">
+      <button type="submit" style="padding:13px 24px;border-radius:10px;border:none;background:var(--blue);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+    </form>
+    <div style="display:none;color:#059669;font-size:14px;font-weight:600;padding:8px 0"><i class="fa-solid fa-circle-check"></i> Subscribed! Check your inbox.</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:12px"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime.</div>
+  </div>
+</section>
+`} />
+</BaseLayout>

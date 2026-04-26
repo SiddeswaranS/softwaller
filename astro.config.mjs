@@ -9,8 +9,9 @@ export default defineConfig({
   site: 'https://www.softwaller.com',
   trailingSlash: 'never',
   build: {
-    // Emit /about.html, /products/crm-software.html — preserves indexed URLs.
-    format: 'file',
+    // 'preserve' keeps the structure of src/pages: about.astro → about.html,
+    // blog/index.astro → blog/index.html (so /blog/ still resolves).
+    format: 'preserve',
   },
   integrations: [
     sitemap(),

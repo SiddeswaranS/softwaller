@@ -1,0 +1,315 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Restaurant POS + Swiggy/Zomato Integration: The 2026 Stack | Softwaller";
+const description = "Unified menu, KOT routing, commission reconciliation. The complete restaurant POS stack for 2026 — what to integrate, what to keep separate, what saves a 60-cover dinner.";
+const canonical = "https://www.softwaller.com/blog/restaurant-pos-swiggy-zomato-integration.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Restaurant POS + Swiggy/Zomato Integration: The 2026 Stack";
+const ogDescription = "Unified menu, KOT routing, commission reconciliation. The complete restaurant POS stack for 2026 — what to integrate, what to keep separate, what saves a 60-cover dinner.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Restaurant POS + Swiggy/Zomato Integration: The 2026 Stack",
+    "description": "Unified menu, KOT routing, commission reconciliation. The complete restaurant POS stack for 2026.",
+    "author": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies",
+      "url": "https://www.softwaller.com"
+    },
+    "datePublished": "2026-04-26",
+    "dateModified": "2026-04-26",
+    "url": "https://www.softwaller.com/blog/restaurant-pos-swiggy-zomato-integration.html",
+    "image": "https://www.softwaller.com/assets/og-image.jpg"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.softwaller.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Restaurant POS Integration",
+        "item": "https://www.softwaller.com/blog/restaurant-pos-swiggy-zomato-integration.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can one POS handle dine-in, Swiggy, Zomato and Magicpin orders together?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Modern integrated POS systems pull aggregator orders directly into the same KOT printer queue as dine-in orders, so the kitchen sees one consolidated stream. Menu, prices and item availability sync the other way — turn off paneer in the POS, it disappears on Swiggy and Zomato within seconds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do commissions and settlements get reconciled?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The integrated POS pulls payout reports from each aggregator daily, matches every order against its order ID, calculates expected vs received settlement after commission and TCS, and flags discrepancies. Manual reconciliation typically misses 1-2% of settlement leaks; automated reconciliation catches 99%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about KOT printing for online orders during peak hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Online orders should print on a separate KOT colour or dedicated printer so the kitchen can prioritise dine-in or online based on policy. The POS routes by station (tandoor, curry, dessert, beverage) automatically based on the menu item's recipe assignment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is integration worth it for a single-outlet restaurant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you do over 30 online orders a day, yes. Below that, manual entry from aggregator tablet to POS is workable. Above 30, the entry errors and reconciliation effort cost more than the integration in the first month."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <style is:global slot="head-css" set:html={`
+body{min-height:100vh;display:flex;flex-direction:column}
+.blog-hero{padding:120px 0 48px;background:var(--surf);text-align:center;position:relative;overflow:hidden}
+.blog-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.blog-hero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+.blog-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:12px;color:var(--ink)}
+.blog-hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--blue)}
+.blog-hero p{font-size:16px;color:var(--muted);max-width:560px;margin:0 auto;line-height:1.75}
+.post-inner{max-width:760px;margin:0 auto;padding:48px 28px 80px}
+.post-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.post-body h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:32px 0 14px}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:24px 0 10px}
+.post-body p{font-size:15.5px;color:var(--muted);line-height:1.85;margin-bottom:16px}
+.post-body ul,.post-body ol{padding-left:20px;margin-bottom:16px}
+.post-body li{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:8px}
+.post-body strong{color:var(--ink)}
+.post-body blockquote{border-left:3px solid var(--blue);padding:16px 20px;margin:24px 0;background:var(--blue-bg);border-radius:0 10px 10px 0;font-size:15px;color:var(--ink3);font-style:italic;line-height:1.75}
+.post-cta{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:32px;text-align:center;margin-top:48px}
+.post-cta h3{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.post-cta p{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.post-related{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.post-related h3{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:20px}
+.post-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pr-card{padding:20px;border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:all .2s;display:block}
+.pr-card:hover{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.08)}
+.pr-card h4{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.pr-card p{font-size:12.5px;color:var(--muted);line-height:1.5}
+.pfooter{margin-top:auto}
+@media(max-width:768px){.post-related-grid{grid-template-columns:1fr}.post-cta .btn-primary,.post-cta .btn-outline{display:block;width:100%;text-align:center;margin:8px 0}}
+
+
+
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+  <section class="blog-hero">
+    <div class="blog-hero-inner">
+      <h1>The Restaurant POS Stack for 2026: <em>Dine-In, Online, One Kitchen</em></h1>
+      <p>Three tablets on the counter. Two printers fighting for the same paneer order. The 7 pm rush turning into chaos. There is a better way to wire a restaurant.</p>
+    </div>
+  </section>
+
+  <article class="post-inner">
+    <div class="post-meta">
+      <span><i class="fa-regular fa-calendar"></i> April 26, 2026</span>
+      <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+      <span><i class="fa-solid fa-tag"></i> Hospitality</span>
+    </div>
+
+    <div class="post-body">
+      <p>Stand behind the counter of any 50-seat restaurant in Bengaluru, Mumbai or Pune at 8 pm and you will see the same thing. Three different tablets — one for Swiggy, one for Zomato, one for the in-house POS. A separate stack of slips for direct walk-in orders. Two printers, sometimes three. A staff member whose entire job is re-keying online orders into the POS so the kitchen can see them. When something goes wrong — and on a Friday night something always goes wrong — nobody can tell whether the missing dish is dine-in table 14 or Zomato order #2387.</p>
+
+      <p>The fix is not a fancier POS. It is unifying the order stream so the kitchen sees one queue, the menu lives in one place, and reconciliation runs itself. The 2026 restaurant stack does this with three or four well-chosen pieces — not the eleven most chains accumulate over time.</p>
+
+      <h2>The Four Layers of a Modern Restaurant Stack</h2>
+
+      <h3>1. Point of Sale (the Captain Layer)</h3>
+
+      <p>Bills, opens tables, takes payments, prints KOTs. This is the only layer that needs sub-second response time. If your POS takes 3 seconds to add an item, your captain is doing fewer covers per hour than they could be — and on a 60-cover dinner that is one full extra service rotation lost.</p>
+
+      <h3>2. Aggregator Integration (the Pipe Layer)</h3>
+
+      <p>Pulls orders from Swiggy, Zomato, Magicpin, ONDC, your own website, and pushes menu, prices, availability and item-out-of-stock back to each. This is what removes the "second tablet on the counter".</p>
+
+      <h3>3. KOT and Kitchen Display (the Cook Layer)</h3>
+
+      <p>Routes each line item to the right station — tandoor, curry, cold kitchen, dessert, beverage — based on recipe metadata. Either prints to dedicated thermal printers or shows on a kitchen display screen (KDS) per station. The KDS is winning in 2026 because it survives a power flicker that destroys a half-printed slip.</p>
+
+      <h3>4. Inventory + Recipes (the Margin Layer)</h3>
+
+      <p>Each menu item is a recipe (BOM). When the kitchen marks a dish complete, raw inventory deducts automatically. Without this layer, you cannot tell whether your monthly food cost is 28% or 38% — and the 10-point gap is your operating margin.</p>
+
+      <h2>Unified Menu Management Is the Heart of the Stack</h2>
+
+      <p>Every menu change should happen in one place. Add Mango Lassi for the summer, change the price of paneer butter masala, mark dosa batter out of stock at 9 pm — one entry, propagates everywhere. The integrated POS:</p>
+
+      <ul>
+        <li>Pushes new items, prices, descriptions and food images to Swiggy and Zomato within seconds via their merchant APIs</li>
+        <li>Updates your own QR-menu and website at the same time</li>
+        <li>Marks items as "out of stock" on every channel when the kitchen flags them, eliminating the 30-minute window where customers order something you cannot make</li>
+        <li>Maintains separate prices per channel — dine-in price, takeaway price, aggregator-listed price (often higher to absorb commission)</li>
+      </ul>
+
+      <p>Without this single source of truth, every menu change becomes a four-tablet update with the inevitable item that gets missed on Zomato and continues selling at last month's price for two weeks.</p>
+
+      <h2>How Order Aggregation Actually Looks</h2>
+
+      <p>When a Swiggy customer hits "Place Order" at 7:42 pm:</p>
+
+      <ol>
+        <li>Swiggy sends the order to the integrated POS over webhook within 1-2 seconds</li>
+        <li>The POS auto-accepts (configurable per outlet — some accept manually for capacity control)</li>
+        <li>KOT prints at the relevant kitchen station(s) immediately, marked clearly as Swiggy with the order ID</li>
+        <li>Order also appears on the captain's screen so the floor manager has visibility into total kitchen load</li>
+        <li>Inventory deducts based on recipe</li>
+        <li>When the rider arrives, scanning the order ID closes the order and triggers the settlement to wait for next-day reconciliation</li>
+      </ol>
+
+      <p>The dine-in flow is identical except the captain creates the order on a tablet and prints the bill at the end. Same kitchen. Same KDS. Same inventory deduction. Zero double entry.</p>
+
+      <h2>Commission Reconciliation: Where Most Restaurants Bleed</h2>
+
+      <p>Aggregator commissions in India range from 18% to 28% depending on the city, restaurant tier, and promo participation. On top of that, TCS at 1% is deducted. Promotions, refunds, customer disputes and rider compensation events all reduce settlement further. Most restaurants reconcile this manually once a month — and lose 1-2% of expected settlement to mismatches that nobody has the patience to chase.</p>
+
+      <p>Automated reconciliation works like this:</p>
+
+      <ul>
+        <li>Pull yesterday's settlement report (CSV/JSON) from Swiggy and Zomato APIs every morning</li>
+        <li>Match every order to its order ID in the POS</li>
+        <li>Compute expected settlement = order total &minus; commission &minus; TCS &minus; promo subsidy share</li>
+        <li>Flag any order where actual settlement varies from expected by more than Rs 5</li>
+        <li>Generate a one-click dispute file for the operations team to escalate</li>
+      </ul>
+
+      <p>For a restaurant doing Rs 25 lakh/month in aggregator revenue, recovering even 1.5% of leaked settlement is Rs 4.5 lakh per year. Pays for the integration many times over.</p>
+
+      <blockquote>The aggregator commission is fixed. The settlement leak is not. Most operators chase the first and miss the second — which is the bigger loss in the long run.</blockquote>
+
+      <h2>KOT Workflow: The Detail That Saves Friday Night</h2>
+
+      <p>Three KOT design choices separate a calm Friday from a chaotic one:</p>
+
+      <ul>
+        <li><strong>Colour or printer separation by channel.</strong> Online orders on yellow paper, dine-in on white. Or different printers entirely. Cooks recognise priority instantly.</li>
+        <li><strong>Station-level KDS instead of one big monitor.</strong> Tandoor sees only tandoor items. Cold kitchen sees only cold-kitchen items. Each cook focuses without filtering noise.</li>
+        <li><strong>Modifiers and customisations bold and capitalised.</strong> "JAIN, NO ONION" should be impossible to miss. Most KOT bugs come from this single line being printed in 8-point regular.</li>
+      </ul>
+
+      <h2>What to Skip from the Brochure</h2>
+
+      <p>Restaurant tech vendors love bundling features that sound impressive in a demo and never get used:</p>
+
+      <ul>
+        <li><strong>AI demand forecasting</strong> for a single outlet with under Rs 50 lakh monthly revenue — sample size too small to be useful</li>
+        <li><strong>Built-in CRM with email campaigns</strong> — most diners give a fake number anyway, the database is junk</li>
+        <li><strong>Loyalty programs with point-based rewards</strong> — replace with simple "free dish on 6th visit" stamp logic, easier and equally effective</li>
+        <li><strong>QR-menu for dine-in tables</strong> — useful during pandemic, mostly ignored now, focus on aggregator menu instead</li>
+      </ul>
+
+      <h2>Implementation: 3 Weeks for a Single Outlet</h2>
+
+      <p>Weeks 1-2: install the POS, configure menu and recipes, train captains and cashiers, parallel-run with the existing system for 5 days. Week 3: enable aggregator integration via Swiggy and Zomato merchant APIs, validate that orders flow into KOT correctly, run reconciliation for 5 days. Go live in week 4. After three more weeks of clean reconciliation, retire the old aggregator tablets.</p>
+
+      <p>For chains, multiply by outlet count and add 2 weeks for centralised menu management and chain-level reporting. The economics get better, not worse, as outlets multiply — there is no per-outlet menu update tax once the system is unified.</p>
+
+      <!-- FAQ -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions about this topic.</p>
+    <details class="faq-item">
+      <summary>Can one POS handle dine-in, Swiggy, Zomato and Magicpin orders together?</summary>
+      <div class="faq-answer">Yes. Modern integrated POS systems pull aggregator orders directly into the same KOT printer queue as dine-in orders, so the kitchen sees one consolidated stream. Menu, prices and item availability sync the other way — turn off paneer in the POS, it disappears on Swiggy and Zomato within seconds.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How do commissions and settlements get reconciled?</summary>
+      <div class="faq-answer">The integrated POS pulls payout reports from each aggregator daily, matches every order against its order ID, calculates expected vs received settlement after commission and TCS, and flags discrepancies. Manual reconciliation typically misses 1-2% of settlement leaks; automated reconciliation catches 99%.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What about KOT printing for online orders during peak hours?</summary>
+      <div class="faq-answer">Online orders should print on a separate KOT colour or dedicated printer so the kitchen can prioritise dine-in or online based on policy. The POS routes by station (tandoor, curry, dessert, beverage) automatically based on the menu item's recipe assignment.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Is integration worth it for a single-outlet restaurant?</summary>
+      <div class="faq-answer">If you do over 30 online orders a day, yes. Below that, manual entry from aggregator tablet to POS is workable. Above 30, the entry errors and reconciliation effort cost more than the integration in the first month.</div>
+    </details>
+  </div>
+</section>
+
+      <!-- CTA -->
+      <div class="post-cta">
+        <h3>Run a Restaurant on One Stack, Not Five Tablets</h3>
+        <p>Custom restaurant POS with Swiggy, Zomato and ONDC integration, KDS routing, recipe-driven inventory and daily auto-reconciliation. One platform, one source of truth.</p>
+        <a href="/../products/custom-business-apps.html" class="btn-primary">Explore Custom Business Apps <i class="fa-solid fa-arrow-right"></i></a>
+        &nbsp;&nbsp;
+        <a href="/../#contact" class="btn-outline">Book a Demo</a>
+      </div>
+
+      <!-- Related Posts -->
+      <div class="post-related">
+        <h3>Related Articles</h3>
+        <div class="post-related-grid">
+          <a href="/ecommerce-website-vs-marketplace.html" class="pr-card">
+            <h4>E-Commerce Website vs Marketplace: Cost Compared</h4>
+            <p>The same buy-vs-aggregator math, applied to retail e-commerce.</p>
+          </a>
+          <a href="/inventory-management-mistakes.html" class="pr-card">
+            <h4>7 Inventory Mistakes Killing Your Profits</h4>
+            <p>Recipe BOMs, wastage tracking, and the inventory traps in F&amp;B.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+<!-- Newsletter signup -->
+<section style="max-width:800px;margin:0 auto;padding:0 28px 48px">
+  <div style="background:var(--ink);border-radius:20px;padding:36px;text-align:center">
+    <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:6px">Enjoyed this article?</div>
+    <div style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.65;margin-bottom:20px">Get practical business software insights delivered to your inbox every week.</div>
+    <form action="https://eb65560b.sibforms.com/serve/MUIFACP2rFDETv2p-mUPqyHo3glJtZhcD0GG3f63ikM49xDLRJyQdEWUq0PBoF0ksGw1g_N182HgQUpPssTKQKbO_o-YEB7N347_FS22M6QudGfXoY8QkWZ93gPvVtu8RVTgz--uNpErO1Xd4RccAsEDFLg3mci83OfHVyaJWN0sybuGWiTH50Rmf6Jh_BRVN1HTSAYIwS2z6SKAUw==" method="POST" novalidate style="display:flex;flex-wrap:wrap;gap:10px;max-width:440px;margin:0 auto" target="nl-iframe" onsubmit="var e=this.querySelector('input[type=email]');if(!e.value||!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(e.value)){event.preventDefault();e.style.borderColor='#DC2626';return}var f=this;setTimeout(function(){f.style.display='none';f.nextElementSibling.style.display='block'},1500)">
+      <input type="hidden" name="locale" value="en">
+      <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" style="flex:1;padding:13px 16px;border-radius:10px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-family:var(--font);font-size:14px" oninput="this.style.borderColor='rgba(255,255,255,.15)'">
+      <button type="submit" style="padding:13px 24px;border-radius:10px;border:none;background:var(--blue);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+    </form>
+    <div style="display:none;color:#059669;font-size:14px;font-weight:600;padding:8px 0"><i class="fa-solid fa-circle-check"></i> Subscribed! Check your inbox.</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:12px"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime.</div>
+  </div>
+</section>
+`} />
+</BaseLayout>
