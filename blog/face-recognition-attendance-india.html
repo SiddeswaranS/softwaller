@@ -75,6 +75,19 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Face Recognition Attendance: What Works in Indian Factories","description":"Biometric is fading; face recognition attendance is taking over. Here is what really works on a dusty shop floor, accuracy under low light, DPDP rules, and payroll integration.","author":{"@type":"Organization","name":"Softwaller Technologies"},"publisher":{"@type":"Organization","name":"Softwaller Technologies","url":"https://www.softwaller.com"},"datePublished":"2026-04-26","dateModified":"2026-04-26","url":"https://www.softwaller.com/blog/face-recognition-attendance-india.html","image":"https://www.softwaller.com/assets/og-image.jpg"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.softwaller.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.softwaller.com/blog/"},{"@type":"ListItem","position":3,"name":"Face Recognition Attendance","item":"https://www.softwaller.com/blog/face-recognition-attendance-india.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is face recognition attendance legal in India?","acceptedAnswer":{"@type":"Answer","text":"Yes, when collected with employee consent and stored under reasonable security practices. The DPDP Act 2023 classifies facial data as personal data, so consent must be specific, informed, and withdrawable. The Information Technology (Reasonable Security Practices) Rules 2011 also apply."}},{"@type":"Question","name":"How accurate is face recognition in dusty or low-light Indian factories?","acceptedAnswer":{"@type":"Answer","text":"Modern infrared-equipped face terminals achieve 99% accuracy in low light and 96-98% accuracy on dusty shop floors when faces are properly enrolled. Cheap webcam-based solutions drop to 80-85% under the same conditions and become unusable below 200 lux."}},{"@type":"Question","name":"How does face recognition compare to fingerprint biometric for daily worker attendance?","acceptedAnswer":{"@type":"Answer","text":"Face recognition is contactless (no hygiene concerns), works for workers with worn fingerprints from manual labour (a chronic biometric failure), and supports mask detection. Fingerprint is cheaper hardware-wise but has 5-10% rejection in factory environments."}},{"@type":"Question","name":"Can face recognition attendance integrate with payroll?","acceptedAnswer":{"@type":"Answer","text":"Yes. The attendance data flows in real-time via API into the payroll system as in/out punches with timestamps. Late marks, overtime calculations, half-days and shift mapping happen automatically. Most face terminals also support cloud sync for multi-location consolidation."}}]}</script>
+<style>
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -193,6 +206,30 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
       <p>Most plants we work with do not switch in one weekend. The pattern that works: install one face terminal alongside the existing fingerprint reader, run both for 30 days, reconcile attendance daily. After 30 days of clean data, retire the fingerprint reader. Repeat for the next gate. By month 4, the entire site is on face recognition with zero downtime risk.</p>
 
       <p>The shift is not just hardware. It is a rare moment where you can also clean up shift masters, late-mark policies, and overtime rules — most are still set the way they were in 2018 and have outgrown their definitions. Face recognition is the excuse to get the rules right.</p>
+
+      <!-- FAQ -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions about this topic.</p>
+    <details class="faq-item">
+      <summary>Is face recognition attendance legal in India?</summary>
+      <div class="faq-answer">Yes, when collected with employee consent and stored under reasonable security practices. The DPDP Act 2023 classifies facial data as personal data, so consent must be specific, informed, and withdrawable. The Information Technology (Reasonable Security Practices) Rules 2011 also apply.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How accurate is face recognition in dusty or low-light Indian factories?</summary>
+      <div class="faq-answer">Modern infrared-equipped face terminals achieve 99% accuracy in low light and 96-98% accuracy on dusty shop floors when faces are properly enrolled. Cheap webcam-based solutions drop to 80-85% under the same conditions and become unusable below 200 lux.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How does face recognition compare to fingerprint biometric for daily worker attendance?</summary>
+      <div class="faq-answer">Face recognition is contactless (no hygiene concerns), works for workers with worn fingerprints from manual labour (a chronic biometric failure), and supports mask detection. Fingerprint is cheaper hardware-wise but has 5-10% rejection in factory environments.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can face recognition attendance integrate with payroll?</summary>
+      <div class="faq-answer">Yes. The attendance data flows in real-time via API into the payroll system as in/out punches with timestamps. Late marks, overtime calculations, half-days and shift mapping happen automatically. Most face terminals also support cloud sync for multi-location consolidation.</div>
+    </details>
+  </div>
+</section>
 
       <!-- CTA -->
       <div class="post-cta">

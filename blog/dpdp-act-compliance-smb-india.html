@@ -72,6 +72,19 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.softwaller.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.softwaller.com/blog/"},{"@type":"ListItem","position":3,"name":"DPDP Act Compliance India","item":"https://www.softwaller.com/blog/dpdp-act-compliance-smb-india.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When does DPDP Act enforcement actually begin in India?","acceptedAnswer":{"@type":"Answer","text":"The Ministry of Electronics and Information Technology gazetted DPDP Rules 2025 on November 13, 2025. Enforcement is phased: the Data Protection Board of India is operational from November 14, 2025; consent manager provisions come into force on November 14, 2026; full substantive compliance and penalties become enforceable from May 14, 2027."}},{"@type":"Question","name":"Do small businesses need to appoint a Data Protection Officer (DPO)?","acceptedAnswer":{"@type":"Answer","text":"No. A DPO is mandatory only for entities the government designates as Significant Data Fiduciaries based on data volume, sensitivity, and risk. Other Data Fiduciaries, including most SMBs, must publish a named contact person who can respond to data principal queries by May 14, 2027."}},{"@type":"Question","name":"What is the breach notification timeline under the DPDP Act?","acceptedAnswer":{"@type":"Answer","text":"Data Fiduciaries must notify the Data Protection Board of India and every affected data principal within 72 hours of becoming aware of a personal data breach. Unlike GDPR, the DPDP Act requires reporting of all breaches regardless of risk assessment."}},{"@type":"Question","name":"What is the maximum penalty under the DPDP Act?","acceptedAnswer":{"@type":"Answer","text":"The Data Protection Board can impose a financial penalty of up to Rs 250 crore for failure to implement reasonable security safeguards that lead to a personal data breach, and up to Rs 200 crore for failure to notify a breach to the Board and affected individuals."}},{"@type":"Question","name":"Do I need fresh consent for existing customer data already in my CRM?",
 "acceptedAnswer":{"@type":"Answer","text":"Yes. Section 5(2) of the DPDP Act requires Data Fiduciaries to provide a fresh notice to existing data principals and obtain renewed valid consent for ongoing processing. The notice must be standalone, in plain language, and list each itemised purpose separately."}}]}</script>
+<style>
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -197,6 +210,34 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
       <p>The businesses that handle DPDP well are not the ones with the biggest legal teams. They are the ones who build consent capture, retention rules, and breach response into the software itself — once — and stop relying on humans to remember the rules. Hard-coded toggles, automated retention purges, encrypted-by-default databases, and audit-ready consent logs cost a fraction of one Rs 50 crore penalty.</p>
 
       <p>2026 is the build year. Use it. The May 2027 deadline will arrive faster than the 18-month phase-in suggests, and the first wave of fines will go to whichever Data Fiduciary is unlucky enough to suffer a publicised breach in summer 2027.</p>
+
+      <!-- FAQ -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions about this topic.</p>
+    <details class="faq-item">
+      <summary>When does DPDP Act enforcement actually begin in India?</summary>
+      <div class="faq-answer">The Ministry of Electronics and Information Technology gazetted DPDP Rules 2025 on November 13, 2025. Enforcement is phased: the Data Protection Board of India is operational from November 14, 2025; consent manager provisions come into force on November 14, 2026; full substantive compliance and penalties become enforceable from May 14, 2027.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Do small businesses need to appoint a Data Protection Officer (DPO)?</summary>
+      <div class="faq-answer">No. A DPO is mandatory only for entities the government designates as Significant Data Fiduciaries based on data volume, sensitivity, and risk. Other Data Fiduciaries, including most SMBs, must publish a named contact person who can respond to data principal queries by May 14, 2027.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What is the breach notification timeline under the DPDP Act?</summary>
+      <div class="faq-answer">Data Fiduciaries must notify the Data Protection Board of India and every affected data principal within 72 hours of becoming aware of a personal data breach. Unlike GDPR, the DPDP Act requires reporting of all breaches regardless of risk assessment.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What is the maximum penalty under the DPDP Act?</summary>
+      <div class="faq-answer">The Data Protection Board can impose a financial penalty of up to Rs 250 crore for failure to implement reasonable security safeguards that lead to a personal data breach, and up to Rs 200 crore for failure to notify a breach to the Board and affected individuals.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Do I need fresh consent for existing customer data already in my CRM?</summary>
+      <div class="faq-answer">Yes. Section 5(2) of the DPDP Act requires Data Fiduciaries to provide a fresh notice to existing data principals and obtain renewed valid consent for ongoing processing. The notice must be standalone, in plain language, and list each itemised purpose separately.</div>
+    </details>
+  </div>
+</section>
 
       <!-- CTA -->
       <div class="post-cta">

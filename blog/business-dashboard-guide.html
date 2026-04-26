@@ -82,6 +82,19 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why Every Business Needs a Dashboard (And What to Put on It)","description":"If your Monday morning starts with someone building a report in Excel, you are already behind. Dashboards give you answers before you ask the question.","author":{"@type":"Organization","name":"Softwaller Technologies"},"publisher":{"@type":"Organization","name":"Softwaller Technologies","url":"https://www.softwaller.com"},"datePublished":"2026-03-29","dateModified":"2026-03-29","url":"https://www.softwaller.com/blog/business-dashboard-guide.html","image":"https://www.softwaller.com/assets/og-image.jpg"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.softwaller.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.softwaller.com/blog/"},{"@type":"ListItem","position":3,"name":"Why Every Business Needs a Dashboard","item":"https://www.softwaller.com/blog/business-dashboard-guide.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which 5 KPIs should every SMB track on a dashboard?","acceptedAnswer":{"@type":"Answer","text":"Cash position (bank balance + receivables - payables), monthly revenue and run-rate, gross margin by product or service, customer acquisition cost vs lifetime value, and on-time delivery percentage."}},{"@type":"Question","name":"How often should the dashboard refresh?","acceptedAnswer":{"@type":"Answer","text":"Operational dashboards (sales, stock, ops) should refresh every 5 to 30 minutes. Financial dashboards refresh hourly or daily. Strategic dashboards (board-level) update weekly or monthly with deeper context."}},{"@type":"Question","name":"Should we use Excel, Power BI, or a custom BI tool?","acceptedAnswer":{"@type":"Answer","text":"Excel works for under 5 dashboards and 1 user. Power BI scales to 10 to 50 users at Rs 800/user/month. Custom BI wins when you have 50+ users, sensitive data residency needs, or complex multi-source joins."}}]}</script>
+<style>
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -239,6 +252,26 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
       <blockquote>A dashboard does not make decisions for you. It makes sure you are making decisions based on what is actually happening, not what happened last week.</blockquote>
 
       <p>The businesses that thrive are not the ones with the most data. They are the ones that see the right data at the right time. A well-built dashboard is not a luxury or a technology project — it is the difference between reacting to problems and preventing them. Start small, start now, and let the dashboard grow with your business.</p>
+
+      <!-- FAQ -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions about this topic.</p>
+    <details class="faq-item">
+      <summary>Which 5 KPIs should every SMB track on a dashboard?</summary>
+      <div class="faq-answer">Cash position (bank balance + receivables - payables), monthly revenue and run-rate, gross margin by product or service, customer acquisition cost vs lifetime value, and on-time delivery percentage.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How often should the dashboard refresh?</summary>
+      <div class="faq-answer">Operational dashboards (sales, stock, ops) should refresh every 5 to 30 minutes. Financial dashboards refresh hourly or daily. Strategic dashboards (board-level) update weekly or monthly with deeper context.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Should we use Excel, Power BI, or a custom BI tool?</summary>
+      <div class="faq-answer">Excel works for under 5 dashboards and 1 user. Power BI scales to 10 to 50 users at Rs 800/user/month. Custom BI wins when you have 50+ users, sensitive data residency needs, or complex multi-source joins.</div>
+    </details>
+  </div>
+</section>
 
       <!-- CTA -->
       <div class="post-cta">

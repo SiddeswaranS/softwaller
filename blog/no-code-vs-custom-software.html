@@ -75,6 +75,19 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"No-Code vs Custom Software: The Real 3-Year Cost","description":"No-code looks cheaper on day one. By month 30 the picture flips. Here is the honest 3-year TCO comparison between no-code platforms and custom software for Indian SMBs.","author":{"@type":"Organization","name":"Softwaller Technologies"},"publisher":{"@type":"Organization","name":"Softwaller Technologies","url":"https://www.softwaller.com"},"datePublished":"2026-04-26","dateModified":"2026-04-26","url":"https://www.softwaller.com/blog/no-code-vs-custom-software.html","image":"https://www.softwaller.com/assets/og-image.jpg"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.softwaller.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.softwaller.com/blog/"},{"@type":"ListItem","position":3,"name":"No-Code vs Custom Software","item":"https://www.softwaller.com/blog/no-code-vs-custom-software.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is no-code really cheaper than custom software?","acceptedAnswer":{"@type":"Answer","text":"No-code is cheaper for the first 6-12 months and for very small teams. Beyond 25-30 active users or after the third feature outside the platform's defaults, per-user fees and integration costs typically push no-code TCO above a one-time custom build over a 3-year horizon."}},{"@type":"Question","name":"What does vendor lock-in actually look like with no-code?","acceptedAnswer":{"@type":"Answer","text":"You cannot self-host most no-code platforms. Data export is usually CSV or JSON without business logic, formulas, automations, or UI. Migrating 18 months of work to a different platform takes 3-4 months and effectively rebuilds the application from scratch."}},{"@type":"Question","name":"When does no-code clearly win?","acceptedAnswer":{"@type":"Answer","text":"For internal tools used by under 20 people, MVPs needed in 4-8 weeks, and processes that fit the platform's data model with minimal customisation. Also strong for static dashboards, simple form-and-database workflows, and approval flows."}},{"@type":"Question","name":"What hidden costs do no-code platforms add over time?","acceptedAnswer":{"@type":"Answer","text":"Per-user pricing scales with headcount, premium connectors charge per integration, automation runs are metered, storage adds up, sandbox/test environments cost separately, and SSO is usually a paid add-on. Expect the listed per-user price to be 2-3x the actual all-in cost."}}]}</script>
+<style>
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -211,6 +224,30 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
       <h2>Run the Math Before You Sign</h2>
 
       <p>Before any new tool, build a 36-month spreadsheet. Include licences, premium add-ons, integration costs, automation overage, growing user count, and migration cost if you ever leave. Compare it to a one-time build with realistic AMC. Do this in a one-page model — not a vendor's calculator. The right tool will still look like the right tool. The wrong one will reveal itself in row 19, column F, around month 22.</p>
+
+      <!-- FAQ -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions about this topic.</p>
+    <details class="faq-item">
+      <summary>Is no-code really cheaper than custom software?</summary>
+      <div class="faq-answer">No-code is cheaper for the first 6-12 months and for very small teams. Beyond 25-30 active users or after the third feature outside the platform's defaults, per-user fees and integration costs typically push no-code TCO above a one-time custom build over a 3-year horizon.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What does vendor lock-in actually look like with no-code?</summary>
+      <div class="faq-answer">You cannot self-host most no-code platforms. Data export is usually CSV or JSON without business logic, formulas, automations, or UI. Migrating 18 months of work to a different platform takes 3-4 months and effectively rebuilds the application from scratch.</div>
+    </details>
+    <details class="faq-item">
+      <summary>When does no-code clearly win?</summary>
+      <div class="faq-answer">For internal tools used by under 20 people, MVPs needed in 4-8 weeks, and processes that fit the platform's data model with minimal customisation. Also strong for static dashboards, simple form-and-database workflows, and approval flows.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What hidden costs do no-code platforms add over time?</summary>
+      <div class="faq-answer">Per-user pricing scales with headcount, premium connectors charge per integration, automation runs are metered, storage adds up, sandbox/test environments cost separately, and SSO is usually a paid add-on. Expect the listed per-user price to be 2-3x the actual all-in cost.</div>
+    </details>
+  </div>
+</section>
 
       <!-- CTA -->
       <div class="post-cta">

@@ -71,6 +71,19 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Restaurant POS + Swiggy/Zomato Integration: The 2026 Stack","description":"Unified menu, KOT routing, commission reconciliation. The complete restaurant POS stack for 2026.","author":{"@type":"Organization","name":"Softwaller Technologies"},"publisher":{"@type":"Organization","name":"Softwaller Technologies","url":"https://www.softwaller.com"},"datePublished":"2026-04-26","dateModified":"2026-04-26","url":"https://www.softwaller.com/blog/restaurant-pos-swiggy-zomato-integration.html","image":"https://www.softwaller.com/assets/og-image.jpg"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.softwaller.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.softwaller.com/blog/"},{"@type":"ListItem","position":3,"name":"Restaurant POS Integration","item":"https://www.softwaller.com/blog/restaurant-pos-swiggy-zomato-integration.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can one POS handle dine-in, Swiggy, Zomato and Magicpin orders together?","acceptedAnswer":{"@type":"Answer","text":"Yes. Modern integrated POS systems pull aggregator orders directly into the same KOT printer queue as dine-in orders, so the kitchen sees one consolidated stream. Menu, prices and item availability sync the other way — turn off paneer in the POS, it disappears on Swiggy and Zomato within seconds."}},{"@type":"Question","name":"How do commissions and settlements get reconciled?","acceptedAnswer":{"@type":"Answer","text":"The integrated POS pulls payout reports from each aggregator daily, matches every order against its order ID, calculates expected vs received settlement after commission and TCS, and flags discrepancies. Manual reconciliation typically misses 1-2% of settlement leaks; automated reconciliation catches 99%."}},{"@type":"Question","name":"What about KOT printing for online orders during peak hours?","acceptedAnswer":{"@type":"Answer","text":"Online orders should print on a separate KOT colour or dedicated printer so the kitchen can prioritise dine-in or online based on policy. The POS routes by station (tandoor, curry, dessert, beverage) automatically based on the menu item's recipe assignment."}},{"@type":"Question","name":"Is integration worth it for a single-outlet restaurant?","acceptedAnswer":{"@type":"Answer","text":"If you do over 30 online orders a day, yes. Below that, manual entry from aggregator tablet to POS is workable. Above 30, the entry errors and reconciliation effort cost more than the integration in the first month."}}]}</script>
+<style>
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -192,6 +205,30 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
       <p>Weeks 1-2: install the POS, configure menu and recipes, train captains and cashiers, parallel-run with the existing system for 5 days. Week 3: enable aggregator integration via Swiggy and Zomato merchant APIs, validate that orders flow into KOT correctly, run reconciliation for 5 days. Go live in week 4. After three more weeks of clean reconciliation, retire the old aggregator tablets.</p>
 
       <p>For chains, multiply by outlet count and add 2 weeks for centralised menu management and chain-level reporting. The economics get better, not worse, as outlets multiply — there is no per-outlet menu update tax once the system is unified.</p>
+
+      <!-- FAQ -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions about this topic.</p>
+    <details class="faq-item">
+      <summary>Can one POS handle dine-in, Swiggy, Zomato and Magicpin orders together?</summary>
+      <div class="faq-answer">Yes. Modern integrated POS systems pull aggregator orders directly into the same KOT printer queue as dine-in orders, so the kitchen sees one consolidated stream. Menu, prices and item availability sync the other way — turn off paneer in the POS, it disappears on Swiggy and Zomato within seconds.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How do commissions and settlements get reconciled?</summary>
+      <div class="faq-answer">The integrated POS pulls payout reports from each aggregator daily, matches every order against its order ID, calculates expected vs received settlement after commission and TCS, and flags discrepancies. Manual reconciliation typically misses 1-2% of settlement leaks; automated reconciliation catches 99%.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What about KOT printing for online orders during peak hours?</summary>
+      <div class="faq-answer">Online orders should print on a separate KOT colour or dedicated printer so the kitchen can prioritise dine-in or online based on policy. The POS routes by station (tandoor, curry, dessert, beverage) automatically based on the menu item's recipe assignment.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Is integration worth it for a single-outlet restaurant?</summary>
+      <div class="faq-answer">If you do over 30 online orders a day, yes. Below that, manual entry from aggregator tablet to POS is workable. Above 30, the entry errors and reconciliation effort cost more than the integration in the first month.</div>
+    </details>
+  </div>
+</section>
 
       <!-- CTA -->
       <div class="post-cta">

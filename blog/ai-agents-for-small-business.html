@@ -75,6 +75,19 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AI Agents for Small Business: Real ROI vs Hype","description":"AI agents are everywhere in 2026 pitches. Here is where they actually earn their keep for Indian SMBs, where they still fail, and how to run a 90-day pilot.","author":{"@type":"Organization","name":"Softwaller Technologies"},"publisher":{"@type":"Organization","name":"Softwaller Technologies","url":"https://www.softwaller.com"},"datePublished":"2026-04-14","dateModified":"2026-04-14","url":"https://www.softwaller.com/blog/ai-agents-for-small-business.html","image":"https://www.softwaller.com/assets/og-image.jpg"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.softwaller.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.softwaller.com/blog/"},{"@type":"ListItem","position":3,"name":"AI Agents for Small Business","item":"https://www.softwaller.com/blog/ai-agents-for-small-business.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between an AI agent and a chatbot?","acceptedAnswer":{"@type":"Answer","text":"A chatbot follows a fixed decision tree and answers questions. An AI agent takes actions — it can read a WhatsApp message, check inventory in your ERP, book an appointment in your calendar, send a confirmation, and log the outcome in CRM, all without a human clicking buttons between each step."}},{"@type":"Question","name":"How much do AI agents cost to run per month?","acceptedAnswer":{"@type":"Answer","text":"Costs depend on usage volume. A typical SMB running 5,000 conversations a month on GPT-4 or Claude class models spends Rs 8,000 to Rs 25,000 per month on tokens, plus hosting and integration. Most businesses see payback within 60-90 days if the agent replaces one full-time support or inside sales role."}},{"@type":"Question","name":"Can AI agents replace human employees?","acceptedAnswer":{"@type":"Answer","text":"Not entirely. Agents work best for repetitive, structured tasks with clear success criteria — lead qualification, appointment booking, first-line support, invoice data entry. They struggle with judgment calls, angry customers, and anything requiring context the agent does not already have access to."}},{"@type":"Question","name":"Is my business data safe with AI agents?","acceptedAnswer":{"@type":"Answer","text":"If the agent is built on the public ChatGPT or Gemini consumer app, your data may be used for training. If it is built using enterprise APIs (OpenAI API, Anthropic API, AWS Bedrock) with proper terms, your data is not used for training. For sensitive workflows like payroll or financials, use private deployment or on-premise models."}}]}</script>
+<style>
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -180,6 +193,30 @@ if(localStorage.getItem('sw_cookie')==='accepted'){
       </ol>
 
       <p>At the end of 90 days, you will have real data — not vendor slides — on whether an agent fits this specific workflow in your specific business. If it works, expand to the next workflow. If it does not, you have spent 90 days and a small budget, not a year and a big one.</p>
+
+      <!-- FAQ -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions about this topic.</p>
+    <details class="faq-item">
+      <summary>What is the difference between an AI agent and a chatbot?</summary>
+      <div class="faq-answer">A chatbot follows a fixed decision tree and answers questions. An AI agent takes actions — it can read a WhatsApp message, check inventory in your ERP, book an appointment in your calendar, send a confirmation, and log the outcome in CRM, all without a human clicking buttons between each step.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How much do AI agents cost to run per month?</summary>
+      <div class="faq-answer">Costs depend on usage volume. A typical SMB running 5,000 conversations a month on GPT-4 or Claude class models spends Rs 8,000 to Rs 25,000 per month on tokens, plus hosting and integration. Most businesses see payback within 60-90 days if the agent replaces one full-time support or inside sales role.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can AI agents replace human employees?</summary>
+      <div class="faq-answer">Not entirely. Agents work best for repetitive, structured tasks with clear success criteria — lead qualification, appointment booking, first-line support, invoice data entry. They struggle with judgment calls, angry customers, and anything requiring context the agent does not already have access to.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Is my business data safe with AI agents?</summary>
+      <div class="faq-answer">If the agent is built on the public ChatGPT or Gemini consumer app, your data may be used for training. If it is built using enterprise APIs (OpenAI API, Anthropic API, AWS Bedrock) with proper terms, your data is not used for training. For sensitive workflows like payroll or financials, use private deployment or on-premise models.</div>
+    </details>
+  </div>
+</section>
 
       <!-- CTA -->
       <div class="post-cta">
