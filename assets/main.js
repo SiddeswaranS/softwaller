@@ -636,3 +636,17 @@ if (nlForm) {
   var nlEmail = document.getElementById('nl-email');
   if (nlEmail) nlEmail.addEventListener('input', function () { nlEmail.classList.remove('nl-error'); });
 }
+
+// Footer self-link aria-current marker (a11y)
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '/');
+  var footerLinks = document.querySelectorAll('footer a, .pfooter a, .fc-links a');
+  footerLinks.forEach(function(link) {
+    try {
+      var linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '/');
+      if (linkPath === path && link.getAttribute('href').indexOf('#') === -1) {
+        link.setAttribute('aria-current', 'page');
+      }
+    } catch (e) { /* ignore invalid URLs */ }
+  });
+});
