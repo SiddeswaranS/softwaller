@@ -1,0 +1,88 @@
+---
+// Sitewide sitemap modal — opens via the "Sitemap" link in the footer.
+// Hash-targets like #home, #services, #faq only resolve on the home page; on other pages
+// the link goes to /<hash> via the [data-sitemap-goto] handler in main.js. Absolute paths
+// for navigation links so the modal works from any depth.
+---
+
+<div class="pol-overlay" id="pol-sitemap" role="dialog" aria-modal="true" aria-labelledby="sm-title">
+  <div class="pol-modal">
+    <div class="pol-header">
+      <div class="pol-title" id="sm-title"><i class="fa-solid fa-sitemap" style="color:var(--blue);margin-right:8px"></i>Sitemap</div>
+      <button class="pol-close" data-close-policy="sitemap" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="pol-body">
+      <p class="pol-date">Softwaller Technologies Private Limited &nbsp;|&nbsp; www.softwaller.com</p>
+      <h2>Main Pages</h2>
+      <ul>
+        <li><a href="/#home" data-sitemap-goto="home">Home — Overview, hero, stats</a></li>
+        <li><a href="/about.html">About Us — Company story, team, values, timeline</a></li>
+        <li><a href="/#services" data-sitemap-goto="services">Services — 18+ software solutions</a></li>
+        <li><a href="/case-studies.html">Case Studies — Real projects with measurable results</a></li>
+        <li><a href="/portfolio.html">Portfolio — Software we've built</a></li>
+        <li><a href="/industries.html">Industries — 6 verticals we serve</a></li>
+        <li><a href="/blog/">Blog — Insights &amp; resources</a></li>
+        <li><a href="/#process" data-sitemap-goto="process">How We Work — Our development process</a></li>
+        <li><a href="/#solutions" data-sitemap-goto="solutions">Solutions — Real solutions we deliver</a></li>
+        <li><a href="/#faq" data-sitemap-goto="faq">FAQ — Frequently asked questions</a></li>
+        <li><a href="/#contact" data-sitemap-goto="contact">Contact Us — Enquiry form and contact details</a></li>
+      </ul>
+      <h2>Services (18+ Solutions)</h2>
+      <ul>
+        <li><a href="/products/crm-software.html">CRM Software — Lead management, sales pipeline, follow-up automation</a></li>
+        <li><a href="/products/erp-solutions.html">ERP Solutions — Finance, procurement, production, HR integration</a></li>
+        <li><a href="/products/inventory-management.html">Inventory Management — Multi-warehouse, barcode/QR, auto reorder</a></li>
+        <li><a href="/products/hr-payroll.html">HR &amp; Payroll — Attendance, leave, payroll, ESI/PF compliance</a></li>
+        <li><a href="/products/gst-billing-accounting.html">GST Billing &amp; Accounting — e-Invoice, e-Way Bill, GSTR exports</a></li>
+        <li><a href="/products/custom-business-apps.html">Custom Business Apps — Web apps, mobile apps, portals, dashboards</a></li>
+        <li><a href="/products/e-commerce.html">E-Commerce &amp; Online Store — Product catalog, payments, orders</a></li>
+        <li><a href="/products/field-service.html">Field Service &amp; Sales Force — GPS tracking, task assignment</a></li>
+        <li><a href="/products/whatsapp-automation.html">WhatsApp Business Automation — Chatbots, bulk messaging, API</a></li>
+        <li><a href="/products/project-management.html">Project &amp; Task Management — Timelines, sprints, team tracking</a></li>
+        <li><a href="/products/helpdesk.html">Helpdesk &amp; Ticket Management — SLA tracking, knowledge base</a></li>
+        <li><a href="/products/document-management.html">Document Management (DMS) — File storage, versioning, access control</a></li>
+        <li><a href="/products/warehouse-management.html">Warehouse Management (WMS) — Pick/pack, barcode, stock transfers</a></li>
+        <li><a href="/products/fleet-logistics.html">Fleet &amp; Logistics — Route planning, vehicle tracking, delivery</a></li>
+        <li><a href="/products/appointment-booking.html">Appointment &amp; Booking — Online scheduling, reminders, payments</a></li>
+        <li><a href="/products/business-intelligence.html">Business Intelligence — KPI dashboards, reports, analytics</a></li>
+        <li><a href="/products/school-management.html">School &amp; Institute Management — Students, fees, attendance</a></li>
+        <li><a href="/products/real-estate.html">Real Estate &amp; Property — Listings, leads, site visits, docs</a></li>
+      </ul>
+      <h2>Blog</h2>
+      <ul>
+        <li><a href="/blog/crm-vs-spreadsheets.html">CRM vs Spreadsheets: Why Growing Businesses Need Custom CRM</a></li>
+        <li><a href="/blog/gst-billing-software.html">How GST Billing Software Saves 20+ Hours Per Month</a></li>
+        <li><a href="/blog/custom-erp-vs-readymade.html">Custom ERP vs Ready-Made ERP: Which Is Right?</a></li>
+        <li><a href="/blog/whatsapp-automation-signs.html">5 Signs Your Business Needs WhatsApp Automation</a></li>
+        <li><a href="/blog/inventory-management-mistakes.html">7 Inventory Management Mistakes Killing Your Profits</a></li>
+        <li><a href="/blog/hr-payroll-compliance-india.html">HR &amp; Payroll Compliance in India: What Businesses Get Wrong</a></li>
+        <li><a href="/blog/ecommerce-website-vs-marketplace.html">E-Commerce Website vs Marketplace: A Cost Comparison</a></li>
+        <li><a href="/blog/business-process-automation-guide.html">Small Business Guide to Process Automation</a></li>
+        <li><a href="/blog/field-sales-team-mobile-app.html">Why Field Sales Teams Fail Without a Mobile App</a></li>
+        <li><a href="/blog/document-management-hidden-cost.html">Document Management: The Hidden Cost of Searching for Files</a></li>
+        <li><a href="/blog/school-management-software-guide.html">How to Choose the Right School Management Software</a></li>
+        <li><a href="/blog/fleet-logistics-tracking.html">Fleet &amp; Logistics Tracking: Guesswork to Real-Time Visibility</a></li>
+        <li><a href="/blog/business-dashboard-guide.html">Why Every Business Needs a Dashboard</a></li>
+        <li><a href="/blog/appointment-booking-software.html">Appointment Booking: Stop Losing Customers to Missed Calls</a></li>
+        <li><a href="/blog/helpdesk-ticket-management.html">Helpdesk: Handle 10x More Tickets Without Hiring</a></li>
+        <li><a href="/blog/real-estate-crm-software.html">Real Estate CRM: Leads, Site Visits, and Closings</a></li>
+      </ul>
+      <h2>Legal</h2>
+      <ul>
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/terms-of-service.html">Terms of Service</a></li>
+        <li><a href="/refund-policy.html">Refund Policy</a></li>
+      </ul>
+      <h2>Contact Information</h2>
+      <ul>
+        <li>CIN: U62099TN2024PTC172175</li>
+        <li>Registered Office: 3-15/8 Singandi Lakshmana, Mudhali St, Tharamangalam, Salem &ndash; 636 502, Tamil Nadu</li>
+        <li>Operations: Chennai, Tamil Nadu, India</li>
+        <li>Email: <a href="mailto:info@softwaller.com">info@softwaller.com</a></li>
+        <li>Phone: <a href="tel:+919585999819">+91 95859 99819</a></li>
+        <li>WhatsApp: <a href="https://wa.me/919585999819" target="_blank">Chat on WhatsApp</a></li>
+        <li>Hours: Monday &ndash; Saturday, 9:00 AM &ndash; 6:00 PM IST</li>
+      </ul>
+    </div>
+  </div>
+</div>
