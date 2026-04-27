@@ -300,8 +300,9 @@ const jsonLd = [
     .lir-head p{color:var(--muted);font-size:16px;line-height:1.6;margin:0}
     .lir-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
     .lir-grid.lir-grid-5{grid-template-columns:repeat(5,1fr)}
-    @media (max-width:1024px){.lir-grid,.lir-grid.lir-grid-5{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:560px){.lir-grid,.lir-grid.lir-grid-5{grid-template-columns:1fr}}
+    .lir-grid.lir-grid-3{grid-template-columns:repeat(3,1fr);max-width:1000px;margin-left:auto;margin-right:auto}
+    @media (max-width:1024px){.lir-grid,.lir-grid.lir-grid-3,.lir-grid.lir-grid-5{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.lir-grid,.lir-grid.lir-grid-3,.lir-grid.lir-grid-5{grid-template-columns:1fr}}
     .lir-card{display:flex;flex-direction:column;gap:10px;padding:22px;background:#fff;border:1px solid #E5E7EB;border-radius:14px;text-decoration:none;color:var(--ink);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;height:100%}
     .lir-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(21,87,255,.08);border-color:var(--blue)}
     .lir-card-ic{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--blue-bg);color:var(--blue);font-size:18px}
@@ -1601,8 +1602,9 @@ const jsonLd = [
     .lir-head p{color:var(--muted);font-size:16px;line-height:1.6;margin:0}
     .lir-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
     .lir-grid.lir-grid-5{grid-template-columns:repeat(5,1fr)}
-    @media (max-width:1024px){.lir-grid,.lir-grid.lir-grid-5{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:560px){.lir-grid,.lir-grid.lir-grid-5{grid-template-columns:1fr}}
+    .lir-grid.lir-grid-3{grid-template-columns:repeat(3,1fr);max-width:1000px;margin-left:auto;margin-right:auto}
+    @media (max-width:1024px){.lir-grid,.lir-grid.lir-grid-3,.lir-grid.lir-grid-5{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.lir-grid,.lir-grid.lir-grid-3,.lir-grid.lir-grid-5{grid-template-columns:1fr}}
     .lir-card{display:flex;flex-direction:column;gap:10px;padding:22px;background:#fff;border:1px solid #E5E7EB;border-radius:14px;text-decoration:none;color:var(--ink);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;height:100%}
     .lir-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(21,87,255,.08);border-color:var(--blue)}
     .lir-card-ic{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--blue-bg);color:var(--blue);font-size:18px}
@@ -1657,7 +1659,7 @@ const jsonLd = [
         <h2>Industries We Build For — <em>Custom ERP, CRM &amp; Billing</em></h2>
         <p>Industry-specific workflows generic SaaS can't handle. Yarn lot tracking, jewellery RFID, distributor schemes, multi-shift manufacturing — built for how Indian businesses actually run.</p>
       </div>
-      <div class="lir-grid">
+      <div class="lir-grid lir-grid-3">
         <a href="/industries/textile-erp.html" class="lir-card reveal">
           <div class="lir-card-ic"><i class="fa-solid fa-shirt"></i></div>
           <h3 class="lir-card-title">Textile ERP</h3>
