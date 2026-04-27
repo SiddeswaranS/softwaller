@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const title = "Custom Software Development Company in Chennai | Softwaller";
-const description = "Custom software development company in Chennai building CRM, ERP, inventory, GST billing, and WhatsApp Business automation for SMEs. In-person meetings, Tamil-speaking team, fixed-price quotes.";
+const title = "Custom Software Chennai — On-Site Local Team | Softwaller";
+const description = "Chennai-focused custom software — CRM, ERP, inventory, GST billing, WhatsApp automation for SMEs. In-person meetings, Tamil team, fixed-price quotes.";
 const canonical = "https://www.softwaller.com/locations/chennai.html";
 const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
-const ogTitle = "Custom Software Development Company in Chennai | Softwaller";
+const ogTitle = "Custom Software Chennai — On-Site Local Team | Softwaller";
 const ogDescription = "Chennai-focused custom software development for SMEs — CRM, ERP, inventory, GST billing, WhatsApp Business automation. Built in Chennai. Delivered across India.";
 const jsonLd = [
   {
@@ -33,13 +33,28 @@ const jsonLd = [
   },
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
+    "@id": "https://www.softwaller.com/locations/chennai.html#business",
     "name": "Softwaller Technologies Private Limited",
+    "alternateName": "Softwaller Chennai",
     "image": "https://www.softwaller.com/assets/og-image.jpg",
     "url": "https://www.softwaller.com/locations/chennai.html",
     "telephone": "+91-95859-99819",
     "email": "info@softwaller.com",
-    "priceRange": "₹₹",
+    "priceRange": "INR",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3-15/8 Singandi Lakshmana, Mudhali Street, Tharamangalam",
+      "addressLocality": "Salem",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "636502",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
     "areaServed": [
       {
         "@type": "City",
