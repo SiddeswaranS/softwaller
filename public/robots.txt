@@ -75,7 +75,7 @@ User-agent: Omgili
 Disallow: /
 
 # Sitemap
-Sitemap: https://www.softwaller.com/sitemap.xml
+Sitemap: https://www.softwaller.com/sitemap-index.xml
 
 # LLM index — curated map for AI search engines (ChatGPT, Claude, Perplexity, Gemini)
 # https://www.softwaller.com/llms.txt
