@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Delete Your CostWise Account &mdash; Softwaller";
+const description = "Request deletion of your CostWise account and all cloud-stored data. Required by Google Play&rsquo;s data deletion policy. 7 business day SLA.";
+const canonical = "https://www.softwaller.com/costwise-delete-account.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Delete Your CostWise Account &mdash; Softwaller";
+const ogDescription = "How to request deletion of your CostWise account and all cloud-stored data.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Delete Your CostWise Account",
+    "description": "How to request deletion of your CostWise account and all cloud-stored data.",
+    "url": "https://www.softwaller.com/costwise-delete-account.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "url": "https://www.softwaller.com"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.softwaller.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Delete CostWise Account",
+          "item": "https://www.softwaller.com/costwise-delete-account.html"
+        }
+      ]
+    }
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <style is:global slot="head-css" set:html={`
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a2e;line-height:1.7;background:#fff}
+  .container{max-width:800px;margin:0 auto;padding:40px 24px 80px}
+  h1{font-size:28px;margin-bottom:8px;color:#1a1a2e}
+  .pol-date{color:#666;font-size:14px;margin-bottom:32px}
+  h2{font-size:18px;margin:28px 0 8px;color:#1a1a2e}
+  p{margin-bottom:12px;font-size:15px;color:#333}
+  ul{margin:0 0 12px 24px}
+  li{margin-bottom:6px;font-size:15px;color:#333}
+  a{color:#1557FF}
+  .back-link{display:inline-block;margin-bottom:24px;font-size:14px;color:#1557FF;text-decoration:none}
+  .back-link:hover{text-decoration:underline}
+  .callout{background:#F7F8FC;border-left:4px solid #1557FF;padding:16px 20px;border-radius:6px;margin:16px 0}
+`}></style>
+  <Fragment set:html={`<div class="container">
+  <a href="/" class="back-link">&larr; Back to softwaller.com</a>
+  <h1>Delete Your CostWise Account</h1>
+  <p class="pol-date">Last updated: 6 April 2026 | Softwaller Technologies Private Limited</p>
+
+  <p>This page explains how to request deletion of your <strong>CostWise</strong> account and all the data we hold about you in the cloud. We comply with Google Play&rsquo;s data deletion policy and the requirements of the Digital Personal Data Protection Act, 2023 (DPDPA).</p>
+
+  <h2>1. How to Request Deletion</h2>
+  <p>To delete your CostWise account, send us an email:</p>
+  <div class="callout">
+    <p style="margin:0"><strong>To:</strong> <a href="mailto:apps@softwaller.com?subject=Delete%20my%20CostWise%20account">apps@softwaller.com</a><br>
+    <strong>Subject:</strong> Delete my CostWise account<br>
+    <strong>From:</strong> the email address you used to sign up for CostWise</p>
+  </div>
+  <p>Sending the request from your registered email lets us verify the request without asking for additional personal information. If you no longer have access to that email, please tell us in your message and we will guide you through identity verification.</p>
+
+  <h2>2. What Gets Deleted</h2>
+  <p>When we process your deletion request, we permanently remove the following:</p>
+  <ul>
+    <li><strong>Firebase Authentication user</strong> &mdash; your email, Firebase user ID, and any sign-in credentials.</li>
+    <li><strong>Firestore data</strong> &mdash; all expenses, persons, categories, budgets, settings, and related records that were synced to the cloud.</li>
+    <li><strong>Receipt photos</strong> &mdash; any images you uploaded to Firebase Cloud Storage.</li>
+    <li><strong>Firebase Cloud Messaging (FCM) tokens</strong> &mdash; the device tokens used to send you push notifications.</li>
+    <li><strong>RevenueCat customer record</strong> &mdash; the subscription entitlement record tied to your account.</li>
+  </ul>
+
+  <h2>3. What Is Kept (and Why)</h2>
+  <ul>
+    <li><strong>Subscription invoices and tax records</strong> &mdash; we are required to retain these for up to 7 years under Indian tax law (GST and Income Tax Act).</li>
+    <li><strong>Anonymised analytics and crash logs</strong> &mdash; these are not tied to your identity and cannot be linked back to you.</li>
+    <li><strong>Email correspondence</strong> &mdash; support emails you sent us are retained for up to 1 year for record-keeping, then deleted.</li>
+  </ul>
+
+  <h2>4. Local Data on Your Device</h2>
+  <p>CostWise also stores data locally on your phone in a SQLite database. <strong>This data is not deleted by an account deletion request</strong> because we never had it in the first place &mdash; it lives only on your device.</p>
+  <p>To remove local data:</p>
+  <ul>
+    <li>Open <em>CostWise &rarr; Settings &rarr; Privacy &rarr; Erase All Local Data</em>, OR</li>
+    <li>Uninstall the CostWise app from your device. Uninstalling automatically removes the local database and any locally cached photos.</li>
+  </ul>
+
+  <h2>5. How Long It Takes</h2>
+  <p>We process all account deletion requests within <strong>7 business days</strong> of receiving them. You will receive a confirmation email once the deletion is complete.</p>
+  <p>If your request requires additional verification, we may take a few extra days, but we will keep you updated.</p>
+
+  <h2>6. Cancel Your Subscription First</h2>
+  <p>If you have an active CostWise Premium subscription, please <strong>cancel it through Google Play before requesting deletion</strong>, otherwise Google may continue to bill you. To cancel:</p>
+  <ul>
+    <li>Open the Google Play Store app.</li>
+    <li>Tap your profile icon &rarr; <em>Payments &amp; subscriptions</em> &rarr; <em>Subscriptions</em>.</li>
+    <li>Tap <strong>CostWise</strong> &rarr; <em>Cancel subscription</em>.</li>
+  </ul>
+  <p>Refunds are governed by the <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play refund policy</a>. Softwaller cannot directly refund Google Play purchases.</p>
+
+  <h2>7. Questions</h2>
+  <p>If you have any questions about this process, write to <a href="mailto:apps@softwaller.com">apps@softwaller.com</a>.</p>
+  <p><strong>Softwaller Technologies Private Limited</strong> (CIN: U62099TN2024PTC172175), 3-15/8, Singandi Lakshmana Mudhali Street, Tharamangalam, Salem &ndash; 636 502, Tamil Nadu, India.</p>
+</div>`} />
+</BaseLayout>

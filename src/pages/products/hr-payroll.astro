@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Custom HRMS with Biometric, PF, ESI + TDS | Softwaller";
+const description = "Custom HRMS with face recognition attendance, leave automation, PF/ESI/TDS compliance, and DPDP-ready employee self-service. From ₹4L, 6-week deployment.";
+const canonical = "https://www.softwaller.com/products/hr-payroll.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Custom HRMS with Biometric, PF, ESI + TDS | Softwaller";
+const ogDescription = "Custom HRMS with face recognition attendance, leave automation, PF/ESI/TDS compliance, and DPDP-ready employee self-service. From ₹4L.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.softwaller.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "HR &amp; Payroll System"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "HR & Payroll System",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Custom HRMS with face recognition attendance, leave automation, PF/ESI/TDS compliance, and DPDP-ready employee self-service. From ₹4L, 6-week deployment.",
+    "url": "https://www.softwaller.com/products/hr-payroll.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "url": "https://www.softwaller.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "description": "Free consultation"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does your payroll software handle PF, ESI, PT, TDS, and Form 16?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Statutory components are computed automatically every payroll cycle: PF (12 percent up to wage ceiling), ESI (0.75 percent employee + 3.25 percent employer), state-wise PT, TDS as per slabs, and year-end Form 16 generation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does attendance integrate with payroll?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Attendance flows from biometric devices, mobile GPS check-in, RFID, or face recognition into a single dashboard. Leave, overtime, late-coming, and shift premiums automatically reflect in salary calculations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is your software DPDP Act compliant for employee data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We follow DPDP Act 2023 norms: explicit consent capture, role-based access, audit logs, encryption at rest, India data residency, and a defined data retention and deletion policy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can employees see payslips and apply for leave on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The Employee Self-Service (ESS) app on Android and iOS gives access to payslips, Form 16, leave application, attendance correction, IT declaration, and reimbursement claims."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <style is:global slot="head-css" set:html={`
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+<section class="phero">
+  <div class="phero-inner">
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-users"></i></div>
+      <h1>Custom HRMS Built for Indian Statutory Compliance</h1>
+      <p>Biometric and face-recognition attendance, payroll with auto PF, ESI, TDS and PT calculations, geo-fenced leave, and branded payslips. Single platform from hire to F&F settlement.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="20" y="20" width="360" height="36" rx="8" fill="#ECFDF5"/><text x="200" y="43" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="12" font-weight="700" fill="#059669">HR Dashboard — March 2026</text><rect x="25" y="72" width="110" height="62" rx="8" fill="#EBF0FF" stroke="#C2CFFF" stroke-width="1"/><text x="80" y="94" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="20" font-weight="800" fill="#1557FF">248</text><text x="80" y="108" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">Employees</text><text x="80" y="120" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#059669">+12 this month</text><rect x="145" y="72" width="110" height="62" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/><text x="200" y="94" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="20" font-weight="800" fill="#059669">94%</text><text x="200" y="108" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">Attendance</text><text x="200" y="120" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#059669">Today</text><rect x="265" y="72" width="110" height="62" rx="8" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/><text x="320" y="94" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="20" font-weight="800" fill="#7C3AED">18</text><text x="320" y="108" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#6B7694">On Leave</text><text x="320" y="120" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#EA580C">3 pending</text><rect x="25" y="148" width="350" height="48" rx="8" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><text x="40" y="167" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#0A0F1E">Payroll Status</text><rect x="40" y="176" width="300" height="10" rx="5" fill="#ECFDF5"/><rect x="40" y="176" width="252" height="10" rx="5" fill="#059669"/><text x="350" y="184" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#059669">84%</text><rect x="25" y="208" width="170" height="68" rx="8" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><text x="40" y="230" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#0A0F1E">PF/ESI Filed</text><circle cx="172" cy="228" r="10" fill="#ECFDF5"/><text x="172" y="232" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#059669">&#x2713;</text><text x="40" y="252" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#6B7694">March 2026 — Submitted</text><text x="40" y="266" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#059669">On time</text><rect x="205" y="208" width="170" height="68" rx="8" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><text x="220" y="230" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#0A0F1E">Payslips Sent</text><circle cx="352" cy="228" r="10" fill="#EBF0FF"/><text x="352" y="232" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#1557FF">&#x2713;</text><text x="220" y="252" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#6B7694">230 / 248 delivered</text><text x="220" y="266" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#1557FF">93% complete</text></svg>
+    </div>
+  </div>
+</section>
+
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
+  <div class="pfeatures-inner">
+    <h2>Complete People Management</h2>
+    <p class="sub">12 modules to streamline HR operations and keep your workforce happy and compliant.</p>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-fingerprint"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Biometric Attendance</h3>
+          <p itemprop="description">Integration with biometric devices and mobile GPS. Accurate attendance tracking with geo-fencing support.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-calendar-check"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Leave Management</h3>
+          <p itemprop="description">Leave application, approval workflows, balance tracking, and carryover rules. Fully configurable leave policies.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-money-check-dollar"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Payroll Processing</h3>
+          <p itemprop="description">Auto salary calculation with overtime, deductions, arrears, and bonuses. Process payroll in minutes, not days.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-landmark"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">ESI / PF / TDS</h3>
+          <p itemprop="description">Statutory compliance with auto calculation and filing support. Stay compliant with zero manual effort.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-file-lines"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">Payslip Generation</h3>
+          <p itemprop="description">Branded payslips delivered via email and employee portal. Professional, detailed, and always on time.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-user-plus"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Employee Onboarding</h3>
+          <p itemprop="description">Digital onboarding with document collection and checklist. Get new hires productive from day one.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-clock"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Shift Management</h3>
+          <p itemprop="description">Flexible shift scheduling with rotation and swap capabilities. Handle complex shift patterns effortlessly.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Loan & Advance</h3>
+          <p itemprop="description">Employee loan management with automatic EMI deduction from salary. Track disbursement and recovery.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-door-open"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Exit Management</h3>
+          <p itemprop="description">Full and final settlement with clearance workflow. Smooth offboarding with complete documentation.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-user-gear"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Employee Self-Service</h3>
+          <p itemprop="description">Portal for leave requests, payslip downloads, tax declarations, and expense claims. Empower your employees.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-bullseye"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Performance Appraisal</h3>
+          <p itemprop="description">Goal setting, KRA/KPI tracking, and appraisal cycles. Drive performance with structured evaluation.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Training Management</h3>
+          <p itemprop="description">Schedule training programs, track attendance, and collect feedback. Invest in your team's growth.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="pwhy">
+  <div class="pwhy-inner">
+    <h2>Why Choose Softwaller</h2>
+    <p class="sub">We don't just build software — we build solutions that grow with your business.</p>
+    <div class="pwhy-grid">
+      <div class="pwhy-item">
+        <i class="fa-solid fa-pencil-ruler"></i>
+        <div><h3>Built for Your Workflow</h3><p>Custom-designed to match how your team actually works, not the other way around.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-arrow-up-right-dots"></i>
+        <div><h3>Scale as You Grow</h3><p>Architecture designed to handle 500+ concurrent users without breaking a sweat.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <div><h3>Mobile Ready</h3><p>Access from any device, anywhere, anytime. Your office travels with you.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-plug"></i>
+        <div><h3>Integration Ready</h3><p>Connect with Tally, WhatsApp, payment gateways, and more out of the box.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-headset"></i>
+        <div><h3>Ongoing Support</h3><p>3 months free support plus AMC options after go-live. We're always here for you.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div><h3>Data Security</h3><p>Role-based access, encryption, and audit trails keep your business data safe.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-related">
+  <div class="p-related-inner">
+    <h2>Related Solutions</h2>
+    <p class="sub">Explore other software that works great alongside this solution.</p>
+    <div class="p-related-grid">
+      <a href="/erp-solutions.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-building"></i></div>
+        <h3>ERP Solutions</h3>
+        <p>Unified business operations</p>
+        <div class="pr-link">ERP Solutions <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/project-management.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-diagram-project"></i></div>
+        <h3>Project Management</h3>
+        <p>Tasks, timelines &amp; teams</p>
+        <div class="pr-link">Project Management <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/gst-billing-accounting.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h3>GST Billing &amp; Accounting</h3>
+        <p>GST-compliant billing</p>
+        <div class="pr-link">GST Billing &amp; Accounting <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pcta">
+  <div class="pcta-inner">
+    <h2>Ready to Simplify HR & Payroll?</h2>
+    <p>Get a free consultation and see how our system can automate your entire HR operations.</p>
+    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>Does your payroll software handle PF, ESI, PT, TDS, and Form 16?</summary>
+      <div class="faq-answer">Yes. Statutory components are computed automatically every payroll cycle: PF (12 percent up to wage ceiling), ESI (0.75 percent employee + 3.25 percent employer), state-wise PT, TDS as per slabs, and year-end Form 16 generation.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How does attendance integrate with payroll?</summary>
+      <div class="faq-answer">Attendance flows from biometric devices, mobile GPS check-in, RFID, or face recognition into a single dashboard. Leave, overtime, late-coming, and shift premiums automatically reflect in salary calculations.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Is your software DPDP Act compliant for employee data?</summary>
+      <div class="faq-answer">Yes. We follow DPDP Act 2023 norms: explicit consent capture, role-based access, audit logs, encryption at rest, India data residency, and a defined data retention and deletion policy.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can employees see payslips and apply for leave on mobile?</summary>
+      <div class="faq-answer">Yes. The Employee Self-Service (ESS) app on Android and iOS gives access to payslips, Form 16, leave application, attendance correction, IT declaration, and reimbursement claims.</div>
+    </details>
+  </div>
+</section>
+
+`} />
+</BaseLayout>

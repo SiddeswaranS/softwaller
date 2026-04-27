@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Custom Project Management Software with Kanban + Gantt | Softwaller";
+const description = "Custom project management software with Kanban boards, Gantt charts, time tracking, resource allocation, and team chat. Built to your workflow. 8 weeks.";
+const canonical = "https://www.softwaller.com/products/project-management.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Custom Project Management Software with Kanban + Gantt | Softwaller";
+const ogDescription = "Custom project management software with Kanban boards, Gantt charts, time tracking, resource allocation, and team chat. 8 weeks.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.softwaller.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Project &amp; Task Management"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Project & Task Management",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Custom project management software with Kanban boards, Gantt charts, time tracking, resource allocation, and team chat. Built to your workflow. 8 weeks.",
+    "url": "https://www.softwaller.com/products/project-management.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "url": "https://www.softwaller.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "description": "Free consultation"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does it support Gantt charts, Kanban, and time tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Each project supports Gantt, Kanban, list, and calendar views with drag-and-drop. Time tracking runs per task with manual entry or live timers, and converts to client invoices automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does it handle client billing for project work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Time entries roll up to billable hours, fixed-fee milestones, and retainers. Invoices generate automatically with GST, TDS, and currency conversion. Clients pay via integrated Razorpay and Stripe links."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can clients see project progress in a portal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A white-labeled client portal shows milestones, completed tasks, blocked items, screenshots, and invoices. Clients comment on tasks and approve deliverables without needing to log into your main system."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it integrate with Slack, Teams, and Google Workspace?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Notifications, daily standup posts, and task creation work from Slack and Microsoft Teams. Google Drive and OneDrive attach files directly. Calendar invites flow to Google and Outlook."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <style is:global slot="head-css" set:html={`
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+<section class="phero">
+  <div class="phero-inner">
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-list-check"></i></div>
+      <h1>Custom Project Management with Kanban & Gantt</h1>
+      <p>Plan sprints on Kanban boards, schedule milestones on Gantt charts, log billable hours, and track resource load — all in one workspace. Built for Indian agencies, IT teams, and consulting firms. Live in 6–8 weeks.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="20" y="20" width="360" height="30" rx="8" fill="#F7F8FC"/><text x="200" y="40" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#1557FF">Sprint 14 — Kanban Board</text><rect x="25" y="62" width="110" height="218" rx="8" fill="#EBF0FF" stroke="#C2CFFF" stroke-width="1"/><text x="80" y="82" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#1557FF">TO DO (4)</text><rect x="33" y="92" width="94" height="36" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><rect x="39" y="98" width="50" height="5" rx="2" fill="#C2CFFF"/><rect x="39" y="108" width="70" height="4" rx="2" fill="#E4E7F0"/><rect x="39" y="117" width="30" height="4" rx="2" fill="#E4E7F0"/><rect x="33" y="134" width="94" height="36" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><rect x="39" y="140" width="60" height="5" rx="2" fill="#C2CFFF"/><rect x="39" y="150" width="75" height="4" rx="2" fill="#E4E7F0"/><rect x="39" y="159" width="40" height="4" rx="2" fill="#E4E7F0"/><rect x="33" y="176" width="94" height="36" rx="6" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><rect x="39" y="182" width="55" height="5" rx="2" fill="#C2CFFF"/><rect x="39" y="192" width="65" height="4" rx="2" fill="#E4E7F0"/><rect x="145" y="62" width="110" height="218" rx="8" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/><text x="200" y="82" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#EA580C">IN PROGRESS (3)</text><rect x="153" y="92" width="94" height="36" rx="6" fill="#fff" stroke="#FED7AA" stroke-width="1"/><rect x="159" y="98" width="50" height="5" rx="2" fill="#FED7AA"/><rect x="159" y="108" width="70" height="4" rx="2" fill="#E4E7F0"/><rect x="159" y="117" width="45" height="4" rx="2" fill="#E4E7F0"/><rect x="153" y="134" width="94" height="36" rx="6" fill="#fff" stroke="#FED7AA" stroke-width="1"/><rect x="159" y="140" width="60" height="5" rx="2" fill="#FED7AA"/><rect x="159" y="150" width="65" height="4" rx="2" fill="#E4E7F0"/><rect x="265" y="62" width="110" height="218" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/><text x="320" y="82" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#059669">DONE (5)</text><rect x="273" y="92" width="94" height="36" rx="6" fill="#fff" stroke="#A7F3D0" stroke-width="1"/><rect x="279" y="98" width="50" height="5" rx="2" fill="#A7F3D0"/><rect x="279" y="108" width="70" height="4" rx="2" fill="#E4E7F0"/><line x1="279" y1="120" x2="355" y2="120" stroke="#A7F3D0" stroke-width="1"/><rect x="273" y="134" width="94" height="36" rx="6" fill="#fff" stroke="#A7F3D0" stroke-width="1"/><rect x="279" y="140" width="45" height="5" rx="2" fill="#A7F3D0"/><rect x="279" y="150" width="60" height="4" rx="2" fill="#E4E7F0"/><rect x="273" y="176" width="94" height="36" rx="6" fill="#fff" stroke="#A7F3D0" stroke-width="1"/><rect x="279" y="182" width="55" height="5" rx="2" fill="#A7F3D0"/><rect x="279" y="192" width="75" height="4" rx="2" fill="#E4E7F0"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
+  <div class="pfeatures-inner">
+    <h2>Plan, Track, and Deliver</h2>
+    <p class="sub">12 essential modules for managing projects, tasks, and teams from start to finish.</p>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-table-columns"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Kanban Boards</h3>
+          <p itemprop="description">Visual task boards with drag-and-drop workflow to move tasks through stages and track progress at a glance.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-timeline"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Gantt Charts</h3>
+          <p itemprop="description">Project timeline view with milestones, dependencies, and critical path visualization for planning ahead.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-stopwatch"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Time Tracking</h3>
+          <p itemprop="description">Log hours per task with timesheets, billing rates, and detailed reports for accurate project costing.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-diagram-project"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">Task Dependencies</h3>
+          <p itemprop="description">Define task relationships, blockers, and critical path to ensure work flows in the right sequence.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-people-group"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">Team Collaboration</h3>
+          <p itemprop="description">Comments, file sharing, and @mentions on tasks to keep conversations in context and teams aligned.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-bolt"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Sprint Planning</h3>
+          <p itemprop="description">Agile sprint management with backlog grooming, velocity tracking, and sprint retrospective tools.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-user-gear"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Resource Allocation</h3>
+          <p itemprop="description">Assign team members with capacity view and workload balancing to prevent burnout and optimize output.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-file-zipper"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Document Sharing</h3>
+          <p itemprop="description">Attach and version-control project documents with easy access for the entire team in one place.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-wallet"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Budget Tracking</h3>
+          <p itemprop="description">Track project costs against budget with real-time alerts when spending approaches or exceeds limits.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-sitemap"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Custom Workflows</h3>
+          <p itemprop="description">Define custom task statuses, approval flows, and automation rules tailored to your team's process.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-chart-pie"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Reporting Dashboard</h3>
+          <p itemprop="description">Project health overview, burndown charts, and team productivity metrics for data-driven decisions.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-eye"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Client Portal</h3>
+          <p itemprop="description">Share project progress with clients in a clean, read-only view with milestones and status updates.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="pwhy">
+  <div class="pwhy-inner">
+    <h2>Why Choose Softwaller</h2>
+    <p class="sub">We build software that works as hard as you do. Here's what sets us apart.</p>
+    <div class="pwhy-grid">
+      <div class="pwhy-item">
+        <i class="fa-solid fa-sliders"></i>
+        <div><h3>Built for Your Workflow</h3><p>Custom-designed to match how your team actually works.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-arrow-up-right-dots"></i>
+        <div><h3>Scale as You Grow</h3><p>Architecture designed to handle 500+ concurrent users.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <div><h3>Mobile Ready</h3><p>Access from any device, anywhere, anytime.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-plug"></i>
+        <div><h3>Integration Ready</h3><p>Connect with Tally, WhatsApp, payment gateways, and more.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-headset"></i>
+        <div><h3>Ongoing Support</h3><p>3 months free support + AMC options after go-live.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div><h3>Data Security</h3><p>Role-based access, encryption, and audit trails.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-related">
+  <div class="p-related-inner">
+    <h2>Related Solutions</h2>
+    <p class="sub">Explore other software that works great alongside this solution.</p>
+    <div class="p-related-grid">
+      <a href="/hr-payroll.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-users"></i></div>
+        <h3>HR &amp; Payroll</h3>
+        <p>Employee &amp; payroll management</p>
+        <div class="pr-link">HR &amp; Payroll <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/helpdesk.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-headset"></i></div>
+        <h3>Helpdesk</h3>
+        <p>Ticket &amp; support management</p>
+        <div class="pr-link">Helpdesk <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/crm-software.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>CRM Software</h3>
+        <p>Manage leads, pipeline &amp; sales</p>
+        <div class="pr-link">CRM Software <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pcta">
+  <div class="pcta-inner">
+    <h2>Ready to Get Started?</h2>
+    <p>Tell us about your project and get a free consultation with our team. No commitments, no pressure.</p>
+    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-calendar-check"></i> Book a Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>Does it support Gantt charts, Kanban, and time tracking?</summary>
+      <div class="faq-answer">Yes. Each project supports Gantt, Kanban, list, and calendar views with drag-and-drop. Time tracking runs per task with manual entry or live timers, and converts to client invoices automatically.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How does it handle client billing for project work?</summary>
+      <div class="faq-answer">Time entries roll up to billable hours, fixed-fee milestones, and retainers. Invoices generate automatically with GST, TDS, and currency conversion. Clients pay via integrated Razorpay and Stripe links.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can clients see project progress in a portal?</summary>
+      <div class="faq-answer">Yes. A white-labeled client portal shows milestones, completed tasks, blocked items, screenshots, and invoices. Clients comment on tasks and approve deliverables without needing to log into your main system.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does it integrate with Slack, Teams, and Google Workspace?</summary>
+      <div class="faq-answer">Yes. Notifications, daily standup posts, and task creation work from Slack and Microsoft Teams. Google Drive and OneDrive attach files directly. Calendar invites flow to Google and Outlook.</div>
+    </details>
+  </div>
+</section>
+
+`} />
+</BaseLayout>

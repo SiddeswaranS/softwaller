@@ -1,0 +1,330 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Tally to Cloud Migration: 10-Year Data Without Losing a Voucher | Softwaller";
+const description = "Move from Tally to a cloud accounting platform without losing a decade of vouchers, masters, or audit trail. Step-by-step migration playbook with parallel run and cutover.";
+const canonical = "https://www.softwaller.com/blog/tally-to-cloud-migration.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Tally to Cloud Migration: 10-Year Data Without Losing a Voucher";
+const ogDescription = "Move from Tally to a cloud accounting platform without losing a decade of vouchers, masters, or audit trail. Step-by-step migration playbook with parallel run and cutover.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Tally to Cloud Migration: 10-Year Data Without Losing a Voucher",
+    "description": "Move from Tally to a cloud accounting platform without losing a decade of vouchers, masters, or audit trail. Step-by-step migration playbook with parallel run and cutover.",
+    "author": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies",
+      "url": "https://www.softwaller.com"
+    },
+    "datePublished": "2026-04-26",
+    "dateModified": "2026-04-26",
+    "url": "https://www.softwaller.com/blog/tally-to-cloud-migration.html",
+    "image": "https://www.softwaller.com/assets/og-image.jpg"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.softwaller.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Tally to Cloud Migration",
+        "item": "https://www.softwaller.com/blog/tally-to-cloud-migration.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I migrate from Tally to cloud without losing past years of data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A proper Tally migration exports every voucher, ledger, stock item and bill-wise breakup using Tally's XML or ODBC interface, then maps each record into the destination schema. Done correctly, you keep 100% of the audit trail back to your earliest Tally year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a Tally to cloud migration usually take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For a typical SMB with 5-10 years of Tally data and 50,000-2,00,000 vouchers, migration takes 4-6 weeks: 1 week for data audit and mapping, 2 weeks for ETL and reconciliation, 2 weeks for parallel run, and a weekend cutover."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about my Tally TDLs and customisations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TDL customisations do not migrate as code, but their behaviour can be re-implemented as configuration, custom fields, or rules in the cloud platform. Most TDLs in Indian SMBs are voucher-class extensions or print formats — both are routine to recreate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the GSTIN trail and old GST returns still be reconciled after migration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Old GSTR-1, GSTR-3B and GSTR-9 data should be archived as PDF/JSON exports from Tally and stored alongside the migrated ledger. Future GST returns are filed from the cloud system. The two histories link via invoice number and GSTIN."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <style is:global slot="head-css" set:html={`
+body{min-height:100vh;display:flex;flex-direction:column}
+.blog-hero{padding:120px 0 48px;background:var(--surf);text-align:center;position:relative;overflow:hidden}
+.blog-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.blog-hero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+.blog-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:12px;color:var(--ink)}
+.blog-hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--blue)}
+.blog-hero p{font-size:16px;color:var(--muted);max-width:560px;margin:0 auto;line-height:1.75}
+.post-inner{max-width:760px;margin:0 auto;padding:48px 28px 80px}
+.post-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.post-body h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:32px 0 14px}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:24px 0 10px}
+.post-body p{font-size:15.5px;color:var(--muted);line-height:1.85;margin-bottom:16px}
+.post-body ul,.post-body ol{padding-left:20px;margin-bottom:16px}
+.post-body li{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:8px}
+.post-body strong{color:var(--ink)}
+.post-body blockquote{border-left:3px solid var(--blue);padding:16px 20px;margin:24px 0;background:var(--blue-bg);border-radius:0 10px 10px 0;font-size:15px;color:var(--ink3);font-style:italic;line-height:1.75}
+.post-cta{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:32px;text-align:center;margin-top:48px}
+.post-cta h3{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.post-cta p{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.post-related{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.post-related h3{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:20px}
+.post-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pr-card{padding:20px;border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:all .2s;display:block}
+.pr-card:hover{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.08)}
+.pr-card h4{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.pr-card p{font-size:12.5px;color:var(--muted);line-height:1.5}
+.pfooter{margin-top:auto}
+@media(max-width:768px){.post-related-grid{grid-template-columns:1fr}.post-cta .btn-primary,.post-cta .btn-outline{display:block;width:100%;text-align:center;margin:8px 0}}
+
+
+
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+  <section class="blog-hero">
+    <div class="blog-hero-inner">
+      <h1>Tally to Cloud Migration: 10-Year Data <em>Without Losing a Voucher</em></h1>
+      <p>The biggest fear in moving off Tally is not the new software. It is leaving a decade of vouchers, audit trail, and bill-wise references behind. Here is how to take all of it with you.</p>
+    </div>
+  </section>
+
+  <article class="post-inner">
+    <div class="post-meta">
+      <span><i class="fa-regular fa-calendar"></i> April 26, 2026</span>
+      <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+      <span><i class="fa-solid fa-tag"></i> Accounting</span>
+    </div>
+
+    <div class="post-body">
+      <p>Indian SMBs do not move off Tally because they hate Tally. They move because their CA wants real-time access from her office, the warehouse needs stock visibility from the phone, and the auditor is asking for an immutable audit trail that Tally Prime added only in recent versions. The pull is real. The fear that holds people back is also real: ten years of meticulously entered vouchers, ledgers with bill-wise references going back to 2016, and a chart of accounts the founder still trusts.</p>
+
+      <p>The good news: every record in Tally can be exported and migrated, including bill-wise breakups, cost centres, godowns, and inventory batches. The bad news: nine out of ten "migrations" are sloppy CSV imports that lose half of that fidelity. The difference between a clean migration and a painful one is process, not software.</p>
+
+      <h2>What Actually Lives Inside Your Tally File</h2>
+
+      <p>Before you migrate anything, know what you are migrating. A typical 10-year Tally company file holds:</p>
+
+      <ul>
+        <li><strong>Masters:</strong> Ledgers (often 800-2,000), stock items, stock groups, godowns, units of measure, voucher types, cost centres, currencies</li>
+        <li><strong>Transactions:</strong> Sales, purchase, receipt, payment, contra, journal, debit note, credit note, stock journal, manufacturing journal — typically 50,000 to 5,00,000 vouchers per company</li>
+        <li><strong>Linkages:</strong> Bill-wise references on every party ledger entry, GSTIN-tagged invoices, e-invoice IRNs (post-2020), e-way bill numbers, TDS certificates</li>
+        <li><strong>Customisations:</strong> TDL files, custom voucher classes, print configurations, security profiles, user-defined fields</li>
+        <li><strong>Attachments:</strong> Scanned vouchers and supporting documents linked through Tally's "Attach" feature</li>
+      </ul>
+
+      <p>If your migration plan does not have a line item for each of these, something will be lost. Almost always it is bill-wise references — and that is what makes outstanding statements unreadable a year after cutover.</p>
+
+      <h2>The Three Migration Strategies</h2>
+
+      <h3>1. Big Bang — Move Everything on Day Zero</h3>
+
+      <p>Export full historical data from Tally, load it into the cloud system, switch off Tally on a Sunday, and start fresh on Monday. Best for businesses with under 50,000 vouchers and clean masters. Cleanest end state. Highest risk if reconciliation fails on Monday morning.</p>
+
+      <h3>2. Opening Balance Only — Start Fresh</h3>
+
+      <p>Bring just the trial balance and bill-wise outstanding as on cutover date. Keep Tally read-only for historical lookup. Easiest to execute. You lose the ability to run year-on-year comparison reports inside the new system. Good for businesses where Tally is being kept as an archive anyway.</p>
+
+      <h3>3. Phased — Last Two Years Live, Older Years Archived</h3>
+
+      <p>Migrate the last 24-36 months of vouchers fully (so all GST and audit reports work in the new system) and bring older data in summary form, year-end balances only. Best balance of cost and continuity for most growing SMBs. The recommended default.</p>
+
+      <h2>Step-by-Step: The Phased Migration Playbook</h2>
+
+      <p>This is the playbook we run for clients moving off Tally Prime to a cloud accounting platform. Six weeks end to end.</p>
+
+      <h3>Week 1 — Audit and Cleanup</h3>
+
+      <p>Export your Tally master list and run it through a dedupe pass. Most 10-year-old Tally companies have duplicate ledgers ("ABC Traders", "ABC Traders.", "ABC Traders Pvt Ltd"). Merge them in Tally first. Same for stock items. Migrating dirty masters means living with dirty masters in the new system forever.</p>
+
+      <p>Lock down the chart of accounts. Decide the destination ledger structure now, not during cutover. If you currently have 1,200 ledgers and the new system suggests 400 with proper sub-groups, decide that mapping in week 1.</p>
+
+      <h3>Week 2 — Data Extraction</h3>
+
+      <p>Use Tally's <strong>Export to XML</strong> for transactions and the <strong>ODBC interface</strong> for masters. Avoid Excel exports — they lose bill-wise references and GST tagging. Export every voucher type separately so reconciliation later is straightforward. Output: one XML per voucher type per financial year.</p>
+
+      <h3>Week 3 — Mapping and ETL</h3>
+
+      <p>Map each Tally field to the destination schema:</p>
+
+      <ul>
+        <li>Tally <code>Voucher.Date</code> → destination <code>transaction_date</code></li>
+        <li>Tally <code>Voucher.LedgerEntries.LedgerName</code> → destination <code>account_id</code> (lookup)</li>
+        <li>Tally <code>Voucher.LedgerEntries.BillAllocations</code> → destination <code>bill_reference</code> (critical — keep this)</li>
+        <li>Tally <code>InventoryEntries.GoDownName</code> → destination <code>warehouse_id</code></li>
+        <li>Tally <code>Voucher.GSTIN</code> → destination <code>party_gstin</code></li>
+      </ul>
+
+      <p>Run the ETL on a non-production environment. Compare trial balance, GST output, and outstanding statements between Tally and the destination — to the rupee. If they do not match, do not move forward.</p>
+
+      <h3>Week 4 — Reconciliation</h3>
+
+      <p>The four reports that must match exactly:</p>
+
+      <ol>
+        <li><strong>Trial Balance</strong> as on cutover date — to the rupee</li>
+        <li><strong>Outstanding Receivables and Payables</strong> with bill-wise breakup — every bill, every party</li>
+        <li><strong>Stock Summary</strong> by item, by godown, with valuation — to the unit and to the rupee</li>
+        <li><strong>GSTR-1 and GSTR-3B</strong> for the last filed return — to confirm tax tagging is intact</li>
+      </ol>
+
+      <p>If any of these break, fix the mapping and re-run. Do not paper over differences with adjustment entries. Adjustment entries today become unanswerable questions during the next audit.</p>
+
+      <h3>Week 5 — Parallel Run</h3>
+
+      <p>For 10 working days, every voucher gets entered in both Tally and the cloud system. End each day with a three-way check: Tally trial balance, cloud trial balance, manual cash count. The team builds confidence in the new system. You catch process gaps (the two-step approval workflow nobody documented, the sales return that always gets posted to a special ledger) while Tally is still your safety net.</p>
+
+      <h3>Week 6 — Cutover</h3>
+
+      <p>Pick a long weekend. Run final reconciliation on Friday evening. Lock Tally as read-only. Open the new system Monday morning. Keep Tally available for the next 12 months for any historical lookup, then archive the company file.</p>
+
+      <blockquote>The migration is technically a data move. Operationally, it is a behaviour move. The accountants who entered into Tally for ten years will resist the new screen for the first two weeks. Plan for that, not against it.</blockquote>
+
+      <h2>Five Things That Always Go Wrong (And How to Catch Them Early)</h2>
+
+      <ul>
+        <li><strong>Bill-wise references silently dropped.</strong> Symptom: outstanding statement shows total correctly but cannot drill down to invoice level. Catch by sampling 20 random parties and matching bill-by-bill.</li>
+        <li><strong>GST rate mismatches on item masters.</strong> Tally lets you set GST at item level, group level, or override at voucher line. The new system may only support one. Catch by running GSTR-1 for last quarter in both systems and reconciling line by line.</li>
+        <li><strong>Stock valuation method drift.</strong> Tally's FIFO/Weighted Avg/LIFO must be reproduced exactly. Catch by reconciling closing stock value, not just quantity.</li>
+        <li><strong>Reverse charge and TDS markers lost.</strong> These live as flags on individual ledger entries. Migration scripts often ignore them. Catch with a TDS reconciliation against Form 26AS.</li>
+        <li><strong>Auto-numbering breaks.</strong> Tally lets you continue invoice number sequence. The new system needs explicit configuration. Catch by issuing one test invoice and confirming the number is what your customer expects.</li>
+      </ul>
+
+      <h2>What to Keep Out of the New System</h2>
+
+      <p>A clean migration is also about leaving things behind. Common candidates for the archive (not the new system):</p>
+
+      <ul>
+        <li>Vouchers older than the statutory record retention period (typically 8 years under the Companies Act and Income Tax Act)</li>
+        <li>Inactive ledgers with no transaction in the last 24 months</li>
+        <li>Stock items discontinued more than two years ago</li>
+        <li>One-off journal entries that were workarounds for Tally limitations and are no longer needed</li>
+      </ul>
+
+      <p>Archive these as a read-only Tally backup. They are not lost. They are just not cluttering your daily reports.</p>
+
+      <h2>The Real Win: Reports You Could Not Run Before</h2>
+
+      <p>Once on the cloud, the reports that were impossible in single-machine Tally become routine. Live cash position across three branches. Customer outstanding aged by 30/60/90 days, viewed from a phone. GST reconciliation against GSTR-2B done automatically every night. Profitability by SKU, by salesperson, by region. The migration is not the win. The reports the migration unlocks are the win.</p>
+
+      <!-- FAQ -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions about this topic.</p>
+    <details class="faq-item">
+      <summary>Can I migrate from Tally to cloud without losing past years of data?</summary>
+      <div class="faq-answer">Yes. A proper Tally migration exports every voucher, ledger, stock item and bill-wise breakup using Tally's XML or ODBC interface, then maps each record into the destination schema. Done correctly, you keep 100% of the audit trail back to your earliest Tally year.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How long does a Tally to cloud migration usually take?</summary>
+      <div class="faq-answer">For a typical SMB with 5-10 years of Tally data and 50,000-2,00,000 vouchers, migration takes 4-6 weeks: 1 week for data audit and mapping, 2 weeks for ETL and reconciliation, 2 weeks for parallel run, and a weekend cutover.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What about my Tally TDLs and customisations?</summary>
+      <div class="faq-answer">TDL customisations do not migrate as code, but their behaviour can be re-implemented as configuration, custom fields, or rules in the cloud platform. Most TDLs in Indian SMBs are voucher-class extensions or print formats — both are routine to recreate.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can the GSTIN trail and old GST returns still be reconciled after migration?</summary>
+      <div class="faq-answer">Yes. Old GSTR-1, GSTR-3B and GSTR-9 data should be archived as PDF/JSON exports from Tally and stored alongside the migrated ledger. Future GST returns are filed from the cloud system. The two histories link via invoice number and GSTIN.</div>
+    </details>
+  </div>
+</section>
+
+      <!-- CTA -->
+      <div class="post-cta">
+        <h3>Move Off Tally Without Losing a Year of Data</h3>
+        <p>We migrate Tally companies of any size — masters, vouchers, bill-wise, GST tags — into a cloud accounting platform with reconciliation guaranteed to the rupee.</p>
+        <a href="/../products/gst-billing-accounting.html" class="btn-primary">Explore GST &amp; Accounting <i class="fa-solid fa-arrow-right"></i></a>
+        &nbsp;&nbsp;
+        <a href="/../#contact" class="btn-outline">Book a Migration Audit</a>
+      </div>
+
+      <!-- Related Posts -->
+      <div class="post-related">
+        <h3>Related Articles</h3>
+        <div class="post-related-grid">
+          <a href="/gst-billing-software.html" class="pr-card">
+            <h4>GST Billing Software Saves 20+ Hours Per Month</h4>
+            <p>Where manual GST time leaks happen and how automation plugs every one of them.</p>
+          </a>
+          <a href="/e-invoicing-threshold-2026.html" class="pr-card">
+            <h4>E-Invoicing Threshold 2026: Is Your Billing Ready?</h4>
+            <p>The e-invoice mandate, who is in scope, and how to be compliant in 30 days.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+<!-- Newsletter signup -->
+<section style="max-width:800px;margin:0 auto;padding:0 28px 48px">
+  <div style="background:var(--ink);border-radius:20px;padding:36px;text-align:center">
+    <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:6px">Enjoyed this article?</div>
+    <div style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.65;margin-bottom:20px">Get practical business software insights delivered to your inbox every week.</div>
+    <form action="https://eb65560b.sibforms.com/serve/MUIFACP2rFDETv2p-mUPqyHo3glJtZhcD0GG3f63ikM49xDLRJyQdEWUq0PBoF0ksGw1g_N182HgQUpPssTKQKbO_o-YEB7N347_FS22M6QudGfXoY8QkWZ93gPvVtu8RVTgz--uNpErO1Xd4RccAsEDFLg3mci83OfHVyaJWN0sybuGWiTH50Rmf6Jh_BRVN1HTSAYIwS2z6SKAUw==" method="POST" novalidate style="display:flex;flex-wrap:wrap;gap:10px;max-width:440px;margin:0 auto" target="nl-iframe" onsubmit="var e=this.querySelector('input[type=email]');if(!e.value||!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(e.value)){event.preventDefault();e.style.borderColor='#DC2626';return}var f=this;setTimeout(function(){f.style.display='none';f.nextElementSibling.style.display='block'},1500)">
+      <input type="hidden" name="locale" value="en">
+      <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" style="flex:1;padding:13px 16px;border-radius:10px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-family:var(--font);font-size:14px" oninput="this.style.borderColor='rgba(255,255,255,.15)'">
+      <button type="submit" style="padding:13px 24px;border-radius:10px;border:none;background:var(--blue);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+    </form>
+    <div style="display:none;color:#059669;font-size:14px;font-weight:600;padding:8px 0"><i class="fa-solid fa-circle-check"></i> Subscribed! Check your inbox.</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:12px"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime.</div>
+  </div>
+</section>
+`} />
+</BaseLayout>

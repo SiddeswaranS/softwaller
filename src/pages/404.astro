@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Page Not Found — Softwaller Technologies Software Company';
+const description = "The page you're looking for doesn't exist. Return to Softwaller Technologies to explore our custom CRM, ERP, and business software solutions for your company.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="https://www.softwaller.com/"
+  noIndex={true}
+>
+  <style slot="head-css">
+  .error-page{min-height:calc(100vh - var(--nav-h, 72px) - 600px);display:flex;align-items:center;justify-content:center;padding:120px 28px 80px;text-align:center;position:relative;overflow:hidden}
+  .error-page::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 50% 20%,rgba(21,87,255,.06) 0%,transparent 70%);pointer-events:none}
+  .error-page::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse 60% 60% at 50% 40%,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 40%,black 20%,transparent 70%);pointer-events:none}
+  .error-inner{position:relative;z-index:1;max-width:520px}
+  .error-code{font-size:clamp(100px,18vw,180px);font-weight:800;letter-spacing:-6px;line-height:1;color:var(--surf);background:linear-gradient(135deg,var(--blue) 0%,rgba(21,87,255,.15) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px}
+  .error-icon{width:64px;height:64px;border-radius:16px;background:var(--blue-bg);border:1px solid var(--blue-br);display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--blue);margin:0 auto 24px}
+  .error-h{font-size:clamp(22px,3vw,32px);font-weight:800;color:var(--ink);letter-spacing:-1px;margin-bottom:12px}
+  .error-p{font-size:15.5px;color:var(--muted);line-height:1.75;margin-bottom:32px}
+  .error-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .error-help{margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+  .error-help-label{font-size:11px;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:16px}
+  .error-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+  .error-links a{font-size:13.5px;font-weight:500;color:var(--muted);display:flex;align-items:center;gap:6px;transition:color .15s}
+  .error-links a:hover{color:var(--blue)}
+  .error-links a i{font-size:12px}
+  @media(max-width:640px){
+    .error-page{padding:100px 20px 60px}
+    .error-btns{flex-direction:column;align-items:center}
+    .error-links{flex-direction:column;gap:12px}
+  }
+  </style>
+
+  <section class="error-page">
+    <div class="error-inner">
+      <div class="error-code">404</div>
+      <div class="error-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <h1 class="error-h">Page Not Found</h1>
+      <p class="error-p">The page you're looking for doesn't exist or has been moved. Let's get you back on track — explore our software solutions or get in touch with our team.</p>
+      <div class="error-btns">
+        <a href="/" class="btn-primary"><i class="fa-solid fa-house"></i> Go to Homepage</a>
+        <a href="/#services" class="btn-outline"><i class="fa-solid fa-grid-2"></i> View Services</a>
+      </div>
+      <div class="error-help">
+        <div class="error-help-label">Quick Links</div>
+        <div class="error-links">
+          <a href="/about.html"><i class="fa-solid fa-building"></i> About Us</a>
+          <a href="/#contact"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+          <a href="https://wa.me/919585999819" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:+919585999819"><i class="fa-solid fa-phone"></i> +91 95859 99819</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

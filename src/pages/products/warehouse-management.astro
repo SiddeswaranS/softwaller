@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Custom WMS for 3PL and Distributors in India | Softwaller";
+const description = "Custom WMS for 3PL operators, distributors, and large warehouses. Pick-pack-ship, zone management, barcode workflows, Tally and e-commerce integrations.";
+const canonical = "https://www.softwaller.com/products/warehouse-management.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Custom WMS for 3PL and Distributors in India | Softwaller";
+const ogDescription = "Custom WMS for 3PL, distributors, and large warehouses. Pick-pack-ship, zone management, barcode workflows, Tally and e-commerce integrations.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.softwaller.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Warehouse Management (WMS)"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Warehouse Management (WMS)",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Custom WMS for 3PL operators, distributors, and large warehouses. Pick-pack-ship, zone management, barcode workflows, Tally and e-commerce integrations.",
+    "url": "https://www.softwaller.com/products/warehouse-management.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "url": "https://www.softwaller.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "description": "Free consultation"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between WMS and inventory management?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inventory management tracks how much stock you have. WMS tracks where exactly each item is (bin, rack, level), how it moves (putaway, picking, packing, dispatch), and who handled it. WMS is essential once you cross 5,000 SKUs or run multi-bin warehouses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does WMS support wave picking and zone picking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We support batch picking, wave picking, zone picking, and cluster picking. The system picks the most efficient strategy based on order profile, picker availability, and warehouse layout."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can WMS integrate with our ERP and shipping partners?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. WMS syncs orders, stock, and dispatch data with ERPs (SAP, Tally, Oracle, Zoho) and connects to shipping APIs (Delhivery, Bluedart, Shiprocket, Shadowfax) for label generation and tracking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work with handheld scanners and tablets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Operators use rugged Android devices or tablets for receiving, putaway, picking, and packing. Voice-directed picking and pick-by-light hardware are supported for high-throughput warehouses."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <style is:global slot="head-css" set:html={`
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+<section class="phero">
+  <div class="phero-inner">
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-warehouse"></i></div>
+      <h1>Custom WMS for 3PL Operators & Distribution Warehouses</h1>
+      <p>Pick-pack-ship workflows, zone and bin management, wave picking, and barcode-driven receiving on rugged Android devices. Connects to ERP, Tally, and shipping APIs for end-to-end fulfilment.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="20" y="20" width="360" height="32" rx="8" fill="#FFF7ED"/><text x="200" y="40" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#EA580C">Warehouse Operations</text><rect x="30" y="65" width="160" height="100" rx="8" fill="#F7F8FC" stroke="#E4E7F0" stroke-width="1"/><text x="110" y="82" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#EA580C">Pick List #PK-847</text><rect x="38" y="90" width="144" height="18" rx="4" fill="#ECFDF5"/><text x="46" y="103" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#059669">&#10003; SKU-001 — Bin A-12</text><rect x="38" y="112" width="144" height="18" rx="4" fill="#ECFDF5"/><text x="46" y="125" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#059669">&#10003; SKU-034 — Bin B-05</text><rect x="38" y="134" width="144" height="18" rx="4" fill="#FFF7ED"/><text x="46" y="147" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#EA580C">&#9723; SKU-112 — Bin C-08</text><rect x="210" y="65" width="160" height="100" rx="8" fill="#F7F8FC" stroke="#E4E7F0" stroke-width="1"/><text x="290" y="82" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#1557FF">Zones Overview</text><rect x="218" y="92" width="44" height="30" rx="4" fill="#EBF0FF"/><text x="240" y="112" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#1557FF">A: 94%</text><rect x="268" y="92" width="44" height="30" rx="4" fill="#ECFDF5"/><text x="290" y="112" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#059669">B: 67%</text><rect x="318" y="92" width="44" height="30" rx="4" fill="#FFF7ED"/><text x="340" y="112" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" font-weight="600" fill="#EA580C">C: 42%</text><rect x="218" y="130" width="144" height="10" rx="5" fill="#E4E7F0"/><rect x="218" y="130" width="100" height="10" rx="5" fill="#1557FF"/><text x="330" y="138" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#6B7694">68%</text><rect x="30" y="180" width="340" height="95" rx="8" fill="#F7F8FC" stroke="#E4E7F0" stroke-width="1"/><text x="50" y="200" font-family="'Plus Jakarta Sans',sans-serif" font-size="10" font-weight="700" fill="#0A0F1E">Shipments Today</text><rect x="40" y="210" width="70" height="50" rx="6" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/><text x="75" y="232" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="16" font-weight="800" fill="#059669">28</text><text x="75" y="248" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#6B7694">Dispatched</text><rect x="120" y="210" width="70" height="50" rx="6" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/><text x="155" y="232" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="16" font-weight="800" fill="#EA580C">12</text><text x="155" y="248" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#6B7694">Packing</text><rect x="200" y="210" width="70" height="50" rx="6" fill="#EBF0FF" stroke="#C2CFFF" stroke-width="1"/><text x="235" y="232" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="16" font-weight="800" fill="#1557FF">7</text><text x="235" y="248" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#6B7694">Receiving</text><rect x="280" y="210" width="70" height="50" rx="6" fill="#FDF2F8" stroke="#FBCFE8" stroke-width="1"/><text x="315" y="232" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="16" font-weight="800" fill="#DB2777">3</text><text x="315" y="248" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="7" fill="#6B7694">Returns</text></svg>
+    </div>
+  </div>
+</section>
+
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
+  <div class="pfeatures-inner">
+    <h2>Complete Warehouse Control</h2>
+    <p class="sub">12 powerful features to run your warehouse with precision and speed.</p>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-boxes-packing"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Pick / Pack / Ship</h3>
+          <p itemprop="description">Optimized workflows with pick lists and packing slips. Reduce errors and speed up order fulfillment from shelf to truck.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Bin Locations</h3>
+          <p itemprop="description">Organize your warehouse into zones, aisles, racks, and bins. Every item has a home for instant retrieval.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-barcode"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Barcode Scanning</h3>
+          <p itemprop="description">Scan items at every step for accuracy and speed. Eliminate manual data entry and reduce picking errors to near zero.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-truck-ramp-box"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">3PL Integration</h3>
+          <p itemprop="description">Integrate with third-party logistics providers seamlessly. Sync orders, inventory, and shipping across partners.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-rotate-left"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">Returns Processing</h3>
+          <p itemprop="description">Manage inbound returns with inspection and restocking workflows. Track return reasons and process refunds efficiently.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Put-Away Rules</h3>
+          <p itemprop="description">Auto-suggest bin locations based on product type and velocity. Intelligent slotting to minimize travel time.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-layer-group"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Wave Planning</h3>
+          <p itemprop="description">Group orders into waves for efficient batch picking. Optimize pick paths and reduce warehouse travel time.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-bullseye"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Inventory Accuracy</h3>
+          <p itemprop="description">Cycle counts, adjustments, and variance reports. Maintain 99%+ inventory accuracy without full shutdowns.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-clipboard-check"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Receiving & QC</h3>
+          <p itemprop="description">Goods receipt with quality inspection checkpoints. Verify quantities, check conditions, and flag discrepancies instantly.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-right-left"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Cross-Docking</h3>
+          <p itemprop="description">Direct transfer from receiving to shipping dock. Skip storage for fast-moving items and reduce handling costs.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-users-gear"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Labor Management</h3>
+          <p itemprop="description">Track worker productivity, pick rates, and efficiency. Identify top performers and optimize workforce allocation.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-chart-column"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Dashboard & Reports</h3>
+          <p itemprop="description">Real-time warehouse KPIs, throughput, and utilization metrics. Make data-driven decisions with actionable insights.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="pwhy">
+  <div class="pwhy-inner">
+    <h2>Why Choose Softwaller</h2>
+    <p class="sub">We don't just build software — we build solutions that grow with your business.</p>
+    <div class="pwhy-grid">
+      <div class="pwhy-item">
+        <i class="fa-solid fa-pencil-ruler"></i>
+        <div><h3>Built for Your Workflow</h3><p>Custom-designed to match how your team actually works, not the other way around.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-arrow-up-right-dots"></i>
+        <div><h3>Scale as You Grow</h3><p>Architecture designed to handle 500+ concurrent users without breaking a sweat.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <div><h3>Mobile Ready</h3><p>Access from any device, anywhere, anytime. Your office travels with you.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-plug"></i>
+        <div><h3>Integration Ready</h3><p>Connect with Tally, WhatsApp, payment gateways, and more out of the box.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-headset"></i>
+        <div><h3>Ongoing Support</h3><p>3 months free support plus AMC options after go-live. We're always here for you.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div><h3>Data Security</h3><p>Role-based access, encryption, and audit trails keep your business data safe.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-related">
+  <div class="p-related-inner">
+    <h2>Related Solutions</h2>
+    <p class="sub">Explore other software that works great alongside this solution.</p>
+    <div class="p-related-grid">
+      <a href="/inventory-management.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-boxes-stacked"></i></div>
+        <h3>Inventory Management</h3>
+        <p>Real-time stock tracking</p>
+        <div class="pr-link">Inventory Management <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/fleet-logistics.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-truck-fast"></i></div>
+        <h3>Fleet &amp; Logistics</h3>
+        <p>Fleet &amp; delivery tracking</p>
+        <div class="pr-link">Fleet &amp; Logistics <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/erp-solutions.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-building"></i></div>
+        <h3>ERP Solutions</h3>
+        <p>Unified business operations</p>
+        <div class="pr-link">ERP Solutions <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pcta">
+  <div class="pcta-inner">
+    <h2>Ready to Get Started?</h2>
+    <p>Get a free consultation and see how our WMS can transform your warehouse operations.</p>
+    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>What is the difference between WMS and inventory management?</summary>
+      <div class="faq-answer">Inventory management tracks how much stock you have. WMS tracks where exactly each item is (bin, rack, level), how it moves (putaway, picking, packing, dispatch), and who handled it. WMS is essential once you cross 5,000 SKUs or run multi-bin warehouses.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does WMS support wave picking and zone picking?</summary>
+      <div class="faq-answer">Yes. We support batch picking, wave picking, zone picking, and cluster picking. The system picks the most efficient strategy based on order profile, picker availability, and warehouse layout.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can WMS integrate with our ERP and shipping partners?</summary>
+      <div class="faq-answer">Yes. WMS syncs orders, stock, and dispatch data with ERPs (SAP, Tally, Oracle, Zoho) and connects to shipping APIs (Delhivery, Bluedart, Shiprocket, Shadowfax) for label generation and tracking.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does it work with handheld scanners and tablets?</summary>
+      <div class="faq-answer">Yes. Operators use rugged Android devices or tablets for receiving, putaway, picking, and packing. Voice-directed picking and pick-by-light hardware are supported for high-throughput warehouses.</div>
+    </details>
+  </div>
+</section>
+
+`} />
+</BaseLayout>

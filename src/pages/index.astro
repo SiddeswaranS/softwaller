@@ -1,0 +1,1714 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Custom Software Development Company in Chennai | Softwaller";
+const description = "Custom CRM, ERP, inventory, HR, e-commerce and WhatsApp Business automation built for Indian SMBs. Chennai team. 18+ solutions. Live in 6–12 weeks.";
+const canonical = "https://www.softwaller.com/";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Custom Software Development Company in Chennai | Softwaller";
+const ogDescription = "Custom CRM, ERP, inventory, HR, e-commerce and WhatsApp Business automation built for Indian SMBs. Chennai team. 18+ solutions.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.softwaller.com/#org",
+        "name": "Softwaller Technologies Private Limited",
+        "alternateName": "Softwaller Tech",
+        "url": "https://www.softwaller.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.softwaller.com/assets/softwaller-technologies-logo-dark.png"
+        },
+        "description": "Custom CRM, ERP, Inventory Management and business software development company based in Chennai, India.",
+        "foundingDate": "2024",
+        "taxID": "U62099TN2024PTC172175",
+        "numberOfEmployees": {
+          "@type": "QuantitativeValue",
+          "minValue": 2,
+          "maxValue": 10
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3-15/8 Singandi Lakshmana, Mudhali St Tharamangalam",
+          "addressLocality": "Salem",
+          "addressRegion": "Tamil Nadu",
+          "postalCode": "636502",
+          "addressCountry": "IN"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91-95859-99819",
+            "contactType": "sales",
+            "availableLanguage": [
+              "English",
+              "Tamil"
+            ],
+            "areaServed": "IN"
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91-95859-99819",
+            "contactType": "customer service",
+            "availableLanguage": [
+              "English",
+              "Tamil"
+            ]
+          }
+        ],
+        "sameAs": [
+          "https://twitter.com/softwaller",
+          "https://www.instagram.com/softwaller_technologies"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.softwaller.com/#website",
+        "url": "https://www.softwaller.com",
+        "name": "Softwaller Technologies",
+        "publisher": {
+          "@id": "https://www.softwaller.com/#org"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "CRM Software Development",
+        "provider": {
+          "@id": "https://www.softwaller.com/#org"
+        },
+        "serviceType": "Software Development",
+        "description": "Custom Customer Relationship Management software for businesses",
+        "areaServed": "IN"
+      },
+      {
+        "@type": "Service",
+        "name": "ERP Software Development",
+        "provider": {
+          "@id": "https://www.softwaller.com/#org"
+        },
+        "serviceType": "Software Development",
+        "description": "Enterprise Resource Planning solutions for manufacturing and trading companies",
+        "areaServed": "IN"
+      },
+      {
+        "@type": "Service",
+        "name": "Inventory Management Software",
+        "provider": {
+          "@id": "https://www.softwaller.com/#org"
+        },
+        "serviceType": "Software Development",
+        "description": "Multi-warehouse inventory tracking with barcode scanning, auto reorder alerts and real-time stock visibility",
+        "areaServed": "IN"
+      },
+      {
+        "@type": "Service",
+        "name": "E-Commerce Software Development",
+        "provider": {
+          "@id": "https://www.softwaller.com/#org"
+        },
+        "serviceType": "Software Development",
+        "description": "Custom online store with product catalog, payment gateway integration, order management and shipping",
+        "areaServed": "IN"
+      },
+      {
+        "@type": "Service",
+        "name": "HR and Payroll Software",
+        "provider": {
+          "@id": "https://www.softwaller.com/#org"
+        },
+        "serviceType": "Software Development",
+        "description": "Employee management with biometric attendance, leave management, payroll processing and compliance automation",
+        "areaServed": "IN"
+      },
+      {
+        "@type": "Service",
+        "name": "WhatsApp Business Automation",
+        "provider": {
+          "@id": "https://www.softwaller.com/#org"
+        },
+        "serviceType": "Software Development",
+        "description": "WhatsApp API integration for chatbots, lead capture, order notifications and bulk messaging",
+        "areaServed": "IN"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long does it take to build custom software?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Depending on scope, a basic CRM or IMS takes 6–8 weeks. A full ERP typically takes 3–6 months. We follow agile sprints so you see working software every 2 weeks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide post-launch support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All projects include 3 months of free support after go-live. We also offer Annual Maintenance Contracts (AMC) for ongoing support, updates, and enhancements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the software GST compliant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All our billing and accounting modules are fully GST-compliant with e-invoicing, e-way bill generation, and GSTR report exports."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can the software integrate with our existing tools?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We integrate with Tally, Zoho, WhatsApp Business API, payment gateways (Razorpay, PayU), SMS gateways, and most third-party APIs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of business software does Softwaller build?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We build 18+ types of business software including CRM, ERP, Inventory Management, HR & Payroll, GST Billing, E-Commerce, WhatsApp Automation, Field Service Management, Warehouse Management, Helpdesk, Project Management, Business Intelligence Dashboards, Appointment Booking, Fleet Management, Document Management, School Management, Real Estate Management, and fully Custom Business Applications."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is Softwaller Technologies located?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Softwaller Technologies Private Limited is based in Chennai, Tamil Nadu, India. We serve clients across India including Tamil Nadu, Karnataka, Andhra Pradesh, Maharashtra, and Telangana. We also work with international clients remotely."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Softwaller Technologies Private Limited",
+    "image": "https://www.softwaller.com/assets/og-image.jpg",
+    "url": "https://www.softwaller.com",
+    "telephone": "+91-95859-99819",
+    "email": "info@softwaller.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3-15/8 Singandi Lakshmana, Mudhali St Tharamangalam",
+      "addressLocality": "Salem",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "636502",
+      "addressCountry": "IN"
+    },
+    "openingHours": "Mo-Sa 09:00-18:00",
+    "priceRange": "$$",
+    "taxID": "U62099TN2024PTC172175"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Site Navigation",
+    "itemListOrder": "https://schema.org/ItemListOrderAscending",
+    "itemListElement": [
+      {
+        "@type": "SiteNavigationElement",
+        "position": 1,
+        "name": "Custom CRM Development",
+        "url": "https://www.softwaller.com/products/crm-software.html"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 2,
+        "name": "Custom ERP Development",
+        "url": "https://www.softwaller.com/products/erp-solutions.html"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 3,
+        "name": "Custom Software Chennai",
+        "url": "https://www.softwaller.com/locations/chennai.html"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 4,
+        "name": "Custom Software Coimbatore",
+        "url": "https://www.softwaller.com/locations/coimbatore.html"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 5,
+        "name": "Textile ERP India",
+        "url": "https://www.softwaller.com/industries/textile-erp.html"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 6,
+        "name": "Jewellery ERP India",
+        "url": "https://www.softwaller.com/industries/jewellery-erp.html"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 7,
+        "name": "Manufacturing ERP India",
+        "url": "https://www.softwaller.com/industries/manufacturing.html"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 8,
+        "name": "Custom ERP Cost India",
+        "url": "https://www.softwaller.com/pricing/custom-erp-cost-india.html"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 9,
+        "name": "E-Invoicing Guide India 2026",
+        "url": "https://www.softwaller.com/guides/e-invoicing-india-2026.html"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 10,
+        "name": "Blog",
+        "url": "https://www.softwaller.com/blog/"
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <style is:global slot="head-css" set:html={`@media(max-width:640px){.wa-use-grid{grid-template-columns:1fr !important}}
+
+
+    .lir-block{margin-bottom:64px}
+    .lir-block:last-child{margin-bottom:0}
+    .lir-head{text-align:center;max-width:780px;margin:0 auto 40px}
+    .lir-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.5px;line-height:1.2;margin:10px 0 12px;color:var(--ink)}
+    .lir-head h2 em{font-style:italic;color:var(--blue);font-family:'Instrument Serif',serif;font-weight:400}
+    .lir-head p{color:var(--muted);font-size:16px;line-height:1.6;margin:0}
+    .lir-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .lir-grid.lir-grid-5{grid-template-columns:repeat(5,1fr)}
+    @media (max-width:1024px){.lir-grid,.lir-grid.lir-grid-5{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.lir-grid,.lir-grid.lir-grid-5{grid-template-columns:1fr}}
+    .lir-card{display:flex;flex-direction:column;gap:10px;padding:22px;background:#fff;border:1px solid #E5E7EB;border-radius:14px;text-decoration:none;color:var(--ink);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;height:100%}
+    .lir-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(21,87,255,.08);border-color:var(--blue)}
+    .lir-card-ic{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--blue-bg);color:var(--blue);font-size:18px}
+    .lir-card-title{font-weight:700;font-size:17px;letter-spacing:-.2px;color:var(--ink);margin:0}
+    .lir-card-desc{color:var(--muted);font-size:14px;line-height:1.55;margin:0;flex:1}
+    .lir-card-link{font-size:13px;font-weight:600;color:var(--blue);margin-top:6px}
+    .lir-card-link i{margin-left:4px;font-size:11px;transition:transform .2s ease}
+    .lir-card:hover .lir-card-link i{transform:translateX(4px)}
+  `}></style>
+  <Fragment set:html={`
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section id="home" aria-labelledby="hero-heading">
+  <div class="hero-mesh" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-eyebrow" aria-label="Active status">
+          <div class="eyebrow-dot"></div>
+          <span class="eyebrow-txt">Businesses already growing with us</span>
+        </div>
+        <h1 class="hero-h1" id="hero-heading">
+          Custom Software<br>Built in <span class="grad">Chennai for<br>Indian SMEs</span>
+        </h1>
+        <p class="hero-desc">
+          <strong>Custom CRM, ERP, inventory, HR & payroll software</strong> built for Indian SMEs — GST and Tally integration ready, mobile-first, deployed in 6–10 weeks from our Chennai team.
+        </p>
+        <div class="hero-btns">
+          <button class="btn-primary" data-goto="contact">
+            <i class="fa-solid fa-phone"></i> Book Free Consultation
+          </button>
+          <button class="btn-outline" data-goto="services">
+            <i class="fa-solid fa-layer-group"></i> View Our Services
+          </button>
+        </div>
+        <div class="hero-trust" aria-label="Client trust signals">
+          <div class="trust-txt">
+            <strong>Trusted by businesses across India</strong>
+            Custom software for manufacturers, traders &amp; service companies
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <div class="hero-value-grid">
+          <div class="hv-card hvc-1">
+            <div class="hv-icon" style="background:var(--blue-bg)"><i class="fa-solid fa-laptop-code" style="color:var(--blue)"></i></div>
+            <div class="hv-num">CRM</div>
+            <div class="hv-label">Sales &amp; Lead Management</div>
+            <div class="hv-sub">Capture leads, track pipeline, automate follow-ups</div>
+          </div>
+          <div class="hv-card hvc-2">
+            <div class="hv-icon" style="background:var(--green-bg)"><i class="fa-solid fa-industry" style="color:var(--green)"></i></div>
+            <div class="hv-num">ERP</div>
+            <div class="hv-label">Enterprise Operations</div>
+            <div class="hv-sub">Purchase, production, inventory &amp; billing unified</div>
+          </div>
+          <div class="hv-card hvc-3">
+            <div class="hv-icon" style="background:var(--orange-bg)"><i class="fa-solid fa-boxes-stacked" style="color:var(--orange)"></i></div>
+            <div class="hv-num">IMS</div>
+            <div class="hv-label">Inventory &amp; Warehouse</div>
+            <div class="hv-sub">Multi-location stock with barcode scanning</div>
+          </div>
+          <div class="hv-card hvc-4">
+            <div class="hv-icon" style="background:var(--purple-bg)"><i class="fa-solid fa-mobile-screen" style="color:var(--purple)"></i></div>
+            <div class="hv-num">Mobile</div>
+            <div class="hv-label">Android &amp; iOS Apps</div>
+            <div class="hv-sub">Native apps with offline sync &amp; GPS tracking</div>
+          </div>
+          <div class="hv-card hv-wide">
+            <div class="hv-wide-left">
+              <div class="hv-wide-label">What We Build</div>
+              <div class="hv-wide-val">End-to-End Business Software</div>
+              <div class="hv-wide-sub">From idea to live software in 6–12 weeks</div>
+            </div>
+            <div class="hv-badges">
+              <span class="hv-badge g"><i class="fa-solid fa-check"></i> GST Compliant</span>
+              <span class="hv-badge b"><i class="fa-solid fa-mobile"></i> Mobile Ready</span>
+              <span class="hv-badge p"><i class="fa-solid fa-link"></i> API Ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TRUST BAR
+══════════════════════════════════════ -->
+<div id="trust-bar" role="complementary" aria-label="Industries we serve">
+  <div class="container">
+    <div class="tb-inner">
+      <span class="tb-label">Industries We Serve</span>
+      <div class="tb-div"></div>
+      <div class="tb-logos" role="list">
+        <div class="tbl-item" role="listitem"><div class="tbl-dot" style="background:#1557FF"><i class="fa-solid fa-industry" style="font-size:8px"></i></div>Manufacturing</div>
+        <div class="tbl-item" role="listitem"><div class="tbl-dot" style="background:#7C3AED"><i class="fa-solid fa-cart-shopping" style="font-size:8px"></i></div>Retail &amp; E-Commerce</div>
+        <div class="tbl-item" role="listitem"><div class="tbl-dot" style="background:#059669"><i class="fa-solid fa-ship" style="font-size:8px"></i></div>Export &amp; Trading</div>
+        <div class="tbl-item" role="listitem"><div class="tbl-dot" style="background:#EA580C"><i class="fa-solid fa-truck" style="font-size:8px"></i></div>Logistics &amp; Distribution</div>
+        <div class="tbl-item" role="listitem"><div class="tbl-dot" style="background:#DB2777"><i class="fa-solid fa-laptop-code" style="font-size:8px"></i></div>IT &amp; Services</div>
+        <div class="tbl-item" role="listitem"><div class="tbl-dot" style="background:#0891B2"><i class="fa-solid fa-building-columns" style="font-size:8px"></i></div>Real Estate</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     ABOUT
+══════════════════════════════════════ -->
+<section id="about" class="sec-pad" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Visual panel -->
+      <div class="about-vis reveal" aria-hidden="true">
+        <div class="avis-main">
+          <div class="avis-topbar">
+            <div class="avis-brand">
+              <div class="avis-av" style="background:none;padding:0"><svg viewBox="0 0 48 48" width="30" height="30"><rect x="2" y="2" width="44" height="44" rx="11" fill="#070D1A" stroke="#2563EB" stroke-width="1.5"/><line x1="24" y1="10" x2="24" y2="38" stroke="#64748B" stroke-width="1.2"/><line x1="10" y1="24" x2="38" y2="24" stroke="#64748B" stroke-width="1.2"/><rect x="8" y="8" width="13.5" height="13.5" rx="3.5" fill="#2563EB"/><rect x="26.5" y="8" width="13.5" height="13.5" rx="3.5" fill="#0891B2"/><rect x="8" y="26.5" width="13.5" height="13.5" rx="3.5" fill="#059669"/><rect x="26.5" y="26.5" width="13.5" height="13.5" rx="3.5" fill="#D97706"/><circle cx="24" cy="24" r="2.8" fill="#DC2626"/></svg></div>
+              <div>
+                <div class="avis-name">Softwaller ERP</div>
+                <div class="avis-sub">Live Client View</div>
+              </div>
+            </div>
+            <div class="avis-live">Live</div>
+          </div>
+          <div class="avis-body">
+            <div class="avis-metrics">
+              <div class="avis-metric">
+                <div class="am-l">Revenue</div>
+                <div class="am-v">&#8377;28.4L<small class="am-g">&#8593;12%</small></div>
+              </div>
+              <div class="avis-metric">
+                <div class="am-l">Orders</div>
+                <div class="am-v">318<small class="am-g">&#8593;9%</small></div>
+              </div>
+              <div class="avis-metric">
+                <div class="am-l">Pending</div>
+                <div class="am-v">47<small class="am-o">review</small></div>
+              </div>
+            </div>
+            <div class="avis-modules">
+              <div class="avis-mod">
+                <div class="am-ico" style="background:rgba(21,87,255,.15)"><i class="fa-solid fa-chart-line" style="color:var(--blue);font-size:13px"></i></div>
+                <div><div class="am-mod-name">Sales CRM</div><div class="am-mod-val">142 active leads &nbsp;·&nbsp; 23 follow-ups due</div></div>
+              </div>
+              <div class="avis-mod">
+                <div class="am-ico" style="background:rgba(124,58,237,.15)"><i class="fa-solid fa-industry" style="color:var(--purple);font-size:12px"></i></div>
+                <div><div class="am-mod-name">ERP Core</div><div class="am-mod-val">Procurement &amp; production synced</div></div>
+              </div>
+              <div class="avis-mod">
+                <div class="am-ico" style="background:rgba(234,88,12,.15)"><i class="fa-solid fa-box" style="color:var(--orange);font-size:12px"></i></div>
+                <div><div class="am-mod-name">Inventory</div><div class="am-mod-val">1,284 SKUs &nbsp;·&nbsp; 3 warehouses live</div></div>
+              </div>
+            </div>
+            <div>
+              <div class="avis-bar-row">
+                <span class="avis-bar-label">CRM</span>
+                <div class="avis-bar-track"><div class="avis-bar-fill" style="width:78%;background:var(--blue)"></div></div>
+                <span class="avis-bar-val">78%</span>
+              </div>
+              <div class="avis-bar-row">
+                <span class="avis-bar-label">ERP</span>
+                <div class="avis-bar-track"><div class="avis-bar-fill" style="width:65%;background:var(--purple)"></div></div>
+                <span class="avis-bar-val">65%</span>
+              </div>
+              <div class="avis-bar-row">
+                <span class="avis-bar-label">IMS</span>
+                <div class="avis-bar-track"><div class="avis-bar-fill" style="width:54%;background:var(--orange)"></div></div>
+                <span class="avis-bar-val">54%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="reveal d1">
+        <div class="sec-tag">About Us</div>
+        <h2 class="sec-h" id="about-heading">Software That Solves <em>Real</em><br>Business Problems</h2>
+        <p class="about-desc"><strong>Softwaller Technologies Private Limited</strong> is a Chennai-based enterprise software company. We help businesses — manufacturers, traders, service companies — replace manual processes and disconnected tools with unified, intelligent software that actually works.</p>
+        <p class="about-desc">Founded in 2024, we deliver custom software across Tamil Nadu, Andhra Pradesh, Karnataka and Maharashtra. Our clients include trading companies, manufacturing units, logistics firms, retail chains and professional services businesses.</p>
+        <div class="about-vals">
+          <div class="av-item">
+            <div class="av-ic" style="background:var(--blue-bg)"><i class="fa-solid fa-bullseye" style="color:var(--blue)"></i></div>
+            <div><div class="av-t">Business-First, Not Template-First</div><div class="av-d">We analyze your processes before writing a single line. No off-the-shelf shortcuts.</div></div>
+          </div>
+          <div class="av-item">
+            <div class="av-ic" style="background:var(--green-bg)"><i class="fa-solid fa-bolt" style="color:var(--green)"></i></div>
+            <div><div class="av-t">Fast Agile Delivery</div><div class="av-d">Working software every 2 weeks. You see progress, not just promises.</div></div>
+          </div>
+          <div class="av-item">
+            <div class="av-ic" style="background:var(--purple-bg)"><i class="fa-solid fa-shield-halved" style="color:var(--purple)"></i></div>
+            <div><div class="av-t">Long-Term Partnership</div><div class="av-d">We stay after go-live. AMC, enhancements, 24/7 critical support — always available.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SERVICES
+══════════════════════════════════════ -->
+<section id="services" class="sec-pad" aria-labelledby="services-heading">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 56px" class="reveal">
+      <div class="sec-tag">Our Services</div>
+      <h2 class="sec-h" id="services-heading">Complete Software for<br>Every <em>Business Function</em></h2>
+      <p class="sec-p">From your first lead to your last invoice — we build the software backbone that runs your entire business.</p>
+    </div>
+    <div class="svc-grid">
+
+      <article class="svc-card reveal" aria-labelledby="svc-crm">
+        <div class="svc-ic" style="background:var(--blue-bg)"><i class="fa-solid fa-chart-line" style="color:var(--blue)"></i></div>
+        <h3 class="svc-title" id="svc-crm">CRM Software</h3>
+        <p class="svc-desc">Manage your entire sales cycle — capture leads from web/phone/WhatsApp, track pipeline stages, automate follow-up reminders, and close more deals with real-time reports.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Lead Capture</span><span class="svc-tag">Sales Pipeline</span>
+          <span class="svc-tag">Follow-up Alerts</span><span class="svc-tag">WhatsApp Integration</span>
+          <span class="svc-tag">Sales Reports</span>
+        </div>
+        <a href="/products/crm-software.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> CRM Software</a>
+      </article>
+
+      <article class="svc-card reveal d1" aria-labelledby="svc-erp">
+        <div class="svc-ic" style="background:var(--purple-bg)"><i class="fa-solid fa-industry" style="color:var(--purple)"></i></div>
+        <h3 class="svc-title" id="svc-erp">ERP Solutions</h3>
+        <p class="svc-desc">Unify your entire business — finance, purchase, sales, production, store and HR — on one platform. Real-time data, automated workflows, and complete management control.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Finance &amp; Accounts</span><span class="svc-tag">Purchase Order</span>
+          <span class="svc-tag">Production Planning</span><span class="svc-tag">Multi-Branch</span>
+          <span class="svc-tag">MIS Reports</span>
+        </div>
+        <a href="/products/erp-solutions.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> ERP Solutions</a>
+      </article>
+
+      <article class="svc-card reveal d2" aria-labelledby="svc-ims">
+        <div class="svc-ic" style="background:var(--orange-bg)"><i class="fa-solid fa-boxes-stacked" style="color:var(--orange)"></i></div>
+        <h3 class="svc-title" id="svc-ims">Inventory Management</h3>
+        <p class="svc-desc">Track stock across multiple warehouses in real time. Barcode / QR scanning, automatic reorder alerts, batch tracking, expiry management and supplier performance reports.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Multi-Warehouse</span><span class="svc-tag">Barcode / QR</span>
+          <span class="svc-tag">Auto Reorder</span><span class="svc-tag">Batch Tracking</span>
+          <span class="svc-tag">Supplier Reports</span>
+        </div>
+        <a href="/products/inventory-management.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Inventory Management</a>
+      </article>
+
+      <article class="svc-card reveal" aria-labelledby="svc-hr">
+        <div class="svc-ic" style="background:var(--green-bg)"><i class="fa-solid fa-users" style="color:var(--green)"></i></div>
+        <h3 class="svc-title" id="svc-hr">HR &amp; Payroll System</h3>
+        <p class="svc-desc">Complete employee lifecycle management — attendance via biometric / mobile, leave approvals, salary processing, ESI/PF/TDS computation and payslip generation on one platform.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Biometric Attendance</span><span class="svc-tag">Leave Management</span>
+          <span class="svc-tag">Payroll Processing</span><span class="svc-tag">ESI / PF / TDS</span>
+          <span class="svc-tag">Payslip Generation</span>
+        </div>
+        <a href="/products/hr-payroll.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> HR &amp; Payroll System</a>
+      </article>
+
+      <article class="svc-card reveal d1" aria-labelledby="svc-billing">
+        <div class="svc-ic" style="background:var(--pink-bg)"><i class="fa-solid fa-file-invoice-dollar" style="color:var(--pink)"></i></div>
+        <h3 class="svc-title" id="svc-billing">GST Billing &amp; Accounting</h3>
+        <p class="svc-desc">100% GST-compliant invoicing with e-invoice and e-way bill generation. Accounts receivable/payable, bank reconciliation, ledger management, and GSTR-1/2/3B exports.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">GST Invoicing</span><span class="svc-tag">E-Invoice</span>
+          <span class="svc-tag">E-Way Bill</span><span class="svc-tag">Bank Reconciliation</span>
+          <span class="svc-tag">GSTR Export</span>
+        </div>
+        <a href="/products/gst-billing-accounting.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> GST Billing &amp; Accounting</a>
+      </article>
+
+      <article class="svc-card reveal d2" aria-labelledby="svc-custom">
+        <div class="svc-ic" style="background:var(--cyan-bg)"><i class="fa-solid fa-gears" style="color:var(--cyan)"></i></div>
+        <h3 class="svc-title" id="svc-custom">Custom Business Apps</h3>
+        <p class="svc-desc">Have a unique workflow that standard software cannot handle? We design and build fully custom web and mobile applications — field service apps, dealer portals, customer portals and more.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Web Applications</span><span class="svc-tag">Mobile Apps</span>
+          <span class="svc-tag">Customer Portals</span><span class="svc-tag">API Integrations</span>
+          <span class="svc-tag">Business Dashboards</span>
+        </div>
+        <a href="/products/custom-business-apps.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Custom Business Apps</a>
+      </article>
+
+      <article class="svc-card reveal" aria-labelledby="svc-ecom">
+        <div class="svc-ic" style="background:var(--green-bg)"><i class="fa-solid fa-cart-shopping" style="color:var(--green)"></i></div>
+        <h3 class="svc-title" id="svc-ecom">E-Commerce &amp; Online Store</h3>
+        <p class="svc-desc">Launch your online store with product catalog, shopping cart, secure payments via Razorpay/PayU, order management, shipping integration and customer accounts — all branded to your business.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Product Catalog</span><span class="svc-tag">Payment Gateway</span>
+          <span class="svc-tag">Order Management</span><span class="svc-tag">Shipping Integration</span>
+          <span class="svc-tag">Customer Portal</span>
+        </div>
+        <a href="/products/e-commerce.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> E-Commerce &amp; Online Store</a>
+      </article>
+
+      <article class="svc-card reveal d1" aria-labelledby="svc-field">
+        <div class="svc-ic" style="background:var(--orange-bg)"><i class="fa-solid fa-location-crosshairs" style="color:var(--orange)"></i></div>
+        <h3 class="svc-title" id="svc-field">Field Service &amp; Sales Force</h3>
+        <p class="svc-desc">Empower your field team with mobile apps for GPS-tracked visits, order booking on-the-go, expense claims, daily reports and real-time sync with your back-office ERP or CRM system.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">GPS Visit Tracking</span><span class="svc-tag">Mobile Order Booking</span>
+          <span class="svc-tag">Expense Claims</span><span class="svc-tag">Daily Reports</span>
+          <span class="svc-tag">Offline Mode</span>
+        </div>
+        <a href="/products/field-service.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Field Service &amp; Sales Force</a>
+      </article>
+
+      <article class="svc-card reveal d2" aria-labelledby="svc-whatsapp">
+        <div class="svc-ic" style="background:#ECFDF5"><i class="fa-brands fa-whatsapp" style="color:#25D366"></i></div>
+        <h3 class="svc-title" id="svc-whatsapp">WhatsApp Business Automation</h3>
+        <p class="svc-desc">Automate customer engagement via WhatsApp — chatbots for lead capture, order confirmations, payment reminders, bulk promotional messages and two-way support conversations.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">WhatsApp API</span><span class="svc-tag">Chatbots</span>
+          <span class="svc-tag">Bulk Messaging</span><span class="svc-tag">Order Notifications</span>
+          <span class="svc-tag">Payment Reminders</span>
+        </div>
+        <a href="/products/whatsapp-automation.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> WhatsApp Business Automation</a>
+      </article>
+
+      <article class="svc-card reveal" aria-labelledby="svc-project">
+        <div class="svc-ic" style="background:var(--blue-bg)"><i class="fa-solid fa-list-check" style="color:var(--blue)"></i></div>
+        <h3 class="svc-title" id="svc-project">Project &amp; Task Management</h3>
+        <p class="svc-desc">Plan, assign and track projects with Kanban boards, Gantt charts, task dependencies, time tracking and team collaboration — so nothing falls through the cracks.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Kanban Boards</span><span class="svc-tag">Gantt Charts</span>
+          <span class="svc-tag">Time Tracking</span><span class="svc-tag">Task Dependencies</span>
+          <span class="svc-tag">Team Collaboration</span>
+        </div>
+        <a href="/products/project-management.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Project &amp; Task Management</a>
+      </article>
+
+      <article class="svc-card reveal d1" aria-labelledby="svc-helpdesk">
+        <div class="svc-ic" style="background:var(--purple-bg)"><i class="fa-solid fa-headset" style="color:var(--purple)"></i></div>
+        <h3 class="svc-title" id="svc-helpdesk">Helpdesk &amp; Ticket Management</h3>
+        <p class="svc-desc">Streamline customer support with ticket creation via email/web/WhatsApp, SLA tracking, auto-assignment, knowledge base and satisfaction surveys — resolve issues faster.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Ticket System</span><span class="svc-tag">SLA Tracking</span>
+          <span class="svc-tag">Auto Assignment</span><span class="svc-tag">Knowledge Base</span>
+          <span class="svc-tag">CSAT Surveys</span>
+        </div>
+        <a href="/products/helpdesk.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Helpdesk &amp; Ticket Management</a>
+      </article>
+
+      <article class="svc-card reveal d2" aria-labelledby="svc-dms">
+        <div class="svc-ic" style="background:var(--pink-bg)"><i class="fa-solid fa-folder-open" style="color:var(--pink)"></i></div>
+        <h3 class="svc-title" id="svc-dms">Document Management (DMS)</h3>
+        <p class="svc-desc">Go paperless with digital document storage — contracts, invoices, compliance records with full-text search, version control, access permissions and audit trails.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Digital Filing</span><span class="svc-tag">Full-Text Search</span>
+          <span class="svc-tag">Version Control</span><span class="svc-tag">Access Permissions</span>
+          <span class="svc-tag">Audit Trail</span>
+        </div>
+        <a href="/products/document-management.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Document Management</a>
+      </article>
+
+      <article class="svc-card reveal" aria-labelledby="svc-wms">
+        <div class="svc-ic" style="background:var(--orange-bg)"><i class="fa-solid fa-warehouse" style="color:var(--orange)"></i></div>
+        <h3 class="svc-title" id="svc-wms">Warehouse Management (WMS)</h3>
+        <p class="svc-desc">Advanced warehouse operations — pick/pack/ship workflows, bin location management, barcode scanning, 3PL integration, returns processing and real-time stock visibility across locations.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Pick / Pack / Ship</span><span class="svc-tag">Bin Locations</span>
+          <span class="svc-tag">Barcode Scanning</span><span class="svc-tag">3PL Integration</span>
+          <span class="svc-tag">Returns Processing</span>
+        </div>
+        <a href="/products/warehouse-management.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Warehouse Management</a>
+      </article>
+
+      <article class="svc-card reveal d1" aria-labelledby="svc-fleet">
+        <div class="svc-ic" style="background:var(--cyan-bg)"><i class="fa-solid fa-truck-fast" style="color:var(--cyan)"></i></div>
+        <h3 class="svc-title" id="svc-fleet">Fleet &amp; Logistics Management</h3>
+        <p class="svc-desc">Track your vehicles in real time — route planning, delivery status updates, driver management, fuel tracking, maintenance schedules and proof-of-delivery capture.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Vehicle Tracking</span><span class="svc-tag">Route Planning</span>
+          <span class="svc-tag">Driver Management</span><span class="svc-tag">Fuel Tracking</span>
+          <span class="svc-tag">Proof of Delivery</span>
+        </div>
+        <a href="/products/fleet-logistics.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Fleet &amp; Logistics Management</a>
+      </article>
+
+      <article class="svc-card reveal d2" aria-labelledby="svc-booking">
+        <div class="svc-ic" style="background:var(--green-bg)"><i class="fa-solid fa-calendar-check" style="color:var(--green)"></i></div>
+        <h3 class="svc-title" id="svc-booking">Appointment &amp; Booking System</h3>
+        <p class="svc-desc">Let customers book online — for clinics, salons, consultants or service businesses. Calendar sync, automated reminders, rescheduling, payments and no-show management.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Online Booking</span><span class="svc-tag">Calendar Sync</span>
+          <span class="svc-tag">SMS / Email Reminders</span><span class="svc-tag">Payments</span>
+          <span class="svc-tag">No-Show Tracking</span>
+        </div>
+        <a href="/products/appointment-booking.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Appointment &amp; Booking System</a>
+      </article>
+
+      <article class="svc-card reveal" aria-labelledby="svc-bi">
+        <div class="svc-ic" style="background:var(--blue-bg)"><i class="fa-solid fa-chart-pie" style="color:var(--blue)"></i></div>
+        <h3 class="svc-title" id="svc-bi">Business Intelligence &amp; Dashboards</h3>
+        <p class="svc-desc">Turn your data into decisions — custom KPI dashboards, interactive reports, trend analysis, Excel/PDF exports and scheduled email reports for management and stakeholders.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">KPI Dashboards</span><span class="svc-tag">Custom Reports</span>
+          <span class="svc-tag">Trend Analysis</span><span class="svc-tag">Excel / PDF Export</span>
+          <span class="svc-tag">Scheduled Reports</span>
+        </div>
+        <a href="/products/business-intelligence.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Business Intelligence &amp; Dashboards</a>
+      </article>
+
+      <article class="svc-card reveal d1" aria-labelledby="svc-school">
+        <div class="svc-ic" style="background:var(--purple-bg)"><i class="fa-solid fa-graduation-cap" style="color:var(--purple)"></i></div>
+        <h3 class="svc-title" id="svc-school">School &amp; Institute Management</h3>
+        <p class="svc-desc">Complete school and institute management — student enrollment, fee collection, attendance tracking, exam management, report cards, parent communication and timetable scheduling.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Student Enrollment</span><span class="svc-tag">Fee Management</span>
+          <span class="svc-tag">Attendance</span><span class="svc-tag">Exam &amp; Report Cards</span>
+          <span class="svc-tag">Parent Portal</span>
+        </div>
+        <a href="/products/school-management.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> School &amp; Institute Management</a>
+      </article>
+
+      <article class="svc-card reveal d2" aria-labelledby="svc-realestate">
+        <div class="svc-ic" style="background:var(--cyan-bg)"><i class="fa-solid fa-building" style="color:var(--cyan)"></i></div>
+        <h3 class="svc-title" id="svc-realestate">Real Estate &amp; Property Management</h3>
+        <p class="svc-desc">Manage properties, tenants and sales — listing management, lead tracking, rent collection, maintenance requests, agreement generation and owner/tenant portals for complete visibility.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Property Listings</span><span class="svc-tag">Tenant Management</span>
+          <span class="svc-tag">Rent Collection</span><span class="svc-tag">Maintenance Requests</span>
+          <span class="svc-tag">Owner Portal</span>
+        </div>
+        <a href="/products/real-estate.html" class="svc-link"><i class="fa-solid fa-arrow-right" style="font-size:11px"></i> Real Estate &amp; Property Management</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PROJECT SHOWCASE
+══════════════════════════════════════ -->
+<section id="showcase" class="sec-pad" aria-labelledby="showcase-heading">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:56px">
+      <div class="sec-tag">What We Deliver</div>
+      <h2 class="sec-h" id="showcase-heading">Typical Impact on<br><em>Your Business</em></h2>
+      <p class="sec-p" style="max-width:600px;margin:0 auto">Here's what businesses like yours can expect — measurable before &amp; after impact across key metrics.</p>
+      <p class="sec-p" style="max-width:600px;margin:4px auto 0;font-size:12px;opacity:.6">Results are representative of typical outcomes. Client names withheld for confidentiality.</p>
+    </div>
+    <div class="sc-grid">
+
+      <div class="sc-card reveal">
+        <div class="sc-header" style="background:linear-gradient(135deg,var(--blue),#818CF8)">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.7;margin-bottom:6px">Manufacturing ERP</div>
+          <div style="font-size:18px;font-weight:700">Manufacturing Company</div>
+          <div style="font-size:12px;opacity:.6;margin-top:4px">Production &bull; 120+ Employees</div>
+        </div>
+        <div style="padding:24px">
+          <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Before &rarr; After</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Order Processing</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">4 hours</span> &rarr; <span style="color:var(--green)">18 mins</span></span>
+            </div>
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Stock Accuracy</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">72%</span> &rarr; <span style="color:var(--green)">99.2%</span></span>
+            </div>
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Weekly Hours Saved</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">0</span> &rarr; <span style="color:var(--green)">22 hrs</span></span>
+            </div>
+          </div>
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--line)">
+            <div style="font-size:12px;color:var(--muted);line-height:1.65">Typical result: Unified ERP replaces multiple disconnected spreadsheets, saving significant hours weekly across departments.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-card reveal">
+        <div class="sc-header" style="background:linear-gradient(135deg,var(--green),#34D399)">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.7;margin-bottom:6px">CRM + WhatsApp</div>
+          <div style="font-size:18px;font-weight:700">IT Services Company</div>
+          <div style="font-size:12px;opacity:.6;margin-top:4px">B2B Services &bull; 45 Employees</div>
+        </div>
+        <div style="padding:24px">
+          <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Before &rarr; After</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Lead Conversion</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">8%</span> &rarr; <span style="color:var(--green)">32%</span></span>
+            </div>
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Follow-up Missed</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">40%</span> &rarr; <span style="color:var(--green)">2%</span></span>
+            </div>
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Revenue Growth</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">Flat</span> &rarr; <span style="color:var(--green)">+42% in 6mo</span></span>
+            </div>
+          </div>
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--line)">
+            <div style="font-size:12px;color:var(--muted);line-height:1.65">Typical result: Automated lead capture from WhatsApp and web eliminates manual entry, improving conversion rates significantly.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-card reveal">
+        <div class="sc-header" style="background:linear-gradient(135deg,var(--orange),#F59E0B)">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.7;margin-bottom:6px">Inventory + Barcode</div>
+          <div style="font-size:18px;font-weight:700">Export Trading Firm</div>
+          <div style="font-size:12px;opacity:.6;margin-top:4px">Textile Export &bull; 3 Warehouses</div>
+        </div>
+        <div style="padding:24px">
+          <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Before &rarr; After</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Stock Discrepancy</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">15-20%</span> &rarr; <span style="color:var(--green)">&lt;0.5%</span></span>
+            </div>
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Stocktake Time</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">3 days</span> &rarr; <span style="color:var(--green)">4 hours</span></span>
+            </div>
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">ROI Achieved</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">12+ months</span> &rarr; <span style="color:var(--green)">60 days</span></span>
+            </div>
+          </div>
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--line)">
+            <div style="font-size:12px;color:var(--muted);line-height:1.65">Typical result: Barcode scanning eliminates manual counting errors, reducing stock discrepancies to near zero.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-card reveal">
+        <div class="sc-header" style="background:linear-gradient(135deg,#7C3AED,#A78BFA)">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.7;margin-bottom:6px">HR &amp; Payroll</div>
+          <div style="font-size:18px;font-weight:700">Wholesale Trading Company</div>
+          <div style="font-size:12px;opacity:.6;margin-top:4px">Distribution &bull; 85 Employees</div>
+        </div>
+        <div style="padding:24px">
+          <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Before &rarr; After</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Payroll Processing</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">5 days</span> &rarr; <span style="color:var(--green)">2 hours</span></span>
+            </div>
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Attendance Errors</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">30+/month</span> &rarr; <span style="color:var(--green)">0</span></span>
+            </div>
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Compliance Penalties</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">&#8377;2L/year</span> &rarr; <span style="color:var(--green)">&#8377;0</span></span>
+            </div>
+          </div>
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--line)">
+            <div style="font-size:12px;color:var(--muted);line-height:1.65">Typical result: Automated payroll with ESI/PF compliance drastically reduces processing time and eliminates penalty risk.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-card reveal">
+        <div class="sc-header" style="background:linear-gradient(135deg,#DB2777,#F472B6)">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.7;margin-bottom:6px">E-Commerce + GST Billing</div>
+          <div style="font-size:18px;font-weight:700">Multi-Store Retail Chain</div>
+          <div style="font-size:12px;opacity:.6;margin-top:4px">Retail &bull; 6 Stores &bull; Online</div>
+        </div>
+        <div style="padding:24px">
+          <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Before &rarr; After</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Online Revenue</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">&#8377;0</span> &rarr; <span style="color:var(--green)">&#8377;12L/month</span></span>
+            </div>
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Invoice Generation</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">Manual</span> &rarr; <span style="color:var(--green)">Auto GST</span></span>
+            </div>
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">GSTR Filing Time</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">3 days</span> &rarr; <span style="color:var(--green)">1 click</span></span>
+            </div>
+          </div>
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--line)">
+            <div style="font-size:12px;color:var(--muted);line-height:1.65">Typical result: Custom e-commerce with auto GST invoicing enables online sales and simplifies GSTR filing.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-card reveal">
+        <div class="sc-header" style="background:linear-gradient(135deg,#0891B2,#22D3EE)">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;opacity:.7;margin-bottom:6px">Field Service + Fleet</div>
+          <div style="font-size:18px;font-weight:700">Industrial Equipment Company</div>
+          <div style="font-size:12px;opacity:.6;margin-top:4px">Field Operations &bull; 200+ Staff</div>
+        </div>
+        <div style="padding:24px">
+          <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Before &rarr; After</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Field Visits Tracked</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">0%</span> &rarr; <span style="color:var(--green)">100% GPS</span></span>
+            </div>
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Service Response</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">48 hrs</span> &rarr; <span style="color:var(--green)">4 hrs</span></span>
+            </div>
+            <div class="sc-metric-row" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surf);border-radius:8px">
+              <span style="font-size:13px;color:var(--muted)">Fuel Cost Saved</span>
+              <span style="font-size:13px;font-weight:700"><span style="color:var(--red);text-decoration:line-through">Untracked</span> &rarr; <span style="color:var(--green)">28% saved</span></span>
+            </div>
+          </div>
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--line)">
+            <div style="font-size:12px;color:var(--muted);line-height:1.65">Typical result: GPS-tracked field visits with route optimization cut service response time and reduce fuel costs.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WHY CHOOSE US
+══════════════════════════════════════ -->
+<section id="why" class="sec-pad" aria-labelledby="why-heading">
+  <div class="container why-inner">
+    <div class="why-grid">
+      <div class="reveal">
+        <div class="sec-tag" style="background:rgba(21,87,255,.25);border-color:rgba(21,87,255,.4);color:#93BBFF">Why Softwaller</div>
+        <h2 class="sec-h why-h" id="why-heading">Why Businesses<br>Choose <em>Us</em></h2>
+        <p class="why-p">We are not a generic IT vendor. We are a focused business software company that understands local business operations, regulatory compliance, and regional languages.</p>
+        <div class="why-stats">
+          <div class="why-stat"><div class="ws-n">&#60;48<span>hrs</span></div><div class="ws-l">Support response time</div></div>
+          <div class="why-stat"><div class="ws-n">100<span>%</span></div><div class="ws-l">GST &amp; compliance ready</div></div>
+          <div class="why-stat"><div class="ws-n">3<span>mo</span></div><div class="ws-l">Free support post go-live</div></div>
+          <div class="why-stat"><div class="ws-n">Tamil<span>&amp;En</span></div><div class="ws-l">Bilingual support team</div></div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <div class="why-item">
+          <div class="wi-icon" style="background:rgba(21,87,255,.2)"><i class="fa-solid fa-map-location-dot" style="color:#93BBFF"></i></div>
+          <div><div class="wi-t">Built for Local Compliance</div><div class="wi-d">GST, TDS, ESI, PF, e-invoice, e-way bill — all built-in natively. No workarounds.</div></div>
+        </div>
+        <div class="why-item">
+          <div class="wi-icon" style="background:rgba(52,211,153,.15)"><i class="fa-solid fa-screwdriver-wrench" style="color:#34D399"></i></div>
+          <div><div class="wi-t">Fully Customizable</div><div class="wi-d">Every module is built to match your workflow. We adapt to your business, not the opposite.</div></div>
+        </div>
+        <div class="why-item">
+          <div class="wi-icon" style="background:rgba(251,146,60,.15)"><i class="fa-solid fa-link" style="color:#FB923C"></i></div>
+          <div><div class="wi-t">Integrates With Everything</div><div class="wi-d">Tally, Zoho, Razorpay, WhatsApp Business API, SMS, email — we connect your stack.</div></div>
+        </div>
+        <div class="why-item">
+          <div class="wi-icon" style="background:rgba(196,181,253,.15)"><i class="fa-solid fa-mobile-screen" style="color:#C4B5FD"></i></div>
+          <div><div class="wi-t">Mobile &amp; Cloud Ready</div><div class="wi-d">Access your business data from anywhere on any device. Real-time, always in sync.</div></div>
+        </div>
+        <div class="why-item">
+          <div class="wi-icon" style="background:rgba(251,191,36,.15)"><i class="fa-solid fa-headset" style="color:#FBD24C"></i></div>
+          <div><div class="wi-t">Dedicated Post-Launch Support</div><div class="wi-d">3 months free support. AMC plans available. Tamil &amp; English speaking support team.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TECHNOLOGY STACK
+══════════════════════════════════════ -->
+<section id="tech-stack" class="sec-pad" aria-labelledby="tech-heading" style="background:var(--white)">
+  <div class="container">
+    <div style="text-align:center;max-width:540px;margin:0 auto" class="reveal">
+      <div class="sec-tag">Our Stack</div>
+      <h2 class="sec-h" id="tech-heading">Technologies We <em>Work With</em></h2>
+      <p class="sec-p" style="margin-bottom:48px">We use proven, enterprise-grade technologies to build software that scales reliably and performs under pressure.</p>
+    </div>
+    <!-- Row 1 — scrolls left -->
+    <div class="marquee-row reveal d1">
+      <div class="marquee-track" style="--speed:30s">
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-csharp-plain colored" style="font-size:32px"></i></div><div class="tech-name">C#</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-dot-net-plain colored" style="font-size:32px"></i></div><div class="tech-name">ASP.NET</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-blazor-plain colored" style="font-size:32px"></i></div><div class="tech-name">Blazor</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-dotnetcore-plain colored" style="font-size:32px"></i></div><div class="tech-name">.NET MAUI</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-microsoftsqlserver-plain colored" style="font-size:32px"></i></div><div class="tech-name">SQL Server</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-azure-plain colored" style="font-size:32px"></i></div><div class="tech-name">Azure</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="2" width="6" height="20" rx="1.5" fill="#F2C811"/><rect x="9" y="6" width="6" height="16" rx="1.5" fill="#F2C811" opacity=".75"/><rect x="4" y="10" width="6" height="12" rx="1.5" fill="#F2C811" opacity=".5"/></svg></div><div class="tech-name">Power BI</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-react-original colored" style="font-size:32px"></i></div><div class="tech-name">React</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-nextjs-plain" style="font-size:32px;color:#000"></i></div><div class="tech-name">Next.js</div></div>
+        <!-- duplicate set for seamless loop -->
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-csharp-plain colored" style="font-size:32px"></i></div><div class="tech-name">C#</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-dot-net-plain colored" style="font-size:32px"></i></div><div class="tech-name">ASP.NET</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-blazor-plain colored" style="font-size:32px"></i></div><div class="tech-name">Blazor</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-dotnetcore-plain colored" style="font-size:32px"></i></div><div class="tech-name">.NET MAUI</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-microsoftsqlserver-plain colored" style="font-size:32px"></i></div><div class="tech-name">SQL Server</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-azure-plain colored" style="font-size:32px"></i></div><div class="tech-name">Azure</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="2" width="6" height="20" rx="1.5" fill="#F2C811"/><rect x="9" y="6" width="6" height="16" rx="1.5" fill="#F2C811" opacity=".75"/><rect x="4" y="10" width="6" height="12" rx="1.5" fill="#F2C811" opacity=".5"/></svg></div><div class="tech-name">Power BI</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-react-original colored" style="font-size:32px"></i></div><div class="tech-name">React</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-nextjs-plain" style="font-size:32px;color:#000"></i></div><div class="tech-name">Next.js</div></div>
+      </div>
+    </div>
+    <!-- Row 2 — scrolls right (reverse) -->
+    <div class="marquee-row reveal d2">
+      <div class="marquee-track marquee-reverse" style="--speed:35s">
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-angularjs-plain colored" style="font-size:32px"></i></div><div class="tech-name">Angular</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-javascript-plain colored" style="font-size:32px"></i></div><div class="tech-name">JavaScript</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-typescript-plain colored" style="font-size:32px"></i></div><div class="tech-name">TypeScript</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-html5-plain colored" style="font-size:32px"></i></div><div class="tech-name">HTML / CSS</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-git-plain colored" style="font-size:32px"></i></div><div class="tech-name">Git</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-azuredevops-plain colored" style="font-size:32px"></i></div><div class="tech-name">Azure DevOps</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-fastapi-plain colored" style="font-size:32px"></i></div><div class="tech-name">REST APIs</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-docker-plain colored" style="font-size:32px"></i></div><div class="tech-name">Docker</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-redis-plain colored" style="font-size:32px"></i></div><div class="tech-name">Redis</div></div>
+        <!-- duplicate set for seamless loop -->
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-angularjs-plain colored" style="font-size:32px"></i></div><div class="tech-name">Angular</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-javascript-plain colored" style="font-size:32px"></i></div><div class="tech-name">JavaScript</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-typescript-plain colored" style="font-size:32px"></i></div><div class="tech-name">TypeScript</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-html5-plain colored" style="font-size:32px"></i></div><div class="tech-name">HTML / CSS</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-git-plain colored" style="font-size:32px"></i></div><div class="tech-name">Git</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-azuredevops-plain colored" style="font-size:32px"></i></div><div class="tech-name">Azure DevOps</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-fastapi-plain colored" style="font-size:32px"></i></div><div class="tech-name">REST APIs</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-docker-plain colored" style="font-size:32px"></i></div><div class="tech-name">Docker</div></div>
+        <div class="tech-item"><div class="tech-icon tech-icon-devicon"><i class="devicon-redis-plain colored" style="font-size:32px"></i></div><div class="tech-name">Redis</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PROCESS
+══════════════════════════════════════ -->
+<section id="process" class="sec-pad" aria-labelledby="process-heading">
+  <div class="container">
+    <div style="max-width:520px" class="reveal">
+      <div class="sec-tag">How We Work</div>
+      <h2 class="sec-h" id="process-heading">From Idea to <em>Live Software</em><br>in 6–12 Weeks</h2>
+      <p class="sec-p" style="font-size:15.5px">A transparent, sprint-based delivery process so you always know where your project stands.</p>
+    </div>
+    <div class="process-steps">
+      <div class="ps reveal">
+        <div class="ps-num">01</div>
+        <span class="ps-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass" style="color:var(--blue)"></i></span>
+        <div class="ps-title">Discovery &amp; Analysis</div>
+        <p class="ps-desc">We study your current process, pain points, data flows, and business rules. We document everything before writing a line of code.</p>
+      </div>
+      <div class="ps reveal d1">
+        <div class="ps-num">02</div>
+        <span class="ps-icon" aria-hidden="true"><i class="fa-solid fa-pen-ruler" style="color:var(--blue)"></i></span>
+        <div class="ps-title">Design &amp; Prototype</div>
+        <p class="ps-desc">You see and click through the actual UI before development begins. Revise freely — changes at this stage cost nothing. Changes later cost time.</p>
+      </div>
+      <div class="ps reveal d2">
+        <div class="ps-num">03</div>
+        <span class="ps-icon" aria-hidden="true"><i class="fa-solid fa-code" style="color:var(--blue)"></i></span>
+        <div class="ps-title">Build &amp; Test</div>
+        <p class="ps-desc">2-week agile sprints with demos after each sprint. You test and give feedback throughout — not just at the end when changes are expensive.</p>
+      </div>
+      <div class="ps reveal d3">
+        <div class="ps-num">04</div>
+        <span class="ps-icon" aria-hidden="true"><i class="fa-solid fa-rocket" style="color:var(--blue)"></i></span>
+        <div class="ps-title">Launch &amp; Support</div>
+        <p class="ps-desc">We train your team, migrate your existing data, go live together, and stay by your side for 3 months of free support after launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WHAT WE DELIVER
+══════════════════════════════════════ -->
+<section id="solutions" class="sec-pad" aria-labelledby="solutions-heading">
+  <div class="container">
+    <div style="text-align:center;max-width:520px;margin:0 auto 56px" class="reveal">
+      <div class="sec-tag">What We Deliver</div>
+      <h2 class="sec-h" id="solutions-heading">Real Solutions for<br><em>Real Businesses</em></h2>
+    </div>
+    <div class="testi-grid">
+      <article class="tc reveal">
+        <div class="tc-quote"><i class="fa-solid fa-industry" style="color:var(--blue);font-size:20px"></i></div>
+        <p class="tc-text">Complete ERP systems for manufacturing companies — integrating purchase, production, inventory, billing, and accounts into a single platform. Replacing disconnected spreadsheets with real-time, unified data.</p>
+        <div class="tc-sep"></div>
+        <div class="tc-author">
+          <div class="tc-av" style="background:#1557FF"><i class="fa-solid fa-gears" style="color:#fff;font-size:14px"></i></div>
+          <div>
+            <div class="tc-name">Manufacturing ERP</div>
+            <div class="tc-co">Production, Inventory &amp; Billing</div>
+          </div>
+        </div>
+      </article>
+      <article class="tc reveal d1">
+        <div class="tc-quote"><i class="fa-solid fa-chart-line" style="color:var(--purple);font-size:20px"></i></div>
+        <p class="tc-text">CRM solutions with automated lead capture from websites and WhatsApp. Follow-up reminders, pipeline tracking, and sales reports — so no lead falls through the cracks.</p>
+        <div class="tc-sep"></div>
+        <div class="tc-author">
+          <div class="tc-av" style="background:#7C3AED"><i class="fa-solid fa-bullseye" style="color:#fff;font-size:14px"></i></div>
+          <div>
+            <div class="tc-name">Sales CRM</div>
+            <div class="tc-co">Lead Capture &amp; Pipeline Management</div>
+          </div>
+        </div>
+      </article>
+      <article class="tc reveal d2">
+        <div class="tc-quote"><i class="fa-solid fa-warehouse" style="color:var(--green);font-size:20px"></i></div>
+        <p class="tc-text">Multi-warehouse inventory management with barcode scanning, real-time stock visibility, and auto-reorder alerts. Designed to eliminate stock mismatches across locations.</p>
+        <div class="tc-sep"></div>
+        <div class="tc-author">
+          <div class="tc-av" style="background:#059669"><i class="fa-solid fa-barcode" style="color:#fff;font-size:14px"></i></div>
+          <div>
+            <div class="tc-name">Inventory &amp; WMS</div>
+            <div class="tc-co">Multi-location Stock Management</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FAQ
+══════════════════════════════════════ -->
+<section id="faq" class="sec-pad" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="reveal">
+        <div class="sec-tag">FAQ</div>
+        <h2 class="sec-h" id="faq-heading">Frequently Asked<br><em>Questions</em></h2>
+        <div class="faq-list" role="list">
+
+          <div class="faq-item" role="listitem">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span>How long does it take to build custom software?</span>
+              <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">A basic CRM or Inventory Management System typically takes 6–8 weeks. A full ERP with multiple integrated modules takes 3–5 months. We work in 2-week sprints, so you see working software throughout — not just at the end. We provide a detailed timeline estimate after the discovery call.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span>Do you provide support after the software goes live?</span>
+              <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">Yes — all projects include 3 months of free post-launch support covering bug fixes, minor adjustments, and user training. After that, we offer Annual Maintenance Contracts (AMC) that cover ongoing support, security updates, server management, and feature enhancements. We have clients who have been on AMC with us since 2024.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span>Is the software fully GST compliant?</span>
+              <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">Yes, completely. Our billing and accounting modules handle GST invoicing, e-Invoice generation via IRP, e-Way Bill, GSTR-1, GSTR-3B, GSTR-2A reconciliation, and TDS/TCS computations — all built-in. We stay updated with every GST council change so your software stays compliant automatically.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span>Can it integrate with Tally / WhatsApp / payment gateways?</span>
+              <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">Yes. We integrate with Tally (via XML / direct API), Zoho Books, WhatsApp Business API (for lead capture and order notifications), Razorpay, PayU, PayTM payment gateways, SMS providers (Textlocal, MSG91), and most third-party REST APIs. If you use a specific tool, ask us — we have likely integrated it before.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span>Will it work on mobile phones and tablets?</span>
+              <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">All our web applications are fully responsive and work on any device — desktop, tablet, and mobile. For field operations requiring offline access, barcode scanning, or GPS tracking, we build native Android apps that sync with the central system when connectivity is available.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span>What is the typical cost / pricing model?</span>
+              <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">We work on fixed-price project contracts after a detailed discovery. A basic CRM starts from ₹80,000. A full multi-module ERP typically ranges from ₹2–6 lakhs depending on scope. We do not charge per-user SaaS fees — you own your software outright. AMC for ongoing support is priced separately and affordably. Book a free call and we will give you a detailed estimate.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Sticky info card -->
+      <div class="reveal d1">
+        <div class="faq-right">
+          <div class="faq-right-tag">Free Consultation</div>
+          <div class="faq-right-h">Still Have Questions?</div>
+          <p class="faq-right-p">Book a free 30-minute call with our technical team. We will analyze your current setup, answer all your questions, and give you a clear recommendation — with no sales pressure.</p>
+          <button class="faq-cta-btn" data-goto="contact">
+            <i class="fa-solid fa-calendar-check"></i> Book Free Call Now
+          </button>
+          <div class="faq-info-list">
+            <div class="fil"><i class="fa-solid fa-check"></i>No commitment required</div>
+            <div class="fil"><i class="fa-solid fa-check"></i>Same-day response guaranteed</div>
+            <div class="fil"><i class="fa-solid fa-check"></i>Get a project estimate in 48 hours</div>
+            <div class="fil"><i class="fa-solid fa-phone"></i>Call us: +91 95859 99819</div>
+            <div class="fil"><i class="fa-brands fa-whatsapp"></i>WhatsApp: +91 95859 99819</div>
+            <div class="fil"><i class="fa-solid fa-envelope"></i>info@softwaller.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     LATEST FROM BLOG
+══════════════════════════════════════ -->
+<section id="blog" class="sec-pad" aria-labelledby="blog-heading" style="background:var(--surf)">
+  <div class="container">
+    <div style="text-align:center;max-width:720px;margin:0 auto" class="reveal">
+      <div class="sec-tag">Insights & Resources</div>
+      <h2 class="sec-h" id="blog-heading">Latest from <em>the Blog</em></h2>
+      <p class="sec-p">Practical guides on GST compliance, business automation, AI, and the software decisions Indian SMBs face.</p>
+    </div>
+
+    <div class="hb-grid">
+      <a href="/blog/e-invoicing-threshold-2026.html" class="hb-card reveal">
+        <div class="hb-color" style="background:var(--green)"></div>
+        <div class="hb-img"><img src="/assets/blog/gst.webp" alt="E-invoicing threshold 2026 IRN compliance" width="600" height="400" loading="lazy"></div>
+        <div class="hb-body">
+          <span class="hb-tag" style="background:var(--green-bg);color:var(--green)">GST</span>
+          <h3 class="hb-title">E-Invoicing Threshold 2026: Is Your Billing Ready?</h3>
+          <p class="hb-desc">The turnover limit keeps falling. Where the rule stands today and what non-compliance really costs.</p>
+          <div class="hb-meta"><span><i class="fa-regular fa-clock"></i> 7 min read</span><span class="hb-read">Read <i class="fa-solid fa-arrow-right"></i></span></div>
+        </div>
+      </a>
+
+      <a href="/blog/e-invoicing-penalties-india-2026.html" class="hb-card reveal d1">
+        <div class="hb-color" style="background:var(--green)"></div>
+        <div class="hb-img"><img src="/assets/blog/gst-penalties.webp" alt="E-invoicing penalties India 2026" width="600" height="400" loading="lazy"></div>
+        <div class="hb-body">
+          <span class="hb-tag" style="background:var(--green-bg);color:var(--green)">GST</span>
+          <h3 class="hb-title">E-Invoicing Penalties India 2026: Fines & How to Avoid Them</h3>
+          <p class="hb-desc">One missed IRN can cost ₹25,000 per invoice. What the law says, what officers levy, and how to never trip over either.</p>
+          <div class="hb-meta"><span><i class="fa-regular fa-clock"></i> 8 min read</span><span class="hb-read">Read <i class="fa-solid fa-arrow-right"></i></span></div>
+        </div>
+      </a>
+
+      <a href="/blog/tally-to-cloud-migration.html" class="hb-card reveal d2">
+        <div class="hb-color" style="background:var(--green)"></div>
+        <div class="hb-img"><img src="/assets/blog/tally-cloud.webp" alt="Tally to cloud accounting migration" width="600" height="400" loading="lazy"></div>
+        <div class="hb-body">
+          <span class="hb-tag" style="background:var(--green-bg);color:var(--green)">Accounting</span>
+          <h3 class="hb-title">Tally to Cloud Migration: 10-Year Data Without Losing a Voucher</h3>
+          <p class="hb-desc">The biggest fear in moving off Tally is leaving a decade of vouchers behind. Here is how to take all of it with you.</p>
+          <div class="hb-meta"><span><i class="fa-regular fa-clock"></i> 8 min read</span><span class="hb-read">Read <i class="fa-solid fa-arrow-right"></i></span></div>
+        </div>
+      </a>
+
+      <a href="/blog/ai-agents-for-small-business.html" class="hb-card reveal">
+        <div class="hb-color" style="background:var(--blue)"></div>
+        <div class="hb-img"><img src="/assets/blog/automation.webp" alt="AI agents for small business" width="600" height="400" loading="lazy"></div>
+        <div class="hb-body">
+          <span class="hb-tag" style="background:var(--blue-bg);color:var(--blue)">AI & Automation</span>
+          <h3 class="hb-title">AI Agents for Small Business: Where They Actually Earn Their Keep</h3>
+          <p class="hb-desc">Most pitches are repackaged chatbots. What real agents do and where they still fall short for Indian SMBs.</p>
+          <div class="hb-meta"><span><i class="fa-regular fa-clock"></i> 8 min read</span><span class="hb-read">Read <i class="fa-solid fa-arrow-right"></i></span></div>
+        </div>
+      </a>
+
+      <a href="/blog/clinic-management-software-abha.html" class="hb-card reveal d1">
+        <div class="hb-color" style="background:#0891B2"></div>
+        <div class="hb-img"><img src="/assets/blog/clinic.webp" alt="Clinic management software with ABHA integration" width="600" height="400" loading="lazy"></div>
+        <div class="hb-body">
+          <span class="hb-tag" style="background:#ECFEFF;color:#0891B2">Healthcare</span>
+          <h3 class="hb-title">Clinic Management Software with ABHA: The 2026 Standard</h3>
+          <p class="hb-desc">Patient records pulled from any hospital nationwide. Billing, pharmacy and lab in one screen.</p>
+          <div class="hb-meta"><span><i class="fa-regular fa-clock"></i> 8 min read</span><span class="hb-read">Read <i class="fa-solid fa-arrow-right"></i></span></div>
+        </div>
+      </a>
+
+      <a href="/blog/restaurant-pos-swiggy-zomato-integration.html" class="hb-card reveal d2">
+        <div class="hb-color" style="background:#D97706"></div>
+        <div class="hb-img"><img src="/assets/blog/restaurant-pos.webp" alt="Restaurant POS Swiggy Zomato integration" width="600" height="400" loading="lazy"></div>
+        <div class="hb-body">
+          <span class="hb-tag" style="background:#FFFBEB;color:#D97706">Hospitality</span>
+          <h3 class="hb-title">The Restaurant POS Stack for 2026: Dine-In, Online, One Kitchen</h3>
+          <p class="hb-desc">Three tablets, two printers, the 7 pm rush turning into chaos. There is a better way to wire a restaurant.</p>
+          <div class="hb-meta"><span><i class="fa-regular fa-clock"></i> 7 min read</span><span class="hb-read">Read <i class="fa-solid fa-arrow-right"></i></span></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="hb-all-wrap reveal">
+      <a href="/blog/" class="hb-all">View all articles <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     NEWSLETTER
+══════════════════════════════════════ -->
+<section id="newsletter" class="sec-pad nl-section" aria-labelledby="nl-heading">
+  <div class="container">
+    <div class="nl-inner">
+      <div class="reveal">
+        <div class="sec-tag" style="background:rgba(21,87,255,.25);border-color:rgba(21,87,255,.4);color:#93BBFF">Stay Updated</div>
+        <h2 class="nl-h" id="nl-heading">Get Business Software<br>Insights <em>Every Week</em></h2>
+        <p class="nl-p">Practical tips on CRM, ERP, GST compliance, and business automation — delivered free to your inbox. No spam, unsubscribe anytime.</p>
+      </div>
+      <div class="reveal d1">
+        <div class="nl-form" id="nl-form-wrap">
+          <div class="nl-form-title">Subscribe to Our Newsletter</div>
+          <div class="nl-form-sub">Join business owners who read our weekly insights.</div>
+          <iframe name="nl-iframe" style="display:none"></iframe>
+          <form id="nl-subscribe" action="https://eb65560b.sibforms.com/serve/MUIFACP2rFDETv2p-mUPqyHo3glJtZhcD0GG3f63ikM49xDLRJyQdEWUq0PBoF0ksGw1g_N182HgQUpPssTKQKbO_o-YEB7N347_FS22M6QudGfXoY8QkWZ93gPvVtu8RVTgz--uNpErO1Xd4RccAsEDFLg3mci83OfHVyaJWN0sybuGWiTH50Rmf6Jh_BRVN1HTSAYIwS2z6SKAUw==" method="POST" target="nl-iframe" novalidate>
+            <input type="hidden" name="locale" value="en">
+            <div class="nl-row">
+              <input type="email" name="EMAIL" class="nl-input" id="nl-email" placeholder="your@email.com" required aria-label="Email address">
+              <button type="submit" class="nl-btn" id="nl-submit-btn"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+            </div>
+            <p class="nl-note"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime. We respect your privacy.</p>
+            <p class="nl-note" style="margin-top:6px"><i class="fa-brands fa-whatsapp" style="color:#25D366"></i> By subscribing, you agree to receive communication via email and WhatsApp from Softwaller Technologies. You can opt out anytime by replying <strong>STOP</strong> or emailing <a href="mailto:info@softwaller.com" style="color:#93BBFF">info@softwaller.com</a>.</p>
+          </form>
+          <div class="nl-success" id="nl-success">
+            <i class="fa-solid fa-circle-check"></i>
+            <div class="nl-success-text">You're subscribed!</div>
+            <div class="nl-success-sub">Check your inbox for a confirmation email.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     HOW WE USE WHATSAPP (Meta / WhatsApp Business API Compliance)
+══════════════════════════════════════ -->
+<style>@media(max-width:640px){.wa-use-grid{grid-template-columns:1fr !important}}</style>
+<section id="how-we-use-whatsapp" class="sec-pad" aria-labelledby="wa-use-heading" style="background:#f6f8fb">
+  <div class="container">
+    <div style="max-width:820px;margin:0 auto;text-align:center">
+      <div class="sec-tag" style="background:rgba(37,211,102,.12);color:#128C4B;border-color:rgba(37,211,102,.25)">
+        <i class="fa-brands fa-whatsapp" style="color:#25D366"></i> WhatsApp Business API
+      </div>
+      <h2 class="sec-h" id="wa-use-heading">How We Use <em>WhatsApp</em></h2>
+      <p class="sec-p" style="margin-bottom:28px">
+        We only send messages to users who have <strong>explicitly opted in</strong> through our website contact form or who have requested communication from us directly. We do <strong>not</strong> send spam, bulk promotions, or unsolicited messages.
+      </p>
+      <div class="wa-use-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;text-align:left;margin-bottom:24px">
+        <div style="background:#fff;border:1px solid #e6e9ef;border-radius:12px;padding:18px 20px">
+          <div style="font-weight:700;font-size:14px;margin-bottom:4px;color:#1a1a2e"><i class="fa-solid fa-check-circle" style="color:#25D366;margin-right:6px"></i>Explicit Opt-In Only</div>
+          <div style="font-size:13px;color:#555;line-height:1.6">Consent is captured via checkbox on our contact form or by a user initiating a conversation with us.</div>
+        </div>
+        <div style="background:#fff;border:1px solid #e6e9ef;border-radius:12px;padding:18px 20px">
+          <div style="font-weight:700;font-size:14px;margin-bottom:4px;color:#1a1a2e"><i class="fa-solid fa-bell" style="color:#1557FF;margin-right:6px"></i>Service Messages</div>
+          <div style="font-size:13px;color:#555;line-height:1.6">Project updates, appointment reminders, invoices, and customer support replies — never cold outreach.</div>
+        </div>
+        <div style="background:#fff;border:1px solid #e6e9ef;border-radius:12px;padding:18px 20px">
+          <div style="font-weight:700;font-size:14px;margin-bottom:4px;color:#1a1a2e"><i class="fa-solid fa-ban" style="color:#DC2626;margin-right:6px"></i>No Spam, Ever</div>
+          <div style="font-size:13px;color:#555;line-height:1.6">We never purchase or scrape phone numbers. Every opt-in is timestamped and auditable.</div>
+        </div>
+        <div style="background:#fff;border:1px solid #e6e9ef;border-radius:12px;padding:18px 20px">
+          <div style="font-weight:700;font-size:14px;margin-bottom:4px;color:#1a1a2e"><i class="fa-solid fa-right-from-bracket" style="color:#EA580C;margin-right:6px"></i>Easy Opt-Out</div>
+          <div style="font-size:13px;color:#555;line-height:1.6">Reply <strong>STOP</strong> to any WhatsApp message or email <a href="mailto:info@softwaller.com" style="color:#1557FF">info@softwaller.com</a>. Processed within 24 hours.</div>
+        </div>
+      </div>
+      <p style="font-size:13px;color:#555">
+        Read our full <a href="/whatsapp-policy.html" style="color:#1557FF;font-weight:600">WhatsApp Messaging Policy</a> and <a href="/privacy-policy.html" style="color:#1557FF;font-weight:600">Privacy Policy</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA BAND
+══════════════════════════════════════ -->
+<section id="cta-band" aria-label="Call to action">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="reveal">
+        <h2 class="cta-h">Ready to Transform<br>Your Business Operations?</h2>
+        <p class="cta-p">Book a free consultation today. We will review your current process and show you exactly how we can help — no obligation.</p>
+      </div>
+      <div class="cta-acts reveal d1">
+        <button class="btn-white" data-goto="contact">
+          <i class="fa-solid fa-calendar-check" style="color:var(--blue)"></i> Book Free Call
+        </button>
+        <button class="btn-wh-out" data-goto="services">View Services</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CONTACT
+══════════════════════════════════════ -->
+<section id="contact" class="sec-pad" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="sec-tag">Get In Touch</div>
+        <h2 class="sec-h" id="contact-heading">Let's Build Your<br><em>Perfect Solution</em></h2>
+        <p class="contact-desc">Tell us about your business and what you need. Our team will respond within 24 hours with a personalized recommendation — no obligation, no hard selling.</p>
+        <div class="cd-list">
+          <div class="cd-card">
+            <div class="cd-ic"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div class="cd-label">Office</div>
+              <div class="cd-val">Regd: 3-15/8 Singandi Lakshmana, Mudhali St, Tharamangalam, Salem – 636502, TN<br>Operating from: Chennai, Tamil Nadu, India</div>
+            </div>
+          </div>
+          <a href="mailto:info@softwaller.com" class="cd-card">
+            <div class="cd-ic"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <div class="cd-label">Email</div>
+              <div class="cd-val">info@softwaller.com</div>
+            </div>
+          </a>
+          <a href="tel:+919585999819" class="cd-card">
+            <div class="cd-ic"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div class="cd-label">Phone / WhatsApp</div>
+              <div class="cd-val">+91 95859 99819</div>
+            </div>
+          </a>
+          <div class="cd-card">
+            <div class="cd-ic"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <div class="cd-label">Working Hours</div>
+              <div class="cd-val">Monday – Saturday &nbsp;&middot;&nbsp; 9:00 AM – 6:00 PM IST</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-social">
+          <a href="https://twitter.com/softwaller" target="_blank" rel="noopener noreferrer" class="cs-btn" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/softwaller_technologies" target="_blank" rel="noopener noreferrer" class="cs-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/919585999819?text=Hi%20Softwaller%2C%20I%20would%20like%20to%20discuss%20a%20software%20project" target="_blank" rel="noopener noreferrer" class="cs-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="reveal d1">
+        <form class="form-wrap" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="d4ae6881-299d-4780-aab8-424fce957afb">
+          <input type="hidden" name="subject" value="New Project Enquiry — Softwaller Technologies">
+          <input type="hidden" name="from_name" value="Softwaller Website">
+          <div class="form-top-bar" aria-hidden="true"></div>
+          <div id="form-body">
+            <div class="cf-title">Send Us a Message</div>
+            <div class="cf-sub">We respond within 24 hours on business days.</div>
+            <!-- Step indicator -->
+            <div class="form-steps-bar">
+              <div class="fsb-step active" data-step="1"><span class="fsb-num">1</span> Contact</div>
+              <div class="fsb-line"><div class="fsb-line-fill"></div></div>
+              <div class="fsb-step" data-step="2"><span class="fsb-num">2</span> Project</div>
+            </div>
+            <!-- Step 1: Contact info -->
+            <div class="form-step" id="form-step-1">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="fname">First Name<span class="req">*</span></label>
+                  <input class="form-ctrl" type="text" id="fname" name="first_name" placeholder="Ravi" autocomplete="given-name" required aria-describedby="fname-err">
+                  <div class="form-err" id="fname-err">Please enter your first name</div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="lname">Last Name<span class="req">*</span></label>
+                  <input class="form-ctrl" type="text" id="lname" name="last_name" placeholder="Kumar" autocomplete="family-name" required aria-describedby="lname-err">
+                  <div class="form-err" id="lname-err">Please enter your last name</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Business Email<span class="req">*</span></label>
+                <input class="form-ctrl" type="email" id="email" name="email" placeholder="ravi@yourcompany.com" autocomplete="email" required aria-describedby="email-err">
+                <div class="form-err" id="email-err">Please enter a valid email address</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone / WhatsApp<span class="req">*</span></label>
+                <input class="form-ctrl" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" required aria-describedby="phone-err">
+                <div class="form-err" id="phone-err">Please enter a valid phone number (10 digits)</div>
+              </div>
+              <button type="button" class="form-submit" id="form-next-btn" data-action="formNextStep">
+                Continue <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <!-- Step 2: Project details -->
+            <div class="form-step" id="form-step-2" style="display:none">
+              <div class="form-group">
+                <label class="form-label" for="company">Company Name<span class="req">*</span></label>
+                <input class="form-ctrl" type="text" id="company" name="company" placeholder="Your Company Pvt Ltd" autocomplete="organization" required aria-describedby="company-err">
+                <div class="form-err" id="company-err">Please enter your company name</div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Service Needed<span class="req">*</span></label>
+                  <input type="hidden" id="service" name="service" required aria-describedby="service-err">
+                  <div class="csel" id="csel-service" data-placeholder="Select a service...">
+                    <div class="csel-trigger"><span class="csel-value">Select a service...</span><svg class="csel-arrow" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <div class="csel-options">
+                      <div class="csel-opt" data-val="CRM Software">CRM Software</div>
+                      <div class="csel-opt" data-val="ERP Solutions">ERP Solutions</div>
+                      <div class="csel-opt" data-val="Inventory Management">Inventory Management</div>
+                      <div class="csel-opt" data-val="HR &amp; Payroll">HR &amp; Payroll</div>
+                      <div class="csel-opt" data-val="GST Billing &amp; Accounting">GST Billing &amp; Accounting</div>
+                      <div class="csel-opt" data-val="E-Commerce &amp; Online Store">E-Commerce &amp; Online Store</div>
+                      <div class="csel-opt" data-val="Field Service &amp; Sales Force">Field Service &amp; Sales Force</div>
+                      <div class="csel-opt" data-val="WhatsApp Business Automation">WhatsApp Business Automation</div>
+                      <div class="csel-opt" data-val="Project &amp; Task Management">Project &amp; Task Management</div>
+                      <div class="csel-opt" data-val="Helpdesk &amp; Ticket Management">Helpdesk &amp; Ticket Management</div>
+                      <div class="csel-opt" data-val="Document Management (DMS)">Document Management (DMS)</div>
+                      <div class="csel-opt" data-val="Warehouse Management (WMS)">Warehouse Management (WMS)</div>
+                      <div class="csel-opt" data-val="Fleet &amp; Logistics Management">Fleet &amp; Logistics Management</div>
+                      <div class="csel-opt" data-val="Appointment &amp; Booking System">Appointment &amp; Booking System</div>
+                      <div class="csel-opt" data-val="Business Intelligence &amp; Dashboards">Business Intelligence &amp; Dashboards</div>
+                      <div class="csel-opt" data-val="School &amp; Institute Management">School &amp; Institute Management</div>
+                      <div class="csel-opt" data-val="Real Estate &amp; Property Management">Real Estate &amp; Property Management</div>
+                      <div class="csel-opt" data-val="Custom Business App">Custom Business App</div>
+                      <div class="csel-opt" data-val="Multiple / Not Sure Yet">Multiple / Not Sure Yet</div>
+                    </div>
+                  </div>
+                  <div class="form-err" id="service-err">Please select a service</div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Approx. Budget</label>
+                  <input type="hidden" id="budget" name="budget">
+                  <div class="csel" id="csel-budget" data-placeholder="Select range...">
+                    <div class="csel-trigger"><span class="csel-value">Select range...</span><svg class="csel-arrow" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <div class="csel-options">
+                      <div class="csel-opt" data-val="Under ₹1 Lakh">Under ₹1 Lakh</div>
+                      <div class="csel-opt" data-val="₹1 – 3 Lakhs">₹1 – 3 Lakhs</div>
+                      <div class="csel-opt" data-val="₹3 – 6 Lakhs">₹3 – 6 Lakhs</div>
+                      <div class="csel-opt" data-val="₹6 Lakhs &amp; above">₹6 Lakhs &amp; above</div>
+                      <div class="csel-opt" data-val="Not decided yet">Not decided yet</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Tell Us About Your Requirements<span class="req">*</span></label>
+                <textarea class="form-ctrl" id="message" name="message" placeholder="Describe your current process, what problems you face, and what you'd like to achieve with new software..." required aria-describedby="message-err"></textarea>
+                <div class="form-err" id="message-err">Please describe your requirements</div>
+              </div>
+              <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+              <div class="wa-consent-wrap">
+                <label class="wa-consent-label">
+                  <input type="checkbox" name="whatsapp_consent" id="wa-consent" value="yes">
+                  <span class="wa-consent-check"><i class="fa-brands fa-whatsapp"></i></span>
+                  <span class="wa-consent-text">I consent to receive project updates, notifications, and support messages from Softwaller Technologies via WhatsApp. I can opt out anytime by replying "STOP". <a href="/whatsapp-policy.html" target="_blank" rel="noopener">Messaging Policy</a></span>
+                </label>
+              </div>
+              <p class="form-disclosure" style="font-size:12.5px;color:#555;line-height:1.6;margin:10px 2px 4px;padding:10px 12px;background:#f6f8fb;border-left:3px solid #25D366;border-radius:6px">
+                <i class="fa-brands fa-whatsapp" style="color:#25D366;margin-right:4px"></i>
+                By submitting this form, you agree to receive communication via WhatsApp, phone, or email from <strong>Softwaller Technologies Private Limited</strong>. You can opt out anytime by replying <strong>STOP</strong> or contacting
+                <a href="mailto:info@softwaller.com" style="color:#1557FF">info@softwaller.com</a>. See our
+                <a href="/privacy-policy.html" target="_blank" rel="noopener" style="color:#1557FF">Privacy Policy</a> and
+                <a href="/whatsapp-policy.html" target="_blank" rel="noopener" style="color:#1557FF">WhatsApp Messaging Policy</a>.
+              </p>
+              <div style="display:flex;gap:10px">
+                <button type="button" class="btn-outline" style="flex:0 0 auto;padding:13px 20px" data-action="formPrevStep"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                <button type="submit" class="form-submit" id="submit-btn" style="flex:1">
+                  <i class="fa-solid fa-paper-plane"></i> Send Message &amp; Get Free Consultation
+                </button>
+              </div>
+              <p class="form-note"><i class="fa-solid fa-lock"></i>Your information is 100% secure and never shared.</p>
+            </div>
+            <!-- Or book a call -->
+            <div class="form-or">
+              <span class="form-or-line"></span><span class="form-or-text">or</span><span class="form-or-line"></span>
+            </div>
+            <a href="https://cal.com/softwaller/30min" target="_blank" rel="noopener" class="form-book-call" id="book-call-btn">
+              <i class="fa-solid fa-calendar-check"></i> Book a Free 30-Min Call
+            </a>
+          </div>
+          <div class="form-success" id="form-success" aria-live="polite">
+            <div class="fs-circle"><i class="fa-solid fa-check"></i></div>
+            <div class="fs-h">Message Received!</div>
+            <p class="fs-p">Thank you for reaching out. Our team will review your requirements and contact you within 24 business hours with a personalized recommendation.</p>
+          </div>
+          <div class="form-error" id="form-error" aria-live="polite">
+            <div class="fe-circle"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div class="fe-h">Couldn't Send Message</div>
+            <p class="fe-p">Our contact form is temporarily unavailable. Please email us directly and we'll get back to you within 24 business hours.</p>
+            <a class="fe-mailto" id="fe-mailto-link" href="mailto:info@softwaller.com"><i class="fa-solid fa-envelope"></i> Email info@softwaller.com</a>
+            <br><button class="fe-retry" data-action="retryForm"><i class="fa-solid fa-arrow-rotate-right"></i> Try the form again</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     LOCATIONS, INDUSTRIES & RESOURCES
+══════════════════════════════════════ -->
+<section id="locations-industries-resources" class="sec-pad" aria-labelledby="lir-heading" style="background:var(--surf)">
+  <style>
+    .lir-block{margin-bottom:64px}
+    .lir-block:last-child{margin-bottom:0}
+    .lir-head{text-align:center;max-width:780px;margin:0 auto 40px}
+    .lir-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.5px;line-height:1.2;margin:10px 0 12px;color:var(--ink)}
+    .lir-head h2 em{font-style:italic;color:var(--blue);font-family:'Instrument Serif',serif;font-weight:400}
+    .lir-head p{color:var(--muted);font-size:16px;line-height:1.6;margin:0}
+    .lir-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .lir-grid.lir-grid-5{grid-template-columns:repeat(5,1fr)}
+    @media (max-width:1024px){.lir-grid,.lir-grid.lir-grid-5{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.lir-grid,.lir-grid.lir-grid-5{grid-template-columns:1fr}}
+    .lir-card{display:flex;flex-direction:column;gap:10px;padding:22px;background:#fff;border:1px solid #E5E7EB;border-radius:14px;text-decoration:none;color:var(--ink);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;height:100%}
+    .lir-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(21,87,255,.08);border-color:var(--blue)}
+    .lir-card-ic{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--blue-bg);color:var(--blue);font-size:18px}
+    .lir-card-title{font-weight:700;font-size:17px;letter-spacing:-.2px;color:var(--ink);margin:0}
+    .lir-card-desc{color:var(--muted);font-size:14px;line-height:1.55;margin:0;flex:1}
+    .lir-card-link{font-size:13px;font-weight:600;color:var(--blue);margin-top:6px}
+    .lir-card-link i{margin-left:4px;font-size:11px;transition:transform .2s ease}
+    .lir-card:hover .lir-card-link i{transform:translateX(4px)}
+  </style>
+  <div class="container">
+    <div class="lir-head reveal">
+      <div class="sec-tag" id="lir-heading">Locations, Industries &amp; Resources</div>
+    </div>
+
+    <!-- Sub-block A: Locations -->
+    <div class="lir-block">
+      <div class="lir-head reveal">
+        <h2>Where We Work — <em>Custom Software Across Tamil Nadu &amp; India</em></h2>
+        <p>On-site visits across South India. Tamil-speaking team. From Chennai's auto-component clusters to Coimbatore's textile mills, we build software where your business runs.</p>
+      </div>
+      <div class="lir-grid">
+        <a href="/locations/chennai.html" class="lir-card reveal">
+          <div class="lir-card-ic"><i class="fa-solid fa-location-dot"></i></div>
+          <h3 class="lir-card-title">Chennai</h3>
+          <p class="lir-card-desc">Auto-component clusters, IT services, logistics &amp; trading houses across the metro.</p>
+          <span class="lir-card-link">Learn more <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a href="/locations/coimbatore.html" class="lir-card reveal d1">
+          <div class="lir-card-ic"><i class="fa-solid fa-location-dot"></i></div>
+          <h3 class="lir-card-title">Coimbatore</h3>
+          <p class="lir-card-desc">Textile mills, foundries, pump &amp; motor manufacturers and Kovai engineering units.</p>
+          <span class="lir-card-link">Learn more <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a href="/locations/salem.html" class="lir-card reveal d2">
+          <div class="lir-card-ic"><i class="fa-solid fa-location-dot"></i></div>
+          <h3 class="lir-card-title">Salem</h3>
+          <p class="lir-card-desc">Steel traders, sago units, poultry &amp; agri-processing across Salem and Namakkal.</p>
+          <span class="lir-card-link">Learn more <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a href="/locations/madurai.html" class="lir-card reveal d3">
+          <div class="lir-card-ic"><i class="fa-solid fa-location-dot"></i></div>
+          <h3 class="lir-card-title">Madurai</h3>
+          <p class="lir-card-desc">Jewellery showrooms, distributors, hospitals and growing IT hubs in southern TN.</p>
+          <span class="lir-card-link">Learn more <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sub-block B: Industries -->
+    <div class="lir-block">
+      <div class="lir-head reveal">
+        <h2>Industries We Build For — <em>Custom ERP, CRM &amp; Billing</em></h2>
+        <p>Industry-specific workflows generic SaaS can't handle. Yarn lot tracking, jewellery RFID, distributor schemes, multi-shift manufacturing — built for how Indian businesses actually run.</p>
+      </div>
+      <div class="lir-grid">
+        <a href="/industries/textile-erp.html" class="lir-card reveal">
+          <div class="lir-card-ic"><i class="fa-solid fa-shirt"></i></div>
+          <h3 class="lir-card-title">Textile ERP</h3>
+          <p class="lir-card-desc">Yarn lot tracking, loom planning, dyeing batches and fabric costing in one system.</p>
+          <span class="lir-card-link">Explore <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a href="/industries/jewellery-erp.html" class="lir-card reveal d1">
+          <div class="lir-card-ic"><i class="fa-solid fa-gem"></i></div>
+          <h3 class="lir-card-title">Jewellery ERP</h3>
+          <p class="lir-card-desc">RFID tagging, daily rate updates, BIS hallmarking and customer-wise gold loan ledgers.</p>
+          <span class="lir-card-link">Explore <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a href="/industries/manufacturing.html" class="lir-card reveal d2">
+          <div class="lir-card-ic"><i class="fa-solid fa-industry"></i></div>
+          <h3 class="lir-card-title">Manufacturing ERP</h3>
+          <p class="lir-card-desc">Multi-shift production, BoM, job work, machine downtime and finished-goods costing.</p>
+          <span class="lir-card-link">Explore <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sub-block C: Resources & Pricing -->
+    <div class="lir-block">
+      <div class="lir-head reveal">
+        <h2>Resources &amp; Pricing — <em>Plan Your Custom Software Investment</em></h2>
+        <p>Transparent pricing, honest comparisons, and a 4,000-word e-invoicing guide trusted by Indian SMBs.</p>
+      </div>
+      <div class="lir-grid lir-grid-5">
+        <a href="/pricing/custom-erp-cost-india.html" class="lir-card reveal">
+          <div class="lir-card-ic"><i class="fa-solid fa-tag"></i></div>
+          <h3 class="lir-card-title">Custom ERP Cost India</h3>
+          <p class="lir-card-desc">What an ERP build really costs in 2026 — modules, team size and timelines explained.</p>
+          <span class="lir-card-link">View pricing <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a href="/pricing/custom-crm-cost-india.html" class="lir-card reveal d1">
+          <div class="lir-card-ic"><i class="fa-solid fa-tag"></i></div>
+          <h3 class="lir-card-title">Custom CRM Cost India</h3>
+          <p class="lir-card-desc">CRM build pricing across SMB, mid-market and enterprise tiers — no SaaS lock-in.</p>
+          <span class="lir-card-link">View pricing <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a href="/compare/custom-erp-vs-tally.html" class="lir-card reveal d2">
+          <div class="lir-card-ic"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h3 class="lir-card-title">ERP vs Tally</h3>
+          <p class="lir-card-desc">Where Tally hits its ceiling and when a custom ERP genuinely pays for itself.</p>
+          <span class="lir-card-link">Compare <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a href="/compare/custom-crm-vs-zoho.html" class="lir-card reveal d3">
+          <div class="lir-card-ic"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h3 class="lir-card-title">CRM vs Zoho</h3>
+          <p class="lir-card-desc">Zoho's per-user pricing vs a one-time custom build — long-term TCO compared.</p>
+          <span class="lir-card-link">Compare <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a href="/guides/e-invoicing-india-2026.html" class="lir-card reveal d4">
+          <div class="lir-card-ic"><i class="fa-solid fa-book"></i></div>
+          <h3 class="lir-card-title">E-Invoicing Guide 2026</h3>
+          <p class="lir-card-desc">Thresholds, IRN flow, penalties and integration steps — a 4,000-word reference.</p>
+          <span class="lir-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`} />
+</BaseLayout>

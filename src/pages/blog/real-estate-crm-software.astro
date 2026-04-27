@@ -1,0 +1,347 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Real Estate CRM: Leads, Visits & Closings | Softwaller";
+const description = "Generic CRMs miss site visits, unit inventory & broker networks. Learn how a real estate CRM helps real estate teams convert more leads and close deals faster.";
+const canonical = "https://www.softwaller.com/blog/real-estate-crm-software.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Real Estate CRM: Leads, Visits & Closings";
+const ogDescription = "Generic CRMs miss site visits, unit inventory & broker networks. Learn how a real estate CRM helps real estate teams convert more leads and close deals faster.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Real Estate CRM: Managing Leads, Site Visits, and Closings in One Place",
+    "description": "Generic CRMs miss site visits, unit inventory & broker networks. Learn how a real estate CRM helps real estate teams convert more leads and close deals faster.",
+    "author": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies",
+      "url": "https://www.softwaller.com"
+    },
+    "datePublished": "2026-03-29",
+    "dateModified": "2026-03-29",
+    "url": "https://www.softwaller.com/blog/real-estate-crm-software.html",
+    "image": "https://www.softwaller.com/assets/og-image.jpg"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.softwaller.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Real Estate CRM Software",
+        "item": "https://www.softwaller.com/blog/real-estate-crm-software.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is different about a real estate CRM vs a regular CRM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Real estate CRMs handle inventory by unit (with floor, view, plan, status), payment milestones, channel partner commissions, RERA reporting, site visits, and bank loan integrations — none of which standard CRMs cover."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can it manage both pre-launch and ready-to-move projects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Each project can be in any stage (pre-launch, under construction, ready, OC received, possession). Inventory states (available, blocked, booked, registered, handed over) update in real time across teams."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are channel partner commissions tracked?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each lead carries source, sub-source, and channel partner. Commission rules per scheme (slabs, bonuses, retentions) compute automatically on milestones. Commission invoices, GST, and TDS generate with payment alerts."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <style is:global slot="head-css" set:html={`
+body{min-height:100vh;display:flex;flex-direction:column}
+.blog-hero{padding:120px 0 48px;background:#FFF1F2;text-align:center;position:relative;overflow:hidden}
+.blog-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(225,29,72,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(225,29,72,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.blog-hero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+.blog-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:12px;color:var(--ink)}
+.blog-hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#E11D48}
+.blog-hero p{font-size:16px;color:var(--muted);max-width:560px;margin:0 auto;line-height:1.75}
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1200px;margin:0 auto;padding:48px 28px 80px}
+.blog-card{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:all .25s;display:flex;flex-direction:column}
+.blog-card:hover{box-shadow:0 12px 40px rgba(10,15,30,.12);transform:translateY(-4px)}
+.bc-color{height:6px}
+.bc-body{padding:28px;flex:1;display:flex;flex-direction:column}
+.bc-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:14px;width:fit-content}
+.bc-title{font-size:20px;font-weight:800;color:var(--ink);letter-spacing:-.5px;line-height:1.25;margin-bottom:10px}
+.bc-desc{font-size:14px;color:var(--muted);line-height:1.7;flex:1;margin-bottom:16px}
+.bc-meta{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--muted2)}
+.bc-read{font-size:13px;font-weight:600;color:#E11D48;text-decoration:none;display:flex;align-items:center;gap:4px}
+.bc-read:hover{gap:8px}
+.post-inner{max-width:760px;margin:0 auto;padding:48px 28px 80px}
+.post-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.post-body h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:32px 0 14px}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:24px 0 10px}
+.post-body p{font-size:15.5px;color:var(--muted);line-height:1.85;margin-bottom:16px}
+.post-body ul,.post-body ol{padding-left:20px;margin-bottom:16px}
+.post-body li{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:8px}
+.post-body strong{color:var(--ink)}
+.post-body blockquote{border-left:3px solid #E11D48;padding:16px 20px;margin:24px 0;background:#FFF1F2;border-radius:0 10px 10px 0;font-size:15px;color:var(--ink3);font-style:italic;line-height:1.75}
+.post-cta{background:#FFF1F2;border:1px solid #FECDD3;border-radius:16px;padding:32px;text-align:center;margin-top:48px}
+.post-cta h3{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.post-cta p{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.post-cta .btn-primary{background:#E11D48;border-color:#E11D48}
+.post-cta .btn-primary:hover{background:#BE123C;border-color:#BE123C}
+.post-related{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.post-related h3{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:20px}
+.post-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pr-card{padding:20px;border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:all .2s;display:block}
+.pr-card:hover{border-color:#FECDD3;box-shadow:0 4px 16px rgba(225,29,72,.08)}
+.pr-card h4{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.pr-card p{font-size:12.5px;color:var(--muted);line-height:1.5}
+.pfooter{margin-top:auto}
+@media(max-width:768px){.blog-grid{grid-template-columns:1fr}.post-related-grid{grid-template-columns:1fr}.post-cta .btn-primary,.post-cta .btn-outline{display:block;width:100%;text-align:center;margin:8px 0}}
+
+
+
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+  <section class="blog-hero">
+    <div class="blog-hero-inner">
+      <h1>Real Estate CRM: Managing Leads, Site Visits, and Closings in <em>One Place</em></h1>
+      <p>In real estate, the broker who follows up first wins. A CRM makes sure that broker is always you.</p>
+    </div>
+  </section>
+
+  <article class="post-inner">
+    <div class="post-meta">
+      <span><i class="fa-regular fa-calendar"></i> March 29, 2026</span>
+      <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+      <span><i class="fa-solid fa-tag"></i> Real Estate</span>
+    </div>
+
+    <div class="post-body">
+      <p>A builder in Chennai runs Facebook ads, lists on 99acres and MagicBricks, gets walk-ins at the site office, and has 40 channel partners sending referrals. On a good week, that is 200+ leads flowing in from five different sources. On a bad week, half of them never receive a single follow-up call. Not because the sales team is lazy — but because there is no system to catch, assign, and track every lead the moment it arrives.</p>
+
+      <p>Real estate is not like selling software subscriptions or retail products. The ticket size is in lakhs and crores. The sales cycle runs 3 to 18 months. A single missed follow-up can mean losing a 90-lakh booking. Yet most builders still manage leads in Excel sheets, WhatsApp groups, and sticky notes on the site manager's desk. This is where a purpose-built real estate CRM changes the game.</p>
+
+      <h2>Why Real Estate Needs Its Own CRM</h2>
+
+      <p>Generic CRMs like Salesforce or Zoho were built for SaaS companies and e-commerce businesses. They understand deals, contacts, and email sequences. What they do not understand is:</p>
+
+      <ul>
+        <li><strong>Site visits.</strong> In real estate, a site visit is the single most important conversion event. Scheduling, transport, on-site experience, and post-visit follow-up need their own dedicated workflow — not a "meeting" record in a generic CRM.</li>
+        <li><strong>Unit inventory.</strong> A builder selling 200 apartments needs real-time visibility into which units are available, blocked, or sold — with pricing per floor, view, and configuration. A generic CRM has no concept of "Tower B, 14th Floor, 3BHK East-facing."</li>
+        <li><strong>Broker networks.</strong> Channel partners and sub-brokers are a parallel sales force. They need portal access, deal registration, commission tracking, and performance visibility — without seeing your direct sales data.</li>
+        <li><strong>Possession timelines.</strong> Real estate sales do not end at booking. There are construction milestones, payment schedules, RERA compliance updates, and possession handovers. A CRM that stops at "Deal Won" misses half the customer lifecycle.</li>
+        <li><strong>Regulatory compliance.</strong> RERA mandates specific disclosures, documentation, and timelines. A real estate CRM can embed these compliance checks directly into the sales workflow.</li>
+      </ul>
+
+      <p>Trying to force-fit these workflows into a generic CRM means months of customization, expensive consultants, and a system that still feels awkward to use. A purpose-built real estate CRM handles all of this out of the box.</p>
+
+      <h2>The Lead Leakage Problem</h2>
+
+      <p>A mid-sized builder in Pune spends 8-10 lakhs per month on digital marketing across 99acres, MagicBricks, Housing.com, Facebook, and Google Ads. That spend generates roughly 600 leads per month. When they audited their process, here is what they found:</p>
+
+      <ul>
+        <li><strong>32% of leads</strong> from property portals were never called — the CSV export sat in someone's inbox for two days before being uploaded to the shared sheet.</li>
+        <li><strong>18% of leads</strong> received a first call but no follow-up within 48 hours, because no task was created after the initial contact.</li>
+        <li><strong>12% of leads</strong> were duplicates across sources — the same prospect enquired on 99acres and also filled a Facebook form. Two different salespeople called them, quoting different prices.</li>
+      </ul>
+
+      <p>That is over 50% lead leakage. At an average ticket size of 75 lakhs and a 3% conversion rate, those leaked leads represent approximately 6-7 crores in lost annual revenue. The marketing spend was not the problem. The capture-and-follow-up system was.</p>
+
+      <p>A real estate CRM solves this by auto-capturing leads from every source the moment they come in — API integrations with 99acres, MagicBricks, Housing.com, Facebook Lead Ads, and website forms. Each lead is instantly deduplicated, assigned to a salesperson based on round-robin or project rules, and a first-contact task is created with a 15-minute SLA.</p>
+
+      <h2>Site Visit Scheduling and Tracking</h2>
+
+      <p>In Indian real estate, the site visit is where deals are made. A prospect who visits the site is 8-10x more likely to book compared to one who only had phone conversations. Yet scheduling and tracking site visits is one of the most chaotic parts of the process.</p>
+
+      <h3>Before CRM</h3>
+      <p>The salesperson calls the prospect, confirms a date and time, sends the site address on WhatsApp, and hopes they show up. If the builder offers cab pickup, the driver gets a separate WhatsApp message. After the visit, the salesperson makes a mental note of the feedback and maybe updates the spreadsheet three days later.</p>
+
+      <h3>With a Real Estate CRM</h3>
+      <ul>
+        <li><strong>Automated scheduling.</strong> The salesperson books the visit in the CRM. The prospect receives an automated WhatsApp confirmation with date, time, location pin, and site manager's contact.</li>
+        <li><strong>Driver assignment.</strong> If cab pickup is included, the CRM auto-assigns the nearest available driver and sends them the pickup address and time.</li>
+        <li><strong>Visit check-in.</strong> The site manager marks the prospect as "arrived" in the CRM mobile app. The visit timer starts.</li>
+        <li><strong>Feedback capture.</strong> After the visit, a structured feedback form pops up — interested/not interested, preferred unit type, budget range, objections raised, next step agreed.</li>
+        <li><strong>Follow-up triggers.</strong> Based on the feedback, the CRM automatically creates the next task: send a quotation within 4 hours for hot leads, schedule a second visit for warm leads, or move to nurture for cold leads.</li>
+      </ul>
+
+      <p>A builder in Bangalore who implemented this workflow saw site visit no-show rates drop from 35% to 12% — primarily because of the automated reminders sent 24 hours and 2 hours before the visit.</p>
+
+      <h2>Unit Inventory and Availability</h2>
+
+      <p>One of the most painful moments in real estate sales is when a salesperson quotes a unit that was already sold yesterday. Or when two salespeople block the same unit for different prospects on the same day. These are not edge cases — they happen weekly in projects with 200+ units and 10+ salespeople.</p>
+
+      <p>A real estate CRM provides a real-time availability board that shows:</p>
+
+      <ul>
+        <li><strong>Visual floor plan view.</strong> Every unit displayed on an interactive floor plan with color coding — green for available, yellow for blocked/held, red for sold, grey for not released.</li>
+        <li><strong>Unit-level pricing.</strong> Base price, floor rise, PLC (preferential location charges), GST, and total cost — all calculated automatically per unit configuration.</li>
+        <li><strong>Block/hold management.</strong> A salesperson can block a unit for a prospect for a defined period (e.g., 48 hours). After the hold expires, it automatically releases back to the available pool.</li>
+        <li><strong>Comparison sheets.</strong> Generate instant comparison between 2-3 units for the prospect — showing floor, area, price, view, and amenities side by side.</li>
+      </ul>
+
+      <p>For a project with 4 towers, 25 floors each, and 4 units per floor, that is 400 units to track. Doing this in a spreadsheet is a recipe for daily conflicts. A CRM with a real-time inventory module eliminates these conflicts completely.</p>
+
+      <h2>Broker and Channel Partner Management</h2>
+
+      <p>In most Indian real estate markets, 40-60% of sales come through channel partners — independent brokers, sub-brokers, and referral networks. Managing this ecosystem is a business in itself:</p>
+
+      <ul>
+        <li><strong>Deal registration.</strong> When a broker refers a lead, the CRM registers that lead against the broker with a timestamp. If the same lead comes from another source later, the first-touch broker gets credit. No more disputes over who brought the client.</li>
+        <li><strong>Commission tracking.</strong> Different brokers may have different commission structures — 1.5% for Tier-1 partners, 1% for Tier-2, flat fees for sub-brokers. The CRM calculates payable commissions automatically as deals move through stages.</li>
+        <li><strong>Performance dashboards.</strong> Brokers see their own pipeline — leads referred, site visits completed, bookings done, commissions earned and pending. Top-performing brokers are identified instantly for incentive programs.</li>
+        <li><strong>Payout automation.</strong> When a booking reaches the "agreement signed" stage and the first payment is received, the broker's commission is automatically queued for payout with the finance team. No more manual tracking in separate sheets.</li>
+        <li><strong>Broker portal.</strong> A dedicated login where channel partners can submit leads, check status, download marketing collateral, and view their earnings — without calling the sales manager for updates.</li>
+      </ul>
+
+      <p>A Pune-based builder managing 120+ channel partners reduced commission dispute resolution time from 2 weeks to same-day after implementing a CRM with transparent deal registration and commission tracking.</p>
+
+      <h2>Document Management for Real Estate</h2>
+
+      <p>A single real estate transaction generates 15-25 documents: KYC documents, booking form, cost sheet, allotment letter, agreement for sale, demand letters, payment receipts, NOC from the bank, possession letter, and more. Multiply that by 200 customers, and you have 4,000+ documents to organize.</p>
+
+      <ul>
+        <li><strong>Customer-level document vault.</strong> Every document is stored against the customer record in the CRM. Need the agreement for Flat 1402? Two clicks, not 20 minutes of searching through folder structures.</li>
+        <li><strong>Template-based generation.</strong> Cost sheets, allotment letters, and demand letters are generated from templates with customer and unit data auto-populated. A document that took 30 minutes to prepare now takes 30 seconds.</li>
+        <li><strong>E-signature integration.</strong> Send documents for digital signature directly from the CRM. Track who signed, when, and send automatic reminders for pending signatures.</li>
+        <li><strong>RERA compliance documents.</strong> Maintain RERA-mandated documents per project — approved plans, specifications, timeline disclosures — accessible to the team from within the CRM.</li>
+        <li><strong>Payment receipt tracking.</strong> Every payment received is logged against the unit, with receipt generation and automatic updates to the demand schedule. The accounts team and sales team always see the same numbers.</li>
+      </ul>
+
+      <h2>The Follow-Up Machine</h2>
+
+      <p>In real estate, the average buyer takes 6-8 touchpoints before making a decision. That means 6-8 well-timed, relevant communications over weeks or months. Do this manually across 500 active leads, and things will fall through the cracks. A CRM automates the follow-up engine:</p>
+
+      <blockquote>In real estate, the difference between a converted lead and a lost one is usually 24 hours. A CRM makes sure those 24 hours count.</blockquote>
+
+      <ul>
+        <li><strong>Post-site-visit sequence.</strong> Within 2 hours of a site visit: WhatsApp message thanking them for visiting, with a PDF brochure and cost sheet attached. Day 2: call task for the salesperson. Day 5: WhatsApp with a virtual tour video. Day 10: special offer notification if the lead has not moved forward.</li>
+        <li><strong>Payment reminders.</strong> Automated reminders for upcoming installments — 15 days before due date, 7 days before, on due date, and escalation to the manager if 7 days overdue.</li>
+        <li><strong>Construction updates.</strong> Monthly project progress updates sent to all booked customers via WhatsApp — photos of construction milestones, percentage completion, and expected possession timeline.</li>
+        <li><strong>Possession updates.</strong> Automated notifications for OC received, final inspection scheduling, key handover appointment, and move-in checklist.</li>
+        <li><strong>Referral nudges.</strong> 30 days after possession, an automated message asking the customer for referrals — with a link to a referral form that feeds directly into the CRM as a new lead.</li>
+      </ul>
+
+      <p>A Chennai builder using automated WhatsApp sequences saw their lead-to-site-visit conversion improve by 22% — simply because every lead received a consistent, timely follow-up regardless of how busy the sales team was.</p>
+
+      <h2>Choosing the Right Real Estate CRM</h2>
+
+      <p>The market is full of CRM options, but for Indian real estate, these are the non-negotiable features to look for:</p>
+
+      <ol>
+        <li><strong>Property portal integrations.</strong> Direct API connections with 99acres, MagicBricks, Housing.com, and CommonFloor for automatic lead capture. If leads still need to be exported as CSV and uploaded manually, the CRM is already outdated.</li>
+        <li><strong>WhatsApp Business API integration.</strong> Not just notifications — full two-way WhatsApp conversations logged inside the CRM. Template messages for follow-ups, document sharing, and payment reminders.</li>
+        <li><strong>Unit inventory module.</strong> Visual floor plans, real-time availability, pricing engine, and block/hold management. This is table stakes for any serious real estate CRM.</li>
+        <li><strong>Channel partner portal.</strong> Self-service portal for brokers with lead submission, status tracking, commission visibility, and marketing collateral downloads.</li>
+        <li><strong>Mobile app for the site team.</strong> The site sales team lives on their phones. They need to check unit availability, log visit feedback, and generate cost sheets from a mobile app — not a desktop browser.</li>
+        <li><strong>RERA compliance support.</strong> Built-in workflows for RERA-mandated timelines, document management, and customer communication requirements.</li>
+        <li><strong>Payment schedule management.</strong> Demand letter generation, installment tracking, receipt management, and overdue alerts integrated with the customer record.</li>
+        <li><strong>Customizable dashboards.</strong> The MD wants project-level revenue numbers. The sales manager wants team performance. The site head wants today's visit schedule. Each role needs a different view of the same data.</li>
+      </ol>
+
+      <p>Avoid CRMs that try to be everything for everyone. A tool built for SaaS sales will never handle possession timelines well, no matter how many custom fields you add. Look for solutions specifically designed for Indian real estate, with local support teams who understand RERA, GST on under-construction properties, and the realities of channel partner networks in cities like Chennai, Pune, and Bangalore.</p>
+
+      <p>The real estate market is competitive enough. The builders who win are not just the ones with the best locations or the lowest prices — they are the ones who respond to every lead in 15 minutes, never miss a follow-up, and give their brokers a reason to send more referrals. A purpose-built CRM is the infrastructure that makes all of that possible.</p>
+
+      <!-- FAQ -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions about this topic.</p>
+    <details class="faq-item">
+      <summary>What is different about a real estate CRM vs a regular CRM?</summary>
+      <div class="faq-answer">Real estate CRMs handle inventory by unit (with floor, view, plan, status), payment milestones, channel partner commissions, RERA reporting, site visits, and bank loan integrations — none of which standard CRMs cover.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can it manage both pre-launch and ready-to-move projects?</summary>
+      <div class="faq-answer">Yes. Each project can be in any stage (pre-launch, under construction, ready, OC received, possession). Inventory states (available, blocked, booked, registered, handed over) update in real time across teams.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How are channel partner commissions tracked?</summary>
+      <div class="faq-answer">Each lead carries source, sub-source, and channel partner. Commission rules per scheme (slabs, bonuses, retentions) compute automatically on milestones. Commission invoices, GST, and TDS generate with payment alerts.</div>
+    </details>
+  </div>
+</section>
+
+      <!-- CTA -->
+      <div class="post-cta">
+        <h3>Ready to Stop Losing Leads?</h3>
+        <p>See how a real estate CRM built for Indian builders can help you capture every lead, track every site visit, and close more bookings — all from one platform.</p>
+        <a href="/../products/real-estate.html" class="btn-primary">Explore Real Estate Software <i class="fa-solid fa-arrow-right"></i></a>
+        &nbsp;&nbsp;
+        <a href="/../#contact" class="btn-outline">Get a Free Consultation</a>
+      </div>
+
+      <!-- Related Posts -->
+      <div class="post-related">
+        <h3>Related Articles</h3>
+        <div class="post-related-grid">
+          <a href="/crm-vs-spreadsheets.html" class="pr-card">
+            <h4>CRM vs Spreadsheets: Why Growing Businesses Need Custom CRM Software</h4>
+            <p>The hidden cost of managing your sales pipeline in Excel — and when it is time to switch.</p>
+          </a>
+          <a href="/whatsapp-automation-signs.html" class="pr-card">
+            <h4>5 Signs Your Business Needs WhatsApp Automation</h4>
+            <p>Missing leads, slow replies, manual follow-ups? Here are 5 clear signs your business needs WhatsApp automation.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+<!-- Newsletter signup -->
+<section style="max-width:800px;margin:0 auto;padding:0 28px 48px">
+  <div style="background:var(--ink);border-radius:20px;padding:36px;text-align:center">
+    <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:6px">Enjoyed this article?</div>
+    <div style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.65;margin-bottom:20px">Get practical business software insights delivered to your inbox every week.</div>
+    <form action="https://eb65560b.sibforms.com/serve/MUIFACP2rFDETv2p-mUPqyHo3glJtZhcD0GG3f63ikM49xDLRJyQdEWUq0PBoF0ksGw1g_N182HgQUpPssTKQKbO_o-YEB7N347_FS22M6QudGfXoY8QkWZ93gPvVtu8RVTgz--uNpErO1Xd4RccAsEDFLg3mci83OfHVyaJWN0sybuGWiTH50Rmf6Jh_BRVN1HTSAYIwS2z6SKAUw==" method="POST" novalidate style="display:flex;flex-wrap:wrap;gap:10px;max-width:440px;margin:0 auto" target="nl-iframe" onsubmit="var e=this.querySelector('input[type=email]');if(!e.value||!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(e.value)){event.preventDefault();e.style.borderColor='#DC2626';return}var f=this;setTimeout(function(){f.style.display='none';f.nextElementSibling.style.display='block'},1500)">
+      <input type="hidden" name="locale" value="en">
+      <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" style="flex:1;padding:13px 16px;border-radius:10px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-family:var(--font);font-size:14px" oninput="this.style.borderColor='rgba(255,255,255,.15)'">
+      <button type="submit" style="padding:13px 24px;border-radius:10px;border:none;background:#E11D48;color:#fff;font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+    </form>
+    <div style="display:none;color:#059669;font-size:14px;font-weight:600;padding:8px 0"><i class="fa-solid fa-circle-check"></i> Subscribed! Check your inbox.</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:12px"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime.</div>
+  </div>
+</section>
+`} />
+</BaseLayout>

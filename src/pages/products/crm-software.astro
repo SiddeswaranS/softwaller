@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Custom CRM Development in Chennai for Indian SMEs | Softwaller";
+const description = "Custom CRM built for your sales process — pipeline tracking, automated follow-ups, mobile-first, WhatsApp Business and Tally integration. Live in 6–8 weeks.";
+const canonical = "https://www.softwaller.com/products/crm-software.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Custom CRM Development in Chennai for Indian SMEs | Softwaller";
+const ogDescription = "Custom CRM with pipeline tracking, automated follow-ups, mobile-first, WhatsApp Business and Tally integration. Built for Indian SMEs. 6–8 weeks.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.softwaller.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "CRM Software"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CRM Software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Custom CRM built for your sales process — pipeline tracking, automated follow-ups, mobile-first, WhatsApp Business and Tally integration. Live in 6–8 weeks.",
+    "url": "https://www.softwaller.com/products/crm-software.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "url": "https://www.softwaller.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "description": "Free consultation"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a custom CRM cost in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Custom CRM development with Softwaller starts at around Rs 1.5 lakh for a small sales team and scales by user count, modules, and integrations. We share a fixed quote after a free consultation, with no per-user SaaS fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does CRM implementation take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A standard CRM rollout takes 4 to 8 weeks: 1 week for requirements, 3 to 5 weeks for development and customization, 1 week for data import and training, and 1 week for go-live support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the CRM integrate with WhatsApp, email, and our existing ERP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We integrate with WhatsApp Business API, Gmail, Outlook, IMAP, common ERPs (SAP, Tally, Zoho, Oracle), telephony providers, and accounting software through REST APIs and webhooks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide ongoing support and feature updates?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every project includes 3 months of free post-go-live support. Annual maintenance contracts (AMC) cover bug fixes, minor enhancements, server monitoring, backups, and a defined SLA for critical issues."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <style is:global slot="head-css" set:html={`
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+<section class="phero">
+  <div class="phero-inner">
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-chart-line"></i></div>
+      <h1>Custom CRM Built for Indian Sales Teams</h1>
+      <p>Pipeline tracking, automated follow-ups, and a mobile-first sales app designed around how Indian SMEs actually sell. WhatsApp Business and Tally integration included, live in 6–8 weeks.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><rect x="20" y="20" width="360" height="36" rx="8" fill="#F7F8FC"/><circle cx="40" cy="38" r="6" fill="#DC2626"/><circle cx="58" cy="38" r="6" fill="#D97706"/><circle cx="76" cy="38" r="6" fill="#059669"/><text x="200" y="43" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="12" font-weight="700" fill="#6B7694">Sales Pipeline</text><rect x="30" y="76" width="80" height="90" rx="10" fill="#EBF0FF" stroke="#C2CFFF" stroke-width="1"/><text x="70" y="98" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#1557FF">NEW</text><rect x="38" y="108" width="64" height="8" rx="4" fill="#C2CFFF"/><rect x="38" y="122" width="48" height="8" rx="4" fill="#C2CFFF"/><rect x="38" y="136" width="56" height="8" rx="4" fill="#C2CFFF"/><rect x="125" y="76" width="80" height="90" rx="10" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/><text x="165" y="98" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#7C3AED">QUAL</text><rect x="133" y="108" width="64" height="8" rx="4" fill="#DDD6FE"/><rect x="133" y="122" width="40" height="8" rx="4" fill="#DDD6FE"/><rect x="220" y="76" width="80" height="90" rx="10" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/><text x="260" y="98" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#EA580C">PROP</text><rect x="228" y="108" width="64" height="8" rx="4" fill="#FED7AA"/><rect x="315" y="76" width="60" height="90" rx="10" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/><text x="345" y="98" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="700" fill="#059669">WON</text><rect x="323" y="108" width="44" height="8" rx="4" fill="#A7F3D0"/><rect x="30" y="186" width="165" height="90" rx="10" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><text x="45" y="206" font-family="'Plus Jakarta Sans',sans-serif" font-size="10" font-weight="700" fill="#0A0F1E">Revenue</text><polyline points="45,260 75,240 105,250 135,225 165,220 180,210" fill="none" stroke="#1557FF" stroke-width="2.5" stroke-linecap="round"/><circle cx="180" cy="210" r="4" fill="#1557FF"/><rect x="210" y="186" width="165" height="90" rx="10" fill="#fff" stroke="#E4E7F0" stroke-width="1"/><text x="225" y="206" font-family="'Plus Jakarta Sans',sans-serif" font-size="10" font-weight="700" fill="#0A0F1E">Leads</text><rect x="225" y="218" width="16" height="48" rx="3" fill="#EBF0FF"/><rect x="225" y="238" width="16" height="28" rx="3" fill="#1557FF"/><rect x="249" y="218" width="16" height="48" rx="3" fill="#EBF0FF"/><rect x="249" y="228" width="16" height="38" rx="3" fill="#1557FF"/><rect x="273" y="218" width="16" height="48" rx="3" fill="#EBF0FF"/><rect x="273" y="222" width="16" height="44" rx="3" fill="#1557FF"/><rect x="297" y="218" width="16" height="48" rx="3" fill="#EBF0FF"/><rect x="297" y="232" width="16" height="34" rx="3" fill="#1557FF"/><rect x="321" y="218" width="16" height="48" rx="3" fill="#EBF0FF"/><rect x="321" y="226" width="16" height="40" rx="3" fill="#1557FF"/><rect x="345" y="218" width="16" height="48" rx="3" fill="#EBF0FF"/><rect x="345" y="220" width="16" height="46" rx="3" fill="#1557FF"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
+  <div class="pfeatures-inner">
+    <h2>Everything Your Sales Team Needs</h2>
+    <p class="sub">12 powerful features to supercharge your sales process from lead to revenue.</p>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-magnet"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Lead Capture</h3>
+          <p itemprop="description">Capture leads from web forms, phone calls, and WhatsApp automatically. Never miss a potential customer again.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-filter"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Sales Pipeline</h3>
+          <p itemprop="description">Visual pipeline with drag-and-drop stages. See every deal's status at a glance and move them forward effortlessly.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-bell"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Follow-up Alerts</h3>
+          <p itemprop="description">Automated reminders via email, SMS, and WhatsApp ensure no lead falls through the cracks.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">WhatsApp Integration</h3>
+          <p itemprop="description">Two-way WhatsApp messaging with leads. Send quotes, follow-ups, and updates directly from the CRM.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-chart-pie"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">Sales Reports</h3>
+          <p itemprop="description">Real-time dashboards and analytics to track team performance, conversion rates, and revenue trends.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-address-book"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Contact Management</h3>
+          <p itemprop="description">Centralized customer database with complete interaction history, notes, and documents in one place.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-handshake"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Deal Tracking</h3>
+          <p itemprop="description">Track deal value, probability, and expected close date. Forecast revenue with confidence.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-envelope-open-text"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">Email Campaigns</h3>
+          <p itemprop="description">Send bulk email campaigns with open and click tracking. Know exactly who's engaging with your content.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-list-check"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Task Management</h3>
+          <p itemprop="description">Assign and track sales tasks per team member. Keep your entire team aligned and accountable.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-user-shield"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Role-based Access</h3>
+          <p itemprop="description">Control data visibility by role and territory. Each team member sees only what they need.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-star-half-stroke"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Lead Scoring</h3>
+          <p itemprop="description">Auto-score leads based on engagement and behavior. Focus your team on the hottest opportunities.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Mobile App</h3>
+          <p itemprop="description">Access your CRM on-the-go with a dedicated mobile app. Update deals and log calls from anywhere.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="pwhy">
+  <div class="pwhy-inner">
+    <h2>Why Choose Softwaller</h2>
+    <p class="sub">We don't just build software — we build solutions that grow with your business.</p>
+    <div class="pwhy-grid">
+      <div class="pwhy-item">
+        <i class="fa-solid fa-pencil-ruler"></i>
+        <div><h3>Built for Your Workflow</h3><p>Custom-designed to match how your team actually works, not the other way around.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-arrow-up-right-dots"></i>
+        <div><h3>Scale as You Grow</h3><p>Architecture designed to handle 500+ concurrent users without breaking a sweat.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <div><h3>Mobile Ready</h3><p>Access from any device, anywhere, anytime. Your office travels with you.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-plug"></i>
+        <div><h3>Integration Ready</h3><p>Connect with Tally, WhatsApp, payment gateways, and more out of the box.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-headset"></i>
+        <div><h3>Ongoing Support</h3><p>3 months free support plus AMC options after go-live. We're always here for you.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div><h3>Data Security</h3><p>Role-based access, encryption, and audit trails keep your business data safe.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-related">
+  <div class="p-related-inner">
+    <h2>Related Solutions</h2>
+    <p class="sub">Explore other software that works great alongside this solution.</p>
+    <div class="p-related-grid">
+      <a href="/erp-solutions.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-building"></i></div>
+        <h3>ERP Solutions</h3>
+        <p>Unified business operations</p>
+        <div class="pr-link">ERP Solutions <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/whatsapp-automation.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--green-bg);color:#25D366"><i class="fa-brands fa-whatsapp"></i></div>
+        <h3>WhatsApp Automation</h3>
+        <p>Automated messaging</p>
+        <div class="pr-link">WhatsApp Automation <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/business-intelligence.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-chart-column"></i></div>
+        <h3>Business Intelligence</h3>
+        <p>Dashboards &amp; analytics</p>
+        <div class="pr-link">Business Intelligence <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pcta">
+  <div class="pcta-inner">
+    <h2>Ready to Close More Deals?</h2>
+    <p>Get a free consultation and see how our CRM can transform your sales process.</p>
+    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>How much does a custom CRM cost in India?</summary>
+      <div class="faq-answer">Custom CRM development with Softwaller starts at around Rs 1.5 lakh for a small sales team and scales by user count, modules, and integrations. We share a fixed quote after a free consultation, with no per-user SaaS fees.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How long does CRM implementation take?</summary>
+      <div class="faq-answer">A standard CRM rollout takes 4 to 8 weeks: 1 week for requirements, 3 to 5 weeks for development and customization, 1 week for data import and training, and 1 week for go-live support.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can the CRM integrate with WhatsApp, email, and our existing ERP?</summary>
+      <div class="faq-answer">Yes. We integrate with WhatsApp Business API, Gmail, Outlook, IMAP, common ERPs (SAP, Tally, Zoho, Oracle), telephony providers, and accounting software through REST APIs and webhooks.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Do you provide ongoing support and feature updates?</summary>
+      <div class="faq-answer">Yes. Every project includes 3 months of free post-go-live support. Annual maintenance contracts (AMC) cover bug fixes, minor enhancements, server monitoring, backups, and a defined SLA for critical issues.</div>
+    </details>
+  </div>
+</section>
+
+`} />
+</BaseLayout>

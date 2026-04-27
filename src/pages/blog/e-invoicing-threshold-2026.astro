@@ -1,0 +1,317 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "E-Invoicing Threshold 2026: Is Your Billing Ready? | Softwaller";
+const description = "The e-invoicing turnover threshold keeps dropping. Learn where it stands in 2026, who must comply, the penalty for missing IRNs, and how to get ready in 30 days.";
+const canonical = "https://www.softwaller.com/blog/e-invoicing-threshold-2026.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "E-Invoicing Threshold 2026: Is Your Billing Ready?";
+const ogDescription = "The e-invoicing turnover threshold keeps dropping. Learn where it stands in 2026, who must comply, the penalty for missing IRNs, and how to get ready in 30 days.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "E-Invoicing Threshold 2026: Is Your Billing Ready?",
+    "description": "The e-invoicing turnover threshold keeps dropping. Learn where it stands in 2026, who must comply, the penalty for missing IRNs, and how to get ready in 30 days.",
+    "author": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies",
+      "url": "https://www.softwaller.com"
+    },
+    "datePublished": "2026-04-14",
+    "dateModified": "2026-04-14",
+    "url": "https://www.softwaller.com/blog/e-invoicing-threshold-2026.html",
+    "image": "https://www.softwaller.com/assets/og-image.jpg"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.softwaller.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "E-Invoicing Threshold 2026",
+        "item": "https://www.softwaller.com/blog/e-invoicing-threshold-2026.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the current e-invoicing threshold in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As of 2026, e-invoicing under GST applies to businesses with an aggregate annual turnover above Rs 5 crore in any financial year from 2017-18 onwards. Once a business crosses this threshold, the rule applies permanently, even if turnover later falls below the limit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I issue an invoice without an IRN?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An invoice issued without a valid IRN is not considered a legal tax invoice under Rule 48(5) of the CGST Rules. The buyer cannot claim input tax credit on it, and penalties under Section 122 of the CGST Act can be up to Rs 25,000 per invoice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need e-invoicing for B2C sales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "E-invoicing currently applies to B2B supplies, exports, and credit/debit notes issued to registered persons. B2C invoices are outside the mandate, though a dynamic QR code requirement applies separately for businesses with turnover above Rs 500 crore."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is e-invoicing applicable to SEZ and export transactions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Supplies to SEZ units or developers (with or without payment of tax) and export invoices both fall under the e-invoicing mandate once the business crosses the turnover threshold."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <style is:global slot="head-css" set:html={`
+body{min-height:100vh;display:flex;flex-direction:column}
+.blog-hero{padding:120px 0 48px;background:var(--surf);text-align:center;position:relative;overflow:hidden}
+.blog-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.blog-hero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+.blog-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:12px;color:var(--ink)}
+.blog-hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--blue)}
+.blog-hero p{font-size:16px;color:var(--muted);max-width:560px;margin:0 auto;line-height:1.75}
+.post-inner{max-width:760px;margin:0 auto;padding:48px 28px 80px}
+.post-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.post-body h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:32px 0 14px}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:24px 0 10px}
+.post-body p{font-size:15.5px;color:var(--muted);line-height:1.85;margin-bottom:16px}
+.post-body ul,.post-body ol{padding-left:20px;margin-bottom:16px}
+.post-body li{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:8px}
+.post-body strong{color:var(--ink)}
+.post-body blockquote{border-left:3px solid var(--blue);padding:16px 20px;margin:24px 0;background:var(--blue-bg);border-radius:0 10px 10px 0;font-size:15px;color:var(--ink3);font-style:italic;line-height:1.75}
+.post-cta{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:32px;text-align:center;margin-top:48px}
+.post-cta h3{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.post-cta p{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.post-related{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.post-related h3{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:20px}
+.post-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pr-card{padding:20px;border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:all .2s;display:block}
+.pr-card:hover{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.08)}
+.pr-card h4{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.pr-card p{font-size:12.5px;color:var(--muted);line-height:1.5}
+.pfooter{margin-top:auto}
+@media(max-width:768px){.post-related-grid{grid-template-columns:1fr}.post-cta .btn-primary,.post-cta .btn-outline{display:block;width:100%;text-align:center;margin:8px 0}}
+
+
+
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+  <section class="blog-hero">
+    <div class="blog-hero-inner">
+      <h1>E-Invoicing Threshold Dropped Again — Is Your Billing <em>Ready for 2026</em>?</h1>
+      <p>The turnover limit keeps falling. Thousands of businesses crossed it last year without realising. Here is where the rule stands today and what non-compliance actually costs.</p>
+    </div>
+  </section>
+
+  <article class="post-inner">
+    <div class="post-meta">
+      <span><i class="fa-regular fa-calendar"></i> April 14, 2026</span>
+      <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+      <span><i class="fa-solid fa-tag"></i> GST</span>
+    </div>
+
+    <div class="post-body">
+      <p>When e-invoicing launched in October 2020, it only applied to businesses with turnover above Rs 500 crore. Five years and five amendments later, the threshold has collapsed to Rs 5 crore — bringing lakhs of small and mid-size Indian businesses under the mandate, many of whom still issue invoices from Tally, Busy, or Excel without generating an Invoice Reference Number (IRN).</p>
+
+      <p>If your turnover crossed Rs 5 crore in any year since FY 2017-18, you are already legally required to e-invoice. The rule is not prospective — it is permanent once triggered. And the cost of ignoring it is not just a notice; it is your buyer losing their input tax credit and coming back to ask for it in cash.</p>
+
+      <h2>The Threshold Timeline: From Rs 500 Crore to Rs 5 Crore</h2>
+
+      <p>The Central Board of Indirect Taxes and Customs (CBIC) has lowered the e-invoicing threshold five times through GST Council notifications:</p>
+
+      <ul>
+        <li><strong>October 2020:</strong> Rs 500 crore and above</li>
+        <li><strong>January 2021:</strong> Rs 100 crore and above</li>
+        <li><strong>April 2021:</strong> Rs 50 crore and above</li>
+        <li><strong>April 2022:</strong> Rs 20 crore and above</li>
+        <li><strong>October 2022:</strong> Rs 10 crore and above</li>
+        <li><strong>August 2023:</strong> Rs 5 crore and above (current)</li>
+      </ul>
+
+      <p>Industry bodies and the GST Council have repeatedly signalled further reductions — to Rs 1 crore, then eventually to all registered taxpayers. The direction of travel is clear. The only open question is the calendar.</p>
+
+      <h2>How "Aggregate Turnover" Is Actually Calculated</h2>
+
+      <p>This is the trap most small businesses fall into. Aggregate turnover under Section 2(6) of the CGST Act includes <strong>all</strong> of the following on a PAN-India basis:</p>
+
+      <ul>
+        <li>Taxable supplies (B2B and B2C)</li>
+        <li>Exempt supplies</li>
+        <li>Exports of goods and services</li>
+        <li>Inter-state supplies between branches of the same PAN</li>
+      </ul>
+
+      <p>It excludes GST tax itself, inward supplies on reverse charge, and non-taxable supplies like alcohol. The number you must compare against the Rs 5 crore threshold is the <strong>combined turnover of every GSTIN registered under the same PAN</strong>, not just one state's business.</p>
+
+      <p>Example: a company with offices in Karnataka (Rs 3.2 crore turnover) and Tamil Nadu (Rs 2.1 crore turnover) has aggregate turnover of Rs 5.3 crore. Both GSTINs must e-invoice, even though neither state's turnover individually crosses the threshold.</p>
+
+      <h2>What Counts as a Valid E-Invoice</h2>
+
+      <p>A valid e-invoice is not just a PDF labelled "Tax Invoice". It must have three things:</p>
+
+      <ol>
+        <li>A 64-character <strong>IRN</strong> generated by the government's Invoice Registration Portal (IRP)</li>
+        <li>A digitally signed <strong>QR code</strong> containing key invoice details</li>
+        <li>An acknowledgement number and timestamp from the IRP</li>
+      </ol>
+
+      <p>Without the IRN, the invoice is legally not a tax invoice under Rule 48(5) of the CGST Rules. Your buyer cannot claim input tax credit (ITC) on it. When they match their GSTR-2B at month-end, the invoice will simply not appear — because it never entered the GST system.</p>
+
+      <h2>The Real Cost of Non-Compliance</h2>
+
+      <p>Most business owners worry about penalties. The bigger commercial risk is different.</p>
+
+      <h3>Your Buyer Loses Input Tax Credit</h3>
+
+      <p>When you issue an invoice without an IRN, your B2B buyer cannot claim ITC. On a Rs 10 lakh invoice at 18% GST, that is Rs 1.8 lakh your buyer effectively loses. They will either deduct it from your next payment, demand a re-issued e-invoice, or quietly switch suppliers. Losing a Rs 50 lakh annual customer to a compliance error is a far bigger hit than any penalty.</p>
+
+      <h3>Penalties Under Section 122 of the CGST Act</h3>
+
+      <ul>
+        <li><strong>Non-issuance of invoice:</strong> Penalty of Rs 10,000 or the tax amount involved, whichever is higher, per invoice</li>
+        <li><strong>Incorrect invoice:</strong> Up to Rs 25,000 per invoice</li>
+        <li><strong>Aggregate cap:</strong> Penalties can reach Rs 50,000 per day of non-compliance in certain cases</li>
+      </ul>
+
+      <h3>E-Way Bill Generation Fails</h3>
+
+      <p>Since late 2023, the e-way bill portal requires a valid IRN for any invoice above Rs 5 crore turnover businesses. No IRN means no e-way bill. No e-way bill means your truck cannot legally move the consignment. A stopped shipment at a state border gets expensive very fast.</p>
+
+      <blockquote>The real penalty is not Rs 25,000 from the department. It is the Rs 10 lakh customer who stops placing orders because your invoices break their ITC claims.</blockquote>
+
+      <h2>The 30-Day Readiness Checklist</h2>
+
+      <p>If you have crossed the threshold but are not yet e-invoicing, here is a realistic plan to get compliant in under a month:</p>
+
+      <ol>
+        <li><strong>Day 1-3:</strong> Verify your aggregate turnover across all GSTINs under your PAN. Confirm you are actually above Rs 5 crore (many businesses assume they are, and are not — or vice versa).</li>
+        <li><strong>Day 4-7:</strong> Register on the Invoice Registration Portal (einvoice1.gst.gov.in) with your GSTIN. Generate API credentials or choose a GSP (GST Suvidha Provider) for integration.</li>
+        <li><strong>Day 8-15:</strong> Connect your billing software to the IRP via API. If you use Tally, enable the e-invoicing feature (Tally Prime 3.0 or later). If you use custom software, integrate using the IRP API or a middleware like Softwaller's GST module.</li>
+        <li><strong>Day 16-20:</strong> Run parallel invoicing for 5 business days. Every invoice goes through the IRP and returns an IRN. Validate that the IRN and QR code print correctly on the invoice PDF.</li>
+        <li><strong>Day 21-25:</strong> Train your billing team on the new flow. The IRP rejects roughly 3-5% of invoices on first attempt (usually for GSTIN or HSN errors). Train staff to read IRP error codes and fix them at source.</li>
+        <li><strong>Day 26-30:</strong> Go live. Issue every new invoice with an IRN. Back-fill any recent post-threshold invoices that were issued without one.</li>
+      </ol>
+
+      <h2>Common Implementation Mistakes</h2>
+
+      <ul>
+        <li><strong>Generating IRN after printing the invoice.</strong> The invoice must be pushed to the IRP <em>before</em> it is given to the buyer. Otherwise the invoice number and the IRN can drift out of sync.</li>
+        <li><strong>Using test API credentials in production.</strong> The sandbox IRP accepts dummy invoices but does not make them legally valid.</li>
+        <li><strong>Ignoring cancellation windows.</strong> An e-invoice can only be cancelled within 24 hours of IRN generation. After that, you must issue a credit note — which must itself be e-invoiced.</li>
+        <li><strong>Not storing the signed QR code.</strong> During a GST audit, the department can ask for the signed QR payload, not just the printed QR image. Your system must archive it.</li>
+        <li><strong>Manual data entry into the IRP portal.</strong> This works for 5-10 invoices a day. At 50-100 invoices a day it breaks. API integration is not optional at scale.</li>
+      </ul>
+
+      <h2>Automation Pays for Itself in the First Month</h2>
+
+      <p>A billing system with native e-invoicing integration handles the entire flow without human intervention: create the invoice, push to IRP, receive IRN and QR, embed into the PDF, and send to the customer — in under two seconds per invoice. For a business issuing 500 invoices a month, that is a saving of 15-20 hours of manual portal work, zero rejection follow-ups, and zero risk of missed IRNs.</p>
+
+      <p>More importantly, it keeps your buyers' ITC claims clean. Which keeps your revenue clean. The Rs 5 crore threshold will keep dropping. The businesses that get ahead of it will not be the ones scrambling to respond to notices next year.</p>
+
+      <!-- FAQ -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions about this topic.</p>
+    <details class="faq-item">
+      <summary>What is the current e-invoicing threshold in India?</summary>
+      <div class="faq-answer">As of 2026, e-invoicing under GST applies to businesses with an aggregate annual turnover above Rs 5 crore in any financial year from 2017-18 onwards. Once a business crosses this threshold, the rule applies permanently, even if turnover later falls below the limit.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What happens if I issue an invoice without an IRN?</summary>
+      <div class="faq-answer">An invoice issued without a valid IRN is not considered a legal tax invoice under Rule 48(5) of the CGST Rules. The buyer cannot claim input tax credit on it, and penalties under Section 122 of the CGST Act can be up to Rs 25,000 per invoice.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Do I need e-invoicing for B2C sales?</summary>
+      <div class="faq-answer">E-invoicing currently applies to B2B supplies, exports, and credit/debit notes issued to registered persons. B2C invoices are outside the mandate, though a dynamic QR code requirement applies separately for businesses with turnover above Rs 500 crore.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Is e-invoicing applicable to SEZ and export transactions?</summary>
+      <div class="faq-answer">Yes. Supplies to SEZ units or developers (with or without payment of tax) and export invoices both fall under the e-invoicing mandate once the business crosses the turnover threshold.</div>
+    </details>
+  </div>
+</section>
+
+      <!-- CTA -->
+      <div class="post-cta">
+        <h3>Get E-Invoicing Right from Day One</h3>
+        <p>Our GST billing software talks directly to the IRP. Every invoice gets an IRN, QR code, and e-way bill — automatically, accurately, from a single screen.</p>
+        <a href="/../products/gst-billing-accounting.html" class="btn-primary">Explore GST Billing Software <i class="fa-solid fa-arrow-right"></i></a>
+        &nbsp;&nbsp;
+        <a href="/../#contact" class="btn-outline">Book a Compliance Audit</a>
+      </div>
+
+      <!-- Related Posts -->
+      <div class="post-related">
+        <h3>Related Articles</h3>
+        <div class="post-related-grid">
+          <a href="/e-invoicing-penalties-india-2026.html" class="pr-card">
+            <h4>E-Invoicing Penalties India 2026: Fines & How to Avoid Them</h4>
+            <p>Section 122 fines, the 30-day rule, ITC loss to buyers, and a six-control playbook.</p>
+          </a>
+          <a href="/irn-generation-step-by-step-guide.html" class="pr-card">
+            <h4>IRN Generation Step-by-Step: Complete Guide for ₹5 Cr+ Businesses</h4>
+            <p>JSON schema, three integration paths, the 30-day rule, and rejection codes — one guide.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+<!-- Newsletter signup -->
+<section style="max-width:800px;margin:0 auto;padding:0 28px 48px">
+  <div style="background:var(--ink);border-radius:20px;padding:36px;text-align:center">
+    <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:6px">Enjoyed this article?</div>
+    <div style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.65;margin-bottom:20px">Get practical business software insights delivered to your inbox every week.</div>
+    <form action="https://eb65560b.sibforms.com/serve/MUIFACP2rFDETv2p-mUPqyHo3glJtZhcD0GG3f63ikM49xDLRJyQdEWUq0PBoF0ksGw1g_N182HgQUpPssTKQKbO_o-YEB7N347_FS22M6QudGfXoY8QkWZ93gPvVtu8RVTgz--uNpErO1Xd4RccAsEDFLg3mci83OfHVyaJWN0sybuGWiTH50Rmf6Jh_BRVN1HTSAYIwS2z6SKAUw==" method="POST" novalidate style="display:flex;flex-wrap:wrap;gap:10px;max-width:440px;margin:0 auto" target="nl-iframe" onsubmit="var e=this.querySelector('input[type=email]');if(!e.value||!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(e.value)){event.preventDefault();e.style.borderColor='#DC2626';return}var f=this;setTimeout(function(){f.style.display='none';f.nextElementSibling.style.display='block'},1500)">
+      <input type="hidden" name="locale" value="en">
+      <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" style="flex:1;padding:13px 16px;border-radius:10px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-family:var(--font);font-size:14px" oninput="this.style.borderColor='rgba(255,255,255,.15)'">
+      <button type="submit" style="padding:13px 24px;border-radius:10px;border:none;background:var(--blue);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+    </form>
+    <div style="display:none;color:#059669;font-size:14px;font-weight:600;padding:8px 0"><i class="fa-solid fa-circle-check"></i> Subscribed! Check your inbox.</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:12px"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime.</div>
+  </div>
+</section>
+`} />
+</BaseLayout>

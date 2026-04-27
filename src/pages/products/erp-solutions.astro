@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Custom ERP Development for Manufacturers in India | Softwaller";
+const description = "Custom ERP for manufacturers, distributors, and traders in India. Production planning, multi-branch, GST-compliant, Tally migration supported. From ₹15L.";
+const canonical = "https://www.softwaller.com/products/erp-solutions.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "Custom ERP Development for Manufacturers in India | Softwaller";
+const ogDescription = "Custom ERP for manufacturers, distributors, and traders in India. Production planning, multi-branch, GST-compliant, Tally migration supported.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.softwaller.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "ERP Solutions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ERP Solutions",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Custom ERP for manufacturers, distributors, and traders in India. Production planning, multi-branch, GST-compliant, Tally migration supported.",
+    "url": "https://www.softwaller.com/products/erp-solutions.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies Private Limited",
+      "url": "https://www.softwaller.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "description": "Free consultation"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should I buy ready-made ERP or build a custom one?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ready-made ERP works if your processes match the software. Custom ERP wins when you have unique workflows, multi-company structures, or specific Indian compliance needs. Most mid-sized SMBs save 30 to 50 percent over 5 years with a right-sized custom build."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does ERP implementation typically take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A focused custom ERP for one business unit takes 3 to 6 months. Multi-module ERP covering sales, purchase, inventory, manufacturing, and finance takes 6 to 12 months including data migration, UAT, and training."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is GST e-invoicing and e-way bill included?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Our ERP generates IRN through GSP/IRP integration, prints e-invoice QR codes, creates e-way bills, and pushes data to GSTR-1. We support multi-GSTIN setups for businesses with branches across states."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the ERP work offline at remote sites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We build offline-first modules for warehouses, factories, and field locations with poor connectivity. Data syncs to the central server when the network is back, with conflict resolution rules."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <style is:global slot="head-css" set:html={`
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+<section class="phero">
+  <div class="phero-inner">
+    <div class="phero-text">
+      <div class="phero-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-industry"></i></div>
+      <h1>Custom ERP for Manufacturers, Distributors & Traders</h1>
+      <p>Production planning, multi-branch inventory, GST e-invoicing, and Tally migration — built around your workflow. Multi-GSTIN ready, offline-capable for plants and warehouses, delivered in 3–6 months.</p>
+    </div>
+    <div class="phero-visual">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" rx="16" fill="#fff" stroke="#E4E7F0" stroke-width="1.5"/><circle cx="200" cy="150" r="40" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1.5"/><text x="200" y="146" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="11" font-weight="700" fill="#7C3AED">ERP</text><text x="200" y="160" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="8" fill="#7C3AED">Central</text><line x1="200" y1="110" x2="200" y2="55" stroke="#DDD6FE" stroke-width="1.5"/><rect x="165" y="20" width="70" height="35" rx="8" fill="#EBF0FF" stroke="#C2CFFF" stroke-width="1"/><text x="200" y="42" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="600" fill="#1557FF">Finance</text><line x1="160" y1="135" x2="95" y2="100" stroke="#A7F3D0" stroke-width="1.5"/><rect x="45" y="75" width="70" height="35" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/><text x="80" y="97" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="600" fill="#059669">Purchase</text><line x1="240" y1="135" x2="305" y2="100" stroke="#FED7AA" stroke-width="1.5"/><rect x="285" y="75" width="70" height="35" rx="8" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/><text x="320" y="97" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="600" fill="#EA580C">Production</text><line x1="160" y1="165" x2="95" y2="200" stroke="#FBCFE8" stroke-width="1.5"/><rect x="45" y="190" width="70" height="35" rx="8" fill="#FDF2F8" stroke="#FBCFE8" stroke-width="1"/><text x="80" y="212" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="600" fill="#DB2777">HR</text><line x1="240" y1="165" x2="305" y2="200" stroke="#A5F3FC" stroke-width="1.5"/><rect x="285" y="190" width="70" height="35" rx="8" fill="#ECFEFF" stroke="#A5F3FC" stroke-width="1"/><text x="320" y="212" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="600" fill="#0891B2">Sales</text><line x1="200" y1="190" x2="200" y2="245" stroke="#C2CFFF" stroke-width="1.5"/><rect x="165" y="245" width="70" height="35" rx="8" fill="#EBF0FF" stroke="#C2CFFF" stroke-width="1"/><text x="200" y="267" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" font-weight="600" fill="#1557FF">Inventory</text></svg>
+    </div>
+  </div>
+</section>
+
+<section class="pfeatures" itemscope itemtype="https://schema.org/ItemList">
+  <div class="pfeatures-inner">
+    <h2>Complete Business Management</h2>
+    <p class="sub">12 integrated modules to run your entire operation from a single dashboard.</p>
+    <ol class="feat-list" role="list">
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-calculator"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">01</span>
+          <h3 itemprop="name">Finance & Accounts</h3>
+          <p itemprop="description">General ledger, accounts payable/receivable, trial balance, and profit & loss — all automated and accurate.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-file-contract"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">02</span>
+          <h3 itemprop="name">Purchase Order</h3>
+          <p itemprop="description">Vendor management, PO creation, and GRN tracking. Streamline procurement from indent to delivery.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-gears"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">03</span>
+          <h3 itemprop="name">Production Planning</h3>
+          <p itemprop="description">Bill of materials, work orders, and production scheduling. Plan and track manufacturing in real time.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="4">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-building"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">04</span>
+          <h3 itemprop="name">Multi-Branch</h3>
+          <p itemprop="description">Manage multiple branches from a single dashboard with consolidated reporting and inter-branch transfers.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="5">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-chart-bar"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">05</span>
+          <h3 itemprop="name">MIS Reports</h3>
+          <p itemprop="description">Management dashboards with drill-down analytics. Get insights at every level — company, branch, department.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="6">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-receipt"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">06</span>
+          <h3 itemprop="name">Sales Management</h3>
+          <p itemprop="description">Quotation to invoice with credit management. Track the complete sales cycle with payment follow-ups.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="7">
+        <div class="feat-ic" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-warehouse"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">07</span>
+          <h3 itemprop="name">Store & Inventory</h3>
+          <p itemprop="description">Stock tracking with bin locations and batch management. Know exactly what's where at all times.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="8">
+        <div class="feat-ic" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-users-gear"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">08</span>
+          <h3 itemprop="name">HR Integration</h3>
+          <p itemprop="description">Employee data, attendance, and payroll linked directly to your ERP for seamless workforce management.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="9">
+        <div class="feat-ic" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-toolbox"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">09</span>
+          <h3 itemprop="name">Asset Management</h3>
+          <p itemprop="description">Track fixed assets, depreciation schedules, and maintenance history. Maximize asset lifecycle value.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="10">
+        <div class="feat-ic" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-clipboard-check"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">10</span>
+          <h3 itemprop="name">Quality Control</h3>
+          <p itemprop="description">Inspection checklists, rejection tracking, and CAPA management. Maintain quality standards consistently.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="11">
+        <div class="feat-ic" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-check-double"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">11</span>
+          <h3 itemprop="name">Approval Workflows</h3>
+          <p itemprop="description">Multi-level approvals for purchase orders, indents, and expenses. Nothing goes through without proper sign-off.</p>
+        </div>
+      </li>
+      <li class="feat-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="12">
+        <div class="feat-ic" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-clock-rotate-left"></i></div>
+        <div class="feat-body">
+          <span class="feat-num">12</span>
+          <h3 itemprop="name">Audit Trail</h3>
+          <p itemprop="description">Complete change log for compliance and accountability. Track who changed what, when, and why.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="pwhy">
+  <div class="pwhy-inner">
+    <h2>Why Choose Softwaller</h2>
+    <p class="sub">We don't just build software — we build solutions that grow with your business.</p>
+    <div class="pwhy-grid">
+      <div class="pwhy-item">
+        <i class="fa-solid fa-pencil-ruler"></i>
+        <div><h3>Built for Your Workflow</h3><p>Custom-designed to match how your team actually works, not the other way around.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-arrow-up-right-dots"></i>
+        <div><h3>Scale as You Grow</h3><p>Architecture designed to handle 500+ concurrent users without breaking a sweat.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <div><h3>Mobile Ready</h3><p>Access from any device, anywhere, anytime. Your office travels with you.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-plug"></i>
+        <div><h3>Integration Ready</h3><p>Connect with Tally, WhatsApp, payment gateways, and more out of the box.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-headset"></i>
+        <div><h3>Ongoing Support</h3><p>3 months free support plus AMC options after go-live. We're always here for you.</p></div>
+      </div>
+      <div class="pwhy-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div><h3>Data Security</h3><p>Role-based access, encryption, and audit trails keep your business data safe.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-related">
+  <div class="p-related-inner">
+    <h2>Related Solutions</h2>
+    <p class="sub">Explore other software that works great alongside this solution.</p>
+    <div class="p-related-grid">
+      <a href="/inventory-management.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-boxes-stacked"></i></div>
+        <h3>Inventory Management</h3>
+        <p>Real-time stock tracking</p>
+        <div class="pr-link">Inventory Management <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/gst-billing-accounting.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h3>GST Billing &amp; Accounting</h3>
+        <p>GST-compliant billing</p>
+        <div class="pr-link">GST Billing &amp; Accounting <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      <a href="/hr-payroll.html" class="p-related-card">
+        <div class="pr-icon" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-users"></i></div>
+        <h3>HR &amp; Payroll</h3>
+        <p>Employee &amp; payroll management</p>
+        <div class="pr-link">HR &amp; Payroll <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pcta">
+  <div class="pcta-inner">
+    <h2>Ready to Unify Your Operations?</h2>
+    <p>Get a free consultation and see how our ERP can streamline your entire business.</p>
+    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+  </div>
+</section>
+
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Common questions buyers ask before choosing this software.</p>
+    <details class="faq-item">
+      <summary>Should I buy ready-made ERP or build a custom one?</summary>
+      <div class="faq-answer">Ready-made ERP works if your processes match the software. Custom ERP wins when you have unique workflows, multi-company structures, or specific Indian compliance needs. Most mid-sized SMBs save 30 to 50 percent over 5 years with a right-sized custom build.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How long does ERP implementation typically take?</summary>
+      <div class="faq-answer">A focused custom ERP for one business unit takes 3 to 6 months. Multi-module ERP covering sales, purchase, inventory, manufacturing, and finance takes 6 to 12 months including data migration, UAT, and training.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Is GST e-invoicing and e-way bill included?</summary>
+      <div class="faq-answer">Yes. Our ERP generates IRN through GSP/IRP integration, prints e-invoice QR codes, creates e-way bills, and pushes data to GSTR-1. We support multi-GSTIN setups for businesses with branches across states.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can the ERP work offline at remote sites?</summary>
+      <div class="faq-answer">Yes. We build offline-first modules for warehouses, factories, and field locations with poor connectivity. Data syncs to the central server when the network is back, with conflict resolution rules.</div>
+    </details>
+  </div>
+</section>
+
+`} />
+</BaseLayout>

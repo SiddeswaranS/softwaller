@@ -1,0 +1,182 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SitemapModal from '../components/SitemapModal.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Full URL e.g. "https://www.softwaller.com/about.html". If omitted, derived from Astro.url. */
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  /** Each entry rendered as a separate <script type="application/ld+json"> */
+  jsonLd?: Record<string, unknown>[];
+  noIndex?: boolean;
+  /** Optional extra <head> content for page-specific links/styles */
+  extraHead?: string;
+  /** CSS asset version (cache-buster) */
+  cssVersion?: string;
+  /** JS asset version (cache-buster) */
+  jsVersion?: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogImage = 'https://www.softwaller.com/assets/og-image.jpg',
+  ogType = 'website',
+  twitterTitle,
+  twitterDescription,
+  twitterImage,
+  jsonLd = [],
+  noIndex = false,
+  extraHead,
+  cssVersion = '1.0.9',
+  jsVersion = '1.0.9',
+} = Astro.props;
+
+// Derive canonical from current URL when not provided.
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, 'https://www.softwaller.com').toString();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content={description}>
+<meta http-equiv="content-language" content="en-IN">
+<meta name="author" content="Softwaller Technologies Private Limited">
+{noIndex
+  ? <meta name="robots" content="noindex, nofollow" />
+  : <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+}
+<meta name="geo.region" content="IN-TN">
+<meta name="geo.placename" content="Chennai">
+<meta name="theme-color" content="#1557FF">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" href="/assets/softwaller-icon-light.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href={canonicalUrl}>
+<meta property="og:type" content={ogType}>
+<meta property="og:url" content={canonicalUrl}>
+<meta property="og:title" content={ogTitle ?? title}>
+<meta property="og:description" content={ogDescription ?? description}>
+<meta property="og:image" content={ogImage}>
+<meta property="og:site_name" content="Softwaller Technologies Private Limited">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@softwaller">
+<meta name="twitter:title" content={twitterTitle ?? ogTitle ?? title}>
+<meta name="twitter:description" content={twitterDescription ?? ogDescription ?? description}>
+<meta name="twitter:image" content={twitterImage ?? ogImage}>
+
+{jsonLd.map((data) => (
+  <script type="application/ld+json" set:html={JSON.stringify(data)} />
+))}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" integrity="sha256-ohsW1KkP6RfCe24qro+KdGrtJ4T+sv8ZrvVZEJHz5k0=" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="stylesheet" href={`/assets/shared.min.css?v=${cssVersion}`}>
+<link rel="stylesheet" href={`/assets/home.min.css?v=${cssVersion}`}>
+<slot name="head-css" />
+
+<style is:inline>
+.sw-loader{position:fixed;inset:0;z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#070D1A;transition:opacity .5s,visibility .5s}
+.sw-loader.hide{opacity:0;visibility:hidden}
+.sw-loader-icon{width:80px;height:80px;position:relative}
+.sw-loader-border{position:absolute;inset:-4px;border-radius:18px;border:2px solid #2563EB;animation:sw-border-pulse 1.8s ease-in-out infinite}
+.sw-loader-grid{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:8px}
+.sw-loader-grid .sw-q{border-radius:6px;opacity:0;animation:sw-pop .5s forwards}
+.sw-q1{background:#2563EB;animation-delay:.2s!important}
+.sw-q2{background:#0891B2;animation-delay:.4s!important}
+.sw-q3{background:#059669;animation-delay:.6s!important}
+.sw-q4{background:#D97706;animation-delay:.8s!important}
+.sw-loader-dot{position:absolute;top:50%;left:50%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#DC2626;opacity:0;animation:sw-dot-in .3s 1s forwards,sw-dot-pulse 1.2s 1.3s ease-in-out infinite}
+.sw-loader-gridlines{position:absolute;inset:0}
+.sw-loader-gridlines line{opacity:0;animation:sw-line-in .4s .9s forwards}
+.sw-loader-text{margin-top:24px;font-family:'Plus Jakarta Sans','Segoe UI',sans-serif;font-weight:700;font-size:18px;color:#fff;opacity:0;animation:sw-text-in .5s 1.2s forwards;letter-spacing:-.3px}
+.sw-loader-text span{color:#2563EB}
+.sw-loader-bar{width:120px;height:3px;background:rgba(255,255,255,.1);border-radius:3px;margin-top:16px;overflow:hidden;opacity:0;animation:sw-text-in .5s 1.4s forwards}
+.sw-loader-bar-fill{width:0;height:100%;background:linear-gradient(90deg,#2563EB,#0891B2,#059669,#D97706,#DC2626);border-radius:3px;animation:sw-bar-fill 1.5s 1.5s ease-in-out forwards}
+@keyframes sw-pop{0%{opacity:0;transform:scale(.5)}100%{opacity:1;transform:scale(1)}}
+@keyframes sw-dot-in{0%{opacity:0;transform:scale(0)}100%{opacity:1;transform:scale(1)}}
+@keyframes sw-dot-pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.3);opacity:.7}}
+@keyframes sw-border-pulse{0%,100%{border-color:#2563EB;box-shadow:0 0 0 0 rgba(37,99,235,0)}50%{border-color:#0891B2;box-shadow:0 0 20px rgba(37,99,235,.15)}}
+@keyframes sw-line-in{0%{opacity:0}100%{opacity:.5}}
+@keyframes sw-text-in{0%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes sw-bar-fill{0%{width:0}100%{width:100%}}
+</style>
+
+{extraHead && <Fragment set:html={extraHead} />}
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="sw-loader" id="sw-loader">
+  <div class="sw-loader-icon">
+    <div class="sw-loader-border"></div>
+    <div class="sw-loader-grid">
+      <div class="sw-q sw-q1"></div>
+      <div class="sw-q sw-q2"></div>
+      <div class="sw-q sw-q3"></div>
+      <div class="sw-q sw-q4"></div>
+    </div>
+    <svg class="sw-loader-gridlines" viewBox="0 0 80 80"><line x1="40" y1="8" x2="40" y2="72" stroke="#64748B" stroke-width="1.5"/><line x1="8" y1="40" x2="72" y2="40" stroke="#64748B" stroke-width="1.5"/></svg>
+    <div class="sw-loader-dot"></div>
+  </div>
+  <div class="sw-loader-text">Softwaller <span>Technologies</span></div>
+  <div class="sw-loader-bar"><div class="sw-loader-bar-fill"></div></div>
+</div>
+
+<div id="progress-bar" role="progressbar" aria-hidden="true"></div>
+
+<Header />
+
+<main id="main">
+  <slot />
+</main>
+
+<Footer />
+
+<a id="wa-btn" href="https://wa.me/919585999819?text=Hi%20Softwaller%2C%20I%20want%20to%20discuss%20a%20software%20project" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+<div id="wa-tooltip" role="tooltip">Chat with us on WhatsApp</div>
+
+<button id="btt" data-action="scrollTop" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<div id="cookie" role="dialog" aria-label="Cookie notice">
+  <p class="cookie-txt"><strong>We use cookies</strong> to improve your experience on our website. By continuing to browse, you agree to our use of cookies as described in our <a href="/privacy-policy.html" style="color:#93BBFF">Privacy Policy</a>.</p>
+  <div class="cookie-acts">
+    <button class="ck-ok" data-action="acceptCookie">Accept All</button>
+    <button class="ck-no" data-action="rejectCookie">Reject All</button>
+  </div>
+</div>
+
+<SitemapModal />
+
+<script src={`/assets/nav.min.js?v=${jsVersion}`} defer></script>
+<script src={`/assets/main.min.js?v=${jsVersion}`} defer></script>
+</body>
+</html>

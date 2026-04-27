@@ -1,0 +1,334 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "No-Code vs Custom Software: The Real 3-Year Cost | Softwaller";
+const description = "No-code looks cheaper on day one. By month 30 the picture flips. Here is the honest 3-year TCO comparison between no-code platforms and custom software for Indian SMBs.";
+const canonical = "https://www.softwaller.com/blog/no-code-vs-custom-software.html";
+const ogImage = "https://www.softwaller.com/assets/og-image.jpg";
+const ogTitle = "No-Code vs Custom Software: The Real 3-Year Cost";
+const ogDescription = "No-code looks cheaper on day one. By month 30 the picture flips. Here is the honest 3-year TCO comparison between no-code platforms and custom software for Indian SMBs.";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "No-Code vs Custom Software: The Real 3-Year Cost",
+    "description": "No-code looks cheaper on day one. By month 30 the picture flips. Here is the honest 3-year TCO comparison between no-code platforms and custom software for Indian SMBs.",
+    "author": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Softwaller Technologies",
+      "url": "https://www.softwaller.com"
+    },
+    "datePublished": "2026-04-26",
+    "dateModified": "2026-04-26",
+    "url": "https://www.softwaller.com/blog/no-code-vs-custom-software.html",
+    "image": "https://www.softwaller.com/assets/og-image.jpg"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.softwaller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.softwaller.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "No-Code vs Custom Software",
+        "item": "https://www.softwaller.com/blog/no-code-vs-custom-software.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is no-code really cheaper than custom software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No-code is cheaper for the first 6-12 months and for very small teams. Beyond 25-30 active users or after the third feature outside the platform's defaults, per-user fees and integration costs typically push no-code TCO above a one-time custom build over a 3-year horizon."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does vendor lock-in actually look like with no-code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You cannot self-host most no-code platforms. Data export is usually CSV or JSON without business logic, formulas, automations, or UI. Migrating 18 months of work to a different platform takes 3-4 months and effectively rebuilds the application from scratch."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When does no-code clearly win?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For internal tools used by under 20 people, MVPs needed in 4-8 weeks, and processes that fit the platform's data model with minimal customisation. Also strong for static dashboards, simple form-and-database workflows, and approval flows."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What hidden costs do no-code platforms add over time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Per-user pricing scales with headcount, premium connectors charge per integration, automation runs are metered, storage adds up, sandbox/test environments cost separately, and SSO is usually a paid add-on. Expect the listed per-user price to be 2-3x the actual all-in cost."
+        }
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  <style is:global slot="head-css" set:html={`
+body{min-height:100vh;display:flex;flex-direction:column}
+.blog-hero{padding:120px 0 48px;background:var(--surf);text-align:center;position:relative;overflow:hidden}
+.blog-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.blog-hero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+.blog-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:12px;color:var(--ink)}
+.blog-hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--blue)}
+.blog-hero p{font-size:16px;color:var(--muted);max-width:560px;margin:0 auto;line-height:1.75}
+.post-inner{max-width:760px;margin:0 auto;padding:48px 28px 80px}
+.post-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.post-body h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:32px 0 14px}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:24px 0 10px}
+.post-body p{font-size:15.5px;color:var(--muted);line-height:1.85;margin-bottom:16px}
+.post-body ul,.post-body ol{padding-left:20px;margin-bottom:16px}
+.post-body li{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:8px}
+.post-body strong{color:var(--ink)}
+.post-body blockquote{border-left:3px solid var(--blue);padding:16px 20px;margin:24px 0;background:var(--blue-bg);border-radius:0 10px 10px 0;font-size:15px;color:var(--ink3);font-style:italic;line-height:1.75}
+.post-body table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+.post-body th,.post-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.post-body th{background:var(--surf);font-weight:700;color:var(--ink)}
+.post-body td{color:var(--muted)}
+.post-cta{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:32px;text-align:center;margin-top:48px}
+.post-cta h3{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.post-cta p{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.post-related{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.post-related h3{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:20px}
+.post-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pr-card{padding:20px;border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:all .2s;display:block}
+.pr-card:hover{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.08)}
+.pr-card h4{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.pr-card p{font-size:12.5px;color:var(--muted);line-height:1.5}
+.pfooter{margin-top:auto}
+@media(max-width:768px){.post-related-grid{grid-template-columns:1fr}.post-cta .btn-primary,.post-cta .btn-outline{display:block;width:100%;text-align:center;margin:8px 0}.post-body table{font-size:13px}.post-body th,.post-body td{padding:8px}}
+
+
+
+.faq-section{margin:48px 0 32px;padding:0}
+.faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
+.faq-section p.faq-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--white);transition:border-color .2s}
+.faq-item:hover{border-color:var(--blue-br)}
+.faq-item[open]{border-color:var(--blue-br);box-shadow:0 4px 16px rgba(10,15,30,.06)}
+.faq-item summary{padding:18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.5}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'\\002B';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'\\2212'}
+.faq-item .faq-answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.8}
+`}></style>
+  <Fragment set:html={`
+  <section class="blog-hero">
+    <div class="blog-hero-inner">
+      <h1>No-Code vs Custom Software: <em>The Real 3-Year Cost</em></h1>
+      <p>No-code looks cheaper on day one. The math at month 30 tells a different story. Here is the honest TCO comparison Indian SMBs almost never see before they sign.</p>
+    </div>
+  </section>
+
+  <article class="post-inner">
+    <div class="post-meta">
+      <span><i class="fa-regular fa-calendar"></i> April 26, 2026</span>
+      <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+      <span><i class="fa-solid fa-tag"></i> Build vs Buy</span>
+    </div>
+
+    <div class="post-body">
+      <p>The pitch is hard to argue with. "Build your CRM in a weekend, no developers needed, Rs 1,500 per user per month." For a 10-person team, that is Rs 15,000 a month versus a Rs 8 lakh custom build. The math seems obvious. So most growing Indian SMBs sign up for the no-code platform, build something that mostly works, and then spend the next 24 months discovering what the price tag did not include.</p>
+
+      <p>This is not an anti-no-code piece. No-code is the right answer for plenty of problems. It is a clear-eyed look at when the per-user model starts losing to a one-time build, and what makes the crossover happen earlier than the brochure suggests.</p>
+
+      <h2>The Day-One Comparison Is Misleading</h2>
+
+      <p>Pricing pages compare a per-user monthly fee to a one-time development cost. That is not a fair fight unless you also model the next 36 months. Let us run the numbers for a typical Indian SMB scenario: a CRM and order-management app for a 25-person team that grows to 50 over three years.</p>
+
+      <h3>The No-Code Path</h3>
+
+      <table>
+        <tr><th>Cost item</th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr>
+        <tr><td>Per-user licence (Rs 1,500/user/month, growing)</td><td>4,50,000</td><td>6,75,000</td><td>9,00,000</td></tr>
+        <tr><td>Premium connectors (Tally, WhatsApp, payment gateway)</td><td>1,20,000</td><td>1,20,000</td><td>1,20,000</td></tr>
+        <tr><td>Automation run overage</td><td>30,000</td><td>60,000</td><td>90,000</td></tr>
+        <tr><td>Implementation consultant</td><td>2,50,000</td><td>50,000</td><td>50,000</td></tr>
+        <tr><td>SSO / advanced security add-on</td><td>60,000</td><td>60,000</td><td>60,000</td></tr>
+        <tr><td>Sandbox + storage</td><td>40,000</td><td>50,000</td><td>60,000</td></tr>
+        <tr><th>Total per year</th><th>9,50,000</th><th>10,15,000</th><th>11,80,000</th></tr>
+      </table>
+
+      <p><strong>Three-year no-code TCO: Rs 31.45 lakh.</strong> Not the Rs 18 lakh you would estimate from licences alone.</p>
+
+      <h3>The Custom Build Path</h3>
+
+      <table>
+        <tr><th>Cost item</th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr>
+        <tr><td>One-time build (CRM + Order Mgmt + integrations)</td><td>9,00,000</td><td>—</td><td>—</td></tr>
+        <tr><td>Cloud hosting (AWS/Azure)</td><td>1,20,000</td><td>1,32,000</td><td>1,50,000</td></tr>
+        <tr><td>Maintenance &amp; support (15% AMC)</td><td>—</td><td>1,35,000</td><td>1,35,000</td></tr>
+        <tr><td>Feature additions (planned roadmap)</td><td>1,50,000</td><td>2,00,000</td><td>2,00,000</td></tr>
+        <tr><th>Total per year</th><th>11,70,000</th><th>4,67,000</th><th>4,85,000</th></tr>
+      </table>
+
+      <p><strong>Three-year custom TCO: Rs 21.22 lakh.</strong> A Rs 10 lakh saving over the no-code option, with no per-user lock-in.</p>
+
+      <p>The crossover happens around month 16. Before that, no-code wins. After that, custom is cheaper for every additional month and every additional user.</p>
+
+      <h2>Where the No-Code Numbers Hide</h2>
+
+      <p>If you only look at the headline per-user price, you will under-budget by 60-100%. Here is what gets added between sign-up and go-live, in roughly the order it surfaces.</p>
+
+      <h3>The Premium Connector Problem</h3>
+
+      <p>The base plan integrates with 20-30 popular tools. The Tally connector, WhatsApp Business API, GST portal, and Indian payment gateways are usually on the premium tier or sold as separate apps. Each adds Rs 5,000-15,000/month.</p>
+
+      <h3>Automation Run Limits</h3>
+
+      <p>Most no-code platforms include 5,000-20,000 automation runs per month. That sounds like a lot until you realise that an order-confirmation flow with three steps consumes three runs. A 50-order day is 150 runs. Add lead nurture, payment reminders, and stock alerts — you are over the limit by week three. Overage is metered.</p>
+
+      <h3>The "We Need a Consultant" Phase</h3>
+
+      <p>Marketing says "no developers needed". Reality says you will hire a certified no-code consultant for Rs 1,500-3,000/hour to build anything past the templates. Average implementation: 60-120 hours.</p>
+
+      <h3>Per-User Pricing as You Grow</h3>
+
+      <p>This is the slow burn. A 25-person team paying Rs 4.5 lakh in year one becomes a 50-person team paying Rs 9 lakh in year three. With custom software, the user count is irrelevant — server cost grows with usage, not headcount.</p>
+
+      <h2>Where the Custom Numbers Hide Too</h2>
+
+      <p>To be fair, custom software has its own pitfalls that the brochure does not mention.</p>
+
+      <ul>
+        <li><strong>Initial timeline reality.</strong> A "3-month build" is rarely 3 months. Plan for 4-5 with two rounds of revisions.</li>
+        <li><strong>Maintenance is not optional.</strong> Plan 12-15% of build cost annually for AMC — security patches, hosting, bug fixes, minor enhancements.</li>
+        <li><strong>You own the bus factor.</strong> If your developer disappears, you need code documentation, version control, and a transition plan. Demand these from day one.</li>
+        <li><strong>Compliance changes are your problem.</strong> When DPDP, GST, or e-invoicing rules update, you pay your dev team to update the software. SaaS does this for you.</li>
+      </ul>
+
+      <h2>The Decision Framework</h2>
+
+      <p>Pick no-code when:</p>
+
+      <ul>
+        <li>Team using the tool is under 20 people and unlikely to grow past 30</li>
+        <li>The process fits the platform's data model with minimal customisation (forms, approvals, simple workflows)</li>
+        <li>You need to launch in under 8 weeks</li>
+        <li>The tool is internal-only and not customer-facing</li>
+        <li>Your industry compliance requirements are standard (GDPR/SOC2 covered by the platform itself)</li>
+      </ul>
+
+      <p>Pick custom when:</p>
+
+      <ul>
+        <li>Active users will cross 30 within 18 months</li>
+        <li>The application has 3+ deep integrations (Tally, ERP, custom hardware, IoT)</li>
+        <li>You need offline mode or edge deployment (warehouses, factories, vehicles)</li>
+        <li>Compliance is industry-specific (DPDP for sensitive data, healthcare ABDM, financial RBI rules)</li>
+        <li>The app is part of how customers experience your brand (mobile app, customer portal, white-labelled)</li>
+        <li>You expect to commercialise the application or use it as a competitive moat</li>
+      </ul>
+
+      <blockquote>The cheapest software is rarely the one with the lowest sticker price. It is the one whose cost stops growing in line with your business.</blockquote>
+
+      <h2>The Hybrid Pattern That Works</h2>
+
+      <p>Most successful Indian SMBs end up with a hybrid stack, not a pure-play decision. The pattern that works:</p>
+
+      <ol>
+        <li><strong>Custom for the core revenue system.</strong> Sales, billing, inventory, and customer experience — anything where your business logic differs from the standard template.</li>
+        <li><strong>SaaS for commodity functions.</strong> Email, calendar, video calls, payroll engine, accounting backbone, file storage. Where the workflow is identical across companies, do not pay to rebuild it.</li>
+        <li><strong>No-code for internal tools.</strong> HR forms, IT request flows, simple approval workflows used by 10-20 people. Cheap to build, cheap to throw away when the process changes.</li>
+      </ol>
+
+      <p>The mistake is using one tool for all three layers. The custom-everything build collapses under maintenance. The SaaS-everything stack collapses under per-user fees. The no-code-everything platform collapses the day a 100-person team tries to log in.</p>
+
+      <h2>Run the Math Before You Sign</h2>
+
+      <p>Before any new tool, build a 36-month spreadsheet. Include licences, premium add-ons, integration costs, automation overage, growing user count, and migration cost if you ever leave. Compare it to a one-time build with realistic AMC. Do this in a one-page model — not a vendor's calculator. The right tool will still look like the right tool. The wrong one will reveal itself in row 19, column F, around month 22.</p>
+
+      <!-- FAQ -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions about this topic.</p>
+    <details class="faq-item">
+      <summary>Is no-code really cheaper than custom software?</summary>
+      <div class="faq-answer">No-code is cheaper for the first 6-12 months and for very small teams. Beyond 25-30 active users or after the third feature outside the platform's defaults, per-user fees and integration costs typically push no-code TCO above a one-time custom build over a 3-year horizon.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What does vendor lock-in actually look like with no-code?</summary>
+      <div class="faq-answer">You cannot self-host most no-code platforms. Data export is usually CSV or JSON without business logic, formulas, automations, or UI. Migrating 18 months of work to a different platform takes 3-4 months and effectively rebuilds the application from scratch.</div>
+    </details>
+    <details class="faq-item">
+      <summary>When does no-code clearly win?</summary>
+      <div class="faq-answer">For internal tools used by under 20 people, MVPs needed in 4-8 weeks, and processes that fit the platform's data model with minimal customisation. Also strong for static dashboards, simple form-and-database workflows, and approval flows.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What hidden costs do no-code platforms add over time?</summary>
+      <div class="faq-answer">Per-user pricing scales with headcount, premium connectors charge per integration, automation runs are metered, storage adds up, sandbox/test environments cost separately, and SSO is usually a paid add-on. Expect the listed per-user price to be 2-3x the actual all-in cost.</div>
+    </details>
+  </div>
+</section>
+
+      <!-- CTA -->
+      <div class="post-cta">
+        <h3>Get a Realistic 36-Month TCO</h3>
+        <p>We build custom business apps that pay for themselves before month 18. Tell us your team size, integrations, and process, and we will model your real cost — both options.</p>
+        <a href="/../products/custom-business-apps.html" class="btn-primary">Explore Custom Business Apps <i class="fa-solid fa-arrow-right"></i></a>
+        &nbsp;&nbsp;
+        <a href="/../#contact" class="btn-outline">Get a TCO Estimate</a>
+      </div>
+
+      <!-- Related Posts -->
+      <div class="post-related">
+        <h3>Related Articles</h3>
+        <div class="post-related-grid">
+          <a href="/custom-erp-vs-readymade.html" class="pr-card">
+            <h4>Custom ERP vs Ready-Made: Which Is Right?</h4>
+            <p>The same buy-vs-build question, applied to ERP — and where each option breaks.</p>
+          </a>
+          <a href="/business-process-automation-guide.html" class="pr-card">
+            <h4>The Small Business Guide to Process Automation</h4>
+            <p>Where to automate first, what to leave manual, and how to size the build.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+<!-- Newsletter signup -->
+<section style="max-width:800px;margin:0 auto;padding:0 28px 48px">
+  <div style="background:var(--ink);border-radius:20px;padding:36px;text-align:center">
+    <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:6px">Enjoyed this article?</div>
+    <div style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.65;margin-bottom:20px">Get practical business software insights delivered to your inbox every week.</div>
+    <form action="https://eb65560b.sibforms.com/serve/MUIFACP2rFDETv2p-mUPqyHo3glJtZhcD0GG3f63ikM49xDLRJyQdEWUq0PBoF0ksGw1g_N182HgQUpPssTKQKbO_o-YEB7N347_FS22M6QudGfXoY8QkWZ93gPvVtu8RVTgz--uNpErO1Xd4RccAsEDFLg3mci83OfHVyaJWN0sybuGWiTH50Rmf6Jh_BRVN1HTSAYIwS2z6SKAUw==" method="POST" novalidate style="display:flex;flex-wrap:wrap;gap:10px;max-width:440px;margin:0 auto" target="nl-iframe" onsubmit="var e=this.querySelector('input[type=email]');if(!e.value||!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(e.value)){event.preventDefault();e.style.borderColor='#DC2626';return}var f=this;setTimeout(function(){f.style.display='none';f.nextElementSibling.style.display='block'},1500)">
+      <input type="hidden" name="locale" value="en">
+      <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" style="flex:1;padding:13px 16px;border-radius:10px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-family:var(--font);font-size:14px" oninput="this.style.borderColor='rgba(255,255,255,.15)'">
+      <button type="submit" style="padding:13px 24px;border-radius:10px;border:none;background:var(--blue);color:#fff;font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+    </form>
+    <div style="display:none;color:#059669;font-size:14px;font-weight:600;padding:8px 0"><i class="fa-solid fa-circle-check"></i> Subscribed! Check your inbox.</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:12px"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime.</div>
+  </div>
+</section>
+`} />
+</BaseLayout>
