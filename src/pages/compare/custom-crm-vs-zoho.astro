@@ -217,7 +217,7 @@ const jsonLd = [
     <li><strong>Workflow customization has hard limits.</strong> Zoho's blueprint and workflow engines are powerful but bounded. Multi-step approval chains with conditional branching, custom validation logic that depends on related records, or complex commission calculations frequently end up half-implemented in CRM and half-implemented in spreadsheets.</li>
     <li><strong>Industry-specific data models need workarounds.</strong> Real estate inventory (tower &rarr; floor &rarr; unit with status, area, view, parking), jewellery items (purity, weight, making charges, hallmark), pharma SKUs (batch, expiry, schedule, GST HSN) &mdash; these need first-class data models. In Zoho they end up as custom fields glued onto Products or Deals, which works but creates fragile reporting.</li>
     <li><strong>Data residency and DPDP Act control are limited.</strong> Your data sits in Zoho's chosen data centre. The Digital Personal Data Protection Act 2023 raises the bar on consent, purpose limitation and data principal rights. If your compliance team needs your CRM data to live on infrastructure you control, SaaS does not give you that lever.</li>
-    <li><strong>White-label and source code IP are not on offer.</strong> If your product strategy needs a CRM that you ship to your own customers under your brand, or if you simply want to own the source code so you are not dependent on Zoho's roadmap, SaaS is the wrong shape. Read more in our analysis of <a href="/../blog/no-code-vs-custom-software.html">no-code vs custom software</a>.</li>
+    <li><strong>White-label and source code IP are not on offer.</strong> If your product strategy needs a CRM that you ship to your own customers under your brand, or if you simply want to own the source code so you are not dependent on Zoho's roadmap, SaaS is the wrong shape. Read more in our analysis of <a href="/blog/no-code-vs-custom-software.html">no-code vs custom software</a>.</li>
   </ol>
 </section>
 
@@ -237,7 +237,7 @@ const jsonLd = [
   <h2>When you should build a custom CRM</h2>
   <p class="cmp-sub">If two or more of these match you, the custom path very likely beats the SaaS path on 3-year economics and on product fit.</p>
   <ul class="cmp-list-x">
-    <li><i class="fa-solid fa-circle-xmark"></i> <strong>You have 50+ active users (and you are growing).</strong> The break-even point flips. Per-user SaaS fees stop being trivial line items and become a meaningful share of your software budget. See <a href="/../pricing/custom-crm-cost-india.html">custom CRM cost in India</a> for the numbers.</li>
+    <li><i class="fa-solid fa-circle-xmark"></i> <strong>You have 50+ active users (and you are growing).</strong> The break-even point flips. Per-user SaaS fees stop being trivial line items and become a meaningful share of your software budget. See <a href="/pricing/custom-crm-cost-india.html">custom CRM cost in India</a> for the numbers.</li>
     <li><i class="fa-solid fa-circle-xmark"></i> <strong>Your data model is industry-specific.</strong> Real estate units and bookings, jewellery item-level traceability, pharma batch and expiry, distributor route-and-beat planning. These are first-class entities in your business and they should be first-class entities in your CRM.</li>
     <li><i class="fa-solid fa-circle-xmark"></i> <strong>Your workflows are deep and frequently changing.</strong> Multi-step approvals with conditional logic, dynamic pricing, split commissions, integrated production scheduling. If your process changes every quarter, you need a system you can change at the speed of your business.</li>
     <li><i class="fa-solid fa-circle-xmark"></i> <strong>You need white-label or platform plays.</strong> If your customers see your CRM, or you are a franchise/consulting brand wanting to ship CRM-as-part-of-service, SaaS does not bend that way.</li>
@@ -320,11 +320,11 @@ const jsonLd = [
   <p class="cmp-sub">For some businesses, the smart answer is not Zoho or custom &mdash; it is both.</p>
   <p>The hybrid path keeps Zoho CRM as the system of record for the things it is genuinely great at &mdash; lead capture, contact management, deal pipelines, email tracking, standard automation &mdash; and adds a custom layer on top, talking to Zoho via the official REST API. The custom layer typically covers three categories:</p>
   <ol>
-    <li><strong>A custom mobile app for field sales</strong> with offline-first behaviour, GPS check-in, route planning and the exact 6-tap order-entry flow your reps actually need. Reads and writes back to Zoho CRM via API. See <a href="/../blog/field-sales-team-mobile-app.html">field sales mobile app</a>.</li>
+    <li><strong>A custom mobile app for field sales</strong> with offline-first behaviour, GPS check-in, route planning and the exact 6-tap order-entry flow your reps actually need. Reads and writes back to Zoho CRM via API. See <a href="/blog/field-sales-team-mobile-app.html">field sales mobile app</a>.</li>
     <li><strong>Custom dashboards and BI</strong> on top of Zoho data &mdash; drill-down by branch, beat, item category, distributor, dealer-on-time-payment, slab-based commissions. Pulls Zoho data nightly, layers it with ERP and Tally numbers, surfaces what your management actually meets on.</li>
     <li><strong>Industry-specific add-on modules</strong> &mdash; a real estate booking and unit-availability module, a jewellery item ledger, a service-AMC scheduler &mdash; sitting alongside Zoho but linking back to deals and contacts.</li>
   </ol>
-  <p>Indicative cost: a Zoho CRM Professional or Enterprise tier (refer to Zoho's official pricing page for current per-user rates) + Softwaller custom layer (Rs 3&ndash;6 lakh one-time + AMC). For many businesses with 30&ndash;60 users, this is typically cheaper than Zoho Ultimate alone and far cheaper than a full custom replacement, while preserving Zoho's automation and update pipeline. We discuss this pattern further in <a href="/../blog/crm-vs-spreadsheets.html">CRM vs spreadsheets</a> and <a href="/../products/custom-business-apps.html">custom business apps</a>.</p>
+  <p>Indicative cost: a Zoho CRM Professional or Enterprise tier (refer to Zoho's official pricing page for current per-user rates) + Softwaller custom layer (Rs 3&ndash;6 lakh one-time + AMC). For many businesses with 30&ndash;60 users, this is typically cheaper than Zoho Ultimate alone and far cheaper than a full custom replacement, while preserving Zoho's automation and update pipeline. We discuss this pattern further in <a href="/blog/crm-vs-spreadsheets.html">CRM vs spreadsheets</a> and <a href="/products/custom-business-apps.html">custom business apps</a>.</p>
 </section>
 
 <section class="cmp-section">
@@ -343,14 +343,14 @@ const jsonLd = [
   <h2>Adjacent reading</h2>
   <p class="cmp-sub">Decisions like this rarely happen in isolation. These pages cover the questions that usually come next.</p>
   <ul>
-    <li><a href="/../products/crm-software.html">Custom CRM development</a> &mdash; what Softwaller actually builds.</li>
-    <li><a href="/../products/whatsapp-automation.html">WhatsApp Business automation</a> &mdash; how WhatsApp fits the CRM, whether you stay on Zoho or move.</li>
-    <li><a href="/../pricing/custom-crm-cost-india.html">Custom CRM cost in India</a> &mdash; deeper pricing breakdown.</li>
-    <li><a href="/../pricing/custom-erp-cost-india.html">Custom ERP cost in India</a> &mdash; the ERP-side equivalent of this analysis.</li>
+    <li><a href="/products/crm-software.html">Custom CRM development</a> &mdash; what Softwaller actually builds.</li>
+    <li><a href="/products/whatsapp-automation.html">WhatsApp Business automation</a> &mdash; how WhatsApp fits the CRM, whether you stay on Zoho or move.</li>
+    <li><a href="/pricing/custom-crm-cost-india.html">Custom CRM cost in India</a> &mdash; deeper pricing breakdown.</li>
+    <li><a href="/pricing/custom-erp-cost-india.html">Custom ERP cost in India</a> &mdash; the ERP-side equivalent of this analysis.</li>
     <li><a href="/custom-erp-vs-tally.html">Custom ERP vs Tally</a> &mdash; the same shape of comparison for accounting and ERP.</li>
-    <li><a href="/../blog/crm-vs-spreadsheets.html">CRM vs spreadsheets</a> &mdash; the step before this decision.</li>
-    <li><a href="/../blog/no-code-vs-custom-software.html">No-code vs custom software</a> &mdash; another way to think about the build/buy axis.</li>
-    <li><a href="/../about.html">About Softwaller</a> &mdash; who we are, where we are based, how we work.</li>
+    <li><a href="/blog/crm-vs-spreadsheets.html">CRM vs spreadsheets</a> &mdash; the step before this decision.</li>
+    <li><a href="/blog/no-code-vs-custom-software.html">No-code vs custom software</a> &mdash; another way to think about the build/buy axis.</li>
+    <li><a href="/about.html">About Softwaller</a> &mdash; who we are, where we are based, how we work.</li>
   </ul>
 </section>
 
@@ -358,7 +358,7 @@ const jsonLd = [
   <div class="pcta-inner">
     <h2>Need a fair second opinion on Zoho vs custom?</h2>
     <p>Tell us your user count, industry and current pain points. We will tell you honestly whether Zoho CRM, a custom build, or the hybrid path is the right call for you.</p>
-    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get a Free CRM Strategy Call</a>
+    <a href="/#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get a Free CRM Strategy Call</a>
   </div>
 </section>
 

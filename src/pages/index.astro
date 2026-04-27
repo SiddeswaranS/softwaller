@@ -287,6 +287,8 @@ const jsonLd = [
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
+  {/* devicon CDN — only home-page uses tech-stack badges (.devicon-*) */}
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" integrity="sha256-ohsW1KkP6RfCe24qro+KdGrtJ4T+sv8ZrvVZEJHz5k0=" crossorigin="anonymous" referrerpolicy="no-referrer">`} />
   <style is:global slot="head-css" set:html={`@media(max-width:640px){.wa-use-grid{grid-template-columns:1fr !important}}
 
 

@@ -87,7 +87,7 @@ const jsonLd = [
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
-  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="/assets/product.min.css?v=1.0.9">`} />
   <style is:global slot="head-css" set:html={`
 .faq-section{margin:48px 0 32px;padding:0}
 .faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
@@ -270,19 +270,19 @@ const jsonLd = [
     <h2>Related Solutions</h2>
     <p class="sub">Explore other software that works great alongside this solution.</p>
     <div class="p-related-grid">
-      <a href="/inventory-management.html" class="p-related-card">
+      <a href=$1/products/inventory-management.html" class="p-related-card">
         <div class="pr-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-boxes-stacked"></i></div>
         <h3>Inventory Management</h3>
         <p>Real-time stock tracking</p>
         <div class="pr-link">Inventory Management <i class="fa-solid fa-arrow-right"></i></div>
       </a>
-      <a href="/gst-billing-accounting.html" class="p-related-card">
+      <a href=$1/products/gst-billing-accounting.html" class="p-related-card">
         <div class="pr-icon" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-file-invoice-dollar"></i></div>
         <h3>GST Billing &amp; Accounting</h3>
         <p>GST-compliant billing</p>
         <div class="pr-link">GST Billing &amp; Accounting <i class="fa-solid fa-arrow-right"></i></div>
       </a>
-      <a href="/hr-payroll.html" class="p-related-card">
+      <a href=$1/products/hr-payroll.html" class="p-related-card">
         <div class="pr-icon" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-users"></i></div>
         <h3>HR &amp; Payroll</h3>
         <p>Employee &amp; payroll management</p>
@@ -296,7 +296,7 @@ const jsonLd = [
   <div class="pcta-inner">
     <h2>Ready to Unify Your Operations?</h2>
     <p>Get a free consultation and see how our ERP can streamline your entire business.</p>
-    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+    <a href="/#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
   </div>
 </section>
 

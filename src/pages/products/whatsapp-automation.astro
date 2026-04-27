@@ -87,7 +87,7 @@ const jsonLd = [
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
-  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="/assets/product.min.css?v=1.0.9">`} />
   <style is:global slot="head-css" set:html={`
 .faq-section{margin:48px 0 32px;padding:0}
 .faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
@@ -303,19 +303,19 @@ const jsonLd = [
     <h2>Related Solutions</h2>
     <p class="sub">Explore other software that works great alongside this solution.</p>
     <div class="p-related-grid">
-      <a href="/crm-software.html" class="p-related-card">
+      <a href=$1/products/crm-software.html" class="p-related-card">
         <div class="pr-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-chart-line"></i></div>
         <h3>CRM Software</h3>
         <p>Manage leads, pipeline &amp; sales</p>
         <div class="pr-link">CRM Software <i class="fa-solid fa-arrow-right"></i></div>
       </a>
-      <a href="/e-commerce.html" class="p-related-card">
+      <a href=$1/products/e-commerce.html" class="p-related-card">
         <div class="pr-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-cart-shopping"></i></div>
         <h3>E-Commerce</h3>
         <p>Online store &amp; payments</p>
         <div class="pr-link">E-Commerce <i class="fa-solid fa-arrow-right"></i></div>
       </a>
-      <a href="/helpdesk.html" class="p-related-card">
+      <a href=$1/products/helpdesk.html" class="p-related-card">
         <div class="pr-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-headset"></i></div>
         <h3>Helpdesk</h3>
         <p>Ticket &amp; support management</p>
@@ -329,7 +329,7 @@ const jsonLd = [
   <div class="pcta-inner">
     <h2>Ready to Get Started?</h2>
     <p>Tell us about your project and get a free consultation with our team. No commitments, no pressure.</p>
-    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-calendar-check"></i> Book a Free Consultation</a>
+    <a href="/#contact" class="pcta-btn"><i class="fa-solid fa-calendar-check"></i> Book a Free Consultation</a>
   </div>
 </section>
 

@@ -372,7 +372,7 @@ const jsonLd = [
     <li><strong>Out of scope:</strong> B2C sales (sales to retail consumers without a GSTIN), nil-rated supplies, and exempt supplies</li>
   </ul>
   <p>Note that businesses with turnover above Rs 500 crore have a separate obligation to print a <strong>dynamic QR code on B2C invoices</strong>, but this is not the same as e-invoicing — there is no IRN involved.</p>
-  <p>For a full deep dive on threshold mechanics, edge cases around joint ventures, branch-level GSTINs, and what to do when your turnover fluctuates, see our companion blog post on the <a href="/../blog/e-invoicing-threshold-2026.html">e-invoicing turnover threshold 2026</a>.</p>
+  <p>For a full deep dive on threshold mechanics, edge cases around joint ventures, branch-level GSTINs, and what to do when your turnover fluctuates, see our companion blog post on the <a href="/blog/e-invoicing-threshold-2026.html">e-invoicing turnover threshold 2026</a>.</p>
   <div class="stat-callout"><strong>Stat:</strong> The Rs 5 crore threshold extended e-invoicing to an estimated <strong>4.5 lakh additional taxpayers</strong> when it took effect in August 2023, and the next reduction (rumoured to be Rs 1.5 crore or Rs 2 crore) would pull in another 8-10 lakh small businesses (GST Council briefings, 2023-2024).</div>
 </section>
 
@@ -408,7 +408,7 @@ const jsonLd = [
   <p>The QR code carries: supplier GSTIN, recipient GSTIN, invoice number and date, invoice value, number of line items, main HSN code, and the IRN itself. Anyone with a QR scanner app (or the IRP's online verifier) can confirm an invoice's authenticity in seconds.</p>
   <h3>The 30-day rule</h3>
   <p>Effective 1 November 2023, businesses with AATO above <strong>Rs 100 crore</strong> must submit invoices to the IRP within <strong>30 days of the invoice date</strong>. Any submission older than 30 days is rejected outright. This rule is widely expected to be extended to Rs 5 crore taxpayers within the next 12-18 months, so smaller businesses should treat the 30-day window as best practice today.</p>
-  <p>For a hands-on walkthrough of every API field, sandbox credentials, and example JSON payloads, see our detailed <a href="/../blog/irn-generation-step-by-step-guide.html">IRN generation step-by-step guide</a>.</p>
+  <p>For a hands-on walkthrough of every API field, sandbox credentials, and example JSON payloads, see our detailed <a href="/blog/irn-generation-step-by-step-guide.html">IRN generation step-by-step guide</a>.</p>
   <div class="stat-callout"><strong>Stat:</strong> Median IRN response time on the GSTN production IRP is <strong>1.4 seconds</strong> at off-peak hours and <strong>2.7 seconds</strong> at month-end peak load (GSTN performance reports, FY 2023-24).</div>
 </section>
 
@@ -431,7 +431,7 @@ const jsonLd = [
       <tr><td>Validates</td><td>Tax invoice authenticity</td><td>Right to move goods</td></tr>
     </tbody>
   </table>
-  <p>For exhaustive scenarios — same-state vs interstate, multi-vehicle, transhipment, branch transfers, return shipments, and the Part-A/Part-B mechanics of e-way bill — see our full <a href="/../blog/e-invoice-vs-e-way-bill.html">e-invoice vs e-way bill comparison</a>.</p>
+  <p>For exhaustive scenarios — same-state vs interstate, multi-vehicle, transhipment, branch transfers, return shipments, and the Part-A/Part-B mechanics of e-way bill — see our full <a href="/blog/e-invoice-vs-e-way-bill.html">e-invoice vs e-way bill comparison</a>.</p>
 </section>
 
 <section id="part-5">
@@ -446,7 +446,7 @@ const jsonLd = [
   <h3>GSTIN suspension</h3>
   <p>Repeated default — typically three or more cycles of non-compliance — can trigger Rule 21 suspension of your GSTIN by the proper officer. Suspension means you cannot issue any tax invoice at all, effectively halting business until restored.</p>
   <div class="stat-callout"><strong>Stat:</strong> The CBIC reported recovering over <strong>Rs 1,200 crore in penalties and recovered ITC fraud</strong> in FY 2023-24 directly attributable to e-invoicing data analytics (CBIC press release, June 2024).</div>
-  <p>For a deeper look at exact penalty calculations, real-world case studies, and how to structure customer communications when you've issued an invoice without an IRN by mistake, read our <a href="/../blog/e-invoicing-penalties-india-2026.html">e-invoicing penalties under GST</a> playbook.</p>
+  <p>For a deeper look at exact penalty calculations, real-world case studies, and how to structure customer communications when you've issued an invoice without an IRN by mistake, read our <a href="/blog/e-invoicing-penalties-india-2026.html">e-invoicing penalties under GST</a> playbook.</p>
 </section>
 
 <section id="part-6">
@@ -475,7 +475,7 @@ const jsonLd = [
     <li>Escalates ambiguous cases to a designated accounts user with the exact field at fault</li>
     <li>Tracks failure rate by error code and alerts when any single cause exceeds 2% of submissions</li>
   </ul>
-  <p>Our customers using Softwaller's GST billing module see IRN submission success rates above 99.4% by month two of go-live. For an in-depth fix playbook with sample API responses and screenshots, read our <a href="/../blog/top-10-e-invoicing-errors-fixes.html">top 10 IRP errors and fixes</a> guide.</p>
+  <p>Our customers using Softwaller's GST billing module see IRN submission success rates above 99.4% by month two of go-live. For an in-depth fix playbook with sample API responses and screenshots, read our <a href="/blog/top-10-e-invoicing-errors-fixes.html">top 10 IRP errors and fixes</a> guide.</p>
   <div class="stat-callout"><strong>Stat:</strong> Duplicate IRN, invalid HSN, and invalid recipient GSTIN together account for <strong>~62% of all e-invoice rejections</strong> across the IRP (industry survey of 1,200 SMEs, 2024).</div>
 </section>
 
@@ -496,7 +496,7 @@ const jsonLd = [
   <p>Paid tools also reduce indirect costs: fewer customer disputes over missing IRNs, faster GSTR-1 filing (because data is already validated), and compliance peace of mind during department audits.</p>
   <h3>When custom ERP makes sense</h3>
   <p>Custom-built billing software becomes the better economic choice when you have any two of: multiple branches with separate GSTINs, &gt;500 invoices a month, integration with inventory/sales/POS, multi-user role-based access needs, or industry-specific edge cases (textile, pharma, automotive). The upfront investment is higher but recurring costs converge with paid SaaS within 18-24 months and you keep full data ownership.</p>
-  <p>For a side-by-side comparison of free vs paid for businesses just crossing Rs 5 crore, see our breakdown <a href="/../blog/e-invoicing-small-business-free-vs-paid.html">free GSTN portal vs paid software for small business</a>. For pricing on a custom ERP, see our <a href="/../pricing/custom-erp-cost-india.html">custom ERP cost guide</a>.</p>
+  <p>For a side-by-side comparison of free vs paid for businesses just crossing Rs 5 crore, see our breakdown <a href="/blog/e-invoicing-small-business-free-vs-paid.html">free GSTN portal vs paid software for small business</a>. For pricing on a custom ERP, see our <a href="/pricing/custom-erp-cost-india.html">custom ERP cost guide</a>.</p>
 </section>
 
 <section id="part-8">
@@ -554,7 +554,7 @@ const jsonLd = [
 
 <section id="part-9">
   <h2>9. How Softwaller helps</h2>
-  <p>Softwaller Technologies is a Salem-based custom software house that has been building GST-compliant billing and ERP systems for Indian SMEs since the GST regime began. Our <a href="/../products/gst-billing-accounting.html">Custom GST Billing Software</a> ships with end-to-end e-invoicing baked in — not as a bolt-on, but as part of the core invoice creation flow.</p>
+  <p>Softwaller Technologies is a Salem-based custom software house that has been building GST-compliant billing and ERP systems for Indian SMEs since the GST regime began. Our <a href="/products/gst-billing-accounting.html">Custom GST Billing Software</a> ships with end-to-end e-invoicing baked in — not as a bolt-on, but as part of the core invoice creation flow.</p>
   <h3>What's included by default</h3>
   <ul>
     <li><strong>Built-in IRP integration</strong> via registered GSPs — no third-party plugins, no extra subscription per IRN</li>
@@ -566,7 +566,7 @@ const jsonLd = [
     <li><strong>Tally Prime two-way sync</strong> via XML or ODBC for businesses keeping accounting in Tally</li>
     <li><strong>Audit trails and role-based access</strong> covering DPDP and CBIC audit needs</li>
   </ul>
-  <p>For broader business operations beyond billing, our <a href="/../products/erp-solutions.html">Custom ERP with e-invoicing</a> integrates the same compliance core with sales, inventory, manufacturing, HR, and dashboards. See <a href="/../case-studies.html">case studies</a> from customers in distribution, manufacturing, and retail, or read more <a href="/../about.html">about the team</a>.</p>
+  <p>For broader business operations beyond billing, our <a href="/products/erp-solutions.html">Custom ERP with e-invoicing</a> integrates the same compliance core with sales, inventory, manufacturing, HR, and dashboards. See <a href="/case-studies.html">case studies</a> from customers in distribution, manufacturing, and retail, or read more <a href="/about.html">about the team</a>.</p>
 </section>
 
 </div>
@@ -575,7 +575,7 @@ const jsonLd = [
   <div class="pcta-inner">
     <h2>Need a billing system with e-invoicing built in?</h2>
     <p>Get a free consultation. We'll review your invoice volume, compliance gaps, and recommend the right path — whether that's a tool integration or a custom ERP.</p>
-    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+    <a href="/#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
   </div>
 </section>
 
@@ -628,42 +628,42 @@ const jsonLd = [
   <h2 id="cluster-heading">Related articles in this series</h2>
   <p class="sub">Deep dives on every part of the e-invoicing topic — written for Indian SMEs and updated for 2026.</p>
   <div class="related-cluster-grid">
-    <a href="/../blog/e-invoicing-threshold-2026.html" class="rc-card">
+    <a href="/blog/e-invoicing-threshold-2026.html" class="rc-card">
       <div class="rc-thumb" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-chart-line"></i></div>
       <h3>E-invoicing turnover threshold 2026</h3>
       <p>Where the Rs 5 crore threshold stands today, who must comply, and how to prepare in 30 days.</p>
     </a>
-    <a href="/../blog/e-invoicing-penalties-india-2026.html" class="rc-card">
+    <a href="/blog/e-invoicing-penalties-india-2026.html" class="rc-card">
       <div class="rc-thumb" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-triangle-exclamation"></i></div>
       <h3>E-invoicing penalties under GST</h3>
       <p>Section 122, late fees, GSTIN suspension, and ITC denial — how non-compliance actually hurts.</p>
     </a>
-    <a href="/../blog/e-invoicing-small-business-free-vs-paid.html" class="rc-card">
+    <a href="/blog/e-invoicing-small-business-free-vs-paid.html" class="rc-card">
       <div class="rc-thumb" style="background:var(--green-bg);color:var(--green)"><i class="fa-solid fa-scale-balanced"></i></div>
       <h3>Free GSTN portal vs paid software</h3>
       <p>Cost-benefit breakdown for small businesses just crossing the threshold.</p>
     </a>
-    <a href="/../blog/irn-generation-step-by-step-guide.html" class="rc-card">
+    <a href="/blog/irn-generation-step-by-step-guide.html" class="rc-card">
       <div class="rc-thumb" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-list-check"></i></div>
       <h3>IRN generation step-by-step</h3>
       <p>Hands-on walkthrough with API fields, sandbox setup, and example JSON payloads.</p>
     </a>
-    <a href="/../blog/e-invoice-vs-e-way-bill.html" class="rc-card">
+    <a href="/blog/e-invoice-vs-e-way-bill.html" class="rc-card">
       <div class="rc-thumb" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-truck"></i></div>
       <h3>E-invoice vs e-way bill differences</h3>
       <p>Two documents, two triggers — and the one scenario where they overlap.</p>
     </a>
-    <a href="/../blog/top-10-e-invoicing-errors-fixes.html" class="rc-card">
+    <a href="/blog/top-10-e-invoicing-errors-fixes.html" class="rc-card">
       <div class="rc-thumb" style="background:var(--cyan-bg);color:var(--cyan)"><i class="fa-solid fa-bug"></i></div>
       <h3>Top 10 IRP errors and fixes</h3>
       <p>Detailed playbook with error codes, root causes, and one-click fixes.</p>
     </a>
-    <a href="/../blog/gst-billing-software.html" class="rc-card">
+    <a href="/blog/gst-billing-software.html" class="rc-card">
       <div class="rc-thumb" style="background:var(--blue-bg);color:var(--blue)"><i class="fa-solid fa-file-invoice-dollar"></i></div>
       <h3>GST billing software guide</h3>
       <p>What to look for in a billing tool, integration paths, and a buyer's checklist.</p>
     </a>
-    <a href="/../products/gst-billing-accounting.html" class="rc-card">
+    <a href="/products/gst-billing-accounting.html" class="rc-card">
       <div class="rc-thumb" style="background:var(--pink-bg);color:var(--pink)"><i class="fa-solid fa-rocket"></i></div>
       <h3>Custom GST Billing Software</h3>
       <p>Our flagship product — billing, accounting, e-invoicing, e-way bill, GSTR exports.</p>

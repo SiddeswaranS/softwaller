@@ -87,7 +87,7 @@ const jsonLd = [
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} ogTitle={ogTitle} ogDescription={ogDescription} jsonLd={jsonLd}>
-  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="../assets/product.min.css?v=1.0.3">`} />
+  <Fragment slot="head-css" set:html={`<link rel="stylesheet" href="/assets/product.min.css?v=1.0.9">`} />
   <style is:global slot="head-css" set:html={`
 .faq-section{margin:48px 0 32px;padding:0}
 .faq-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0 0 18px}
@@ -270,19 +270,19 @@ const jsonLd = [
     <h2>Related Solutions</h2>
     <p class="sub">Explore other software that works great alongside this solution.</p>
     <div class="p-related-grid">
-      <a href="/erp-solutions.html" class="p-related-card">
+      <a href=$1/products/erp-solutions.html" class="p-related-card">
         <div class="pr-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="fa-solid fa-building"></i></div>
         <h3>ERP Solutions</h3>
         <p>Unified business operations</p>
         <div class="pr-link">ERP Solutions <i class="fa-solid fa-arrow-right"></i></div>
       </a>
-      <a href="/inventory-management.html" class="p-related-card">
+      <a href=$1/products/inventory-management.html" class="p-related-card">
         <div class="pr-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-boxes-stacked"></i></div>
         <h3>Inventory Management</h3>
         <p>Real-time stock tracking</p>
         <div class="pr-link">Inventory Management <i class="fa-solid fa-arrow-right"></i></div>
       </a>
-      <a href="/e-commerce.html" class="p-related-card">
+      <a href=$1/products/e-commerce.html" class="p-related-card">
         <div class="pr-icon" style="background:var(--orange-bg);color:var(--orange)"><i class="fa-solid fa-cart-shopping"></i></div>
         <h3>E-Commerce</h3>
         <p>Online store &amp; payments</p>
@@ -296,7 +296,7 @@ const jsonLd = [
   <div class="pcta-inner">
     <h2>Ready to Simplify GST & Accounting?</h2>
     <p>Get a free consultation and see how our system can automate your billing and compliance.</p>
-    <a href="/../#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
+    <a href="/#contact" class="pcta-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Consultation</a>
   </div>
 </section>
 

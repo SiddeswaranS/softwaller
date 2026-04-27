@@ -110,9 +110,11 @@ function parsePage(html, srcPath) {
       .trim();
   }
 
-  // Rewrite asset paths: relative href="assets/foo" → href="/assets/foo"
-  // Only rewrite paths that don't already start with /, http, mailto, tel, #
-  body = body.replace(/(\s(?:href|src)=["'])(?!\/|https?:|mailto:|tel:|#|data:)/g, '$1/');
+  // Rewrite asset paths: relative href="assets/foo" → href="/assets/foo".
+  // Skip already-absolute, scheme-prefixed, hash, and dot-relative paths
+  // (./foo, ../foo) — prefixing those produced literal /./foo and /../foo
+  // in earlier runs.
+  body = body.replace(/(\s(?:href|src)=["'])(?!\/|https?:|mailto:|tel:|#|data:|\.\.?\/)/g, '$1/');
 
   return {
     title,

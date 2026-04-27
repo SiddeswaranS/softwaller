@@ -58,4 +58,80 @@
       document.body.style.overflow = '';
     }
   });
+
+  /* ── Desktop mega-menu: keyboard + aria-expanded ──
+     The CSS opens panels on hover/focus-within. We mirror that state into
+     aria-expanded so screen readers follow along, and we add Click + Enter
+     + Space + Escape so keyboard users can drive the menu.                  */
+  var megaTriggers = document.querySelectorAll('.swh-links > li > .swh-link[aria-haspopup="true"]');
+
+  function closeAllMegas(except) {
+    megaTriggers.forEach(function (b) {
+      if (b === except) return;
+      b.setAttribute('aria-expanded', 'false');
+      var li = b.parentElement;
+      if (li) li.classList.remove('open');
+    });
+  }
+
+  megaTriggers.forEach(function (btn) {
+    var li = btn.parentElement;
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      closeAllMegas(btn);
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      li.classList.toggle('open', !open);
+    });
+
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btn.click();
+      } else if (e.key === 'Escape') {
+        btn.setAttribute('aria-expanded', 'false');
+        li.classList.remove('open');
+        btn.focus();
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (btn.getAttribute('aria-expanded') !== 'true') btn.click();
+        var firstItem = li.querySelector('.swh-mega a, .swh-mega button');
+        if (firstItem) firstItem.focus();
+      }
+    });
+
+    /* Hover state should also reflect in aria-expanded for assistive tech */
+    li.addEventListener('mouseenter', function () { btn.setAttribute('aria-expanded', 'true'); });
+    li.addEventListener('mouseleave', function () {
+      if (!li.classList.contains('open')) btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* Click outside or Escape closes any open mega panel */
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.swh-links > li')) closeAllMegas(null);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeAllMegas(null);
+  });
+
+  /* ── Footer accordion aria-expanded mirror ──
+     CSS shows fc-links on desktop unconditionally; on mobile the .fc-col.open
+     class drives display. Mirror that state into aria-expanded so screen
+     readers match what's visible.                                            */
+  function syncFooterExpanded() {
+    var isDesktop = window.innerWidth >= 769;
+    document.querySelectorAll('.fc-col').forEach(function (col) {
+      var head = col.querySelector('.fc-head');
+      if (!head) return;
+      var expanded = isDesktop ? true : col.classList.contains('open');
+      head.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+  }
+  syncFooterExpanded();
+  window.addEventListener('resize', syncFooterExpanded);
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('.fc-head')) setTimeout(syncFooterExpanded, 0);
+  });
 })();

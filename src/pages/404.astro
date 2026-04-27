@@ -3,6 +3,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title = 'Page Not Found — Softwaller Technologies Software Company';
 const description = "The page you're looking for doesn't exist. Return to Softwaller Technologies to explore our custom CRM, ERP, and business software solutions for your company.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Page Not Found",
+    "url": "https://www.softwaller.com/404.html",
+    "description": description,
+    "isPartOf": { "@id": "https://www.softwaller.com/#website" },
+    "publisher": { "@id": "https://www.softwaller.com/#org" }
+  }
+];
 ---
 
 <BaseLayout
@@ -10,6 +22,7 @@ const description = "The page you're looking for doesn't exist. Return to Softwa
   description={description}
   canonical="https://www.softwaller.com/"
   noIndex={true}
+  jsonLd={jsonLd}
 >
   <style slot="head-css">
   .error-page{min-height:calc(100vh - var(--nav-h, 72px) - 600px);display:flex;align-items:center;justify-content:center;padding:120px 28px 80px;text-align:center;position:relative;overflow:hidden}
