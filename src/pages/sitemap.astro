@@ -1,0 +1,271 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Sitemap — Softwaller Technologies";
+const description = "Complete index of every page on softwaller.com — products, industries, locations, blog, pricing guides, comparisons, and legal. Built for fast navigation and clean indexing by search engines and AI crawlers.";
+const canonical = "https://www.softwaller.com/sitemap.html";
+
+const SITE = "https://www.softwaller.com";
+
+// ---- Data tables (drive both the page and the JSON-LD ItemLists) ----
+const mainPages = [
+  { url: SITE + "/",                  name: "Home",         desc: "Overview, hero, stats" },
+  { url: SITE + "/about.html",        name: "About Us",     desc: "Company story, team, values, timeline" },
+  { url: SITE + "/case-studies.html", name: "Case Studies", desc: "Real projects with measurable results" },
+  { url: SITE + "/portfolio.html",    name: "Portfolio",    desc: "Software we've built" },
+  { url: SITE + "/industries.html",   name: "Industries",   desc: "6 verticals we serve" },
+  { url: SITE + "/blog/",             name: "Blog",         desc: "Insights & resources" },
+  { url: SITE + "/#contact",          name: "Contact Us",   desc: "Enquiry form and contact details" },
+];
+
+const products = [
+  { url: "/products/crm-software.html",            name: "CRM Software",                  desc: "Lead management, sales pipeline, follow-up automation" },
+  { url: "/products/erp-solutions.html",           name: "ERP Solutions",                 desc: "Finance, procurement, production, HR integration" },
+  { url: "/products/inventory-management.html",    name: "Inventory Management",          desc: "Multi-warehouse, barcode/QR, auto reorder" },
+  { url: "/products/warehouse-management.html",    name: "Warehouse Management (WMS)",    desc: "Pick/pack, barcode, stock transfers" },
+  { url: "/products/hr-payroll.html",              name: "HR & Payroll",                  desc: "Attendance, leave, payroll, ESI/PF compliance" },
+  { url: "/products/gst-billing-accounting.html",  name: "GST Billing & Accounting",      desc: "e-Invoice, e-Way Bill, GSTR exports" },
+  { url: "/products/e-commerce.html",              name: "E-Commerce & Online Store",     desc: "Product catalog, payments, orders" },
+  { url: "/products/whatsapp-automation.html",     name: "WhatsApp Business Automation",  desc: "Chatbots, bulk messaging, API" },
+  { url: "/products/field-service.html",           name: "Field Service & Sales Force",   desc: "GPS tracking, task assignment" },
+  { url: "/products/project-management.html",      name: "Project & Task Management",     desc: "Timelines, sprints, team tracking" },
+  { url: "/products/helpdesk.html",                name: "Helpdesk & Ticket Management",  desc: "SLA tracking, knowledge base" },
+  { url: "/products/document-management.html",     name: "Document Management (DMS)",     desc: "File storage, versioning, access control" },
+  { url: "/products/fleet-logistics.html",         name: "Fleet & Logistics",             desc: "Route planning, vehicle tracking, delivery" },
+  { url: "/products/appointment-booking.html",     name: "Appointment & Booking",         desc: "Online scheduling, reminders, payments" },
+  { url: "/products/business-intelligence.html",   name: "Business Intelligence",         desc: "KPI dashboards, reports, analytics" },
+  { url: "/products/school-management.html",       name: "School & Institute Management", desc: "Students, fees, attendance" },
+  { url: "/products/real-estate.html",             name: "Real Estate & Property",        desc: "Listings, leads, site visits, docs" },
+  { url: "/products/custom-business-apps.html",    name: "Custom Business Apps",          desc: "Web apps, mobile apps, portals, dashboards" },
+  { url: "/products/costwise.html",                name: "CostWise",                      desc: "Family expense tracker for India (Android app)" },
+];
+
+const industries = [
+  { url: "/industries/manufacturing.html", name: "Manufacturing ERP", desc: "BoM, production, OEE, GST e-invoicing" },
+  { url: "/industries/textile-erp.html",   name: "Textile ERP",       desc: "Yarn lots, looms, dye batches, Tirupur job-work" },
+  { url: "/industries/jewellery-erp.html", name: "Jewellery ERP",     desc: "Live gold rate, BIS HUID, RFID, old-gold exchange" },
+];
+
+const locations = [
+  { url: "/locations/chennai.html",    name: "Chennai",    desc: "Custom software for the Chennai metro" },
+  { url: "/locations/coimbatore.html", name: "Coimbatore", desc: "Textile, jewellery & pump manufacturing belt" },
+  { url: "/locations/madurai.html",    name: "Madurai",    desc: "Jewellery, clinics & southern TN trade hub" },
+  { url: "/locations/salem.html",      name: "Salem",      desc: "Steel, sago & food processing — our HQ city" },
+];
+
+const compare = [
+  { url: "/compare/custom-erp-vs-tally.html", name: "Custom ERP vs Tally Prime", desc: "When to switch, 3-year cost, migration plan" },
+  { url: "/compare/custom-crm-vs-zoho.html",  name: "Custom CRM vs Zoho CRM",    desc: "Per-user fees vs one-time build" },
+];
+
+const pricing = [
+  { url: "/pricing/custom-erp-cost-india.html", name: "Custom ERP Cost India", desc: "₹3L–₹1.5Cr — full 2026 breakdown" },
+  { url: "/pricing/custom-crm-cost-india.html", name: "Custom CRM Cost India", desc: "₹1.5L–₹25L — 3-year TCO vs SaaS" },
+];
+
+const guides = [
+  { url: "/guides/e-invoicing-india-2026.html", name: "E-Invoicing in India 2026", desc: "4,000-word guide: threshold, IRN, penalties, 30-day playbook" },
+];
+
+const blog = [
+  { url: "/blog/",                                       name: "All blog posts",                              desc: "Insights, guides, industry takes" },
+  { url: "/blog/dpdp-act-compliance-smb-india.html",     name: "DPDP Act 2026: SMB Compliance Checklist",     desc: "Rules, penalties, what every Indian SMB must do" },
+  { url: "/blog/e-invoicing-small-business-free-vs-paid.html", name: "E-Invoicing: Free vs Paid Software",  desc: "Free GSTN portal vs paid software — break-even" },
+  { url: "/blog/crm-vs-spreadsheets.html",               name: "CRM vs Spreadsheets",                         desc: "Why growing businesses outgrow Excel" },
+  { url: "/blog/gst-billing-software.html",              name: "How GST Billing Software Saves 20+ Hrs/Mo",   desc: "Stop weekend GSTR reconciliation" },
+  { url: "/blog/custom-erp-vs-readymade.html",           name: "Custom ERP vs Ready-Made ERP",                desc: "Which is right for your business" },
+  { url: "/blog/whatsapp-automation-signs.html",         name: "5 Signs You Need WhatsApp Automation",        desc: "When to upgrade from the free app" },
+  { url: "/blog/inventory-management-mistakes.html",     name: "7 Inventory Mistakes Killing Profits",        desc: "Common warehouse leaks and fixes" },
+  { url: "/blog/hr-payroll-compliance-india.html",       name: "HR & Payroll Compliance in India",            desc: "What businesses get wrong" },
+  { url: "/blog/ecommerce-website-vs-marketplace.html",  name: "E-Commerce Site vs Marketplace",              desc: "Cost comparison & which to pick" },
+  { url: "/blog/business-process-automation-guide.html", name: "SMB Process Automation Guide",                desc: "What to automate first" },
+  { url: "/blog/field-sales-team-mobile-app.html",       name: "Why Field Sales Teams Need Mobile",           desc: "GPS, task assignment, attendance" },
+  { url: "/blog/document-management-hidden-cost.html",   name: "DMS: Hidden Cost of File Searching",          desc: "How knowledge workers lose hours" },
+  { url: "/blog/school-management-software-guide.html",  name: "How to Choose School ERP",                    desc: "CBSE, state board, university" },
+  { url: "/blog/fleet-logistics-tracking.html",          name: "Fleet & Logistics Tracking",                  desc: "Real-time visibility for delivery fleets" },
+  { url: "/blog/business-dashboard-guide.html",          name: "Why Every Business Needs a Dashboard",        desc: "KPIs, alerts, single source of truth" },
+  { url: "/blog/appointment-booking-software.html",      name: "Appointment Booking Software",                desc: "Stop losing customers to missed calls" },
+  { url: "/blog/helpdesk-ticket-management.html",        name: "Helpdesk: 10x More Tickets",                  desc: "SLAs, automation, knowledge base" },
+  { url: "/blog/real-estate-crm-software.html",          name: "Real Estate CRM",                             desc: "Leads, site visits, channel partners" },
+  { url: "/blog/face-recognition-attendance-india.html", name: "Face Recognition Attendance India",           desc: "DPDP, accuracy, factory floor reality" },
+  { url: "/blog/clinic-management-software-abha.html",   name: "Clinic Management with ABHA",                 desc: "Ayushman Bharat-ready clinic software" },
+  { url: "/blog/no-code-vs-custom-software.html",        name: "No-Code vs Custom Software",                  desc: "Real 3-year TCO comparison" },
+  { url: "/blog/whatsapp-business-api-vs-app.html",      name: "WhatsApp Business API vs App",                desc: "When to outgrow the free version" },
+  { url: "/blog/tally-to-cloud-migration.html",          name: "Tally → Cloud Migration",                     desc: "Move 10 years of data without loss" },
+  { url: "/blog/restaurant-pos-swiggy-zomato-integration.html", name: "Restaurant POS + Swiggy/Zomato",       desc: "Unified menu, KOT routing, settlements" },
+  { url: "/blog/ai-agents-for-small-business.html",      name: "AI Agents for Small Business",                desc: "Practical use cases for SMBs" },
+  { url: "/blog/e-invoice-vs-e-way-bill.html",           name: "E-Invoice vs E-Way Bill",                     desc: "Difference, overlap, when each applies" },
+  { url: "/blog/e-invoicing-penalties-india-2026.html",  name: "E-Invoicing Penalties India 2026",            desc: "What missing IRNs actually cost" },
+  { url: "/blog/e-invoicing-threshold-2026.html",        name: "E-Invoicing Threshold 2026",                  desc: "Who must comply now" },
+  { url: "/blog/irn-generation-step-by-step-guide.html", name: "IRN Generation Step-by-Step",                 desc: "Hands-on guide for first-time filers" },
+  { url: "/blog/top-10-e-invoicing-errors-fixes.html",   name: "Top 10 E-Invoicing Errors",                   desc: "Fixes for the most common IRP rejections" },
+];
+
+const legal = [
+  { url: "/privacy-policy.html",          name: "Privacy Policy",            desc: "Data we collect, your DPDP Act 2023 rights" },
+  { url: "/terms-of-service.html",        name: "Terms of Service",          desc: "Engagement scope, IP, payment terms" },
+  { url: "/refund-policy.html",           name: "Refund Policy",             desc: "Cancellation and refund terms" },
+  { url: "/whatsapp-policy.html",         name: "WhatsApp Messaging Policy", desc: "How we use WhatsApp Business API" },
+  { url: "/costwise-privacy.html",        name: "CostWise Privacy",          desc: "Privacy policy for the CostWise app" },
+  { url: "/costwise-terms.html",          name: "CostWise Terms",            desc: "Terms of service for the CostWise app" },
+  { url: "/costwise-delete-account.html", name: "CostWise — Delete Account", desc: "How to delete your CostWise account & data" },
+];
+
+// ---- JSON-LD ----
+function itemList(name, items, base = '') {
+  return {
+    "@type": "ItemList",
+    "name": name,
+    "numberOfItems": items.length,
+    "itemListElement": items.map((item, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": item.url.startsWith('http') ? item.url : SITE + item.url,
+      "name": item.name,
+      "description": item.desc,
+    })),
+  };
+}
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "description": description,
+    "url": canonical,
+    "isPartOf": { "@id": SITE + "/#website" },
+    "publisher": { "@id": SITE + "/#org" },
+    "inLanguage": "en-IN",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "Sitemap" },
+    ],
+  },
+  itemList("Main Pages",                  mainPages),
+  itemList("Services & Products",         products),
+  itemList("Industries",                  industries),
+  itemList("Locations",                   locations),
+  itemList("Comparisons",                 compare),
+  itemList("Pricing Guides",              pricing),
+  itemList("Resource Guides",             guides),
+  itemList("Blog Posts",                  blog),
+  itemList("Legal & Policies",            legal),
+];
+
+const sections = [
+  { id: 'main',       title: 'Main Pages',                  icon: 'fa-house',          items: mainPages },
+  { id: 'services',   title: 'Services & Products',         icon: 'fa-grid-2',         items: products,   note: '18+ business solutions, all built custom' },
+  { id: 'industries', title: 'Industries',                  icon: 'fa-industry',       items: industries },
+  { id: 'locations',  title: 'Locations',                   icon: 'fa-location-dot',   items: locations,  note: 'Tamil Nadu HQ; nationwide remote delivery' },
+  { id: 'compare',    title: 'Comparisons',                 icon: 'fa-scale-balanced', items: compare },
+  { id: 'pricing',    title: 'Pricing Guides',              icon: 'fa-tags',           items: pricing },
+  { id: 'guides',     title: 'In-depth Guides',             icon: 'fa-book',           items: guides },
+  { id: 'blog',       title: 'Blog (' + blog.length + ' posts)', icon: 'fa-newspaper', items: blog },
+  { id: 'legal',      title: 'Legal & Policies',            icon: 'fa-scale-unbalanced', items: legal },
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} jsonLd={jsonLd}>
+  <style slot="head-css" is:global set:html={`
+    .smap-hero{padding:120px 0 32px;background:var(--surf);text-align:center;position:relative;overflow:hidden}
+    .smap-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(21,87,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(21,87,255,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+    .smap-hero-inner{max-width:880px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+    .smap-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);background:var(--blue-bg);padding:6px 14px;border-radius:100px;border:1px solid var(--blue-br);margin-bottom:18px;text-transform:uppercase;letter-spacing:.8px}
+    .smap-hero h1{font-size:clamp(32px,4.5vw,52px);font-weight:800;letter-spacing:-1.5px;line-height:1.05;margin:0 0 14px;color:var(--ink)}
+    .smap-hero h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--blue)}
+    .smap-hero p{font-size:16px;color:var(--muted);max-width:620px;margin:0 auto;line-height:1.7}
+    .smap-toc{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:28px}
+    .smap-toc a{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--ink2);background:#fff;border:1px solid var(--line);padding:7px 12px;border-radius:8px;text-decoration:none;transition:all .15s}
+    .smap-toc a:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-bg)}
+    .smap-toc a i{font-size:11px;color:var(--blue)}
+
+    .smap-body{max-width:1080px;margin:0 auto;padding:48px 28px 96px}
+    .smap-section{margin-bottom:56px;scroll-margin-top:80px}
+    .smap-section:last-child{margin-bottom:0}
+    .smap-section-head{display:flex;align-items:center;gap:14px;padding-bottom:12px;border-bottom:2px solid var(--surf2);margin-bottom:24px}
+    .smap-section-icon{width:42px;height:42px;border-radius:10px;background:var(--blue-bg);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+    .smap-section h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:0;line-height:1.2}
+    .smap-section-note{font-size:13px;color:var(--muted);margin:0;font-style:italic}
+    .smap-section-count{margin-left:auto;font-size:11px;font-weight:700;background:var(--surf);color:var(--muted);padding:5px 11px;border-radius:100px;letter-spacing:.5px;text-transform:uppercase}
+
+    .smap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+    .smap-card{display:flex;flex-direction:column;gap:4px;padding:14px 18px;border:1px solid var(--line);border-radius:11px;background:#fff;text-decoration:none;color:inherit;transition:all .15s;line-height:1.45}
+    .smap-card:hover{border-color:var(--blue);background:var(--blue-bg)}
+    .smap-card-name{font-size:14px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:6px}
+    .smap-card-name::after{content:'→';color:var(--blue);font-weight:500;margin-left:auto;opacity:0;transition:opacity .15s,transform .15s}
+    .smap-card:hover .smap-card-name{color:var(--blue)}
+    .smap-card:hover .smap-card-name::after{opacity:1;transform:translateX(2px)}
+    .smap-card-desc{font-size:12.5px;color:var(--muted);line-height:1.55}
+
+    .smap-contact{margin-top:48px;padding:32px;border-radius:16px;background:var(--ink);color:#fff}
+    .smap-contact h2{color:#fff;margin-bottom:18px;font-size:20px}
+    .smap-contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .smap-contact-row{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:rgba(255,255,255,.78);line-height:1.65}
+    .smap-contact-row i{color:#93BBFF;font-size:13px;width:18px;flex-shrink:0;margin-top:3px}
+    .smap-contact-row a{color:rgba(255,255,255,.85);text-decoration:none}
+    .smap-contact-row a:hover{color:#fff;text-decoration:underline}
+
+    @media (max-width:640px){
+      .smap-hero{padding:100px 0 24px}
+      .smap-section-head{flex-wrap:wrap}
+      .smap-section-count{margin-left:0;width:auto}
+      .smap-grid{grid-template-columns:1fr}
+      .smap-contact{padding:24px}
+    }
+  `}></style>
+
+  <section class="smap-hero">
+    <div class="smap-hero-inner">
+      <span class="smap-eyebrow"><i class="fa-solid fa-sitemap"></i> Site Index</span>
+      <h1>Site <em>Map</em></h1>
+      <p>Every page on softwaller.com — products, industries, locations, blog posts, pricing guides, and policies. Designed to be fast for humans and easy for search engines and AI crawlers to parse.</p>
+      <div class="smap-toc">
+        {sections.map(s => (
+          <a href={`#${s.id}`}><i class={`fa-solid ${s.icon}`}></i>{s.title.replace(/ \(.+\)$/,'')}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="smap-body">
+    {sections.map(s => (
+      <section class="smap-section" id={s.id}>
+        <div class="smap-section-head">
+          <div class="smap-section-icon"><i class={`fa-solid ${s.icon}`}></i></div>
+          <div>
+            <h2>{s.title}</h2>
+            {s.note && <p class="smap-section-note">{s.note}</p>}
+          </div>
+          <span class="smap-section-count">{s.items.length} {s.items.length === 1 ? 'page' : 'pages'}</span>
+        </div>
+        <div class="smap-grid">
+          {s.items.map(it => (
+            <a class="smap-card" href={it.url.startsWith('http') ? it.url : it.url}>
+              <span class="smap-card-name">{it.name}</span>
+              <span class="smap-card-desc">{it.desc}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <section class="smap-contact" aria-label="Contact information">
+      <h2><i class="fa-solid fa-address-card" style="margin-right:8px;color:#93BBFF"></i>Contact &amp; Company Information</h2>
+      <div class="smap-contact-grid">
+        <div class="smap-contact-row"><i class="fa-solid fa-building"></i><span><strong style="color:#fff">Softwaller Technologies Private Limited</strong><br>CIN: U62099TN2024PTC172175</span></div>
+        <div class="smap-contact-row"><i class="fa-solid fa-location-dot"></i><span>Regd: 3-15/8 Singandi Lakshmana, Mudhali St, Tharamangalam, Salem 636502, Tamil Nadu</span></div>
+        <div class="smap-contact-row"><i class="fa-solid fa-city"></i><span>Operations: Chennai, Tamil Nadu, India</span></div>
+        <div class="smap-contact-row"><i class="fa-solid fa-envelope"></i><a href="mailto:info@softwaller.com">info@softwaller.com</a></div>
+        <div class="smap-contact-row"><i class="fa-solid fa-phone"></i><a href="tel:+919585999819">+91 95859 99819</a></div>
+        <div class="smap-contact-row"><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/919585999819" target="_blank" rel="noopener">WhatsApp Us</a></div>
+        <div class="smap-contact-row"><i class="fa-solid fa-clock"></i><span>Mon–Sat, 9 AM–6 PM IST</span></div>
+        <div class="smap-contact-row"><i class="fa-solid fa-file-code"></i><span>Machine-readable: <a href="/sitemap-index.xml">XML sitemap</a> · <a href="/llms.txt">llms.txt</a></span></div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

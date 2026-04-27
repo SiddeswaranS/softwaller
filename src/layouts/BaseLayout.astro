@@ -1,7 +1,6 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import SitemapModal from '../components/SitemapModal.astro';
 
 interface Props {
   title: string;
@@ -173,8 +172,6 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, 'https://www.softw
     <button class="ck-no" data-action="rejectCookie">Reject All</button>
   </div>
 </div>
-
-<SitemapModal />
 
 <script src={`/assets/nav.min.js?v=${jsVersion}`} defer></script>
 <script src={`/assets/main.min.js?v=${jsVersion}`} defer></script>
