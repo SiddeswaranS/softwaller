@@ -86,23 +86,39 @@ window.addEventListener('scroll', function () {
 });
 updateActiveNav();
 
-/* ── Scroll reveal — with bulletproof fallback ── */
-function showAllReveal() { document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); }); }
-var revealTimer = setTimeout(showAllReveal, 1500);
+/* ── Scroll reveal — with bulletproof fallback ──
+   Generic helper: each entry maps a CSS selector to the class that should be
+   added when the element scrolls into view. Items that start above the fold
+   get the class immediately; the rest get an IntersectionObserver. A 1.5 s
+   safety timer adds the class unconditionally if anything goes wrong, so
+   content is never permanently invisible. */
+var REVEAL_GROUPS = [
+  { sel: '.reveal',       on: 'visible'    },
+  { sel: '.ab-tl-item',   on: 'tl-visible' }
+];
+
+function applyAllReveals() {
+  REVEAL_GROUPS.forEach(function (g) {
+    document.querySelectorAll(g.sel).forEach(function (el) { el.classList.add(g.on); });
+  });
+}
+var revealTimer = setTimeout(applyAllReveals, 1500);
 if ('IntersectionObserver' in window) {
-  var revIO = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('visible'); revIO.unobserve(e.target); }
+  REVEAL_GROUPS.forEach(function (g) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add(g.on); io.unobserve(e.target); }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll(g.sel).forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight) { el.classList.add(g.on); }
+      else { io.observe(el); }
     });
-  }, { threshold: 0, rootMargin: '0px 0px -30px 0px' });
-  document.querySelectorAll('.reveal').forEach(function (el) {
-    var r = el.getBoundingClientRect();
-    if (r.top < window.innerHeight) { el.classList.add('visible'); }
-    else { revIO.observe(el); }
   });
   setTimeout(function () { clearTimeout(revealTimer); }, 500);
 } else {
-  showAllReveal();
+  applyAllReveals();
 }
 
 /* ── FAQ accordion ── */
